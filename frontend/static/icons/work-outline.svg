@@ -1,0 +1,12 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Work outline" clip-path="url(#clip0_5479_486)">
+<g id="Vector">
+</g>
+<path id="Vector_2" fill-rule="evenodd" clip-rule="evenodd" d="M9.33301 3.9987V2.66536H6.66634V3.9987H9.33301ZM2.66634 5.33203V12.6654H13.333V5.33203H2.66634ZM13.333 3.9987C14.073 3.9987 14.6663 4.59203 14.6663 5.33203V12.6654C14.6663 13.4054 14.073 13.9987 13.333 13.9987H2.66634C1.92634 13.9987 1.33301 13.4054 1.33301 12.6654L1.33967 5.33203C1.33967 4.59203 1.92634 3.9987 2.66634 3.9987H5.33301V2.66536C5.33301 1.92536 5.92634 1.33203 6.66634 1.33203H9.33301C10.073 1.33203 10.6663 1.92536 10.6663 2.66536V3.9987H13.333Z" fill="var(--fill-0, white)"/>
+</g>
+<defs>
+<clipPath id="clip0_5479_486">
+<rect width="16" height="16" fill="white"/>
+</clipPath>
+</defs>
+</svg>

@@ -1,0 +1,51 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+@theme {
+	/* Brand Colors */
+	--color-primary: #7502ff;
+	--color-secondary: #110d21;
+
+	/* Neutral Colors */
+	--color-neutral-white: #ffffff;
+	--color-neutral-grey: #eaecf0;
+	--color-neutral-light: #f8f3ff;
+	--color-neutral-dark: #1c172b;
+
+	/* Additional colors from design */
+	--color-text-primary: #110d21;
+	--color-text-secondary: #62717a;
+	--color-text-muted: #2a2c2c;
+
+	/* Font Families */
+	--font-geist: Geist, system-ui, sans-serif;
+	--font-lato: Lato, system-ui, sans-serif;
+}
+
+/* Container utility for consistent page padding */
+@layer components {
+	.page-container {
+		@apply mx-auto px-6 sm:px-10 md:px-16 max-w-[1600px];
+	}
+}
+
+/* Infinite scroll animation for partner logos */
+@keyframes scroll {
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translateX(-50%);
+	}
+}
+
+.animate-scroll {
+	animation: scroll 30s linear infinite;
+}
+
+/* Pause animation on hover */
+.animate-scroll:hover {
+	animation-play-state: paused;
+}

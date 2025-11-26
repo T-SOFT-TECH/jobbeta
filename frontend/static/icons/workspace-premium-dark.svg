@@ -1,0 +1,12 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Workspace premium" clip-path="url(#clip0_5450_28)">
+<g id="Vector">
+</g>
+<path id="Vector_2" d="M24.2 34.225L30 29.825L35.775 34.225L33.575 27.1L39.375 22.5H32.275L30 15.475L27.725 22.5H20.625L26.4 27.1L24.2 34.225ZM50 25C50 13.95 41.05 5 30 5C18.95 5 10 13.95 10 25C10 30.075 11.9 34.675 15 38.2V57.5L30 52.5L45 57.5V38.2C48.1 34.675 50 30.075 50 25ZM30 10C38.275 10 45 16.725 45 25C45 33.275 38.275 40 30 40C21.725 40 15 33.275 15 25C15 16.725 21.725 10 30 10ZM30 47.5L20 50.05V42.3C22.95 44 26.35 45 30 45C33.65 45 37.05 44 40 42.3V50.05L30 47.5Z" fill="var(--fill-0, #2A2C2C)"/>
+</g>
+<defs>
+<clipPath id="clip0_5450_28">
+<rect width="60" height="60" fill="white"/>
+</clipPath>
+</defs>
+</svg>
