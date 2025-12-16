@@ -1,5 +1,6 @@
 <script>
-	import { run } from 'svelte/legacy';
+	import { slide } from 'svelte/transition';
+	import { cubicOut } from 'svelte/easing';
 
 	/** @type {{}} */
 	let { ...props } = $props();
@@ -37,6 +38,9 @@
 		}
 	];
 
+	/**
+	 * @param {number} index
+	 */
 	function toggle(index) {
 		openIndex = openIndex === index ? -1 : index;
 	}
@@ -47,12 +51,12 @@
 		<!-- Header -->
 		<div class="flex flex-col items-center justify-center gap-5 text-center">
 			<div
-				class="font-['Geist-Bold',_sans-serif] text-[40px] font-bold leading-[51px] text-[#2a2c2c]"
+				class="font-['Geist-Bold',_sans-serif] text-[40px] leading-[51px] font-bold text-[#2a2c2c]"
 			>
 				Student FAQs
 			</div>
 			<div
-				class="font-['Geist-Medium',_sans-serif] text-xl font-medium leading-[30px] text-[#2a2c2c]"
+				class="font-['Geist-Medium',_sans-serif] text-xl leading-[30px] font-medium text-[#2a2c2c]"
 			>
 				<span>Still have questions? </span>
 				<span class="text-[#7502ff]">Contact our support team!</span>
@@ -65,58 +69,49 @@
 			<div class="flex flex-col gap-6">
 				{#each faqs.slice(0, 3) as faq, i}
 					{@const index = i}
-					<!-- svelte-ignore a11y_click_events_have_key_events -->
-					<!-- svelte-ignore a11y_no_static_element_interactions -->
-					<div
-						class="flex cursor-pointer flex-col gap-8 rounded-2xl bg-[rgba(42,44,44,0.04)] p-6 transition-all hover:bg-[rgba(42,44,44,0.08)]"
+					<button
+						class="flex w-full cursor-pointer flex-col rounded-2xl bg-[rgba(42,44,44,0.04)] p-6 text-left transition-all hover:bg-[rgba(42,44,44,0.08)]"
 						onclick={() => toggle(index)}
 					>
-						<div class="flex flex-row items-center justify-between gap-[30px]">
+						<div class="flex w-full flex-row items-center justify-between gap-[30px]">
 							<div
-								class={`text-left font-['Geist-Bold',_sans-serif] text-xl font-bold leading-[30px] ${openIndex === index ? 'text-[#7502ff]' : 'text-[rgba(42,44,44,0.80)]'}`}
+								class={`text-left font-['Geist-Bold',_sans-serif] text-xl leading-[30px] font-bold transition-colors duration-300 ${openIndex === index ? 'text-[#7502ff]' : 'text-[rgba(42,44,44,0.80)]'}`}
 							>
 								{faq.question}
 							</div>
 							<div class="relative h-6 w-6 shrink-0">
-								{#if openIndex === index}
-									<!-- Minus Icon -->
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										fill="none"
-										viewBox="0 0 24 24"
-										stroke-width="1.5"
-										stroke="#7502ff"
-										class="h-6 w-6"
-									>
-										<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15" />
-									</svg>
-								{:else}
-									<!-- Plus Icon -->
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										fill="none"
-										viewBox="0 0 24 24"
-										stroke-width="1.5"
-										stroke="currentColor"
-										class="h-6 w-6 text-[#2a2c2c]"
-									>
-										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											d="M12 4.5v15m7.5-7.5h-15"
-										/>
-									</svg>
-								{/if}
+								<!-- Animated Plus/Minus Icon -->
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke-width="1.5"
+									stroke={openIndex === index ? '#7502ff' : '#2a2c2c'}
+									class="h-6 w-6 transition-colors duration-300"
+								>
+									<!-- Horizontal line (always visible) -->
+									<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15" />
+									<!-- Vertical line (scales to disappear when open) -->
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										d="M12 4.5v15"
+										class="origin-center transition-all duration-300 {openIndex === index
+											? 'scale-0 opacity-0'
+											: 'scale-100 opacity-100'}"
+									/>
+								</svg>
 							</div>
 						</div>
 						{#if openIndex === index}
 							<div
-								class="text-left font-['Geist-Regular',_sans-serif] text-sm font-normal leading-[21px] text-[rgba(42,44,44,0.80)]"
+								transition:slide={{ duration: 300, easing: cubicOut }}
+								class="mt-6 text-left font-['Geist-Regular',_sans-serif] text-sm leading-[21px] font-normal text-[rgba(42,44,44,0.80)]"
 							>
 								{faq.answer}
 							</div>
 						{/if}
-					</div>
+					</button>
 				{/each}
 			</div>
 
@@ -124,58 +119,49 @@
 			<div class="flex flex-col gap-6">
 				{#each faqs.slice(3, 6) as faq, i}
 					{@const index = i + 3}
-					<!-- svelte-ignore a11y_click_events_have_key_events -->
-					<!-- svelte-ignore a11y_no_static_element_interactions -->
-					<div
-						class="flex cursor-pointer flex-col gap-8 rounded-2xl bg-[rgba(42,44,44,0.04)] p-6 transition-all hover:bg-[rgba(42,44,44,0.08)]"
+					<button
+						class="flex w-full cursor-pointer flex-col rounded-2xl bg-[rgba(42,44,44,0.04)] p-6 text-left transition-all hover:bg-[rgba(42,44,44,0.08)]"
 						onclick={() => toggle(index)}
 					>
-						<div class="flex flex-row items-center justify-between gap-[30px]">
+						<div class="flex w-full flex-row items-center justify-between gap-[30px]">
 							<div
-								class={`text-left font-['Geist-Bold',_sans-serif] text-xl font-bold leading-[30px] ${openIndex === index ? 'text-[#7502ff]' : 'text-[rgba(42,44,44,0.80)]'}`}
+								class={`text-left font-['Geist-Bold',_sans-serif] text-xl leading-[30px] font-bold transition-colors duration-300 ${openIndex === index ? 'text-[#7502ff]' : 'text-[rgba(42,44,44,0.80)]'}`}
 							>
 								{faq.question}
 							</div>
 							<div class="relative h-6 w-6 shrink-0">
-								{#if openIndex === index}
-									<!-- Minus Icon -->
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										fill="none"
-										viewBox="0 0 24 24"
-										stroke-width="1.5"
-										stroke="#7502ff"
-										class="h-6 w-6"
-									>
-										<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15" />
-									</svg>
-								{:else}
-									<!-- Plus Icon -->
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										fill="none"
-										viewBox="0 0 24 24"
-										stroke-width="1.5"
-										stroke="currentColor"
-										class="h-6 w-6 text-[#2a2c2c]"
-									>
-										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											d="M12 4.5v15m7.5-7.5h-15"
-										/>
-									</svg>
-								{/if}
+								<!-- Animated Plus/Minus Icon -->
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke-width="1.5"
+									stroke={openIndex === index ? '#7502ff' : '#2a2c2c'}
+									class="h-6 w-6 transition-colors duration-300"
+								>
+									<!-- Horizontal line (always visible) -->
+									<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15" />
+									<!-- Vertical line (scales to disappear when open) -->
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										d="M12 4.5v15"
+										class="origin-center transition-all duration-300 {openIndex === index
+											? 'scale-0 opacity-0'
+											: 'scale-100 opacity-100'}"
+									/>
+								</svg>
 							</div>
 						</div>
 						{#if openIndex === index}
 							<div
-								class="text-left font-['Geist-Regular',_sans-serif] text-sm font-normal leading-[21px] text-[rgba(42,44,44,0.80)]"
+								transition:slide={{ duration: 300, easing: cubicOut }}
+								class="mt-6 text-left font-['Geist-Regular',_sans-serif] text-sm leading-[21px] font-normal text-[rgba(42,44,44,0.80)]"
 							>
 								{faq.answer}
 							</div>
 						{/if}
-					</div>
+					</button>
 				{/each}
 			</div>
 		</div>

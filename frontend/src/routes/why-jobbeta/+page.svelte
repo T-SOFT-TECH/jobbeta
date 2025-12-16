@@ -27,7 +27,7 @@
 			<div class="relative z-10 flex max-w-[684px] flex-col items-start gap-4 sm:gap-6">
 				<!-- Heading -->
 				<h1
-					class="text-[32px] font-semibold leading-tight text-white sm:text-[40px] md:text-[50px] lg:text-[60px]"
+					class="text-[32px] leading-tight font-semibold text-white sm:text-[40px] md:text-[50px] lg:text-[60px]"
 					style="font-family: var(--font-geist); letter-spacing: -0.3px;"
 				>
 					Why JobBeta? Because Early Careers Deserve a Better Start
@@ -35,7 +35,7 @@
 
 				<!-- Description -->
 				<p
-					class="max-w-[495px] text-[16px] font-normal leading-relaxed text-white sm:text-[18px] lg:text-[20px]"
+					class="max-w-[495px] text-[16px] leading-relaxed font-normal text-white sm:text-[18px] lg:text-[20px]"
 					style="font-family: var(--font-geist); letter-spacing: -0.1px;"
 				>
 					We're building more than a job board — we're creating an ecosystem where students,
@@ -76,12 +76,12 @@
 </section>
 
 <!-- Features Section -->
-<section class="w-full bg-white py-20">
-	<div class="page-container">
+<section class="w-full bg-white py-12 md:py-20">
+	<div class="page-container px-4 md:px-6">
 		<!-- Main Heading -->
-		<div class="mb-20 flex justify-center">
+		<div class="mb-12 flex justify-center md:mb-20">
 			<h2
-				class="max-w-[688px] text-center text-[40px] font-bold leading-[52px] text-[#110d21]"
+				class="max-w-[688px] text-center text-2xl leading-tight font-bold text-[#110d21] sm:text-3xl md:text-[40px] md:leading-[52px]"
 				style="font-family: var(--font-geist); letter-spacing: -0.2px;"
 			>
 				Not Just Another Job Board.<br />A Smarter Career Hub.
@@ -94,12 +94,12 @@
 		</div>
 
 		<!-- Feature 2: Human-Centered + AI Smart -->
-		<div class="mt-32 flex w-full justify-center">
+		<div class="mt-16 flex w-full justify-center md:mt-32">
 			<AISmartFeature />
 		</div>
 
 		<!-- Feature 3: Profiles that Tell Your Story -->
-		<div class="mt-32 flex w-full justify-center">
+		<div class="mt-16 flex w-full justify-center md:mt-32">
 			<ProfilesFeature />
 		</div>
 	</div>

@@ -32,13 +32,13 @@
 	<!-- Background Decorative Circles (Purple) -->
 	<!-- Simplified representation of the many circles in HTML -->
 	<div
-		class="absolute right-[10%] top-[10%] h-[85px] w-[85px] rounded-full border border-[#7502ff] opacity-20"
+		class="absolute top-[10%] right-[10%] h-[85px] w-[85px] rounded-full border border-[#7502ff] opacity-20"
 	></div>
 	<div
-		class="absolute right-[15%] top-[5%] h-[85px] w-[85px] rounded-full border border-[#7502ff] opacity-20"
+		class="absolute top-[5%] right-[15%] h-[85px] w-[85px] rounded-full border border-[#7502ff] opacity-20"
 	></div>
 	<div
-		class="absolute right-[20%] top-[15%] h-[85px] w-[85px] rounded-full border border-[#7502ff] opacity-20"
+		class="absolute top-[15%] right-[20%] h-[85px] w-[85px] rounded-full border border-[#7502ff] opacity-20"
 	></div>
 
 	<div
@@ -48,12 +48,12 @@
 		<div class="flex flex-col items-start justify-start gap-10 md:w-1/2">
 			<div class="flex flex-col gap-5">
 				<div
-					class="font-['Geist-Bold',_sans-serif] text-[40px] font-bold leading-[60px] text-[#7502ff]"
+					class="font-['Geist-Bold',_sans-serif] text-[28px] leading-tight font-bold text-[#7502ff] sm:text-[32px] md:text-[40px] md:leading-[60px]"
 				>
 					Exclusive Features for Students & Graduates
 				</div>
 				<div
-					class="font-['Geist-Medium',_sans-serif] text-xl font-medium leading-[30px] text-[rgba(42,44,44,0.60)]"
+					class="font-['Geist-Medium',_sans-serif] text-xl leading-[30px] font-medium text-[rgba(42,44,44,0.60)]"
 				>
 					We don’t just help you find jobs—we help you build your career!. The best part? It’s all
 					free. Start now!
@@ -64,15 +64,15 @@
 			<div class="flex flex-col gap-[30px]">
 				{#each features as feature}
 					<div class="flex flex-row items-start gap-[30px]">
-						<div class="h-[84px] w-[3px] shrink-0 rounded-lg bg-[#7502ff]"></div>
+						<div class="h-[60px] w-[3px] shrink-0 rounded-lg bg-[#7502ff] md:h-[84px]"></div>
 						<div class="flex flex-col justify-center gap-3 py-2">
 							<div
-								class="font-['Geist-Bold',_sans-serif] text-xl font-bold leading-[30px] text-[#2a2c2c]"
+								class="font-['Geist-Bold',_sans-serif] text-xl leading-[30px] font-bold text-[#2a2c2c]"
 							>
 								{feature.title}
 							</div>
 							<div
-								class="font-['Geist-Regular',_sans-serif] text-base font-normal leading-6 text-[rgba(48,48,48,0.64)]"
+								class="font-['Geist-Regular',_sans-serif] text-base leading-6 font-normal text-[rgba(48,48,48,0.64)]"
 							>
 								{feature.description}
 							</div>

@@ -25,34 +25,38 @@
 </script>
 
 <section class="relative w-full overflow-hidden {rightBgColor}">
-	<div class="mx-auto grid h-[70vh] w-full grid-cols-1 lg:grid-cols-2">
+	<div class="mx-auto grid w-full grid-cols-1 lg:h-[70vh] lg:grid-cols-2">
 		<!-- Left Section -->
 		<div class="relative w-full content-center overflow-hidden {leftBgColor}">
 			<!-- Content -->
-			<div class="relative z-10 px-8 py-32 md:px-16 lg:px-32">
-				<div class="flex max-w-md flex-col gap-12">
-					<div class="flex flex-col gap-5">
+			<div class="relative z-10 px-5 py-12 sm:px-8 md:px-16 md:py-20 lg:px-24 lg:py-32 xl:px-32">
+				<div class="flex max-w-md flex-col gap-8 md:gap-12">
+					<div class="flex flex-col gap-4 md:gap-5">
 						{#if leftLabel}
-							<p class="font-lato text-left text-base font-normal leading-6 text-white">
+							<p class="text-left font-lato text-sm leading-6 font-normal text-white md:text-base">
 								{leftLabel}
 							</p>
 						{/if}
-						<h2 class="font-geist text-left text-4xl font-semibold leading-[54px] text-white">
+						<h2
+							class="text-left font-geist text-2xl leading-tight font-semibold text-white sm:text-3xl md:text-4xl md:leading-[54px]"
+						>
 							{@html leftTitle}
 						</h2>
-						<p class="font-geist text-left text-xl font-normal leading-[30px] text-white">
+						<p
+							class="text-left font-geist text-base leading-relaxed font-normal text-white md:text-xl md:leading-[30px]"
+						>
 							{leftDescription}
 						</p>
 					</div>
 
 					<div class="flex flex-col gap-3 sm:flex-row">
 						<button
-							class="font-lato cursor-pointer rounded-[20px] bg-black px-10 py-4 text-center text-base font-bold leading-6 text-white transition-colors hover:bg-gray-900"
+							class="cursor-pointer rounded-[20px] bg-black px-6 py-3.5 text-center font-lato text-sm leading-6 font-bold text-white transition-colors hover:bg-gray-900 sm:px-10 sm:py-4 sm:text-base"
 						>
 							{leftButton1Text}
 						</button>
 						<button
-							class="font-lato cursor-pointer rounded-[20px] border border-white px-10 py-4 text-center text-base font-bold leading-6 text-white transition-colors hover:bg-white/10"
+							class="cursor-pointer rounded-[20px] border border-white px-6 py-3.5 text-center font-lato text-sm leading-6 font-bold text-white transition-colors hover:bg-white/10 sm:px-10 sm:py-4 sm:text-base"
 						>
 							{leftButton2Text}
 						</button>
@@ -62,7 +66,7 @@
 
 			<!-- Decorative Circles - Bottom Left -->
 			{#if showDecorators && leftDecoratorImage}
-				<div class="pointer-events-none absolute bottom-0 left-0 h-auto w-auto">
+				<div class="pointer-events-none absolute bottom-0 left-0 hidden h-auto w-auto md:block">
 					<img src={leftDecoratorImage} alt="" class="h-auto w-auto" />
 				</div>
 			{/if}
@@ -71,27 +75,31 @@
 		<!-- Right Section -->
 		<div class="relative mx-auto w-full content-center overflow-hidden">
 			<!-- Content -->
-			<div class="relative z-10 px-8 py-32 md:px-16 lg:px-20">
-				<div class="flex flex-col content-center items-center gap-12">
+			<div class="relative z-10 px-5 py-12 sm:px-8 md:px-16 md:py-20 lg:px-20 lg:py-32">
+				<div class="flex flex-col content-center items-center gap-8 md:gap-12 lg:items-start">
 					<div class="flex flex-col gap-1">
 						{#if rightLabel}
-							<p class="font-lato text-left text-base font-normal leading-6 text-white">
+							<p
+								class="text-center font-lato text-sm leading-6 font-normal text-white md:text-left md:text-base"
+							>
 								{rightLabel}
 							</p>
 						{/if}
-						<h2 class="font-geist text-left text-4xl font-semibold leading-[54px] text-white">
+						<h2
+							class="text-center font-geist text-2xl leading-tight font-semibold text-white sm:text-3xl md:text-left md:text-4xl md:leading-[54px]"
+						>
 							{@html rightTitle}
 						</h2>
 					</div>
 
-					<div class="flex flex-col gap-3 sm:flex-row">
+					<div class="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
 						<button
-							class="text-secondary font-lato rounded-[20px] bg-white px-10 py-4 text-center text-base font-bold leading-6 transition-colors hover:bg-gray-100"
+							class="rounded-[20px] bg-white px-6 py-3.5 text-center font-lato text-sm leading-6 font-bold text-secondary transition-colors hover:bg-gray-100 sm:px-10 sm:py-4 sm:text-base"
 						>
 							{rightButton1Text}
 						</button>
 						<button
-							class="font-lato rounded-[20px] border border-white px-10 py-4 text-center text-base font-bold leading-6 text-white transition-colors hover:bg-white/10"
+							class="rounded-[20px] border border-white px-6 py-3.5 text-center font-lato text-sm leading-6 font-bold text-white transition-colors hover:bg-white/10 sm:px-10 sm:py-4 sm:text-base"
 						>
 							{rightButton2Text}
 						</button>
@@ -101,7 +109,7 @@
 
 			<!-- Decorative Circles - Top Right -->
 			{#if showDecorators && rightDecoratorImage}
-				<div class="pointer-events-none absolute right-0 top-0 h-auto w-auto">
+				<div class="pointer-events-none absolute top-0 right-0 hidden h-auto w-auto md:block">
 					<img src={rightDecoratorImage} alt="" class="h-auto w-auto" />
 				</div>
 			{/if}
