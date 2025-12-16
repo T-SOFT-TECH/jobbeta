@@ -365,7 +365,7 @@
 					direction: 'vertical',
 					slidesPerView: 1,
 					spaceBetween: 30,
-					mousewheel: true,
+					mousewheel: false,
 					grabCursor: true,
 					pagination: {
 						clickable: true
@@ -423,24 +423,24 @@
 	style="background: linear-gradient(237.007deg, rgba(238, 236, 252, 0.04) 15.896%, rgba(117, 2, 255, 0.04) 29.374%), linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%)"
 >
 	<!-- Background Grid Pattern - Hidden on mobile -->
-	<div class="absolute left-[54px] top-[132px] hidden lg:block">
+	<div class="absolute top-[132px] left-[54px] hidden lg:block">
 		<div
-			class="absolute left-[170px] top-[40px] h-[782px] w-px border-l border-[rgba(117,2,255,0.08)]"
+			class="absolute top-[40px] left-[170px] h-[782px] w-px border-l border-[rgba(117,2,255,0.08)]"
 		></div>
 		<div
-			class="absolute left-[338px] top-[40px] h-[782px] w-px border-l border-[rgba(117,2,255,0.08)]"
+			class="absolute top-[40px] left-[338px] h-[782px] w-px border-l border-[rgba(117,2,255,0.08)]"
 		></div>
 		<div
-			class="absolute left-[528px] top-[40px] h-[782px] w-px border-l border-[rgba(117,2,255,0.08)]"
+			class="absolute top-[40px] left-[528px] h-[782px] w-px border-l border-[rgba(117,2,255,0.08)]"
 		></div>
 		<div
-			class="absolute left-[696px] top-0 h-[822px] w-px border-l border-[rgba(117,2,255,0.08)]"
+			class="absolute top-0 left-[696px] h-[822px] w-px border-l border-[rgba(117,2,255,0.08)]"
 		></div>
 		<div
-			class="absolute left-[864px] top-[110px] h-[712px] w-px border-l border-[rgba(117,2,255,0.08)]"
+			class="absolute top-[110px] left-[864px] h-[712px] w-px border-l border-[rgba(117,2,255,0.08)]"
 		></div>
 		<div
-			class="absolute left-[1032px] top-[110px] h-[712px] w-px border-l border-[rgba(117,2,255,0.08)]"
+			class="absolute top-[110px] left-[1032px] h-[712px] w-px border-l border-[rgba(117,2,255,0.08)]"
 		></div>
 	</div>
 
@@ -452,7 +452,7 @@
 					<div class="flex w-fit items-center gap-2 rounded-[20px] bg-white px-4 py-2 shadow-sm">
 						<img src="/icons/School.svg" alt="School" class="h-6 w-6" />
 						<p
-							class="font-geist text-sm font-normal leading-[21px] tracking-[-0.07px] text-[#110d21]"
+							class="font-geist text-sm leading-[21px] font-normal tracking-[-0.07px] text-[#110d21]"
 						>
 							Level up your career.
 						</p>
@@ -460,12 +460,12 @@
 
 					<div class="flex flex-col gap-6">
 						<h1
-							class="font-geist text-[32px] font-semibold leading-[1.2] tracking-[-0.02em] text-[#110d21] md:text-[40px] lg:text-[48px]"
+							class="font-geist text-[32px] leading-[1.2] font-semibold tracking-[-0.02em] text-[#110d21] md:text-[40px] lg:text-[48px]"
 						>
 							Discover your next career opportunity and find the perfect candidate today.
 						</h1>
 						<p
-							class="font-geist text-base font-normal leading-[1.6] tracking-[-0.01em] text-[rgba(17,13,33,0.6)] md:text-lg"
+							class="font-geist text-base leading-[1.6] font-normal tracking-[-0.01em] text-[rgba(17,13,33,0.6)] md:text-lg"
 						>
 							We're revolutionizing the way companies hire and how early-career talents find
 							meaningful opportunities — from first internships to full-time roles.
@@ -477,7 +477,7 @@
 							href="/waitlist"
 							class="flex items-center justify-center rounded-[20px] bg-[#7502ff] px-8 py-4 transition-colors hover:bg-[#6502dd]"
 						>
-							<p class="font-lato text-base font-bold leading-6 tracking-[-0.08px] text-white">
+							<p class="font-lato text-base leading-6 font-bold tracking-[-0.08px] text-white">
 								Join Our waiting List
 							</p>
 						</a>
@@ -486,7 +486,7 @@
 							class="flex items-center justify-center rounded-[20px] border border-[#110d21] bg-white px-8 py-4 transition-colors hover:bg-gray-50"
 						>
 							<p
-								class="font-lato text-base font-extrabold leading-6 tracking-[-0.08px] text-[#110d21]"
+								class="font-lato text-base leading-6 font-extrabold tracking-[-0.08px] text-[#110d21]"
 							>
 								View Features
 							</p>
@@ -516,7 +516,7 @@
 	<div class="page-container flex flex-col items-center gap-8 md:gap-12 lg:pt-[50px]">
 		<Animate variant="fade" duration={0.6} delay={0.2}>
 			<p
-				class="font-geist max-w-4xl text-center text-lg font-semibold leading-relaxed tracking-[-0.12px] text-black md:text-xl md:leading-9 lg:text-2xl"
+				class="max-w-4xl text-center font-geist text-lg leading-relaxed font-semibold tracking-[-0.12px] text-black md:text-xl md:leading-9 lg:text-2xl"
 			>
 				Trusted by over 5,000 Employers and thousands of students around the world
 			</p>
@@ -632,7 +632,7 @@
 <!-- Stats Section - #1 Recruitment -->
 <section class="relative w-full overflow-hidden bg-white py-12 md:py-16 lg:h-[526px]">
 	<div
-		class="relative mx-auto overflow-hidden rounded-[30px] px-6 sm:px-10 md:rounded-[40px] md:px-16 lg:absolute lg:left-1/2 lg:top-12 lg:h-[434px] lg:w-[1255px] lg:-translate-x-1/2 lg:rounded-[50px] lg:px-0"
+		class="relative mx-auto overflow-hidden rounded-[30px] px-6 sm:px-10 md:rounded-[40px] md:px-16 lg:absolute lg:top-12 lg:left-1/2 lg:h-[434px] lg:w-[1255px] lg:-translate-x-1/2 lg:rounded-[50px] lg:px-0"
 		style="background: linear-gradient(180deg, #110D21 0%, #1A1530 100%)"
 	>
 		<!-- Background Pattern -->
@@ -646,14 +646,14 @@
 		</div>
 
 		<!-- Decorative Circles - Hidden on mobile/tablet -->
-		<div class="absolute right-[-20px] top-[-30px] hidden xl:block">
+		<div class="absolute top-[-30px] right-[-20px] hidden xl:block">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="136"
 				height="136"
 				viewBox="0 0 136 136"
 				fill="none"
-				class="absolute right-[180px] top-0 flex-shrink-0"
+				class="absolute top-0 right-[180px] flex-shrink-0"
 			>
 				<circle cx="68" cy="68" r="66.5" stroke="white" stroke-width="3" />
 			</svg>
@@ -663,7 +663,7 @@
 				height="136"
 				viewBox="0 0 136 136"
 				fill="none"
-				class="absolute right-[120px] top-0 flex-shrink-0"
+				class="absolute top-0 right-[120px] flex-shrink-0"
 			>
 				<circle cx="68" cy="68" r="66.5" stroke="white" stroke-width="3" />
 			</svg>
@@ -673,7 +673,7 @@
 				height="136"
 				viewBox="0 0 136 136"
 				fill="none"
-				class="absolute right-[60px] top-0 flex-shrink-0"
+				class="absolute top-0 right-[60px] flex-shrink-0"
 			>
 				<circle cx="68" cy="68" r="66.5" stroke="white" stroke-width="3" />
 			</svg>
@@ -683,7 +683,7 @@
 				height="136"
 				viewBox="0 0 136 136"
 				fill="none"
-				class="absolute right-0 top-0 flex-shrink-0"
+				class="absolute top-0 right-0 flex-shrink-0"
 			>
 				<circle cx="68" cy="68" r="66.5" stroke="white" stroke-width="3" />
 			</svg>
@@ -692,20 +692,20 @@
 		<div class="relative flex flex-col gap-8 py-8 md:py-10 lg:flex-row lg:gap-0 lg:py-0">
 			<!-- Purple Card -->
 			<div
-				class="relative h-auto overflow-hidden rounded-[30px] bg-[#7502ff] p-6 text-white md:rounded-[40px] md:p-8 lg:absolute lg:left-10 lg:top-[46px] lg:h-[336px] lg:w-[339px] lg:rounded-[50px] lg:p-0"
+				class="relative h-auto overflow-hidden rounded-[30px] bg-[#7502ff] p-6 text-white md:rounded-[40px] md:p-8 lg:absolute lg:top-[46px] lg:left-10 lg:h-[336px] lg:w-[339px] lg:rounded-[50px] lg:p-0"
 			>
 				<p
-					class="font-geist text-[40px] font-bold leading-tight tracking-[-0.32px] md:text-[50px] lg:absolute lg:left-[33px] lg:top-[50px] lg:text-[64px] lg:leading-[96px]"
+					class="font-geist text-[40px] leading-tight font-bold tracking-[-0.32px] md:text-[50px] lg:absolute lg:top-[50px] lg:left-[33px] lg:text-[64px] lg:leading-[96px]"
 				>
 					#1
 				</p>
 				<p
-					class="font-geist mt-2 text-[28px] font-bold leading-tight tracking-[-0.2px] md:text-[32px] lg:absolute lg:left-[33px] lg:top-[146px] lg:mt-0 lg:text-[40px] lg:leading-[30px]"
+					class="mt-2 font-geist text-[28px] leading-tight font-bold tracking-[-0.2px] md:text-[32px] lg:absolute lg:top-[146px] lg:left-[33px] lg:mt-0 lg:text-[40px] lg:leading-[30px]"
 				>
 					Recruitment
 				</p>
 				<p
-					class="font-geist mt-4 text-base font-normal leading-relaxed tracking-[-0.1px] md:text-lg lg:absolute lg:left-[33px] lg:top-[204px] lg:mt-0 lg:w-[269px] lg:text-xl lg:leading-[30px]"
+					class="mt-4 font-geist text-base leading-relaxed font-normal tracking-[-0.1px] md:text-lg lg:absolute lg:top-[204px] lg:left-[33px] lg:mt-0 lg:w-[269px] lg:text-xl lg:leading-[30px]"
 				>
 					We are one of the best Career builders for any type of job seeker and more.
 				</p>
@@ -713,19 +713,19 @@
 
 			<!-- Stats -->
 			<div
-				class="flex flex-col gap-6 md:flex-row md:flex-wrap md:justify-center lg:absolute lg:left-[418px] lg:top-[146px] lg:flex-nowrap lg:items-start lg:gap-10"
+				class="flex flex-col gap-6 md:flex-row md:flex-wrap md:justify-center lg:absolute lg:top-[146px] lg:left-[418px] lg:flex-nowrap lg:items-start lg:gap-10"
 			>
 				<!-- Stat 1 - Students -->
 				<div
 					class="flex flex-col gap-[6px] text-center text-white md:flex-1 md:text-left lg:w-[239px] lg:flex-initial"
 				>
 					<p
-						class="font-geist text-[40px] font-bold leading-tight tracking-[-0.275px] md:text-[48px] lg:text-[55px] lg:leading-[82px]"
+						class="font-geist text-[40px] leading-tight font-bold tracking-[-0.275px] md:text-[48px] lg:text-[55px] lg:leading-[82px]"
 					>
 						500k+
 					</p>
 					<p
-						class="font-geist text-base font-normal leading-relaxed tracking-[-0.09px] md:text-lg lg:leading-[27px]"
+						class="font-geist text-base leading-relaxed font-normal tracking-[-0.09px] md:text-lg lg:leading-[27px]"
 					>
 						Fresh Gradute and student trust on JobBeta
 					</p>
@@ -739,12 +739,12 @@
 					class="flex flex-col gap-[6px] text-center text-white md:flex-1 md:text-left lg:w-[225px] lg:flex-initial"
 				>
 					<p
-						class="font-geist text-[40px] font-bold leading-tight tracking-[-0.25px] md:text-[48px] lg:text-[50px] lg:leading-[82px]"
+						class="font-geist text-[40px] leading-tight font-bold tracking-[-0.25px] md:text-[48px] lg:text-[50px] lg:leading-[82px]"
 					>
 						3,000+
 					</p>
 					<div
-						class="font-geist text-base font-normal leading-relaxed tracking-[-0.09px] md:text-lg lg:leading-[27px]"
+						class="font-geist text-base leading-relaxed font-normal tracking-[-0.09px] md:text-lg lg:leading-[27px]"
 					>
 						<p class="mb-0">Hired yearly on</p>
 						<p>Jobbeta</p>
@@ -759,12 +759,12 @@
 					class="flex flex-col gap-[6px] text-center text-white md:flex-1 md:text-left lg:w-[190px] lg:flex-initial"
 				>
 					<p
-						class="font-geist text-[40px] font-bold leading-tight tracking-[-0.25px] md:text-[48px] lg:text-[50px] lg:leading-[82px]"
+						class="font-geist text-[40px] leading-tight font-bold tracking-[-0.25px] md:text-[48px] lg:text-[50px] lg:leading-[82px]"
 					>
 						80k
 					</p>
 					<div
-						class="font-geist text-base font-normal leading-relaxed tracking-[-0.09px] md:text-lg lg:leading-[27px]"
+						class="font-geist text-base leading-relaxed font-normal tracking-[-0.09px] md:text-lg lg:leading-[27px]"
 					>
 						<p class="mb-0">Employers hire</p>
 						<p>Talent onJobbeta</p>
@@ -782,7 +782,7 @@
 	>
 		<Animate variant="bottom" duration={0.8} delay={0.3}>
 			<div
-				class="font-geist text-2xl font-semibold leading-tight tracking-[-0.24px] text-black md:text-3xl md:leading-[1.3] lg:text-[48px] lg:leading-[60px]"
+				class="font-geist text-2xl leading-tight font-semibold tracking-[-0.24px] text-black md:text-3xl md:leading-[1.3] lg:text-[48px] lg:leading-[60px]"
 			>
 				<p class="mb-0">Connecting Education with</p>
 				<p>
@@ -793,10 +793,10 @@
 		</Animate>
 		<Animate variant="fade" duration={0.6} delay={0.4}>
 			<p
-				class="font-geist max-w-[900px] text-base font-normal leading-relaxed tracking-[-0.1px] text-[#62717a] md:text-lg lg:text-xl lg:leading-[30px]"
+				class="max-w-[900px] font-geist text-base leading-relaxed font-normal tracking-[-0.1px] text-[#62717a] md:text-lg lg:text-xl lg:leading-[30px]"
 			>
-				JobBeta helps students grow their careers by easily connecting them to jobs, internships, and
-				useful industry information all in one place.
+				JobBeta helps students grow their careers by easily connecting them to jobs, internships,
+				and useful industry information all in one place.
 			</p>
 		</Animate>
 	</div>
@@ -806,187 +806,192 @@
 		<!-- Row 1 -->
 		<Animate variant="bottom" duration={0.6} delay={0.5}>
 			<div class="flex flex-col justify-between gap-4 md:gap-6 lg:flex-row">
-			<!-- Smart Job Matching -->
-			<div
-				class="relative min-h-[400px] w-full overflow-hidden rounded-[16px] bg-[#eaecf0] p-6 md:min-h-[480px] md:p-8 lg:h-[538px] lg:w-[545px] lg:p-0"
-			>
-				<div class="flex flex-col gap-4 md:gap-5 lg:absolute lg:left-[37px] lg:top-[60px]">
-					<p
-						class="font-geist text-sm font-normal leading-relaxed tracking-[-0.1px] text-[#62717a] md:text-base lg:text-xl lg:leading-[30px]"
-					>
-						RESOURCES FOR CONTINUOUS GROWTH
-					</p>
-					<p
-						class="font-geist w-full text-2xl font-medium leading-tight tracking-[-0.16px] text-black md:text-3xl md:leading-[1.4] lg:w-[470px] lg:text-[32px] lg:leading-[48px]"
-					>
-						Smart Job Matching
-					</p>
-					<div
-						class="font-geist w-full text-base font-normal leading-relaxed tracking-[-0.1px] text-[#62717a] md:text-lg lg:w-[422px] lg:text-xl lg:leading-[30px]"
-					>
-						<p class="mb-0">Find roles tailored to your skills & goals.</p>
-						<p>Get automatically connected with relevant roles as they go live</p>
+				<!-- Smart Job Matching -->
+				<div
+					class="relative min-h-[400px] w-full overflow-hidden rounded-[16px] bg-[#eaecf0] p-6 md:min-h-[480px] md:p-8 lg:h-[538px] lg:w-[545px] lg:p-0"
+				>
+					<div class="flex flex-col gap-4 md:gap-5 lg:absolute lg:top-[60px] lg:left-[37px]">
+						<p
+							class="font-geist text-sm leading-relaxed font-normal tracking-[-0.1px] text-[#62717a] md:text-base lg:text-xl lg:leading-[30px]"
+						>
+							RESOURCES FOR CONTINUOUS GROWTH
+						</p>
+						<p
+							class="w-full font-geist text-2xl leading-tight font-medium tracking-[-0.16px] text-black md:text-3xl md:leading-[1.4] lg:w-[470px] lg:text-[32px] lg:leading-[48px]"
+						>
+							Smart Job Matching
+						</p>
+						<div
+							class="w-full font-geist text-base leading-relaxed font-normal tracking-[-0.1px] text-[#62717a] md:text-lg lg:w-[422px] lg:text-xl lg:leading-[30px]"
+						>
+							<p class="mb-0">Find roles tailored to your skills & goals.</p>
+							<p>Get automatically connected with relevant roles as they go live</p>
+						</div>
 					</div>
-				</div>
-				<div
-					class="mt-6 h-auto w-full md:mt-8 lg:absolute lg:left-[242px] lg:top-[242px] lg:mt-0 lg:h-[296px] lg:w-[409px]"
-				>
-					<img
-						src="/education-illustration.svg"
-						alt="Education"
-						loading="lazy"
-						class="block h-auto w-full lg:size-full lg:max-w-none"
-					/>
-				</div>
-			</div>
-
-			<!-- Career Readiness -->
-			<div
-				class="relative min-h-[400px] w-full overflow-hidden rounded-[16px] bg-[#eaecf0] p-6 md:min-h-[480px] md:p-8 lg:h-[538px] lg:w-[617px] lg:p-0"
-			>
-				<!-- Decorative Icons on Left Side - Responsive: centered on mobile, absolute on desktop -->
-				<div
-					class="mb-4 flex justify-center gap-2 md:mb-5 lg:absolute lg:left-[25px] lg:top-[109px] lg:mb-0"
-				>
-					<img
-						src="/icons/Group1321314375.svg"
-						alt=""
-						loading="lazy"
-						class="h-[30px] w-[140px] md:h-[37px] md:w-[170px] lg:h-[45px] lg:w-[209px]"
-					/>
-				</div>
-				<div
-					class="mb-4 flex justify-center gap-2 md:mb-5 lg:absolute lg:left-[25px] lg:top-[49px] lg:mb-0"
-				>
-					<img
-						src="/icons/Group1321314375.svg"
-						alt=""
-						loading="lazy"
-						class="h-[30px] w-[140px] md:h-[37px] md:w-[170px] lg:h-[45px] lg:w-[209px]"
-					/>
-				</div>
-				<div
-					class="mb-4 flex justify-center gap-2 md:mb-5 lg:absolute lg:left-[25px] lg:top-[168px] lg:mb-0"
-				>
-					<img
-						src="/icons/Group1321314375.svg"
-						alt=""
-						loading="lazy"
-						class="h-[30px] w-[140px] md:h-[37px] md:w-[170px] lg:h-[45px] lg:w-[209px]"
-					/>
-				</div>
-				<div
-					class="mb-4 flex justify-center md:mb-5 lg:absolute lg:left-[268px] lg:top-[56px] lg:mb-0"
-				>
-					<img
-						src="/icons/Group.svg"
-						alt=""
-						loading="lazy"
-						class="h-[24px] w-[24px] md:h-[28px] md:w-[28px] lg:h-[32px] lg:w-[32px]"
-					/>
+					<div
+						class="absolute right-0 bottom-0 flex h-[220px] w-[320px] items-end justify-end md:h-[280px] md:w-[380px] lg:top-[242px] lg:left-[242px] lg:h-[296px] lg:w-[409px] lg:items-start lg:justify-start"
+					>
+						<img
+							src="/education-illustration.svg"
+							alt="Education"
+							loading="lazy"
+							class="h-full w-auto object-contain lg:h-full lg:w-full"
+						/>
+					</div>
 				</div>
 
-				<!-- Profile Cards - Responsive: centered and scaled on mobile, absolute on desktop -->
+				<!-- Career Readiness -->
 				<div
-					class="relative mx-auto mb-4 h-[150px] w-[90%] max-w-[280px] overflow-hidden rounded-[8px] bg-[#7502ff] md:mb-5 md:h-[170px] md:max-w-[320px] lg:absolute lg:right-[63px] lg:top-[30px] lg:mx-0 lg:mb-0 lg:h-[203px] lg:w-[230px] lg:max-w-none"
+					class="relative min-h-[450px] w-full overflow-hidden rounded-[16px] bg-[#eaecf0] p-6 md:min-h-[500px] md:p-8 lg:h-[538px] lg:w-[617px] lg:p-0"
 				>
-					<img
-						src="/images/pattern-bg.png"
-						alt=""
-						loading="lazy"
-						class="absolute left-0 top-[-20%] h-[70%] w-full object-cover opacity-30 lg:left-[-55px] lg:top-[-34px] lg:h-[191px] lg:w-[286.57px]"
-					/>
-					<!-- Scrollbar indicator -->
+					<!-- Decorative Icons on Left Side - Scaled for mobile -->
 					<div
-						class="absolute right-[4px] top-[40px] h-[50px] w-[6px] rounded-[16px] bg-[#d9d9d9] md:right-[5px] md:top-[50px] md:h-[60px] md:w-[7px] lg:right-[6px] lg:top-[62px] lg:h-[80px] lg:w-[8px]"
-					></div>
-				</div>
-				<div
-					class="relative mx-auto mb-6 h-[150px] w-[90%] max-w-[280px] overflow-hidden rounded-[8px] bg-white md:mb-8 md:h-[170px] md:max-w-[320px] lg:absolute lg:right-[41px] lg:top-[55px] lg:mx-0 lg:mb-0 lg:h-[203px] lg:w-[230px] lg:max-w-none"
-				>
-					<p
-						class="font-geist absolute left-[15%] top-[5px] text-sm font-normal leading-tight tracking-[-0.1px] text-[#62717a] md:text-base lg:left-[50px] lg:top-[8px] lg:text-xl lg:leading-[30px]"
-					>
-						Ready for Hire
-					</p>
-					<div
-						class="absolute left-[8%] top-[35px] flex gap-2 md:gap-2.5 lg:left-[17px] lg:top-[62px] lg:gap-3"
+						class="absolute top-[40px] left-[10px] md:top-[70px] md:left-[20px] lg:top-[109px] lg:left-[25px]"
 					>
 						<img
-							src="/images/Ellipse178.png"
-							alt="Profile"
-							loading="lazy"
-							class="h-[38px] w-[38px] rounded-full object-cover md:h-[44px] md:w-[44px] lg:h-[52px] lg:w-[52px]"
-						/>
-						<img
-							src="/images/Ellipse175.png"
-							alt="Profile"
-							loading="lazy"
-							class="h-[38px] w-[38px] rounded-full object-cover md:h-[44px] md:w-[44px] lg:h-[52px] lg:w-[52px]"
-						/>
-						<img
-							src="/images/Ellipse177.png"
-							alt="Profile"
-							loading="lazy"
-							class="h-[38px] w-[38px] rounded-full object-cover md:h-[44px] md:w-[44px] lg:h-[52px] lg:w-[52px]"
-						/>
-					</div>
-					<div
-						class="absolute left-[8%] top-[82px] flex gap-2 md:gap-2.5 lg:left-[17px] lg:top-[126px] lg:gap-3"
-					>
-						<img
-							src="/images/Ellipse179.png"
-							alt="Profile"
-							loading="lazy"
-							class="h-[38px] w-[38px] rounded-full object-cover md:h-[44px] md:w-[44px] lg:h-[52px] lg:w-[52px]"
-						/>
-						<img
-							src="/images/Ellipse180.png"
-							alt="Profile"
-							loading="lazy"
-							class="h-[38px] w-[38px] rounded-full object-cover md:h-[44px] md:w-[44px] lg:h-[52px] lg:w-[52px]"
-						/>
-						<img
-							src="/images/Ellipse176.png"
-							alt="Profile"
-							loading="lazy"
-							class="h-[38px] w-[38px] rounded-full object-cover md:h-[44px] md:w-[44px] lg:h-[52px] lg:w-[52px]"
-						/>
-					</div>
-					<!-- Bottom right icon -->
-					<div
-						class="absolute bottom-[10px] right-[12px] md:bottom-[12px] md:right-[15px] lg:bottom-[15px] lg:right-[21px]"
-					>
-						<img
-							src="/icons/Group1.svg"
+							src="/icons/Group1321314375.svg"
 							alt=""
 							loading="lazy"
-							class="h-[22px] w-[22px] md:h-[26px] md:w-[26px] lg:h-[31px] lg:w-[31px]"
+							class="h-[25px] w-[120px] md:h-[35px] md:w-[160px] lg:h-[45px] lg:w-[209px]"
 						/>
 					</div>
-					<!-- Scrollbar indicator -->
 					<div
-						class="absolute right-[4px] top-[40px] h-[50px] w-[6px] rounded-[16px] bg-[#d9d9d9] md:right-[5px] md:top-[50px] md:h-[60px] md:w-[7px] lg:right-[6px] lg:top-[62px] lg:h-[80px] lg:w-[8px]"
-					></div>
+						class="absolute top-[10px] left-[10px] md:top-[30px] md:left-[20px] lg:top-[49px] lg:left-[25px]"
+					>
+						<img
+							src="/icons/Group1321314375.svg"
+							alt=""
+							loading="lazy"
+							class="h-[25px] w-[120px] md:h-[35px] md:w-[160px] lg:h-[45px] lg:w-[209px]"
+						/>
+					</div>
+					<div
+						class="absolute top-[70px] left-[10px] md:top-[110px] md:left-[20px] lg:top-[168px] lg:left-[25px]"
+					>
+						<img
+							src="/icons/Group1321314375.svg"
+							alt=""
+							loading="lazy"
+							class="h-[25px] w-[120px] md:h-[35px] md:w-[160px] lg:h-[45px] lg:w-[209px]"
+						/>
+					</div>
+					<div
+						class="absolute top-[15px] left-[140px] md:top-[35px] md:left-[200px] lg:top-[56px] lg:left-[268px]"
+					>
+						<img
+							src="/icons/Group.svg"
+							alt=""
+							loading="lazy"
+							class="h-[20px] w-[20px] md:h-[26px] md:w-[26px] lg:h-[32px] lg:w-[32px]"
+						/>
+					</div>
+
+					<!-- Profile Cards - Scaled for mobile -->
+					<div
+						class="absolute top-[10px] right-[30px] h-[140px] w-[160px] overflow-hidden rounded-[8px] bg-[#7502ff] md:top-[20px] md:right-[50px] md:h-[170px] md:w-[190px] lg:top-[30px] lg:right-[63px] lg:h-[203px] lg:w-[230px]"
+					>
+						<img
+							src="/images/pattern-bg.png"
+							alt=""
+							loading="lazy"
+							class="absolute top-[-20px] left-[-30px] h-[130px] w-[200px] object-cover opacity-30 md:top-[-28px] md:left-[-45px] md:h-[160px] md:w-[240px] lg:top-[-34px] lg:left-[-55px] lg:h-[191px] lg:w-[286.57px]"
+						/>
+						<!-- Scrollbar indicator -->
+						<div
+							class="absolute top-[40px] right-[4px] h-[50px] w-[5px] rounded-[16px] bg-[#d9d9d9] md:top-[52px] md:right-[5px] md:h-[65px] md:w-[6px] lg:top-[62px] lg:right-[6px] lg:h-[80px] lg:w-[8px]"
+						></div>
+					</div>
+					<div
+						class="absolute top-[30px] right-[10px] h-[140px] w-[160px] overflow-hidden rounded-[8px] bg-white md:top-[40px] md:right-[30px] md:h-[170px] md:w-[190px] lg:top-[55px] lg:right-[41px] lg:h-[203px] lg:w-[230px]"
+					>
+						<p
+							class="absolute top-[5px] left-[30px] font-geist text-sm leading-tight font-normal tracking-[-0.1px] text-[#62717a] md:top-[6px] md:left-[40px] md:text-base lg:top-[8px] lg:left-[50px] lg:text-xl lg:leading-[30px]"
+						>
+							Ready for Hire
+						</p>
+						<div
+							class="absolute top-[35px] left-[10px] flex gap-1.5 md:top-[48px] md:left-[14px] md:gap-2 lg:top-[62px] lg:left-[17px] lg:gap-3"
+						>
+							<img
+								src="/images/Ellipse178.png"
+								alt="Profile"
+								loading="lazy"
+								class="h-[35px] w-[35px] rounded-full object-cover md:h-[42px] md:w-[42px] lg:h-[52px] lg:w-[52px]"
+							/>
+							<img
+								src="/images/Ellipse175.png"
+								alt="Profile"
+								loading="lazy"
+								class="h-[35px] w-[35px] rounded-full object-cover md:h-[42px] md:w-[42px] lg:h-[52px] lg:w-[52px]"
+							/>
+							<img
+								src="/images/Ellipse177.png"
+								alt="Profile"
+								loading="lazy"
+								class="h-[35px] w-[35px] rounded-full object-cover md:h-[42px] md:w-[42px] lg:h-[52px] lg:w-[52px]"
+							/>
+						</div>
+						<div
+							class="absolute top-[75px] left-[10px] flex gap-1.5 md:top-[98px] md:left-[14px] md:gap-2 lg:top-[126px] lg:left-[17px] lg:gap-3"
+						>
+							<img
+								src="/images/Ellipse179.png"
+								alt="Profile"
+								loading="lazy"
+								class="h-[35px] w-[35px] rounded-full object-cover md:h-[42px] md:w-[42px] lg:h-[52px] lg:w-[52px]"
+							/>
+							<img
+								src="/images/Ellipse180.png"
+								alt="Profile"
+								loading="lazy"
+								class="h-[35px] w-[35px] rounded-full object-cover md:h-[42px] md:w-[42px] lg:h-[52px] lg:w-[52px]"
+							/>
+							<img
+								src="/images/Ellipse176.png"
+								alt="Profile"
+								loading="lazy"
+								class="h-[35px] w-[35px] rounded-full object-cover md:h-[42px] md:w-[42px] lg:h-[52px] lg:w-[52px]"
+							/>
+						</div>
+						<!-- Bottom right icon -->
+						<div
+							class="absolute right-[12px] bottom-[8px] md:right-[16px] md:bottom-[10px] lg:right-[21px] lg:bottom-[15px]"
+						>
+							<img
+								src="/icons/Group1.svg"
+								alt=""
+								loading="lazy"
+								class="h-[20px] w-[20px] md:h-[25px] md:w-[25px] lg:h-[31px] lg:w-[31px]"
+							/>
+						</div>
+						<!-- Scrollbar indicator -->
+						<div
+							class="absolute top-[40px] right-[4px] h-[50px] w-[5px] rounded-[16px] bg-[#d9d9d9] md:top-[52px] md:right-[5px] md:h-[65px] md:w-[6px] lg:top-[62px] lg:right-[6px] lg:h-[80px] lg:w-[8px]"
+						></div>
+					</div>
+
+					<!-- Text content - Positioned at bottom on mobile, absolute on desktop -->
+					<div
+						class="absolute right-6 bottom-6 left-6 flex flex-col gap-3 md:right-8 md:bottom-8 md:left-8 md:gap-4 lg:top-[314px] lg:right-auto lg:bottom-auto lg:left-[156px] lg:gap-5"
+					>
+						<p
+							class="font-geist text-xs leading-relaxed font-normal tracking-[-0.1px] text-[#62717a] md:text-sm lg:text-xl lg:leading-[30px]"
+						>
+							SKILL DEVELOPMENT PROGRAMS
+						</p>
+						<p
+							class="w-full font-geist text-xl leading-tight font-medium tracking-[-0.16px] text-black md:text-2xl md:leading-[1.4] lg:text-[32px] lg:leading-[48px]"
+						>
+							Career Readiness
+						</p>
+						<p
+							class="w-full font-geist text-sm leading-relaxed font-normal tracking-[-0.1px] text-[#62717a] md:text-base lg:w-[422px] lg:text-xl lg:leading-[30px]"
+						>
+							Resources like resume-building tools, career counseling, and skill development
+							programs.
+						</p>
+					</div>
 				</div>
-				<div class="flex flex-col gap-4 md:gap-5 lg:absolute lg:left-[156px] lg:top-[314px]">
-					<p
-						class="font-geist text-sm font-normal leading-relaxed tracking-[-0.1px] text-[#62717a] md:text-base lg:text-xl lg:leading-[30px]"
-					>
-						SKILL DEVELOPMENT PROGRAMS
-					</p>
-					<p
-						class="font-geist w-full text-2xl font-medium leading-tight tracking-[-0.16px] text-black md:text-3xl md:leading-[1.4] lg:text-[32px] lg:leading-[48px]"
-					>
-						Career Readiness
-					</p>
-					<p
-						class="font-geist w-full text-base font-normal leading-relaxed tracking-[-0.1px] text-[#62717a] md:text-lg lg:w-[422px] lg:text-xl lg:leading-[30px]"
-					>
-						Resources like resume-building tools, career counseling, and skill development programs.
-					</p>
-				</div>
-			</div>
 			</div>
 		</Animate>
 
@@ -995,143 +1000,145 @@
 			<div
 				class="relative min-h-[500px] w-full overflow-hidden rounded-[16px] bg-[#eaecf0] p-6 md:min-h-[450px] md:p-8 lg:h-[466px] lg:p-0"
 			>
-			<!-- Checklist Icon - Responsive: centered on mobile, absolute on desktop -->
-			<div
-				class="mb-4 flex justify-center md:mb-5 lg:absolute lg:left-[170px] lg:top-[96px] lg:mb-0"
-			>
-				<img
-					src="/icons/checklist-icon.svg"
-					alt="Checklist"
-					loading="lazy"
-					class="h-[71px] w-[35px] md:h-[87px] md:w-[43px] lg:h-[103px] lg:w-[51px]"
-				/>
-			</div>
-			<!-- Factory Illustration - Responsive: centered and scaled on mobile, absolute on desktop -->
-			<div class="mb-6 flex justify-center md:mb-8 lg:absolute lg:bottom-0 lg:left-[82px] lg:mb-0">
-				<img
-					src="/factory-illustration.svg"
-					alt="Factory"
-					loading="lazy"
-					class="h-auto w-full max-w-[320px] md:max-w-[400px] lg:h-[248px] lg:w-[568px] lg:max-w-none"
-				/>
-			</div>
-			<div class="flex flex-col gap-4 md:gap-5 lg:absolute lg:right-[120px] lg:top-[31px]">
-				<p
-					class="font-geist text-sm font-normal leading-relaxed tracking-[-0.1px] text-[#62717a] md:text-base lg:text-xl lg:leading-[30px]"
+				<!-- Checklist Icon - Responsive: centered on mobile, absolute on desktop -->
+				<div
+					class="mb-4 flex justify-center md:mb-5 lg:absolute lg:top-[96px] lg:left-[170px] lg:mb-0"
 				>
-					INFORMED DECISIONS
-				</p>
-				<p
-					class="font-geist w-full text-2xl font-medium leading-tight tracking-[-0.16px] text-black md:text-3xl md:leading-[1.4] lg:w-[470px] lg:text-[32px] lg:leading-[48px]"
+					<img
+						src="/icons/checklist-icon.svg"
+						alt="Checklist"
+						loading="lazy"
+						class="h-[71px] w-[35px] md:h-[87px] md:w-[43px] lg:h-[103px] lg:w-[51px]"
+					/>
+				</div>
+				<!-- Factory Illustration - Responsive: centered and scaled on mobile, absolute on desktop -->
+				<div
+					class="mb-6 flex justify-center md:mb-8 lg:absolute lg:bottom-0 lg:left-[82px] lg:mb-0"
 				>
-					Industry Insights and Exposure For Students
-				</p>
-				<p
-					class="font-geist w-full text-base font-normal leading-relaxed tracking-[-0.1px] text-[#62717a] md:text-lg lg:w-[422px] lg:text-xl lg:leading-[30px]"
+					<img
+						src="/factory-illustration.svg"
+						alt="Factory"
+						loading="lazy"
+						class="h-auto w-full max-w-[320px] md:max-w-[400px] lg:h-[248px] lg:w-[568px] lg:max-w-none"
+					/>
+				</div>
+				<div class="flex flex-col gap-4 md:gap-5 lg:absolute lg:top-[31px] lg:right-[120px]">
+					<p
+						class="font-geist text-sm leading-relaxed font-normal tracking-[-0.1px] text-[#62717a] md:text-base lg:text-xl lg:leading-[30px]"
+					>
+						INFORMED DECISIONS
+					</p>
+					<p
+						class="w-full font-geist text-2xl leading-tight font-medium tracking-[-0.16px] text-black md:text-3xl md:leading-[1.4] lg:w-[470px] lg:text-[32px] lg:leading-[48px]"
+					>
+						Industry Insights and Exposure For Students
+					</p>
+					<p
+						class="w-full font-geist text-base leading-relaxed font-normal tracking-[-0.1px] text-[#62717a] md:text-lg lg:w-[422px] lg:text-xl lg:leading-[30px]"
+					>
+						Through partnership with top companies and industry leaders, JobBeta offers insights and
+						exposure to various career path, helping students make informed decisions about their
+						future aspirations.
+					</p>
+				</div>
+				<a
+					href="/student-signup"
+					class="mt-6 flex w-full items-center justify-center gap-[10px] rounded-[20px] bg-white px-[10px] py-4 md:w-[280px] lg:absolute lg:right-[120px] lg:bottom-[15px] lg:mt-0 lg:w-[240px]"
 				>
-					Through partnership with top companies and industry leaders, JobBeta offers insights and
-					exposure to various career path, helping students make informed decisions about their
-					future aspirations.
-				</p>
-			</div>
-			<a
-				href="/student-signup"
-				class="mt-6 flex w-full items-center justify-center gap-[10px] rounded-[20px] bg-white px-[10px] py-4 md:w-[280px] lg:absolute lg:bottom-[15px] lg:right-[120px] lg:mt-0 lg:w-[240px]"
-			>
-				<p class="font-lato text-base font-bold leading-6 tracking-[-0.08px] text-[#110d21]">
-					Sign Up as a Student
-				</p>
-				<img src="/icons/Group1321314373.svg" alt="Arrow" loading="lazy" class="h-6 w-6" />
-			</a>
+					<p class="font-lato text-base leading-6 font-bold tracking-[-0.08px] text-[#110d21]">
+						Sign Up as a Student
+					</p>
+					<img src="/icons/Group1321314373.svg" alt="Arrow" loading="lazy" class="h-6 w-6" />
+				</a>
 			</div>
 		</Animate>
 
 		<!-- Row 3 -->
 		<Animate variant="right" duration={0.6} delay={0.7}>
 			<div class="flex flex-col justify-between gap-4 md:gap-6 lg:flex-row">
-			<!-- Dynamic Profiles -->
-			<div
-				class="relative min-h-[500px] w-full overflow-hidden rounded-[16px] bg-[#eaecf0] p-6 md:min-h-[520px] md:p-8 lg:h-[538px] lg:w-[545px] lg:p-0"
-			>
-				<div class="flex flex-col gap-4 md:gap-5 lg:absolute lg:left-[37px] lg:top-[60px]">
-					<p
-						class="font-geist text-sm font-normal leading-relaxed tracking-[-0.1px] text-[#62717a] md:text-base lg:text-xl lg:leading-[30px]"
-					>
-						TALENT SHOWCASE AND ASSESSMENT
-					</p>
-					<p
-						class="font-geist w-full text-2xl font-semibold leading-tight tracking-[-0.16px] text-black md:text-3xl md:leading-[1.4] lg:w-[470px] lg:text-[32px] lg:leading-[48px]"
-					>
-						Dynamic Profiles & Portfolios
-					</p>
-					<p
-						class="font-geist w-full text-base font-normal leading-relaxed tracking-[-0.1px] text-[#62717a] md:text-lg lg:w-[422px] lg:text-xl lg:leading-[30px]"
-					>
-						JobBeta offers a platform to showcase your coursework, projects, extracurricular
-						activities, and other relevant experiences to highlight your skills and potential.
-					</p>
-				</div>
-				<!-- Document Icons - Responsive -->
+				<!-- Dynamic Profiles -->
 				<div
-					class="relative mx-auto mt-8 h-[170px] w-[280px] md:mt-10 md:h-[180px] md:w-[300px] lg:absolute lg:left-[184px] lg:top-[322px] lg:mx-0 lg:mt-0 lg:h-[197px] lg:w-[323px]"
+					class="relative min-h-[500px] w-full overflow-hidden rounded-[16px] bg-[#eaecf0] p-6 md:min-h-[520px] md:p-8 lg:h-[538px] lg:w-[545px] lg:p-0"
 				>
-					<div class="absolute bottom-0 left-0 h-[95%] w-[45%] md:h-[96%] md:w-[48%]">
-						<img src="/icons/Group200.svg" alt="Document" loading="lazy" class="h-full w-full" />
+					<div class="flex flex-col gap-4 md:gap-5 lg:absolute lg:top-[60px] lg:left-[37px]">
+						<p
+							class="font-geist text-sm leading-relaxed font-normal tracking-[-0.1px] text-[#62717a] md:text-base lg:text-xl lg:leading-[30px]"
+						>
+							TALENT SHOWCASE AND ASSESSMENT
+						</p>
+						<p
+							class="w-full font-geist text-2xl leading-tight font-semibold tracking-[-0.16px] text-black md:text-3xl md:leading-[1.4] lg:w-[470px] lg:text-[32px] lg:leading-[48px]"
+						>
+							Dynamic Profiles & Portfolios
+						</p>
+						<p
+							class="w-full font-geist text-base leading-relaxed font-normal tracking-[-0.1px] text-[#62717a] md:text-lg lg:w-[422px] lg:text-xl lg:leading-[30px]"
+						>
+							JobBeta offers a platform to showcase your coursework, projects, extracurricular
+							activities, and other relevant experiences to highlight your skills and potential.
+						</p>
 					</div>
+					<!-- Document Icons - Responsive -->
 					<div
-						class="absolute bottom-0 right-0 h-[95%] w-[45%] md:h-[96%] md:w-[48%]"
-						style="transform: rotate(10deg) translateY(-5%);"
+						class="relative mx-auto mt-8 h-[170px] w-[280px] md:mt-10 md:h-[180px] md:w-[300px] lg:absolute lg:top-[322px] lg:left-[184px] lg:mx-0 lg:mt-0 lg:h-[197px] lg:w-[323px]"
 					>
-						<img src="/icons/Group198.svg" alt="Document" loading="lazy" class="h-full w-full" />
+						<div class="absolute bottom-0 left-0 h-[95%] w-[45%] md:h-[96%] md:w-[48%]">
+							<img src="/icons/Group200.svg" alt="Document" loading="lazy" class="h-full w-full" />
+						</div>
+						<div
+							class="absolute right-0 bottom-0 h-[95%] w-[45%] md:h-[96%] md:w-[48%]"
+							style="transform: rotate(10deg) translateY(-5%);"
+						>
+							<img src="/icons/Group198.svg" alt="Document" loading="lazy" class="h-full w-full" />
+						</div>
+						<div
+							class="absolute top-1/2 left-1/2 h-[60px] w-[60px] -translate-x-1/2 -translate-y-1/2 md:h-[70px] md:w-[70px]"
+						>
+							<img
+								src="/icons/Group1321314396.svg"
+								alt="Checkmark"
+								loading="lazy"
+								class="h-full w-full"
+							/>
+						</div>
 					</div>
+				</div>
+
+				<!-- Verified Opportunities -->
+				<div
+					class="relative min-h-[500px] w-full overflow-hidden rounded-[16px] bg-[#eaecf0] p-6 md:min-h-[520px] md:p-8 lg:h-[538px] lg:w-[617px] lg:p-0"
+				>
+					<!-- Complete illustration with world map, profiles, building and arrows - Responsive -->
 					<div
-						class="absolute left-1/2 top-1/2 h-[60px] w-[60px] -translate-x-1/2 -translate-y-1/2 md:h-[70px] md:w-[70px]"
+						class="mb-6 flex justify-center md:mb-8 lg:absolute lg:top-[20px] lg:left-[105px] lg:mb-0"
 					>
 						<img
-							src="/icons/Group1321314396.svg"
-							alt="Checkmark"
+							src="/icons/undraw_global-team_8jok 1.svg"
+							alt="Global Team Verified"
 							loading="lazy"
-							class="h-full w-full"
+							class="h-auto w-full max-w-[300px] md:max-w-[350px] lg:h-[266px] lg:w-[407px] lg:max-w-none"
 						/>
 					</div>
-				</div>
-			</div>
 
-			<!-- Verified Opportunities -->
-			<div
-				class="relative min-h-[500px] w-full overflow-hidden rounded-[16px] bg-[#eaecf0] p-6 md:min-h-[520px] md:p-8 lg:h-[538px] lg:w-[617px] lg:p-0"
-			>
-				<!-- Complete illustration with world map, profiles, building and arrows - Responsive -->
-				<div
-					class="mb-6 flex justify-center md:mb-8 lg:absolute lg:left-[105px] lg:top-[20px] lg:mb-0"
-				>
-					<img
-						src="/icons/undraw_global-team_8jok 1.svg"
-						alt="Global Team Verified"
-						loading="lazy"
-						class="h-auto w-full max-w-[300px] md:max-w-[350px] lg:h-[266px] lg:w-[407px] lg:max-w-none"
-					/>
+					<div class="flex flex-col gap-4 md:gap-5 lg:absolute lg:top-[314px] lg:left-[156px]">
+						<p
+							class="font-geist text-sm leading-relaxed font-normal tracking-[-0.1px] text-[#62717a] md:text-base lg:text-xl lg:leading-[30px]"
+						>
+							NO SCAMS, NO GHOSTING
+						</p>
+						<p
+							class="w-full font-geist text-2xl leading-tight font-medium tracking-[-0.16px] text-black md:text-3xl md:leading-[1.4] lg:text-[32px] lg:leading-[48px]"
+						>
+							Verified Opportunities
+						</p>
+						<p
+							class="w-full font-geist text-base leading-relaxed font-normal tracking-[-0.1px] text-[#62717a] md:text-lg lg:w-[422px] lg:text-xl lg:leading-[30px]"
+						>
+							Genuine opportunities from verified employers — no scams, no missed responses, just
+							real jobs you can trust
+						</p>
+					</div>
 				</div>
-
-				<div class="flex flex-col gap-4 md:gap-5 lg:absolute lg:left-[156px] lg:top-[314px]">
-					<p
-						class="font-geist text-sm font-normal leading-relaxed tracking-[-0.1px] text-[#62717a] md:text-base lg:text-xl lg:leading-[30px]"
-					>
-						NO SCAMS, NO GHOSTING
-					</p>
-					<p
-						class="font-geist w-full text-2xl font-medium leading-tight tracking-[-0.16px] text-black md:text-3xl md:leading-[1.4] lg:text-[32px] lg:leading-[48px]"
-					>
-						Verified Opportunities
-					</p>
-					<p
-						class="font-geist w-full text-base font-normal leading-relaxed tracking-[-0.1px] text-[#62717a] md:text-lg lg:w-[422px] lg:text-xl lg:leading-[30px]"
-					>
-						Genuine opportunities from verified employers — no scams, no missed responses, just real
-						jobs you can trust
-					</p>
-				</div>
-			</div>
 			</div>
 		</Animate>
 	</div>
@@ -1141,7 +1148,7 @@
 <section class="relative w-full overflow-hidden bg-[#7502ff] py-16 md:py-20 lg:py-24">
 	<!-- Decorative Circle Pattern -->
 	<div
-		class="pointer-events-none absolute left-0 top-0 h-[80px] w-full"
+		class="pointer-events-none absolute top-0 left-0 h-[80px] w-full"
 		style="background-image: url('/icons/decorative-circles-pattern.svg'); background-repeat: repeat-x; background-size: auto 100%; background-position: top left; transform: translateY(-15%); opacity: 0.2;"
 	></div>
 
@@ -1150,12 +1157,12 @@
 		<Animate variant="bottom" duration={0.8}>
 			<div class="mx-auto mb-8 max-w-[939px] text-center text-white md:mb-12">
 				<h2
-					class="font-geist mb-6 text-3xl font-semibold leading-tight tracking-[-0.24px] md:mb-[37px] md:text-4xl md:leading-[1.3] lg:text-[48px] lg:leading-[60px]"
+					class="mb-6 font-geist text-3xl leading-tight font-semibold tracking-[-0.24px] md:mb-[37px] md:text-4xl md:leading-[1.3] lg:text-[48px] lg:leading-[60px]"
 				>
 					Connect with top talent and opportunities—all in one place.
 				</h2>
 				<p
-					class="font-geist text-base font-normal leading-relaxed tracking-[-0.1px] md:text-lg lg:text-xl lg:leading-[30px]"
+					class="font-geist text-base leading-relaxed font-normal tracking-[-0.1px] md:text-lg lg:text-xl lg:leading-[30px]"
 				>
 					Tap into a growing network of nearly 1 million employers actively seeking early-career
 					talent students grow their careers by easily connecting them to jobs, internships, and
@@ -1171,7 +1178,7 @@
 					href="/waitlist"
 					class="flex w-full max-w-[299px] items-center justify-center gap-[10px] rounded-[20px] bg-white px-[10px] py-4"
 				>
-					<p class="font-lato text-base font-bold leading-6 tracking-[-0.08px] text-[#110d21]">
+					<p class="font-lato text-base leading-6 font-bold tracking-[-0.08px] text-[#110d21]">
 						Join Waiting list
 					</p>
 					<img src="/icons/arrow-right-alt.svg" alt="" loading="lazy" class="h-6 w-6" />
@@ -1186,20 +1193,20 @@
 				class="relative h-auto w-full overflow-hidden rounded-[16px] bg-[#eaecf0] p-6 md:p-8 lg:h-[579px] lg:w-[730px] lg:p-0"
 			>
 				<div
-					class="flex flex-col gap-4 md:gap-5 lg:absolute lg:left-[47px] lg:top-[24px] lg:w-[515px]"
+					class="flex flex-col gap-4 md:gap-5 lg:absolute lg:top-[24px] lg:left-[47px] lg:w-[515px]"
 				>
 					<p
-						class="font-geist text-sm font-normal leading-relaxed tracking-[-0.1px] text-[#62717a] md:text-base lg:text-xl lg:leading-[30px]"
+						class="font-geist text-sm leading-relaxed font-normal tracking-[-0.1px] text-[#62717a] md:text-base lg:text-xl lg:leading-[30px]"
 					>
 						CUSTOMISED JOB MATCHING
 					</p>
 					<h3
-						class="font-geist text-2xl font-medium leading-tight tracking-[-0.16px] text-black md:text-3xl md:leading-[1.4] lg:text-[32px] lg:leading-[48px]"
+						class="font-geist text-2xl leading-tight font-medium tracking-[-0.16px] text-black md:text-3xl md:leading-[1.4] lg:text-[32px] lg:leading-[48px]"
 					>
 						Facilitate Talent Matching with<br />Partner companies
 					</h3>
 					<p
-						class="font-geist w-full text-base font-normal leading-relaxed tracking-[-0.1px] text-[#62717a] md:text-lg lg:w-[503px] lg:text-xl lg:leading-[30px]"
+						class="w-full font-geist text-base leading-relaxed font-normal tracking-[-0.1px] text-[#62717a] md:text-lg lg:w-[503px] lg:text-xl lg:leading-[30px]"
 					>
 						Match talent with employers who align with their skills, passions, and potential—helping
 						both individuals and companies grow together.
@@ -1209,9 +1216,9 @@
 				<!-- Join Waiting List Button -->
 				<a
 					href="/waitlist"
-					class="mt-6 flex w-full items-center justify-center gap-[10px] rounded-[20px] bg-white px-[10px] py-4 md:mt-8 md:w-[240px] lg:absolute lg:left-[47px] lg:top-[499px] lg:mt-0"
+					class="mt-6 flex w-full items-center justify-center gap-[10px] rounded-[20px] bg-white px-[10px] py-4 md:mt-8 md:w-[240px] lg:absolute lg:top-[499px] lg:left-[47px] lg:mt-0"
 				>
-					<p class="font-lato text-base font-bold leading-6 tracking-[-0.08px] text-[#110d21]">
+					<p class="font-lato text-base leading-6 font-bold tracking-[-0.08px] text-[#110d21]">
 						Join Waiting list
 					</p>
 					<img src="/icons/arrow-right-alt.svg" alt="" loading="lazy" class="h-6 w-6" />
@@ -1219,18 +1226,18 @@
 
 				<!-- Email Mockup Card (Visible only on desktop) -->
 				<div
-					class="absolute left-[581px] top-[54px] hidden h-[522px] w-[452px] overflow-hidden rounded-[16px] bg-white lg:block"
+					class="absolute top-[54px] left-[581px] hidden h-[522px] w-[452px] overflow-hidden rounded-[16px] bg-white lg:block"
 				>
 					<!-- Window dots -->
 					<img
 						src="/icons/window-dots.svg"
 						alt=""
 						loading="lazy"
-						class="absolute left-[24px] top-[24px] h-[20px] w-[76px]"
+						class="absolute top-[24px] left-[24px] h-[20px] w-[76px]"
 					/>
 
 					<!-- Congratulations Header -->
-					<div class="absolute left-[24px] top-[86px] flex items-end gap-2">
+					<div class="absolute top-[86px] left-[24px] flex items-end gap-2">
 						<img
 							src="/images/Ellipse177.png"
 							alt="Profile"
@@ -1238,12 +1245,12 @@
 							loading="lazy"
 						/>
 						<div class="flex flex-col gap-[6px]">
-							<p class="font-geist text-xl font-bold leading-[30px] tracking-[-0.1px] text-black">
+							<p class="font-geist text-xl leading-[30px] font-bold tracking-[-0.1px] text-black">
 								Congratulations!
 							</p>
 							<div class="flex items-center gap-[6px]">
 								<p
-									class="font-geist text-base font-normal leading-6 tracking-[-0.08px] text-[#110d21]"
+									class="font-geist text-base leading-6 font-normal tracking-[-0.08px] text-[#110d21]"
 								>
 									to me
 								</p>
@@ -1254,7 +1261,7 @@
 
 					<!-- Email Body -->
 					<p
-						class="font-geist absolute left-[28px] top-[194px] w-[384px] text-base font-normal leading-6 tracking-[-0.08px] text-[#110d21]"
+						class="absolute top-[194px] left-[28px] w-[384px] font-geist text-base leading-6 font-normal tracking-[-0.08px] text-[#110d21]"
 					>
 						Your profile has been selected for the 1 year internship program with <span
 							class="font-bold">Innoham</span
@@ -1262,28 +1269,28 @@
 					</p>
 
 					<!-- Job Title -->
-					<div class="absolute left-[28px] top-[315px] flex w-[245px] flex-col gap-[9px]">
+					<div class="absolute top-[315px] left-[28px] flex w-[245px] flex-col gap-[9px]">
 						<p
-							class="font-geist text-base font-semibold leading-6 tracking-[-0.08px] text-[#110d21]"
+							class="font-geist text-base leading-6 font-semibold tracking-[-0.08px] text-[#110d21]"
 						>
 							Job Title (Internship at Innoham)
 						</p>
 						<p
-							class="font-geist text-sm font-normal leading-[21px] tracking-[-0.07px] text-[#110d21]"
+							class="font-geist text-sm leading-[21px] font-normal tracking-[-0.07px] text-[#110d21]"
 						>
 							Engineer III
 						</p>
 					</div>
 
 					<!-- Signature -->
-					<div class="absolute left-[304px] top-[444px] flex flex-col gap-[9px]">
+					<div class="absolute top-[444px] left-[304px] flex flex-col gap-[9px]">
 						<p
-							class="font-geist text-base font-semibold leading-6 tracking-[-0.08px] text-[#110d21]"
+							class="font-geist text-base leading-6 font-semibold tracking-[-0.08px] text-[#110d21]"
 						>
 							Anthony Olajire
 						</p>
 						<p
-							class="font-geist text-sm font-normal leading-[21px] tracking-[-0.07px] text-[#110d21]"
+							class="font-geist text-sm leading-[21px] font-normal tracking-[-0.07px] text-[#110d21]"
 						>
 							CTO
 						</p>
@@ -1298,20 +1305,20 @@
 					class="relative h-auto w-full overflow-hidden rounded-[16px] bg-white p-6 md:p-8 lg:h-[235px] lg:p-0"
 				>
 					<p
-						class="font-geist text-base font-normal uppercase leading-[30px] tracking-[-0.1px] text-[#110d21] md:text-lg lg:absolute lg:left-[36px] lg:top-[23px] lg:text-xl"
+						class="font-geist text-base leading-[30px] font-normal tracking-[-0.1px] text-[#110d21] uppercase md:text-lg lg:absolute lg:top-[23px] lg:left-[36px] lg:text-xl"
 					>
 						Smart Job Tracker
 					</p>
 					<p
-						class="font-geist my-4 text-3xl font-bold leading-tight tracking-[-0.24px] text-[#110d21] md:text-4xl lg:absolute lg:left-[36px] lg:top-[79px] lg:my-0 lg:text-[48px] lg:leading-[30px]"
+						class="my-4 font-geist text-3xl leading-tight font-bold tracking-[-0.24px] text-[#110d21] md:text-4xl lg:absolute lg:top-[79px] lg:left-[36px] lg:my-0 lg:text-[48px] lg:leading-[30px]"
 					>
 						10,000+
 					</p>
 
 					<!-- Recommendation badges (desktop only) -->
-					<div class="absolute left-[302px] top-[30px] hidden lg:block">
+					<div class="absolute top-[30px] left-[302px] hidden lg:block">
 						<p
-							class="font-geist text-sm font-normal leading-[21px] tracking-[-0.07px] text-[#110d21]"
+							class="font-geist text-sm leading-[21px] font-normal tracking-[-0.07px] text-[#110d21]"
 						>
 							Recommendations
 						</p>
@@ -1325,7 +1332,7 @@
 					<!-- Progress Bar -->
 					<div class="relative mt-6 lg:mt-0">
 						<!-- Progress bar background and fill -->
-						<div class="relative w-full lg:absolute lg:left-[36px] lg:top-[155px] lg:w-[425px]">
+						<div class="relative w-full lg:absolute lg:top-[155px] lg:left-[36px] lg:w-[425px]">
 							<div class="relative h-[12px] w-full rounded-[12px] bg-[#7502ff]">
 								<!-- White circle slider at 81% position -->
 								<div class="absolute top-1/2 -translate-y-1/2" style="left: 81%;">
@@ -1338,13 +1345,13 @@
 									<div class="absolute bottom-[40px] left-1/2 hidden -translate-x-1/2 lg:block">
 										<div class="relative rounded-[4px] bg-[#110d21] px-[10px] py-[3px]">
 											<p
-												class="font-geist text-sm font-normal leading-[21px] tracking-[-0.07px] text-white"
+												class="font-geist text-sm leading-[21px] font-normal tracking-[-0.07px] text-white"
 											>
 												81
 											</p>
 											<!-- Tooltip arrow -->
 											<div
-												class="absolute -bottom-[6px] left-1/2 h-0 w-0 -translate-x-1/2 border-l-[6px] border-r-[6px] border-t-[6px] border-l-transparent border-r-transparent border-t-[#110d21]"
+												class="absolute -bottom-[6px] left-1/2 h-0 w-0 -translate-x-1/2 border-t-[6px] border-r-[6px] border-l-[6px] border-t-[#110d21] border-r-transparent border-l-transparent"
 											></div>
 										</div>
 									</div>
@@ -1352,15 +1359,15 @@
 							</div>
 						</div>
 						<div
-							class="mt-2 flex justify-between lg:absolute lg:left-[36px] lg:top-[182px] lg:w-[425px]"
+							class="mt-2 flex justify-between lg:absolute lg:top-[182px] lg:left-[36px] lg:w-[425px]"
 						>
 							<p
-								class="font-geist text-base font-normal leading-6 tracking-[-0.08px] text-[#110d21]"
+								class="font-geist text-base leading-6 font-normal tracking-[-0.08px] text-[#110d21]"
 							>
 								0%
 							</p>
 							<p
-								class="font-geist text-base font-normal leading-6 tracking-[-0.08px] text-[#110d21]"
+								class="font-geist text-base leading-6 font-normal tracking-[-0.08px] text-[#110d21]"
 							>
 								100%
 							</p>
@@ -1405,7 +1412,7 @@
 									class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-[#7502ff] bg-white"
 								>
 									<p
-										class="font-geist text-sm font-semibold leading-[21px] tracking-[-0.07px] text-[#7502ff]"
+										class="font-geist text-sm leading-[21px] font-semibold tracking-[-0.07px] text-[#7502ff]"
 									>
 										+20
 									</p>
@@ -1414,7 +1421,7 @@
 							<div class="flex items-center gap-[6px]">
 								<img src="/icons/message-icon.svg" alt="" loading="lazy" class="h-6 w-6" />
 								<p
-									class="font-geist text-sm font-semibold leading-[21px] tracking-[-0.07px] text-[#62717a]"
+									class="font-geist text-sm leading-[21px] font-semibold tracking-[-0.07px] text-[#62717a]"
 								>
 									5
 								</p>
@@ -1425,9 +1432,9 @@
 						<div
 							class="relative h-auto w-full overflow-hidden rounded-[16px] bg-white p-6 lg:h-[226px] lg:p-0"
 						>
-							<div class="mb-3 lg:absolute lg:left-[17px] lg:top-[17px] lg:mb-0">
+							<div class="mb-3 lg:absolute lg:top-[17px] lg:left-[17px] lg:mb-0">
 								<p
-									class="font-geist text-base font-medium uppercase leading-6 tracking-[-0.08px] text-[#110d21]"
+									class="font-geist text-base leading-6 font-medium tracking-[-0.08px] text-[#110d21] uppercase"
 								>
 									Placement Growth<br />2024
 								</p>
@@ -1435,7 +1442,7 @@
 
 							<!-- Chart and Month Labels Container -->
 							<div
-								class="flex w-full flex-col items-center gap-[6px] lg:absolute lg:left-[23px] lg:top-[23px] lg:w-[283px]"
+								class="flex w-full flex-col items-center gap-[6px] lg:absolute lg:top-[23px] lg:left-[23px] lg:w-[283px]"
 							>
 								<!-- Bar Chart - Using Grid for exact positioning (Desktop) / Flex for Mobile -->
 								<div
@@ -1474,7 +1481,7 @@
 
 								<!-- Month labels -->
 								<div
-									class="font-geist flex items-center gap-[37px] text-sm font-normal leading-[21px] tracking-[-0.07px] text-[#110d21]"
+									class="flex items-center gap-[37px] font-geist text-sm leading-[21px] font-normal tracking-[-0.07px] text-[#110d21]"
 								>
 									<p>Jan</p>
 									<p>Feb</p>
@@ -1490,31 +1497,31 @@
 					<div
 						class="relative h-auto w-full flex-1 overflow-hidden rounded-[16px] bg-white p-6 lg:h-[328px] lg:w-[210px] lg:p-0"
 					>
-						<div class="mb-4 flex gap-[10px] lg:absolute lg:left-[24px] lg:top-[20px] lg:mb-0">
+						<div class="mb-4 flex gap-[10px] lg:absolute lg:top-[20px] lg:left-[24px] lg:mb-0">
 							<div class="h-4 w-4 rounded-[20px] bg-[#eaecf0]"></div>
 							<div class="h-4 w-4 rounded-[50px] bg-[#eaecf0]"></div>
 							<div class="h-4 w-4 rounded-[50px] bg-[#eaecf0]"></div>
 						</div>
 
-						<div class="flex flex-col gap-3 lg:absolute lg:left-[24px] lg:top-[65px]">
+						<div class="flex flex-col gap-3 lg:absolute lg:top-[65px] lg:left-[24px]">
 							<p
-								class="font-geist text-sm font-normal leading-[21px] tracking-[-0.07px] text-black"
+								class="font-geist text-sm leading-[21px] font-normal tracking-[-0.07px] text-black"
 							>
 								Talent Assessment
 							</p>
 							<p
-								class="font-geist text-sm font-semibold leading-[21px] tracking-[-0.07px] text-black"
+								class="font-geist text-sm leading-[21px] font-semibold tracking-[-0.07px] text-black"
 							>
 								Talent Certification
 							</p>
 							<p
-								class="font-geist text-sm font-normal leading-[21px] tracking-[-0.07px] text-black"
+								class="font-geist text-sm leading-[21px] font-normal tracking-[-0.07px] text-black"
 							>
 								Interview scheduling
 							</p>
 						</div>
 
-						<div class="mt-4 space-y-2 lg:absolute lg:left-[22px] lg:top-[165px] lg:mt-0">
+						<div class="mt-4 space-y-2 lg:absolute lg:top-[165px] lg:left-[22px] lg:mt-0">
 							<div class="h-[12px] w-[108px] rounded-[12px] bg-[rgba(234,236,240,0.82)]"></div>
 							<div class="flex gap-2">
 								<div class="h-[12px] w-[96px] rounded-[12px] bg-[rgba(234,236,240,0.82)]"></div>
@@ -1544,7 +1551,7 @@
 <section class="relative w-full overflow-hidden bg-white py-12 md:py-16 lg:py-24">
 	<!-- Decorative Background (Top Right) -->
 	<div
-		class="pointer-events-none absolute right-0 top-0 h-[400px] w-[400px] opacity-40 md:h-[500px] md:w-[500px] lg:h-[600px] lg:w-[600px]"
+		class="pointer-events-none absolute top-0 right-0 h-[400px] w-[400px] opacity-40 md:h-[500px] md:w-[500px] lg:h-[600px] lg:w-[600px]"
 	>
 		<img src="/icons/Join-careers.svg" alt="" loading="lazy" class="h-full w-full object-contain" />
 	</div>
@@ -1553,12 +1560,12 @@
 		<!-- Header Content -->
 		<div class="relative z-10 mb-12 flex flex-col gap-6 text-center md:mb-16 md:gap-8 lg:mb-20">
 			<h2
-				class="font-geist mx-auto max-w-[900px] text-3xl font-bold leading-tight tracking-[-0.24px] text-black md:text-4xl md:leading-[1.3] lg:text-[48px] lg:leading-[60px]"
+				class="mx-auto max-w-[900px] font-geist text-3xl leading-tight font-bold tracking-[-0.24px] text-black md:text-4xl md:leading-[1.3] lg:text-[48px] lg:leading-[60px]"
 			>
 				Join Career Events that connect you to opportunities.
 			</h2>
 			<p
-				class="font-geist mx-auto max-w-[850px] text-base font-normal leading-relaxed tracking-[-0.1px] text-[#62717a] md:text-lg lg:text-xl lg:leading-[30px]"
+				class="mx-auto max-w-[850px] font-geist text-base leading-relaxed font-normal tracking-[-0.1px] text-[#62717a] md:text-lg lg:text-xl lg:leading-[30px]"
 			>
 				Discover meaningful opportunities tailored to your goals, build valuable professional
 				connections with industry leaders and peers, and gain the tools and insights you need to
@@ -1569,7 +1576,7 @@
 					href="/events"
 					class="flex w-full items-center justify-center rounded-[20px] bg-[#110d21] px-6 py-4 md:w-auto"
 				>
-					<p class="font-lato text-base font-bold leading-6 tracking-[-0.08px] text-white">
+					<p class="font-lato text-base leading-6 font-bold tracking-[-0.08px] text-white">
 						Learn More about JobBeta
 					</p>
 				</a>
@@ -1587,24 +1594,24 @@
 						<div class="grid h-full grid-cols-1 lg:grid-cols-2">
 							<!-- Left Content -->
 							<div
-								class="flex flex-col justify-center p-6 md:p-8 lg:py-12 lg:pl-14 lg:pr-6 xl:py-16 xl:pl-16 xl:pr-8"
+								class="order-2 flex flex-col justify-center p-6 md:p-8 lg:order-1 lg:py-12 lg:pr-6 lg:pl-14 xl:py-16 xl:pr-8 xl:pl-16"
 							>
 								<!-- Workshop Badge -->
 								<div class="mb-4">
-									<p class="font-geist text-sm font-semibold uppercase tracking-wide text-black">
+									<p class="font-geist text-sm font-semibold tracking-wide text-black uppercase">
 										WORKSHOP
 									</p>
 								</div>
 
 								<!-- Event Title -->
 								<h3
-									class="font-geist mb-4 text-xl font-bold leading-tight text-black md:text-xl lg:text-2xl lg:leading-[1.2]"
+									class="mb-4 font-geist text-xl leading-tight font-bold text-black md:text-xl lg:text-2xl lg:leading-[1.2]"
 								>
 									Resume Workshop: Land Your Dream Job
 								</h3>
 
 								<!-- Event Description -->
-								<p class="font-geist mb-6 text-base font-normal leading-relaxed text-[#4a4a4a]">
+								<p class="mb-6 font-geist text-base leading-relaxed font-normal text-[#4a4a4a]">
 									Land Your Dream Job is a hands-on session where you'll learn how to craft a
 									powerful, results-driven resume that highlights your strengths, aligns with
 									employer expectations, and gets past automated screening systems—giving you a
@@ -1612,7 +1619,7 @@
 								</p>
 
 								<!-- Event Details -->
-								<div class="mb-6 flex flex-col gap-3">
+								<div class="mb-6 flex flex-row flex-wrap gap-x-4 gap-y-2 lg:flex-col lg:gap-3">
 									<!-- Location -->
 									<div class="flex items-center gap-3">
 										<svg
@@ -1627,7 +1634,7 @@
 												fill="black"
 											/>
 										</svg>
-										<p class="font-geist text-base font-normal leading-6 text-black">
+										<p class="font-geist text-base leading-6 font-normal text-black">
 											Virtual Event
 										</p>
 									</div>
@@ -1649,7 +1656,7 @@
 												stroke-linejoin="round"
 											/>
 										</svg>
-										<p class="font-geist text-base font-normal leading-6 text-black">
+										<p class="font-geist text-base leading-6 font-normal text-black">
 											85 attendees
 										</p>
 									</div>
@@ -1676,7 +1683,7 @@
 												stroke-linejoin="round"
 											/>
 										</svg>
-										<p class="font-geist text-base font-normal leading-6 text-black">
+										<p class="font-geist text-base leading-6 font-normal text-black">
 											9:00 Am - 3:00 Pm
 										</p>
 									</div>
@@ -1706,7 +1713,7 @@
 												stroke-linecap="round"
 											/>
 										</svg>
-										<p class="font-geist text-base font-normal leading-6 text-black">
+										<p class="font-geist text-base leading-6 font-normal text-black">
 											April 2,2025
 										</p>
 									</div>
@@ -1730,29 +1737,29 @@
 												stroke-linejoin="round"
 											/>
 										</svg>
-										<p class="font-geist text-base font-semibold leading-6 text-black">
+										<p class="font-geist text-base leading-6 font-semibold text-black">
 											Featured Companies:
 										</p>
 									</div>
 									<div class="flex flex-wrap gap-2">
 										<span
-											class="font-geist rounded-lg bg-[#f5f5f5] px-5 py-2 text-sm font-medium text-black"
+											class="rounded-lg bg-[#f5f5f5] px-5 py-2 font-geist text-sm font-medium text-black"
 											>Google</span
 										>
 										<span
-											class="font-geist rounded-lg bg-[#f5f5f5] px-5 py-2 text-sm font-medium text-black"
+											class="rounded-lg bg-[#f5f5f5] px-5 py-2 font-geist text-sm font-medium text-black"
 											>IBM</span
 										>
 										<span
-											class="font-geist rounded-lg bg-[#f5f5f5] px-5 py-2 text-sm font-medium text-black"
+											class="rounded-lg bg-[#f5f5f5] px-5 py-2 font-geist text-sm font-medium text-black"
 											>Salesforce</span
 										>
 										<span
-											class="font-geist rounded-lg bg-[#f5f5f5] px-5 py-2 text-sm font-medium text-black"
+											class="rounded-lg bg-[#f5f5f5] px-5 py-2 font-geist text-sm font-medium text-black"
 											>Adobe</span
 										>
 										<span
-											class="font-geist rounded-lg bg-[#f5f5f5] px-5 py-2 text-sm font-medium text-black"
+											class="rounded-lg bg-[#f5f5f5] px-5 py-2 font-geist text-sm font-medium text-black"
 											>+1 More</span
 										>
 									</div>
@@ -1760,7 +1767,7 @@
 							</div>
 
 							<!-- Right Image -->
-							<div class="h-[400px] lg:h-full">
+							<div class="order-1 h-[300px] md:h-[400px] lg:order-2 lg:h-full">
 								<img
 									src="/images/event-image%2060.png"
 									alt="Workshop participants"
@@ -1779,28 +1786,28 @@
 						<div class="grid h-full grid-cols-1 lg:grid-cols-2">
 							<!-- Left Content -->
 							<div
-								class="relative flex-1 p-8 md:p-10 lg:p-12"
+								class="relative order-2 flex-1 p-8 md:p-10 lg:order-1 lg:p-12"
 								style="background-image: url('/images/outline_flat_seamless_arabic_geometric_ornament_pattern 2.png'); background-size: cover; background-position: 50%; background-repeat: no-repeat; background-color: #3F018A;"
 							>
 								<!-- Workshop Badge -->
 								<div
 									class="mb-6 inline-flex items-center rounded-full border border-white/30 px-4 py-2"
 								>
-									<p class="font-geist text-sm font-medium uppercase tracking-wide text-white">
+									<p class="font-geist text-sm font-medium tracking-wide text-white uppercase">
 										WORKSHOP
 									</p>
 								</div>
 
 								<!-- Event Title -->
 								<h3
-									class="font-geist mb-6 text-xl font-bold leading-tight text-white md:text-xl lg:text-2xl lg:leading-[1.2]"
+									class="mb-6 font-geist text-xl leading-tight font-bold text-white md:text-xl lg:text-2xl lg:leading-[1.2]"
 								>
 									Interview Mastery Bootcamp
 								</h3>
 
 								<!-- Event Description -->
 								<p
-									class="font-geist mb-8 max-w-[500px] text-base font-normal leading-relaxed tracking-[-0.09px] text-white/80 md:text-lg lg:leading-[27px]"
+									class="mb-8 max-w-[500px] font-geist text-base leading-relaxed font-normal tracking-[-0.09px] text-white/80 md:text-lg lg:leading-[27px]"
 								>
 									The Interview Mastery Bootcamp is designed to equip you with practical techniques,
 									expert insights, and personalized guidance to help you navigate every stage of the
@@ -1809,7 +1816,7 @@
 								</p>
 
 								<!-- Event Details -->
-								<div class="mb-8 flex flex-col gap-4">
+								<div class="mb-8 flex flex-row flex-wrap gap-x-4 gap-y-2 lg:flex-col lg:gap-4">
 									<!-- Location -->
 									<div class="flex items-center gap-3">
 										<svg
@@ -1825,7 +1832,7 @@
 											/>
 										</svg>
 										<p
-											class="font-geist text-base font-normal leading-6 tracking-[-0.08px] text-white"
+											class="font-geist text-base leading-6 font-normal tracking-[-0.08px] text-white"
 										>
 											learning center, lead city campus
 										</p>
@@ -1849,7 +1856,7 @@
 											/>
 										</svg>
 										<p
-											class="font-geist text-base font-normal leading-6 tracking-[-0.08px] text-white"
+											class="font-geist text-base leading-6 font-normal tracking-[-0.08px] text-white"
 										>
 											1085 Registered
 										</p>
@@ -1878,7 +1885,7 @@
 											/>
 										</svg>
 										<p
-											class="font-geist text-base font-normal leading-6 tracking-[-0.08px] text-white"
+											class="font-geist text-base leading-6 font-normal tracking-[-0.08px] text-white"
 										>
 											9:00 Am - 3:00 Pm
 										</p>
@@ -1906,7 +1913,7 @@
 											/>
 										</svg>
 										<p
-											class="font-geist text-base font-normal leading-6 tracking-[-0.08px] text-white"
+											class="font-geist text-base leading-6 font-normal tracking-[-0.08px] text-white"
 										>
 											Jan 12,2025
 										</p>
@@ -1932,30 +1939,30 @@
 											/>
 										</svg>
 										<p
-											class="font-geist text-base font-normal leading-6 tracking-[-0.08px] text-white"
+											class="font-geist text-base leading-6 font-normal tracking-[-0.08px] text-white"
 										>
 											Featured Companies:
 										</p>
 									</div>
 									<div class="flex flex-wrap gap-2">
 										<span
-											class="font-geist rounded-full bg-white px-4 py-2 text-sm font-medium text-[#110d21]"
+											class="rounded-full bg-white px-4 py-2 font-geist text-sm font-medium text-[#110d21]"
 											>Google</span
 										>
 										<span
-											class="font-geist rounded-full bg-white px-4 py-2 text-sm font-medium text-[#110d21]"
+											class="rounded-full bg-white px-4 py-2 font-geist text-sm font-medium text-[#110d21]"
 											>Apple</span
 										>
 										<span
-											class="font-geist rounded-full bg-white px-4 py-2 text-sm font-medium text-[#110d21]"
+											class="rounded-full bg-white px-4 py-2 font-geist text-sm font-medium text-[#110d21]"
 											>Paystack</span
 										>
 										<span
-											class="font-geist rounded-full bg-white px-4 py-2 text-sm font-medium text-[#110d21]"
+											class="rounded-full bg-white px-4 py-2 font-geist text-sm font-medium text-[#110d21]"
 											>Adobe</span
 										>
 										<span
-											class="font-geist rounded-full bg-white px-4 py-2 text-sm font-medium text-[#110d21]"
+											class="rounded-full bg-white px-4 py-2 font-geist text-sm font-medium text-[#110d21]"
 											>+5 More</span
 										>
 									</div>
@@ -1963,7 +1970,7 @@
 							</div>
 
 							<!-- Right Image -->
-							<div class="h-[400px] lg:h-full">
+							<div class="order-1 h-[300px] md:h-[400px] lg:order-2 lg:h-full">
 								<img
 									src="/images/image 61.png"
 									alt="Interview bootcamp participants"
@@ -1981,7 +1988,7 @@
 					>
 						<div class="grid h-full grid-cols-1 lg:grid-cols-2">
 							<!-- Left Image -->
-							<div class="h-[400px] lg:h-full">
+							<div class="h-[300px] md:h-[400px] lg:h-full">
 								<img
 									src="/images/third-slide.png"
 									alt="Tech career fair"
@@ -1995,21 +2002,21 @@
 								<div
 									class="mb-6 inline-flex items-center rounded-full border border-white/30 px-4 py-2"
 								>
-									<p class="font-geist text-sm font-medium uppercase tracking-wide text-white">
+									<p class="font-geist text-sm font-medium tracking-wide text-white uppercase">
 										CAREER FAIR
 									</p>
 								</div>
 
 								<!-- Event Title -->
 								<h3
-									class="font-geist mb-6 text-xl font-bold leading-tight text-white md:text-xl lg:text-2xl lg:leading-[1.2]"
+									class="mb-6 font-geist text-xl leading-tight font-bold text-white md:text-xl lg:text-2xl lg:leading-[1.2]"
 								>
 									Tech Career Fair 2025
 								</h3>
 
 								<!-- Event Description -->
 								<p
-									class="font-geist mb-8 max-w-[500px] text-base font-normal leading-relaxed tracking-[-0.09px] text-white/80 md:text-lg lg:leading-[27px]"
+									class="mb-8 max-w-[500px] font-geist text-base leading-relaxed font-normal tracking-[-0.09px] text-white/80 md:text-lg lg:leading-[27px]"
 								>
 									Connect with top tech employers, discover exciting job and internship
 									opportunities, and gain insights from industry leaders—all in one dynamic event
@@ -2017,7 +2024,7 @@
 								</p>
 
 								<!-- Event Details -->
-								<div class="mb-8 flex flex-col gap-4">
+								<div class="mb-8 flex flex-row flex-wrap gap-x-4 gap-y-2 lg:flex-col lg:gap-4">
 									<!-- Location -->
 									<div class="flex items-center gap-3">
 										<svg
@@ -2033,7 +2040,7 @@
 											/>
 										</svg>
 										<p
-											class="font-geist text-base font-normal leading-6 tracking-[-0.08px] text-white"
+											class="font-geist text-base leading-6 font-normal tracking-[-0.08px] text-white"
 										>
 											Virtual Event
 										</p>
@@ -2057,7 +2064,7 @@
 											/>
 										</svg>
 										<p
-											class="font-geist text-base font-normal leading-6 tracking-[-0.08px] text-white"
+											class="font-geist text-base leading-6 font-normal tracking-[-0.08px] text-white"
 										>
 											2005 attendees
 										</p>
@@ -2086,7 +2093,7 @@
 											/>
 										</svg>
 										<p
-											class="font-geist text-base font-normal leading-6 tracking-[-0.08px] text-white"
+											class="font-geist text-base leading-6 font-normal tracking-[-0.08px] text-white"
 										>
 											9:00 Am - 3:00 Pm
 										</p>
@@ -2114,7 +2121,7 @@
 											/>
 										</svg>
 										<p
-											class="font-geist text-base font-normal leading-6 tracking-[-0.08px] text-white"
+											class="font-geist text-base leading-6 font-normal tracking-[-0.08px] text-white"
 										>
 											April 2,2025
 										</p>
@@ -2140,30 +2147,30 @@
 											/>
 										</svg>
 										<p
-											class="font-geist text-base font-normal leading-6 tracking-[-0.08px] text-white"
+											class="font-geist text-base leading-6 font-normal tracking-[-0.08px] text-white"
 										>
 											Featured Companies:
 										</p>
 									</div>
 									<div class="flex flex-wrap gap-2">
 										<span
-											class="font-geist rounded-full bg-white px-4 py-2 text-sm font-medium text-[#110d21]"
+											class="rounded-full bg-white px-4 py-2 font-geist text-sm font-medium text-[#110d21]"
 											>Google</span
 										>
 										<span
-											class="font-geist rounded-full bg-white px-4 py-2 text-sm font-medium text-[#110d21]"
+											class="rounded-full bg-white px-4 py-2 font-geist text-sm font-medium text-[#110d21]"
 											>IBM</span
 										>
 										<span
-											class="font-geist rounded-full bg-white px-4 py-2 text-sm font-medium text-[#110d21]"
+											class="rounded-full bg-white px-4 py-2 font-geist text-sm font-medium text-[#110d21]"
 											>Salesforce</span
 										>
 										<span
-											class="font-geist rounded-full bg-white px-4 py-2 text-sm font-medium text-[#110d21]"
+											class="rounded-full bg-white px-4 py-2 font-geist text-sm font-medium text-[#110d21]"
 											>Adobe</span
 										>
 										<span
-											class="font-geist rounded-full bg-white px-4 py-2 text-sm font-medium text-[#110d21]"
+											class="rounded-full bg-white px-4 py-2 font-geist text-sm font-medium text-[#110d21]"
 											>+15 More</span
 										>
 									</div>
@@ -2191,12 +2198,12 @@
 			</div>
 
 			<h2
-				class="font-geist text-3xl font-bold leading-tight tracking-[-0.24px] text-white md:text-4xl md:leading-[1.3] lg:text-[48px] lg:leading-[60px]"
+				class="font-geist text-3xl leading-tight font-bold tracking-[-0.24px] text-white md:text-4xl md:leading-[1.3] lg:text-[48px] lg:leading-[60px]"
 			>
 				Kick start your career!
 			</h2>
 			<p
-				class="font-geist mx-auto max-w-[800px] text-base font-normal leading-relaxed tracking-[-0.1px] text-white/90 md:text-lg lg:text-xl lg:leading-[30px]"
+				class="mx-auto max-w-[800px] font-geist text-base leading-relaxed font-normal tracking-[-0.1px] text-white/90 md:text-lg lg:text-xl lg:leading-[30px]"
 			>
 				Stand out to top employers, access curated opportunities, and showcase your skills on a
 				platform built to help you get noticed and hired faster.
@@ -2209,10 +2216,10 @@
 				<input
 					type="email"
 					placeholder="Enter your email"
-					class="font-geist w-full rounded-[12px] border-none px-6 py-4 text-base text-[#110d21] placeholder:text-[#62717a] sm:flex-1"
+					class="w-full rounded-[12px] border-none px-6 py-4 font-geist text-base text-[#110d21] placeholder:text-[#62717a] sm:flex-1"
 				/>
 				<button
-					class="font-lato w-full rounded-[12px] bg-white px-8 py-4 text-base font-bold text-[#110d21] sm:w-auto"
+					class="w-full rounded-[12px] bg-white px-8 py-4 font-lato text-base font-bold text-[#110d21] sm:w-auto"
 				>
 					Sign Up
 				</button>
@@ -2229,7 +2236,7 @@
 				</div>
 
 				<p
-					class="font-geist text-center text-sm font-normal leading-relaxed text-[#110d21] md:text-base"
+					class="text-center font-geist text-sm leading-relaxed font-normal text-[#110d21] md:text-base"
 				>
 					JobBeta empowers students by providing a comprehensive platform that seamlessly connects
 					students with employment opportunities, valuable internships, and insightful industry
@@ -2237,7 +2244,7 @@
 				</p>
 
 				<button
-					class="font-lato mt-auto flex items-center justify-center gap-2 rounded-[16px] bg-[#7502ff] px-8 py-4 text-base font-bold text-white"
+					class="mt-auto flex items-center justify-center gap-2 rounded-[16px] bg-[#7502ff] px-8 py-4 font-lato text-base font-bold text-white"
 				>
 					Learn More
 					<svg
@@ -2267,7 +2274,7 @@
 						<div class="relative flex-shrink-0">
 							<img src="/images/Ellipse177.png" alt="Jane Osteen" class="h-12 w-12 rounded-full" />
 							<div
-								class="absolute -bottom-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-blue-500"
+								class="absolute -right-1 -bottom-1 flex h-5 w-5 items-center justify-center rounded-full bg-blue-500"
 							>
 								<svg
 									width="12"
@@ -2289,7 +2296,7 @@
 						<div class="flex-1">
 							<div class="mb-2 flex items-start justify-between">
 								<div>
-									<p class="font-geist text-base font-semibold leading-tight text-[#110d21]">
+									<p class="font-geist text-base leading-tight font-semibold text-[#110d21]">
 										Jane Osteen
 									</p>
 									<p class="font-geist text-sm leading-tight text-[#62717a]">Fresh Graduate</p>
@@ -2321,7 +2328,7 @@
 						<div class="relative flex-shrink-0">
 							<img src="/images/Ellipse178.png" alt="Abraham Jude" class="h-12 w-12 rounded-full" />
 							<div
-								class="absolute -bottom-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-blue-500"
+								class="absolute -right-1 -bottom-1 flex h-5 w-5 items-center justify-center rounded-full bg-blue-500"
 							>
 								<svg
 									width="12"
@@ -2343,7 +2350,7 @@
 						<div class="flex-1">
 							<div class="mb-2 flex items-start justify-between">
 								<div>
-									<p class="font-geist text-base font-semibold leading-tight text-[#110d21]">
+									<p class="font-geist text-base leading-tight font-semibold text-[#110d21]">
 										Abraham Jude
 									</p>
 									<p class="font-geist text-sm leading-tight text-[#62717a]">
@@ -2381,7 +2388,7 @@
 								class="h-12 w-12 rounded-full"
 							/>
 							<div
-								class="absolute -bottom-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-blue-500"
+								class="absolute -right-1 -bottom-1 flex h-5 w-5 items-center justify-center rounded-full bg-blue-500"
 							>
 								<svg
 									width="12"
@@ -2403,7 +2410,7 @@
 						<div class="flex-1">
 							<div class="mb-2 flex items-start justify-between">
 								<div>
-									<p class="font-geist text-base font-semibold leading-tight text-[#110d21]">
+									<p class="font-geist text-base leading-tight font-semibold text-[#110d21]">
 										Rachel obaloluwa
 									</p>
 									<p class="font-geist text-sm leading-tight text-[#62717a]">
@@ -2435,7 +2442,7 @@
 
 				<!-- Event Button -->
 				<button
-					class="font-geist rounded-[12px] bg-[#7502ff] px-6 py-3 text-sm font-semibold text-white"
+					class="rounded-[12px] bg-[#7502ff] px-6 py-3 font-geist text-sm font-semibold text-white"
 				>
 					Ongoing Events
 				</button>
@@ -2457,14 +2464,14 @@
 
 					<!-- Stats Line -->
 					<div class="flex items-baseline gap-2">
-						<span class="font-geist text-6xl font-bold leading-none text-[#110d21]">5000+</span>
+						<span class="font-geist text-6xl leading-none font-bold text-[#110d21]">5000+</span>
 						<span class="font-geist text-base font-normal text-[#110d21]"
 							>Students and fresh Graduates</span
 						>
 					</div>
 
 					<!-- Description -->
-					<p class="font-geist text-base font-normal leading-[1.6] text-[#110d21]">
+					<p class="font-geist text-base leading-[1.6] font-normal text-[#110d21]">
 						We connect skilled individuals with the right employers by understanding their
 						strengths, aspirations, and career goals—ensuring a perfect match for long-term success.
 					</p>
@@ -2487,22 +2494,22 @@
 <section class="job-section relative w-full overflow-hidden bg-[#1a1a2e] py-12 md:py-16 lg:py-24">
 	<!-- Decorative SVG - Upper Left Corner -->
 	<div
-		class="pointer-events-none absolute left-0 top-0 h-[150px] w-[150px] scale-x-[-1] opacity-40 md:h-[200px] md:w-[200px] lg:h-[250px] lg:w-[250px]"
+		class="pointer-events-none absolute top-0 left-0 h-[150px] w-[150px] scale-x-[-1] opacity-40 md:h-[200px] md:w-[200px] lg:h-[250px] lg:w-[250px]"
 	>
 		<img src="/icons/Group 1321314400.svg" alt="" class="h-full w-full object-contain" />
 	</div>
 
 	<!-- Decorative SVG - Upper Right Corner -->
 	<div
-		class="pointer-events-none absolute right-0 top-0 h-[150px] w-[150px] opacity-40 md:h-[200px] md:w-[200px] lg:h-[250px] lg:w-[250px]"
+		class="pointer-events-none absolute top-0 right-0 h-[150px] w-[150px] opacity-40 md:h-[200px] md:w-[200px] lg:h-[250px] lg:w-[250px]"
 	>
 		<img src="/icons/Group 1321314400.svg" alt="" class="h-full w-full object-contain" />
 	</div>
 
-	<div class="page-container relative z-10 w-full">
+	<div class=" relative z-10 w-full">
 		<!-- Header -->
 		<h2
-			class="font-geist mb-12 text-center text-3xl font-bold leading-tight text-white md:mb-16 md:text-4xl lg:text-5xl"
+			class="mb-12 text-center font-geist text-3xl leading-tight font-bold text-white md:mb-16 md:text-4xl lg:text-5xl"
 		>
 			Curated job and internship<br class="hidden md:block" /> opportunities tailored to your goals.
 		</h2>
@@ -2518,17 +2525,17 @@
 						<div class="flex items-start gap-2">
 							<div class="h-9 w-9 flex-shrink-0 rounded-full bg-gray-200"></div>
 							<div class="min-w-0 flex-1">
-								<h3 class="font-geist line-clamp-2 text-sm font-bold leading-tight text-[#110d21]">
+								<h3 class="line-clamp-2 font-geist text-sm leading-tight font-bold text-[#110d21]">
 									{card.title}
 								</h3>
-								<p class="font-geist mt-1 text-xs text-[#62717a]">{card.category}</p>
+								<p class="mt-1 font-geist text-xs text-[#62717a]">{card.category}</p>
 							</div>
 						</div>
 						<div class="flex flex-wrap gap-2">
-							<span class="font-geist rounded-full bg-[#F5F5F5] px-2 py-1 text-xs text-[#110d21]"
+							<span class="rounded-full bg-[#F5F5F5] px-2 py-1 font-geist text-xs text-[#110d21]"
 								>{card.jobType}</span
 							>
-							<span class="font-geist rounded-full bg-[#F5F5F5] px-2 py-1 text-xs text-[#110d21]"
+							<span class="rounded-full bg-[#F5F5F5] px-2 py-1 font-geist text-xs text-[#110d21]"
 								>{card.location}</span
 							>
 						</div>
@@ -2546,17 +2553,17 @@
 						<div class="flex items-start gap-2">
 							<div class="h-9 w-9 flex-shrink-0 rounded-full bg-gray-200"></div>
 							<div class="min-w-0 flex-1">
-								<h3 class="font-geist line-clamp-2 text-sm font-bold leading-tight text-[#110d21]">
+								<h3 class="line-clamp-2 font-geist text-sm leading-tight font-bold text-[#110d21]">
 									{card.title}
 								</h3>
-								<p class="font-geist mt-1 text-xs text-[#62717a]">{card.category}</p>
+								<p class="mt-1 font-geist text-xs text-[#62717a]">{card.category}</p>
 							</div>
 						</div>
 						<div class="flex flex-wrap gap-2">
-							<span class="font-geist rounded-full bg-[#F5F5F5] px-2 py-1 text-xs text-[#110d21]"
+							<span class="rounded-full bg-[#F5F5F5] px-2 py-1 font-geist text-xs text-[#110d21]"
 								>{card.jobType}</span
 							>
-							<span class="font-geist rounded-full bg-[#F5F5F5] px-2 py-1 text-xs text-[#110d21]"
+							<span class="rounded-full bg-[#F5F5F5] px-2 py-1 font-geist text-xs text-[#110d21]"
 								>{card.location}</span
 							>
 						</div>
@@ -2574,17 +2581,17 @@
 						<div class="flex items-start gap-2">
 							<div class="h-9 w-9 flex-shrink-0 rounded-full bg-gray-200"></div>
 							<div class="min-w-0 flex-1">
-								<h3 class="font-geist line-clamp-2 text-sm font-bold leading-tight text-[#110d21]">
+								<h3 class="line-clamp-2 font-geist text-sm leading-tight font-bold text-[#110d21]">
 									{card.title}
 								</h3>
-								<p class="font-geist mt-1 text-xs text-[#62717a]">{card.category}</p>
+								<p class="mt-1 font-geist text-xs text-[#62717a]">{card.category}</p>
 							</div>
 						</div>
 						<div class="flex flex-wrap gap-2">
-							<span class="font-geist rounded-full bg-[#F5F5F5] px-2 py-1 text-xs text-[#110d21]"
+							<span class="rounded-full bg-[#F5F5F5] px-2 py-1 font-geist text-xs text-[#110d21]"
 								>{card.jobType}</span
 							>
-							<span class="font-geist rounded-full bg-[#F5F5F5] px-2 py-1 text-xs text-[#110d21]"
+							<span class="rounded-full bg-[#F5F5F5] px-2 py-1 font-geist text-xs text-[#110d21]"
 								>{card.location}</span
 							>
 						</div>
@@ -2605,7 +2612,7 @@
 		>
 			<!-- Heading -->
 			<h2
-				class="font-geist max-w-3xl flex-1 text-3xl font-semibold leading-tight tracking-[-0.24px] text-black md:text-4xl md:leading-[61px] lg:text-[48px]"
+				class="max-w-3xl flex-1 font-geist text-3xl leading-tight font-semibold tracking-[-0.24px] text-black md:text-4xl md:leading-[61px] lg:text-[48px]"
 			>
 				Empower your Career with cutting-edge Process.
 			</h2>
@@ -2617,7 +2624,7 @@
 				<button
 					onclick={() => (activeTab = 'employer')}
 					class="{activeTab === 'employer'
-						? 'font-lato bg-[#7502ff] font-bold text-white'
+						? 'bg-[#7502ff] font-lato font-bold text-white'
 						: 'font-geist text-[#110d21]'} flex-1 cursor-pointer px-4 py-3 text-sm transition-colors md:w-[180px] md:flex-none md:px-10 md:py-4 md:text-base"
 				>
 					Employer
@@ -2625,7 +2632,7 @@
 				<button
 					onclick={() => (activeTab = 'jobseeker')}
 					class="{activeTab === 'jobseeker'
-						? 'font-lato bg-[#7502ff] font-bold text-white'
+						? 'bg-[#7502ff] font-lato font-bold text-white'
 						: 'font-geist text-[#110d21]'} flex-1 cursor-pointer px-4 py-3 text-sm transition-colors md:w-[180px] md:flex-none md:px-10 md:py-4 md:text-base"
 				>
 					Jobseeker
@@ -2651,7 +2658,7 @@
 					class="tab-content relative flex flex-col items-start gap-8 md:flex-row md:gap-6 lg:gap-8"
 				>
 					<!-- Connecting Lines - Absolutely positioned, hidden on mobile -->
-					<div class="pointer-events-none absolute left-0 right-0 top-[35px] z-0 hidden md:block">
+					<div class="pointer-events-none absolute top-[35px] right-0 left-0 z-0 hidden md:block">
 						<!-- Line 1-2 -->
 						<svg
 							class="absolute left-[18%] h-auto w-[14%]"
@@ -2712,7 +2719,7 @@
 							</div>
 							<div class="flex flex-col gap-4">
 								<h3
-									class="font-geist text-xl font-semibold leading-[30px] tracking-[-0.1px] text-black"
+									class="font-geist text-xl leading-[30px] font-semibold tracking-[-0.1px] text-black"
 								>
 									{step.title}
 								</h3>
@@ -2743,7 +2750,7 @@
 		<!-- Heading -->
 		<Animate variant="bottom" duration={0.8}>
 			<h2
-				class="font-geist mx-auto mb-8 max-w-[760px] text-center text-3xl font-bold leading-tight tracking-[-0.24px] text-white md:mb-10 md:text-4xl md:leading-[54px] lg:text-[48px]"
+				class="mx-auto mb-8 max-w-[760px] text-center font-geist text-3xl leading-tight font-bold tracking-[-0.24px] text-white md:mb-10 md:text-4xl md:leading-[54px] lg:text-[48px]"
 			>
 				Don't Just Take Our Word — Take Theirs
 			</h2>
@@ -2752,7 +2759,7 @@
 		<!-- Subheading -->
 		<Animate variant="fade" duration={0.6} delay={0.2}>
 			<p
-				class="font-geist mb-8 text-center text-lg leading-[30px] tracking-[-0.1px] text-[rgba(255,255,255,0.9)] md:mb-10 md:text-xl"
+				class="mb-8 text-center font-geist text-lg leading-[30px] tracking-[-0.1px] text-[rgba(255,255,255,0.9)] md:mb-10 md:text-xl"
 			>
 				See how our client's success proves the value we deliver.
 			</p>
@@ -2761,44 +2768,44 @@
 		<!-- Avatar Row with Join Text -->
 		<Animate variant="scale" duration={0.5} delay={0.3}>
 			<div class="mb-12 flex items-center justify-center gap-3 md:mb-16">
-			<!-- Overlapping Avatars -->
-			<div class="relative flex items-center" style="width: 231px; height: 50px;">
-				<img
-					src="/images/Ellipse177.png"
-					alt=""
-					class="absolute left-0 h-[50px] w-[50px] rounded-full object-cover"
-				/>
-				<img
-					src="/images/Ellipse178.png"
-					alt=""
-					class="absolute left-[36px] h-[50px] w-[50px] rounded-full object-cover"
-				/>
-				<img
-					src="/images/Ellipse179.png"
-					alt=""
-					class="absolute left-[75px] h-[50px] w-[50px] rounded-full object-cover"
-				/>
-				<img
-					src="/images/Ellipse180.png"
-					alt=""
-					class="absolute left-[106px] h-[50px] w-[50px] rounded-full object-cover"
-				/>
-				<img
-					src="/images/Ellipse176.png"
-					alt=""
-					class="absolute left-[146px] h-[50px] w-[50px] rounded-full object-cover"
-				/>
-				<img
-					src="/images/Ellipse175.png"
-					alt=""
-					class="absolute left-[181px] h-[50px] w-[50px] rounded-full object-cover"
-				/>
-			</div>
-			<p
-				class="font-geist text-center text-base font-medium leading-6 tracking-[-0.08px] text-white"
-			>
-				Join 10,000+ other loving customers
-			</p>
+				<!-- Overlapping Avatars -->
+				<div class="relative flex items-center" style="width: 231px; height: 50px;">
+					<img
+						src="/images/Ellipse177.png"
+						alt=""
+						class="absolute left-0 h-[50px] w-[50px] rounded-full object-cover"
+					/>
+					<img
+						src="/images/Ellipse178.png"
+						alt=""
+						class="absolute left-[36px] h-[50px] w-[50px] rounded-full object-cover"
+					/>
+					<img
+						src="/images/Ellipse179.png"
+						alt=""
+						class="absolute left-[75px] h-[50px] w-[50px] rounded-full object-cover"
+					/>
+					<img
+						src="/images/Ellipse180.png"
+						alt=""
+						class="absolute left-[106px] h-[50px] w-[50px] rounded-full object-cover"
+					/>
+					<img
+						src="/images/Ellipse176.png"
+						alt=""
+						class="absolute left-[146px] h-[50px] w-[50px] rounded-full object-cover"
+					/>
+					<img
+						src="/images/Ellipse175.png"
+						alt=""
+						class="absolute left-[181px] h-[50px] w-[50px] rounded-full object-cover"
+					/>
+				</div>
+				<p
+					class="text-center font-geist text-base leading-6 font-medium tracking-[-0.08px] text-white"
+				>
+					Join 10,000+ other loving customers
+				</p>
 			</div>
 		</Animate>
 
@@ -2806,7 +2813,7 @@
 		<div class="relative mx-auto max-w-5xl">
 			<!-- Custom Navigation -->
 			<div
-				class="pointer-events-none absolute left-0 right-0 top-1/2 z-20 hidden -translate-y-1/2 justify-between lg:flex"
+				class="pointer-events-none absolute top-1/2 right-0 left-0 z-20 hidden -translate-y-1/2 justify-between lg:flex"
 				style="width: calc(100% + 296px); left: -148px;"
 			>
 				<button
@@ -2836,11 +2843,65 @@
 					<swiper-slide>
 						<!-- Testimonial Card -->
 						<div
-							class="relative min-h-[446px] w-full max-w-[878px] overflow-hidden rounded-2xl border border-[#eaecf0] bg-white"
+							class="relative min-h-[320px] w-full max-w-[878px] overflow-hidden rounded-2xl border border-[#eaecf0] bg-white md:min-h-[380px] lg:min-h-[446px]"
 						>
-							<div class="flex h-full flex-col lg:flex-row">
+							<!-- Mobile Layout: User info left, categories right, testimonial below -->
+							<div class="flex flex-col p-5 lg:hidden">
+								<!-- Top row: User info + Categories -->
+								<div class="flex items-start justify-between gap-3">
+									<!-- User Info (left) -->
+									<div class="flex items-center gap-2">
+										<img
+											src={t.avatar}
+											alt={t.name}
+											class="h-[36px] w-[36px] rounded-full object-cover"
+										/>
+										<div>
+											<p
+												class="font-geist text-sm leading-5 font-bold tracking-[-0.1px] text-[#110d21]"
+											>
+												{t.name}
+											</p>
+											<p class="font-geist text-xs leading-4 tracking-[-0.07px] text-black">
+												{t.role}
+											</p>
+										</div>
+									</div>
+
+									<!-- Categories (right) -->
+									<div class="flex flex-wrap justify-end gap-1.5">
+										{#each t.categories.slice(0, 2) as category}
+											<div class="rounded-full bg-[#f8f3ff] px-2.5 py-1">
+												<p class="font-geist text-xs tracking-[-0.08px] text-[#110d21]">
+													{category}
+												</p>
+											</div>
+										{/each}
+									</div>
+								</div>
+
+								<!-- Rating -->
+								<div class="mt-3 flex items-center gap-1">
+									{#each Array(t.rating) as _}
+										<img src="/icons/star-4.svg" alt="Star" class="h-4 w-4" />
+									{/each}
+								</div>
+
+								<!-- Testimonial (full width below) -->
+								<p class="mt-4 font-geist text-sm leading-6 tracking-[-0.1px] text-[#434d52]">
+									{t.testimonial}
+								</p>
+
+								<!-- Company logo -->
+								<div class="mt-4 h-5 w-24">
+									<img src={t.logo} alt={t.company} class="h-full w-full object-contain" />
+								</div>
+							</div>
+
+							<!-- Desktop Layout: Original two-column -->
+							<div class="hidden h-full lg:flex lg:flex-row">
 								<!-- Left Side -->
-								<div class="flex flex-col gap-5 p-8 lg:w-[322px] lg:p-12">
+								<div class="flex flex-col gap-5 p-12 lg:w-[322px]">
 									<div class="h-7 w-32">
 										<img src={t.logo} alt={t.company} class="h-full w-full object-contain" />
 									</div>
@@ -2857,7 +2918,7 @@
 								</div>
 
 								<!-- Right Side -->
-								<div class="flex-1 border-t border-[#eaecf0] p-8 lg:border-l lg:border-t-0 lg:p-12">
+								<div class="flex-1 border-l border-[#eaecf0] p-12">
 									<div class="flex flex-col gap-7">
 										<div class="flex flex-row items-start justify-start gap-[107px]">
 											<!-- User Info -->
@@ -2869,7 +2930,7 @@
 												/>
 												<div>
 													<p
-														class="font-geist text-xl font-bold leading-[30px] tracking-[-0.1px] text-[#110d21]"
+														class="font-geist text-xl leading-[30px] font-bold tracking-[-0.1px] text-[#110d21]"
 													>
 														{t.name}
 													</p>
@@ -2889,9 +2950,7 @@
 											</div>
 										</div>
 
-										<p
-											class="font-geist text-lg leading-[30px] tracking-[-0.1px] text-[#434d52] md:text-xl"
-										>
+										<p class="font-geist text-xl leading-[30px] tracking-[-0.1px] text-[#434d52]">
 											{t.testimonial}
 										</p>
 									</div>
@@ -2922,9 +2981,9 @@
 <!-- Career Journey Section -->
 <section class="relative w-full overflow-hidden bg-white py-16 md:py-20 lg:py-24">
 	<!-- Decorative circles pattern in background -->
-	<div class="pointer-events-none absolute right-0 top-0 h-full w-full overflow-hidden">
+	<div class="pointer-events-none absolute top-0 right-0 h-full w-full overflow-hidden">
 		<!-- Top right nested circles -->
-		<div class="absolute -right-40 -top-32 opacity-40">
+		<div class="absolute -top-32 -right-40 opacity-40">
 			<svg
 				width="558"
 				height="558"
@@ -2963,7 +3022,7 @@
 		<!-- Heading -->
 		<div class="mb-12 max-w-3xl md:mb-16">
 			<h2
-				class="font-geist mb-4 text-3xl font-semibold leading-tight text-black md:mb-6 md:text-4xl lg:text-5xl"
+				class="mb-4 font-geist text-3xl leading-tight font-semibold text-black md:mb-6 md:text-4xl lg:text-5xl"
 			>
 				Your Career Journey Begins,<br />
 				Let's create magic together
@@ -2978,7 +3037,7 @@
 		<div class="mb-12 flex flex-wrap gap-4 md:mb-16">
 			<button
 				onclick={() => (careerTab = 'student')}
-				class="font-geist rounded-full px-6 py-3 text-sm font-medium transition-all duration-300 md:px-8 md:py-4 md:text-base {careerTab ===
+				class="rounded-full px-6 py-3 font-geist text-sm font-medium transition-all duration-300 md:px-8 md:py-4 md:text-base {careerTab ===
 				'student'
 					? 'bg-[#7502ff] text-white shadow-lg'
 					: 'bg-gray-100 text-[#110d21] hover:bg-gray-200'}"
@@ -2987,7 +3046,7 @@
 			</button>
 			<button
 				onclick={() => (careerTab = 'career')}
-				class="font-geist rounded-full px-6 py-3 text-sm font-medium transition-all duration-300 md:px-8 md:py-4 md:text-base {careerTab ===
+				class="rounded-full px-6 py-3 font-geist text-sm font-medium transition-all duration-300 md:px-8 md:py-4 md:text-base {careerTab ===
 				'career'
 					? 'bg-[#7502ff] text-white shadow-lg'
 					: 'bg-gray-100 text-[#110d21] hover:bg-gray-200'}"
@@ -2996,7 +3055,7 @@
 			</button>
 			<button
 				onclick={() => (careerTab = 'employer')}
-				class="font-geist rounded-full px-6 py-3 text-sm font-medium transition-all duration-300 md:px-8 md:py-4 md:text-base {careerTab ===
+				class="rounded-full px-6 py-3 font-geist text-sm font-medium transition-all duration-300 md:px-8 md:py-4 md:text-base {careerTab ===
 				'employer'
 					? 'bg-[#7502ff] text-white shadow-lg'
 					: 'bg-gray-100 text-[#110d21] hover:bg-gray-200'}"
@@ -3018,17 +3077,17 @@
 							<!-- Decorative elements (behind) -->
 							<!-- Purple box at top right -->
 							<div
-								class="absolute right-[30px] top-[37px] z-0 h-[60px] w-[102px] rounded-lg bg-[#7502ff] md:right-[58px]"
+								class="absolute top-[37px] right-[30px] z-0 h-[60px] w-[102px] rounded-lg bg-[#7502ff] md:right-[58px]"
 							></div>
 							<!-- Black box at bottom left of form area -->
 							<div
-								class="absolute left-[30px] top-[510px] z-0 h-[60px] w-[102px] rounded-lg bg-[#110d21] md:left-[466px]"
+								class="absolute top-[510px] left-[30px] z-0 h-[60px] w-[102px] rounded-lg bg-[#110d21] md:left-[466px]"
 							></div>
 
 							<!-- Content wrapper -->
 							<div class="relative z-10 flex flex-col gap-8 p-6 md:p-8 lg:flex-row lg:p-0">
 								<!-- Left: Image -->
-								<div class="relative w-full lg:absolute lg:left-[52px] lg:top-[26px] lg:w-[380px]">
+								<div class="relative w-full lg:absolute lg:top-[26px] lg:left-[52px] lg:w-[380px]">
 									<div
 										class="relative h-[400px] w-full overflow-hidden rounded-2xl md:h-[500px] lg:h-[544px]"
 									>
@@ -3042,33 +3101,33 @@
 										<div
 											class="absolute bottom-8 left-1/2 w-72 -translate-x-1/2 rounded-xl bg-white px-4 py-3 text-center shadow-lg"
 										>
-											<p class="font-geist mb-1 text-sm text-[#2a2c2c]">Cloud Engineer</p>
+											<p class="mb-1 font-geist text-sm text-[#2a2c2c]">Cloud Engineer</p>
 											<p class="font-geist text-base font-bold text-black">Afolasade Williams</p>
 										</div>
 									</div>
 								</div>
 
 								<!-- Right: Signup Form -->
-								<div class="relative w-full lg:absolute lg:left-[495px] lg:top-[53px] lg:w-[360px]">
+								<div class="relative w-full lg:absolute lg:top-[53px] lg:left-[495px] lg:w-[360px]">
 									<div
 										class="overflow-hidden rounded-2xl border border-[#eaecf0] bg-white shadow-xl"
 										style="height: 502px;"
 									>
 										<div class="p-6 lg:p-[26px_19px]">
-											<h3 class="font-geist mb-6 px-2 text-2xl font-bold text-black lg:mb-8">
+											<h3 class="mb-6 px-2 font-geist text-2xl font-bold text-black lg:mb-8">
 												Sign Up for Free
 											</h3>
 
-											<form class="space-y-[10px] px-2">
+											<form class="pointer-events-none space-y-[10px] px-2 opacity-50">
 												<!-- Full Name -->
 												<div class="relative">
 													<input
 														type="text"
 														placeholder="Enter Full name"
-														class="font-geist w-full rounded-2xl border border-[#eaecf0] bg-white px-3 py-3 text-base font-semibold text-[#110d21] transition-all placeholder:text-[#110d21] focus:border-transparent focus:outline-none focus:ring-2 focus:ring-[#7502ff]"
+														class="w-full rounded-2xl border border-[#eaecf0] bg-white px-3 py-3 font-geist text-base font-semibold text-[#110d21] transition-all placeholder:text-[#110d21] focus:border-transparent focus:ring-2 focus:ring-[#7502ff] focus:outline-none"
 													/>
 													<svg
-														class="absolute right-3 top-1/2 h-6 w-6 -translate-y-1/2"
+														class="absolute top-1/2 right-3 h-6 w-6 -translate-y-1/2"
 														fill="none"
 														stroke="currentColor"
 														viewBox="0 0 24 24"
@@ -3087,10 +3146,10 @@
 													<input
 														type="email"
 														placeholder="Enter Email Address"
-														class="font-geist w-full rounded-2xl border border-[#eaecf0] bg-white px-3 py-3 text-base font-semibold text-[#110d21] transition-all placeholder:text-[#110d21] focus:border-transparent focus:outline-none focus:ring-2 focus:ring-[#7502ff]"
+														class="w-full rounded-2xl border border-[#eaecf0] bg-white px-3 py-3 font-geist text-base font-semibold text-[#110d21] transition-all placeholder:text-[#110d21] focus:border-transparent focus:ring-2 focus:ring-[#7502ff] focus:outline-none"
 													/>
 													<svg
-														class="absolute right-3 top-1/2 h-6 w-6 -translate-y-1/2"
+														class="absolute top-1/2 right-3 h-6 w-6 -translate-y-1/2"
 														fill="none"
 														stroke="currentColor"
 														viewBox="0 0 24 24"
@@ -3107,7 +3166,7 @@
 												<!-- Career Interest -->
 												<div class="relative">
 													<select
-														class="font-geist w-full appearance-none rounded-2xl border border-[#eaecf0] bg-white px-3 py-3 text-base font-semibold text-[#110d21] transition-all focus:border-transparent focus:outline-none focus:ring-2 focus:ring-[#7502ff]"
+														class="w-full appearance-none rounded-2xl border border-[#eaecf0] bg-white px-3 py-3 font-geist text-base font-semibold text-[#110d21] transition-all focus:border-transparent focus:ring-2 focus:ring-[#7502ff] focus:outline-none"
 													>
 														<option>Enter Career interest</option>
 														<option>Technology</option>
@@ -3117,7 +3176,7 @@
 														<option>Marketing</option>
 													</select>
 													<svg
-														class="pointer-events-none absolute right-3 top-1/2 h-6 w-6 -translate-y-1/2"
+														class="pointer-events-none absolute top-1/2 right-3 h-6 w-6 -translate-y-1/2"
 														fill="none"
 														stroke="currentColor"
 														viewBox="0 0 24 24"
@@ -3134,7 +3193,7 @@
 												<!-- Create Account Button -->
 												<button
 													type="submit"
-													class="font-lato w-full rounded-[20px] bg-[#7502ff] py-4 text-base font-bold text-white transition-all hover:bg-[#6502dd]"
+													class="w-full rounded-[20px] bg-[#7502ff] py-4 font-lato text-base font-bold text-white transition-all hover:bg-[#6502dd]"
 												>
 													Create Account
 												</button>
@@ -3142,7 +3201,7 @@
 												<!-- Social Login Buttons -->
 												<button
 													type="button"
-													class="font-lato flex w-full items-center justify-center gap-3 rounded-[20px] bg-[rgba(234,236,240,0.62)] py-4 text-base font-bold text-[#62717a] transition-all hover:bg-[rgba(234,236,240,0.8)]"
+													class="flex w-full items-center justify-center gap-3 rounded-[20px] bg-[rgba(234,236,240,0.62)] py-4 font-lato text-base font-bold text-[#62717a] transition-all hover:bg-[rgba(234,236,240,0.8)]"
 												>
 													<svg class="h-6 w-6" viewBox="0 0 24 24">
 														<path
@@ -3167,7 +3226,7 @@
 
 												<button
 													type="button"
-													class="font-lato flex w-full items-center justify-center gap-3 rounded-[20px] bg-[rgba(234,236,240,0.62)] py-4 text-base font-bold text-[#62717a] transition-all hover:bg-[rgba(234,236,240,0.8)]"
+													class="flex w-full items-center justify-center gap-3 rounded-[20px] bg-[rgba(234,236,240,0.62)] py-4 font-lato text-base font-bold text-[#62717a] transition-all hover:bg-[rgba(234,236,240,0.8)]"
 												>
 													<svg class="h-6 w-6" viewBox="0 0 24 24" fill="#0077B5">
 														<path
@@ -3206,8 +3265,8 @@
 										/>
 									</svg>
 								</div>
-								<h3 class="font-geist mb-3 text-xl font-bold text-black">Resume Builder</h3>
-								<p class="font-geist mb-4 text-base text-[#62717a]">
+								<h3 class="mb-3 font-geist text-xl font-bold text-black">Resume Builder</h3>
+								<p class="mb-4 font-geist text-base text-[#62717a]">
 									Create a professional resume with our easy-to-use templates and expert tips.
 								</p>
 								<button class="font-geist text-sm font-semibold text-[#7502ff] hover:underline"
@@ -3235,8 +3294,8 @@
 										/>
 									</svg>
 								</div>
-								<h3 class="font-geist mb-3 text-xl font-bold text-black">Career Guides</h3>
-								<p class="font-geist mb-4 text-base text-[#62717a]">
+								<h3 class="mb-3 font-geist text-xl font-bold text-black">Career Guides</h3>
+								<p class="mb-4 font-geist text-base text-[#62717a]">
 									Access comprehensive guides on job search, interviews, and career development.
 								</p>
 								<button class="font-geist text-sm font-semibold text-[#7502ff] hover:underline"
@@ -3264,8 +3323,8 @@
 										/>
 									</svg>
 								</div>
-								<h3 class="font-geist mb-3 text-xl font-bold text-black">Job Opportunities</h3>
-								<p class="font-geist mb-4 text-base text-[#62717a]">
+								<h3 class="mb-3 font-geist text-xl font-bold text-black">Job Opportunities</h3>
+								<p class="mb-4 font-geist text-base text-[#62717a]">
 									Browse thousands of job openings across various industries and experience levels.
 								</p>
 								<button class="font-geist text-sm font-semibold text-[#7502ff] hover:underline"
@@ -3283,24 +3342,24 @@
 								>
 									<!-- Purple decorative corner -->
 									<div
-										class="absolute right-0 top-0 h-16 w-24 rounded-bl-[36px] bg-[#110d21]"
+										class="absolute top-0 right-0 h-16 w-24 rounded-bl-[36px] bg-[#110d21]"
 									></div>
 									<h3
-										class="font-geist relative z-10 mb-8 text-2xl font-bold text-black md:text-3xl"
+										class="relative z-10 mb-8 font-geist text-2xl font-bold text-black md:text-3xl"
 									>
 										Register Your Company
 									</h3>
 
-									<form class="space-y-6">
+									<form class="pointer-events-none space-y-6 opacity-50">
 										<!-- Company Name -->
 										<div class="relative">
 											<input
 												type="text"
 												placeholder="Company Name"
-												class="font-geist w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-4 text-base transition-all focus:border-transparent focus:outline-none focus:ring-2 focus:ring-[#110d21]"
+												class="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-4 font-geist text-base transition-all focus:border-transparent focus:ring-2 focus:ring-[#110d21] focus:outline-none"
 											/>
 											<svg
-												class="absolute right-4 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400"
+												class="absolute top-1/2 right-4 h-5 w-5 -translate-y-1/2 text-gray-400"
 												fill="none"
 												stroke="currentColor"
 												viewBox="0 0 24 24"
@@ -3319,10 +3378,10 @@
 											<input
 												type="email"
 												placeholder="Company Email Address"
-												class="font-geist w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-4 text-base transition-all focus:border-transparent focus:outline-none focus:ring-2 focus:ring-[#110d21]"
+												class="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-4 font-geist text-base transition-all focus:border-transparent focus:ring-2 focus:ring-[#110d21] focus:outline-none"
 											/>
 											<svg
-												class="absolute right-4 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400"
+												class="absolute top-1/2 right-4 h-5 w-5 -translate-y-1/2 text-gray-400"
 												fill="none"
 												stroke="currentColor"
 												viewBox="0 0 24 24"
@@ -3339,7 +3398,7 @@
 										<!-- Industry -->
 										<div class="relative">
 											<select
-												class="font-geist w-full appearance-none rounded-xl border border-gray-200 bg-gray-50 px-4 py-4 text-base text-gray-700 transition-all focus:border-transparent focus:outline-none focus:ring-2 focus:ring-[#110d21]"
+												class="w-full appearance-none rounded-xl border border-gray-200 bg-gray-50 px-4 py-4 font-geist text-base text-gray-700 transition-all focus:border-transparent focus:ring-2 focus:ring-[#110d21] focus:outline-none"
 											>
 												<option>Select Industry</option>
 												<option>Technology</option>
@@ -3351,7 +3410,7 @@
 												<option>Other</option>
 											</select>
 											<svg
-												class="pointer-events-none absolute right-4 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400"
+												class="pointer-events-none absolute top-1/2 right-4 h-5 w-5 -translate-y-1/2 text-gray-400"
 												fill="none"
 												stroke="currentColor"
 												viewBox="0 0 24 24"
@@ -3368,7 +3427,7 @@
 										<!-- Create Account Button -->
 										<button
 											type="submit"
-											class="font-geist w-full rounded-xl bg-[#110d21] py-4 text-base font-bold text-white shadow-lg transition-all hover:bg-black hover:shadow-xl"
+											class="w-full rounded-xl bg-[#110d21] py-4 font-geist text-base font-bold text-white shadow-lg transition-all hover:bg-black hover:shadow-xl"
 										>
 											Register Company
 										</button>
@@ -3383,7 +3442,7 @@
 										<!-- Social Login Buttons -->
 										<button
 											type="button"
-											class="font-geist flex w-full items-center justify-center gap-3 rounded-xl border border-gray-200 bg-white py-4 text-base font-medium text-gray-700 transition-all hover:bg-gray-50"
+											class="flex w-full items-center justify-center gap-3 rounded-xl border border-gray-200 bg-white py-4 font-geist text-base font-medium text-gray-700 transition-all hover:bg-gray-50"
 										>
 											<svg class="h-5 w-5" viewBox="0 0 24 24">
 												<path
@@ -3408,7 +3467,7 @@
 
 										<button
 											type="button"
-											class="font-geist flex w-full items-center justify-center gap-3 rounded-xl border border-gray-200 bg-white py-4 text-base font-medium text-gray-700 transition-all hover:bg-gray-50"
+											class="flex w-full items-center justify-center gap-3 rounded-xl border border-gray-200 bg-white py-4 font-geist text-base font-medium text-gray-700 transition-all hover:bg-gray-50"
 										>
 											<svg class="h-5 w-5" fill="#0A66C2" viewBox="0 0 24 24">
 												<path
@@ -3445,7 +3504,7 @@
 												</svg>
 											</div>
 											<div>
-												<h4 class="font-geist mb-1 text-lg font-semibold text-black">
+												<h4 class="mb-1 font-geist text-lg font-semibold text-black">
 													Access Qualified Talent
 												</h4>
 												<p class="font-geist text-base text-[#62717a]">
@@ -3467,7 +3526,7 @@
 												</svg>
 											</div>
 											<div>
-												<h4 class="font-geist mb-1 text-lg font-semibold text-black">
+												<h4 class="mb-1 font-geist text-lg font-semibold text-black">
 													Streamlined Hiring Process
 												</h4>
 												<p class="font-geist text-base text-[#62717a]">
@@ -3489,7 +3548,7 @@
 												</svg>
 											</div>
 											<div>
-												<h4 class="font-geist mb-1 text-lg font-semibold text-black">
+												<h4 class="mb-1 font-geist text-lg font-semibold text-black">
 													Dedicated Support
 												</h4>
 												<p class="font-geist text-base text-[#62717a]">
@@ -3513,10 +3572,10 @@
 	<div class="page-container relative">
 		<!-- Heading -->
 		<div class="mb-8 text-center md:mb-12">
-			<h2 class="font-geist mb-4 text-3xl font-bold text-white md:mb-6 md:text-4xl lg:text-5xl">
+			<h2 class="mb-4 font-geist text-3xl font-bold text-white md:mb-6 md:text-4xl lg:text-5xl">
 				A few things you may want to ask us
 			</h2>
-			<p class="font-geist mx-auto max-w-3xl text-base text-white md:text-lg lg:text-xl">
+			<p class="mx-auto max-w-3xl font-geist text-base text-white md:text-lg lg:text-xl">
 				Need more clarification?. Pleases reach dont hesitate to reach out.
 			</p>
 		</div>
@@ -3524,14 +3583,14 @@
 		<!-- Tab Buttons -->
 		<div class="mb-12 flex items-center justify-center md:mb-16">
 			<div
-				class="inline-flex flex-wrap items-center gap-[18px] rounded-2xl border border-white p-4"
+				class="inline-flex flex-wrap items-center justify-center gap-2 rounded-2xl border border-white p-3 md:gap-[18px] md:p-4"
 			>
 				<button
 					onclick={() => {
 						faqTab = 'employer';
 						openAccordion = null;
 					}}
-					class=" font-geist flex w-52 items-center justify-center gap-[10px] rounded-lg px-[10px] py-[16px] text-base font-bold transition-all duration-300 {faqTab ===
+					class="flex w-auto min-w-[100px] items-center justify-center gap-2 rounded-lg px-4 py-3 font-geist text-sm font-bold transition-all duration-300 md:w-52 md:gap-[10px] md:px-[10px] md:py-[16px] md:text-base {faqTab ===
 					'employer'
 						? 'bg-[#eaecf0] text-[#110d21]'
 						: 'border border-[rgba(255,255,255,0.2)] text-white hover:bg-[rgba(255,255,255,0.1)]'}"
@@ -3548,7 +3607,7 @@
 						faqTab = 'student';
 						openAccordion = null;
 					}}
-					class="font-geist flex w-52 items-center justify-center gap-[10px] rounded-lg px-[10px] py-[16px] text-base font-bold transition-all duration-300 {faqTab ===
+					class="flex w-auto min-w-[100px] items-center justify-center gap-2 rounded-lg px-4 py-3 font-geist text-sm font-bold transition-all duration-300 md:w-52 md:gap-[10px] md:px-[10px] md:py-[16px] md:text-base {faqTab ===
 					'student'
 						? 'bg-[#eaecf0] text-[#110d21]'
 						: 'border border-[rgba(255,255,255,0.2)] text-white hover:bg-[rgba(255,255,255,0.1)]'}"
@@ -3565,7 +3624,7 @@
 						faqTab = 'career';
 						openAccordion = null;
 					}}
-					class="font-geist flex w-52 items-center justify-center gap-[10px] rounded-lg px-[10px] py-[16px] text-base font-bold transition-all duration-300 {faqTab ===
+					class="flex w-auto min-w-[100px] items-center justify-center gap-2 rounded-lg px-4 py-3 font-geist text-sm font-bold transition-all duration-300 md:w-52 md:gap-[10px] md:px-[10px] md:py-[16px] md:text-base {faqTab ===
 					'career'
 						? 'bg-[#eaecf0] text-[#110d21]'
 						: 'border border-[rgba(255,255,255,0.2)] text-white hover:bg-[rgba(255,255,255,0.1)]'}"
@@ -3582,7 +3641,7 @@
 
 		<!-- FAQ Content -->
 		{#key faqTab}
-			<div class="faq-content">
+			<div class="faq-slide-content">
 				<div class="mx-auto grid max-w-6xl gap-6 md:grid-cols-2">
 					{#each faqData[faqTab] as faq, index}
 						<div class="faq-item">
@@ -3592,7 +3651,7 @@
 									onclick={() => (openAccordion = openAccordion === faq.id ? null : faq.id)}
 									class="flex w-full items-center justify-between px-8 py-9 transition-colors duration-200 hover:bg-gray-50"
 								>
-									<h3 class="font-geist text-left text-lg font-bold text-[#62717a] md:text-xl">
+									<h3 class="text-left font-geist text-lg font-bold text-[#62717a] md:text-xl">
 										{faq.question}
 									</h3>
 									<svg
@@ -3737,6 +3796,10 @@
 		animation: faqFadeIn 0.5s ease-in-out;
 	}
 
+	.faq-slide-content {
+		animation: faqSlideIn 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	}
+
 	@keyframes faqFadeIn {
 		from {
 			opacity: 0;
@@ -3745,6 +3808,17 @@
 		to {
 			opacity: 1;
 			transform: translateY(0);
+		}
+	}
+
+	@keyframes faqSlideIn {
+		from {
+			opacity: 0;
+			transform: translateX(50px);
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0);
 		}
 	}
 
