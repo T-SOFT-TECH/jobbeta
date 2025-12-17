@@ -4,7 +4,7 @@
 	const sidebarItems = [
 		{ icon: 'account-balance0.svg', label: 'Overview', active: true },
 		{ icon: 'email0.svg', label: 'Inbox' },
-		{ icon: 'group0.svg', label: 'Jobs' }, // Note: group0 might need checking, using generic for now
+		{ icon: 'work-outline0.svg', label: 'Jobs' },
 		{ icon: 'access-time0.svg', label: 'Events' },
 		{ icon: 'patient-list0.svg', label: 'People' },
 		{ icon: 'school0.svg', label: 'Career Center' },
@@ -26,7 +26,7 @@
 		<!-- Sidebar -->
 		<div class="flex w-[209px] shrink-0 flex-col border-r border-[#2a2c2c]/20 bg-white">
 			<div class="p-8 pl-12">
-				<img src="{base}/images/employers/layer-21.svg" alt="JobBeta" class="h-8" />
+				<img src="{base}/icons/employers/layer-21.svg" alt="JobBeta" class="h-8" />
 			</div>
 
 			<div class="mt-4 flex flex-1 flex-col gap-8 pl-8">
@@ -49,7 +49,7 @@
 				</div>
 
 				<!-- Bottom Menu -->
-				<div class="mb-8 mt-auto flex flex-col gap-4">
+				<div class="mt-auto mb-8 flex flex-col gap-4">
 					{#each bottomSidebarItems as item}
 						<div class="group flex cursor-pointer items-center gap-5">
 							<img
@@ -127,7 +127,7 @@
 						<div class="flex items-center justify-between">
 							<div class="flex items-center gap-3">
 								<div
-									class="bg-secondary/10 flex h-10 w-10 items-center justify-center rounded-full"
+									class="flex h-10 w-10 items-center justify-center rounded-full bg-secondary/10"
 								>
 									<img src="{base}/icons/employers/group2.svg" alt="" class="h-6 w-6" />
 								</div>
@@ -169,10 +169,10 @@
 							</div>
 						</div>
 						<div class="mt-4 flex gap-3">
-							<button class="bg-primary rounded-2xl px-4 py-2 text-sm font-bold text-white"
+							<button class="rounded-2xl bg-primary px-4 py-2 text-sm font-bold text-white"
 								>View interview Details</button
 							>
-							<button class="bg-primary rounded-2xl px-4 py-2 text-base font-bold text-white"
+							<button class="rounded-2xl bg-primary px-4 py-2 text-base font-bold text-white"
 								>Join Live session</button
 							>
 						</div>
@@ -222,7 +222,7 @@
 						</div>
 						<!-- Chart placeholder -->
 						<div class="relative h-24 w-[200px] overflow-hidden rounded-lg bg-neutral-100">
-							<div class="absolute left-4 top-4 flex flex-col gap-2">
+							<div class="absolute top-4 left-4 flex flex-col gap-2">
 								<div class="h-6 w-20 rounded-full bg-[#7502ff]"></div>
 								<div class="h-6 w-16 rounded-full bg-[#110d21]"></div>
 							</div>

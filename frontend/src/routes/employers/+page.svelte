@@ -2,6 +2,7 @@
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import EmployersHero from '$lib/components/employers/EmployersHero.svelte';
+	import EmployersHowItWorksHero from '$lib/components/employers/EmployersHowItWorksHero.svelte';
 	import EmployersBrands from '$lib/components/employers/EmployersBrands.svelte';
 	import RecruitmentSolutions from '$lib/components/employers/RecruitmentSolutions.svelte';
 	import FindTopTalent from '$lib/components/employers/FindTopTalent.svelte';
@@ -20,12 +21,13 @@
 	/>
 </svelte:head>
 
-<div class="font-geist flex min-h-screen flex-col bg-white">
+<div class="flex min-h-screen flex-col bg-white font-geist">
 	<main class="flex-grow">
 		<EmployersHero
 			title="Hire the Best Talent with JobBeta"
 			subtitle="Connect with top-tier candidates and streamline your recruitment process."
 		/>
+		<EmployersHowItWorksHero />
 		<EmployersBrands />
 		<RecruitmentSolutions />
 		<FindTopTalent />

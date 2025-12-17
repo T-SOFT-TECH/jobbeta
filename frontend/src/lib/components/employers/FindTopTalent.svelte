@@ -23,23 +23,23 @@
 	];
 </script>
 
-<section class="lg:py-45 relative overflow-hidden bg-[#eeecfc] md:py-20">
+<section class="relative overflow-hidden bg-[#eeecfc] py-12 md:py-20 lg:py-45">
 	<div class="container mx-auto px-4">
 		<!-- Main Content (Text + Image) -->
 		<div class="mb-20 flex flex-col items-center gap-12 lg:flex-row lg:gap-24">
 			<!-- Text Content -->
 			<div class="w-full lg:w-1/2">
-				<h2 class="font-geist mb-6 text-4xl font-bold leading-tight text-neutral-800 md:text-5xl">
+				<h2 class="mb-6 font-geist text-4xl leading-tight font-bold text-neutral-800 md:text-5xl">
 					Find Top Talent Faster & <br />Smarter
 				</h2>
-				<p class="font-geist mb-8 text-xl leading-relaxed text-neutral-800/80">
+				<p class="mb-8 font-geist text-xl leading-relaxed text-neutral-800/80">
 					At JobBeta, we connect employers with skilled students and graduates who are ready to
 					contribute and grow within your organization. Our platform streamlines the hiring process,
 					giving you direct access to a pool of highly motivated candidates actively seeking job
 					opportunities.
 				</p>
 				<button
-					class="bg-primary font-lato hover:bg-primary/90 rounded-[20px] px-8 py-4 text-base font-bold text-white shadow-lg transition-colors"
+					class="rounded-[20px] bg-primary px-8 py-4 font-lato text-base font-bold text-white shadow-lg transition-colors hover:bg-primary/90"
 				>
 					Learn More
 				</button>

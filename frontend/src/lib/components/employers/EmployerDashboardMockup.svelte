@@ -4,7 +4,7 @@
 	const sidebarItems = [
 		{ icon: 'account-balance2.svg', label: 'Overview', active: true },
 		{ icon: 'class0.svg', label: 'Inbox' },
-		{ icon: 'group32.svg', label: 'Jobs' },
+		{ icon: 'work-outline0.svg', label: 'Jobs' },
 		{ icon: 'family-history0.svg', label: 'Events' },
 		{ icon: 'task0.svg', label: 'People' },
 		{ icon: 'patient-list2.svg', label: 'Career Center' },
@@ -47,11 +47,11 @@
 <div class="relative mx-auto h-[500px] w-full max-w-[657px] md:h-[608px]">
 	<!-- Main Window -->
 	<div
-		class="absolute left-0 top-0 h-full w-full overflow-hidden rounded-[20px] bg-white shadow-[0px_1px_3px_1px_rgba(0,0,0,0.15),0px_1px_2px_0px_rgba(0,0,0,0.30)]"
+		class="absolute top-0 left-0 h-full w-full overflow-hidden rounded-[20px] bg-white shadow-[0px_1px_3px_1px_rgba(0,0,0,0.15),0px_1px_2px_0px_rgba(0,0,0,0.30)]"
 	>
 		<!-- Inner Content with Top Border -->
 		<div
-			class="absolute left-1/2 top-[70px] flex h-[85%] w-[90%] -translate-x-1/2 overflow-hidden rounded-[20px] border-t-8 border-[#7502ff] bg-neutral-50 shadow-sm"
+			class="absolute top-[70px] left-1/2 flex h-[85%] w-[90%] -translate-x-1/2 overflow-hidden rounded-[20px] border-t-8 border-[#7502ff] bg-neutral-50 shadow-sm"
 		>
 			<!-- Sidebar -->
 			<div
@@ -87,12 +87,12 @@
 
 		<!-- Floating Cards Container (Positioned Absolutely to Overlap) -->
 		<div
-			class="absolute left-[80px] top-[180px] z-20 flex w-[280px] flex-col gap-4 md:left-[130px] md:w-[320px]"
+			class="absolute top-[180px] left-[80px] z-20 flex w-[280px] flex-col gap-4 md:left-[130px] md:w-[320px]"
 		>
 			{#each candidates as candidate, i}
 				<div
 					class="flex items-start gap-4 rounded-2xl border border-neutral-100 bg-white p-4 shadow-[0px_4px_20px_rgba(0,0,0,0.08)] transition-transform duration-300 hover:scale-105 {candidate.highlight
-						? 'ring-primary/10 z-30 scale-105 shadow-lg ring-1'
+						? 'z-30 scale-105 shadow-lg ring-1 ring-primary/10'
 						: ''}"
 					style="transform: translateX({i * 20}px);"
 				>
@@ -152,5 +152,5 @@
 
 	<!-- External Floating Elements (Decorations from SVG) -->
 	<!-- Purple shape top right -->
-	<div class="absolute right-10 top-20 -z-10 h-20 w-20 rounded-full bg-[#7502ff]/10 blur-xl"></div>
+	<div class="absolute top-20 right-10 -z-10 h-20 w-20 rounded-full bg-[#7502ff]/10 blur-xl"></div>
 </div>

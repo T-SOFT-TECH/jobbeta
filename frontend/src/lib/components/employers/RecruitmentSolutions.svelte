@@ -36,16 +36,16 @@
 	];
 </script>
 
-<section class="bg-primary relative overflow-hidden py-40">
+<section class="relative overflow-hidden bg-primary py-40">
 	<!-- Decorative Background Circles -->
 	<!-- Decorative Header -->
-	<div class="pointer-events-none absolute left-0 top-0 h-[130px] w-full overflow-hidden">
+	<div class="pointer-events-none absolute top-0 left-0 h-[130px] w-full overflow-hidden">
 		<div
-			class="absolute left-[70px] top-[43px] flex flex-row items-center justify-start gap-[79px] opacity-20 md:opacity-100"
+			class="absolute top-[43px] left-[70px] flex flex-row items-center justify-start gap-[79px] opacity-20 md:opacity-100"
 		>
 			<div class="relative h-8 w-[106px] shrink-0 overflow-hidden">
 				<img
-					class="absolute left-[0.41px] top-[0.39px] h-auto"
+					class="absolute top-[0.39px] left-[0.41px] h-auto"
 					src="{base}/icons/employers/clip-path-group0.svg"
 					alt=""
 				/>
@@ -66,28 +66,28 @@
 			</div>
 			<div class="relative h-[15px] w-[98px] shrink-0 overflow-hidden">
 				<img
-					class="absolute left-[0.01px] top-[0.01px] h-auto"
+					class="absolute top-[0.01px] left-[0.01px] h-auto"
 					src="{base}/icons/employers/page-10.svg"
 					alt=""
 				/>
 			</div>
 			<div class="relative h-[15px] w-[98px] shrink-0 overflow-hidden">
 				<img
-					class="absolute left-[0.01px] top-[0.01px] h-auto"
+					class="absolute top-[0.01px] left-[0.01px] h-auto"
 					src="{base}/icons/employers/page-11.svg"
 					alt=""
 				/>
 			</div>
 			<div class="relative h-[15px] w-[98px] shrink-0 overflow-hidden">
 				<img
-					class="absolute left-[0.01px] top-[0.01px] h-auto"
+					class="absolute top-[0.01px] left-[0.01px] h-auto"
 					src="{base}/icons/employers/page-12.svg"
 					alt=""
 				/>
 			</div>
 			<div class="relative h-[29px] w-[94px] shrink-0 overflow-hidden">
 				<img
-					class="absolute left-[0.36px] top-[0.36px] h-auto"
+					class="absolute top-[0.36px] left-[0.36px] h-auto"
 					src="{base}/icons/employers/clip-path-group1.svg"
 					alt=""
 				/>
@@ -100,19 +100,19 @@
 		</div>
 	</div>
 
-	<div class="container relative z-10 mx-auto px-4">
+	<div class="relative z-10 container mx-auto px-4">
 		<!-- Header -->
 		<Animate variant="bottom" duration={0.8}>
 			<div class="mx-auto mb-16 max-w-3xl text-center">
-				<h2 class="font-geist mb-6 text-3xl font-bold text-white md:text-5xl">
+				<h2 class="mb-6 font-geist text-3xl font-bold text-white md:text-5xl">
 					Recruitment Solutions & Services
 				</h2>
-				<p class="font-geist mb-8 text-lg text-white/85 md:text-xl">
+				<p class="mb-8 font-geist text-lg text-white/85 md:text-xl">
 					At JobBeta, we go beyond job postings. We provide end-to-end recruitment solutions to help
 					you find the right talent faster. Need tailored hiring solutions? Contact us today!
 				</p>
 				<button
-					class="font-lato rounded-[20px] bg-white px-8 py-4 font-bold text-neutral-800 shadow-lg transition-colors hover:bg-neutral-100"
+					class="rounded-[20px] bg-white px-8 py-4 font-lato font-bold text-neutral-800 shadow-lg transition-colors hover:bg-neutral-100"
 				>
 					Contact us today
 				</button>
@@ -127,17 +127,10 @@
 					<div
 						class="flex h-full min-h-[300px] flex-col items-center justify-center gap-4 rounded-2xl bg-white p-6 text-center shadow-lg transition-shadow hover:shadow-xl"
 					>
-						<div class="relative h-12 w-12">
-							<img
-								src="{base}/icons/employers/{solution.iconBg}"
-								alt=""
-								class="absolute inset-0 h-full w-full"
-							/>
-							<img
-								src="{base}/icons/employers/{solution.iconFg}"
-								alt=""
-								class="absolute inset-0 h-full w-full p-0.5"
-							/>
+						<div
+							class="relative flex h-14 w-14 items-center justify-center rounded-full border-2 border-primary"
+						>
+							<img src="{base}/icons/employers/{solution.iconFg}" alt="" class="h-6 w-6" />
 						</div>
 						<h3 class="font-geist text-xl font-bold text-neutral-800">{solution.title}</h3>
 						<p class="font-geist text-base text-neutral-600">{solution.description}</p>
@@ -151,17 +144,10 @@
 					<div
 						class="flex h-full min-h-[300px] flex-col items-center justify-center gap-4 rounded-2xl bg-white p-6 text-center shadow-lg transition-shadow hover:shadow-xl"
 					>
-						<div class="relative h-12 w-12">
-							<img
-								src="{base}/icons/employers/{solution.iconBg}"
-								alt=""
-								class="absolute inset-0 h-full w-full"
-							/>
-							<img
-								src="{base}/icons/employers/{solution.iconFg}"
-								alt=""
-								class="absolute inset-0 h-full w-full p-0.5"
-							/>
+						<div
+							class="relative flex h-14 w-14 items-center justify-center rounded-full border-2 border-primary"
+						>
+							<img src="{base}/icons/employers/{solution.iconFg}" alt="" class="h-6 w-6" />
 						</div>
 						<h3 class="font-geist text-xl font-bold text-neutral-800">{solution.title}</h3>
 						<p class="font-geist text-base text-neutral-600">{solution.description}</p>
