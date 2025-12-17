@@ -66,59 +66,61 @@
 	class="flex min-h-screen items-center justify-center bg-[#eaecf0] p-4 font-['Raleway',_sans-serif]"
 >
 	<div
-		class="relative flex h-[971px] w-full max-w-[1171px] flex-col overflow-hidden rounded-[32px] bg-white shadow-2xl md:flex-row"
+		class="relative flex w-full max-w-[1171px] flex-col overflow-hidden rounded-[32px] bg-white shadow-2xl lg:min-h-[800px] lg:flex-row"
 	>
 		<!-- Left Side: Form -->
-		<div class="absolute left-[120px] top-[186px] z-20 flex w-full flex-col md:w-[450px]">
-			<div class="w-full">
-				<div class="mb-10">
-					<h1
-						class="mb-1 font-['Raleway-Bold',_sans-serif] text-[32px] font-bold leading-9 text-[#000000]"
-					>
+		<div
+			class="flex w-full flex-col justify-center px-6 py-12 sm:px-12 lg:w-1/2 lg:px-[60px] xl:px-[120px]"
+		>
+			<div class="mx-auto w-full max-w-[450px] lg:mx-0">
+				<!-- Header -->
+				<div class="mb-8 lg:mb-10">
+					<h1 class="mb-1 text-2xl leading-tight font-bold text-black sm:text-[32px] sm:leading-9">
 						{isSignUp ? 'Create Account' : 'Welcome Back'}
 					</h1>
 					<p
-						class="text-sm font-normal leading-[21px] tracking-[-0.005em] text-[rgba(42,44,44,0.70)]"
+						class="text-sm leading-[21px] font-normal tracking-[-0.005em] text-[rgba(42,44,44,0.70)]"
 					>
 						{isSignUp
-							? 'welcome to JobBeta - let’s Create your account'
-							: 'welcome to JobBeta - let’s kick start from where we stopped'}
+							? "welcome to JobBeta - let's Create your account"
+							: "welcome to JobBeta - let's kick start from where we stopped"}
 					</p>
 				</div>
 
 				<!-- Social Login -->
-				<div class="mb-[62px] flex flex-row justify-between gap-5">
+				<div class="mb-8 flex flex-col gap-3 sm:flex-row sm:justify-between sm:gap-5 lg:mb-[62px]">
 					<button
-						class="flex h-[54px] flex-row items-center justify-start gap-3 rounded-[20px] border border-[rgba(42,44,44,0.25)] pb-1.5 pl-3 pr-3 pt-1.5 transition-colors hover:bg-gray-50"
+						class="flex h-[54px] flex-1 items-center justify-center gap-3 rounded-[20px] border border-[rgba(42,44,44,0.25)] px-3 py-1.5 transition-colors hover:bg-gray-50"
 					>
-						<div class="relative flex h-10 w-10 items-center justify-center">
+						<div class="flex h-10 w-10 items-center justify-center">
 							<img src="/images/login/group0.svg" alt="Apple" class="h-[22px] w-6" />
 						</div>
 						<span
-							class="text-sm font-bold leading-[21px] tracking-[-0.005em] text-[rgba(42,44,44,0.80)]"
+							class="text-sm leading-[21px] font-bold tracking-[-0.005em] text-[rgba(42,44,44,0.80)]"
 							>Sign In with Apple</span
 						>
 					</button>
 					<button
-						class="flex h-[54px] flex-row items-center justify-start gap-3 rounded-[20px] border border-[rgba(42,44,44,0.25)] pb-1.5 pl-3 pr-3 pt-1.5 transition-colors hover:bg-gray-50"
+						class="flex h-[54px] flex-1 items-center justify-center gap-3 rounded-[20px] border border-[rgba(42,44,44,0.25)] px-3 py-1.5 transition-colors hover:bg-gray-50"
 					>
-						<div class="relative flex h-10 w-10 items-center justify-center">
+						<div class="flex h-10 w-10 items-center justify-center">
 							<img src="/images/login/group1.svg" alt="Google" class="h-6 w-5" />
 						</div>
 						<span
-							class="text-sm font-bold leading-[21px] tracking-[-0.005em] text-[rgba(42,44,44,0.80)]"
+							class="text-sm leading-[21px] font-bold tracking-[-0.005em] text-[rgba(42,44,44,0.80)]"
 							>Sign In with Google</span
 						>
 					</button>
 				</div>
 
-				<div class="mb-[62px] flex w-full items-center justify-between">
-					<div class="w-[200px] border-t border-[rgba(42,44,44,0.16)]"></div>
+				<!-- Divider -->
+				<div class="mb-8 flex w-full items-center justify-between gap-4 lg:mb-[62px]">
+					<div class="flex-1 border-t border-[rgba(42,44,44,0.16)]"></div>
 					<span
-						class="text-base font-normal leading-6 tracking-[-0.005em] text-[rgba(42,44,44,0.60)]"
+						class="text-base leading-6 font-normal tracking-[-0.005em] text-[rgba(42,44,44,0.60)]"
 						>OR</span
 					>
-					<div class="w-[200px] border-t border-[rgba(42,44,44,0.16)]"></div>
+					<div class="flex-1 border-t border-[rgba(42,44,44,0.16)]"></div>
 				</div>
 
 				<!-- Error Message -->
@@ -134,42 +136,42 @@
 						e.preventDefault();
 						handleSubmit();
 					}}
-					class="flex flex-col gap-[62px]"
+					class="flex flex-col gap-6 lg:gap-[62px]"
 				>
-					<div class="flex flex-col gap-2.5">
+					<div class="flex flex-col gap-4 lg:gap-2.5">
 						{#if isSignUp}
-							<div class="flex flex-col gap-5">
+							<div class="flex flex-col gap-2 lg:gap-5">
 								<label
 									for="name"
-									class="text-base font-semibold leading-6 tracking-[-0.005em] text-[#2a2c2c]"
+									class="text-base leading-6 font-semibold tracking-[-0.005em] text-[#2a2c2c]"
 									>Full Name</label
 								>
-								<div class="flex h-14 items-center rounded-2xl border border-[#7502ff] p-2.5">
+								<div class="flex h-14 items-center rounded-2xl border border-[#7502ff] px-4">
 									<input
 										type="text"
 										id="name"
 										bind:value={name}
 										required
 										placeholder="Enter full name"
-										class="h-full w-full border-none bg-white text-base font-normal leading-6 tracking-[-0.005em] text-[rgba(42,44,44,0.65)] outline-none focus:ring-0"
+										class="h-full w-full border-none bg-white text-base leading-6 font-normal tracking-[-0.005em] text-[rgba(42,44,44,0.65)] outline-none focus:ring-0"
 									/>
 								</div>
 							</div>
 
-							<div class="flex flex-col gap-5">
+							<div class="flex flex-col gap-2 lg:gap-5">
 								<label
 									for="role"
-									class="text-base font-semibold leading-6 tracking-[-0.005em] text-[#2a2c2c]"
+									class="text-base leading-6 font-semibold tracking-[-0.005em] text-[#2a2c2c]"
 									>I am a...</label
 								>
 								<div
-									class="flex h-14 items-center rounded-2xl border border-[rgba(42,44,44,0.10)] p-2.5"
+									class="flex h-14 items-center rounded-2xl border border-[rgba(42,44,44,0.10)] px-4"
 								>
 									<select
 										id="role"
 										bind:value={role}
 										required
-										class="h-full w-full border-none bg-white text-base font-normal leading-6 tracking-[-0.005em] text-[rgba(42,44,44,0.65)] outline-none focus:ring-0"
+										class="h-full w-full border-none bg-white text-base leading-6 font-normal tracking-[-0.005em] text-[rgba(42,44,44,0.65)] outline-none focus:ring-0"
 									>
 										<option value="student">Student</option>
 										<option value="jobseeker">Job Seeker</option>
@@ -180,33 +182,33 @@
 							</div>
 						{/if}
 
-						<div class="flex flex-col gap-5">
+						<div class="flex flex-col gap-2 lg:gap-5">
 							<label
 								for="email"
-								class="text-base font-semibold leading-6 tracking-[-0.005em] text-[#2a2c2c]"
+								class="text-base leading-6 font-semibold tracking-[-0.005em] text-[#2a2c2c]"
 								>Username</label
 							>
-							<div class="flex h-14 items-center rounded-2xl border border-[#7502ff] p-2.5">
+							<div class="flex h-14 items-center rounded-2xl border border-[#7502ff] px-4">
 								<input
 									type="email"
 									id="email"
 									bind:value={email}
 									required
 									placeholder="Enter username"
-									class="h-full w-full border-none bg-white text-base font-normal leading-6 tracking-[-0.005em] text-[rgba(42,44,44,0.65)] outline-none focus:ring-0"
+									class="h-full w-full border-none bg-white text-base leading-6 font-normal tracking-[-0.005em] text-[rgba(42,44,44,0.65)] outline-none focus:ring-0"
 								/>
 							</div>
 						</div>
 
-						<div class="flex flex-col gap-5">
+						<div class="flex flex-col gap-2 lg:gap-5">
 							<label
 								for="password"
-								class="text-base font-semibold leading-6 tracking-[-0.005em] text-[#2a2c2c]"
+								class="text-base leading-6 font-semibold tracking-[-0.005em] text-[#2a2c2c]"
 								>Password</label
 							>
 							<div class="flex flex-col gap-2.5">
 								<div
-									class="flex h-14 items-center gap-2.5 rounded-2xl border border-[rgba(42,44,44,0.10)] p-2.5"
+									class="flex h-14 items-center gap-2.5 rounded-2xl border border-[rgba(42,44,44,0.10)] px-4"
 								>
 									<input
 										type={showPassword ? 'text' : 'password'}
@@ -214,7 +216,7 @@
 										bind:value={password}
 										required
 										placeholder="Enter password"
-										class="h-full flex-1 border-none bg-white text-base font-normal leading-6 tracking-[-0.005em] text-[rgba(42,44,44,0.65)] outline-none focus:ring-0"
+										class="h-full flex-1 border-none bg-white text-base leading-6 font-normal tracking-[-0.005em] text-[rgba(42,44,44,0.65)] outline-none focus:ring-0"
 									/>
 									<button
 										type="button"
@@ -233,7 +235,7 @@
 								{#if !isSignUp}
 									<a
 										href="/forgot-password"
-										class="text-right text-base font-bold leading-6 tracking-[-0.005em] text-[#3f018a] hover:underline"
+										class="text-right text-base leading-6 font-bold tracking-[-0.005em] text-[#3f018a] hover:underline"
 										>Forgot password?</a
 									>
 								{/if}
@@ -241,16 +243,16 @@
 						</div>
 					</div>
 
-					<div class="flex h-24 flex-col items-center gap-3">
+					<div class="flex flex-col items-center gap-3">
 						<button
 							type="submit"
 							disabled={loading}
-							class="w-full rounded-[20px] bg-[#7502ff] pb-4 pl-2.5 pr-2.5 pt-4 font-['Geist-Bold',_sans-serif] text-base font-bold leading-6 tracking-[-0.005em] text-white transition-colors hover:bg-[#6002d1] disabled:cursor-not-allowed disabled:opacity-50"
+							class="w-full rounded-[20px] bg-[#7502ff] px-2.5 py-4 font-['Geist-Bold',_sans-serif] text-base leading-6 font-bold tracking-[-0.005em] text-white transition-colors hover:bg-[#6002d1] disabled:cursor-not-allowed disabled:opacity-50"
 						>
 							{loading ? 'Please wait...' : isSignUp ? 'Sign Up' : 'Sign In'}
 						</button>
 
-						<div class="text-center text-base font-normal leading-6 tracking-[-0.005em]">
+						<div class="text-center text-base leading-6 font-normal tracking-[-0.005em]">
 							<span class="text-[rgba(42,44,44,0.65)]">
 								{isSignUp ? 'Already have an account?' : 'Dont have an Account?'}
 							</span>
@@ -267,57 +269,57 @@
 			</div>
 		</div>
 
-		<!-- Right Side: Purple Card -->
+		<!-- Right Side: Purple Card (Hidden on mobile) -->
 		<div
-			class="absolute left-[693px] top-6 hidden h-[971px] w-[721px] overflow-hidden rounded-2xl bg-[#7502ff] md:block"
+			class="relative hidden items-center justify-center overflow-hidden bg-[#7502ff] p-8 lg:flex lg:w-1/2"
 		>
-			<!-- Content -->
-			<div class="absolute left-[86px] top-[123px] flex w-[450px] flex-col gap-1">
-				<div
-					class="font-['Raleway-Bold',_sans-serif] text-[32px] font-bold leading-[48px] text-white"
-				>
-					Kick Start your Career
-				</div>
-				<div
-					class="text-center font-['Raleway-SemiBold',_sans-serif] text-sm font-semibold leading-[21px] tracking-[-0.005em] text-white"
-				>
-					welcome to JobBeta - let’s Create your account
-				</div>
-			</div>
-
-			<!-- Main Image -->
+			<!-- Background Decoration -->
 			<img
-				src="/images/login/frame-20856643060.png"
-				class="absolute left-[calc(50%_-_274.5px)] top-[249px] h-[585px] w-[664px] rounded-[20px] border-[10px] border-white object-cover"
+				src="/images/login/layer-20.svg"
+				class="absolute top-16 left-[72px] h-auto opacity-50"
+				alt=""
 			/>
 
-			<!-- Decorative Elements -->
-			<div
-				class="absolute left-[89px] top-[887px] flex w-[561px] flex-row items-center justify-between"
-			>
-				<div class="relative h-[13px] w-[84px] shrink-0 overflow-hidden">
-					<img src="/images/login/page-10.svg" class="absolute left-[0.01px] top-[0.01px] h-auto" />
+			<!-- Content -->
+			<div class="relative z-10 flex flex-col items-center gap-8">
+				<div class="max-w-[450px] text-center">
+					<h2
+						class="font-['Raleway-Bold',_sans-serif] text-2xl leading-tight font-bold text-white xl:text-[32px] xl:leading-[48px]"
+					>
+						Kick Start your Career
+					</h2>
+					<p class="mt-2 text-sm leading-[21px] font-semibold tracking-[-0.005em] text-white/90">
+						welcome to JobBeta - let's Create your account
+					</p>
 				</div>
-				<img src="/images/login/page-11.svg" class="h-[37.56px] w-[45.14px] shrink-0" />
-				<div class="relative h-[13px] w-[84px] shrink-0 overflow-hidden">
-					<img src="/images/login/page-12.svg" class="absolute left-[0.01px] top-[0.01px] h-auto" />
-				</div>
-				<div class="relative h-[22px] w-[71px] shrink-0 overflow-hidden">
-					<img
-						src="/images/login/clip-path-group0.svg"
-						class="absolute left-[0.27px] top-[0.27px] h-auto"
-					/>
-				</div>
-				<img src="/images/login/page-13.svg" class="h-[37.56px] w-[45.14px] shrink-0" />
-			</div>
 
-			<!-- Background Decoration -->
-			<img src="/images/login/layer-20.svg" class="absolute left-[72px] top-16 h-auto" />
+				<!-- Main Image -->
+				<img
+					src="/images/login/frame-20856643060.png"
+					alt="JobBeta Dashboard Preview"
+					class="w-full max-w-[500px] rounded-[20px] border-[10px] border-white object-cover shadow-2xl"
+				/>
+
+				<!-- Decorative Elements -->
+				<div class="flex w-full max-w-[450px] items-center justify-between gap-4 opacity-60">
+					<div class="h-[13px] w-[84px] shrink-0 overflow-hidden">
+						<img src="/images/login/page-10.svg" class="h-auto" alt="" />
+					</div>
+					<img src="/images/login/page-11.svg" class="h-[37px] w-[45px] shrink-0" alt="" />
+					<div class="h-[13px] w-[84px] shrink-0 overflow-hidden">
+						<img src="/images/login/page-12.svg" class="h-auto" alt="" />
+					</div>
+					<div class="h-[22px] w-[71px] shrink-0 overflow-hidden">
+						<img src="/images/login/clip-path-group0.svg" class="h-auto" alt="" />
+					</div>
+					<img src="/images/login/page-13.svg" class="h-[37px] w-[45px] shrink-0" alt="" />
+				</div>
+			</div>
 		</div>
 
 		<!-- Footer -->
 		<div
-			class="absolute left-[calc(50%_-_484px)] top-[943px] text-center text-sm font-normal leading-[21px] tracking-[-0.005em] text-[rgba(42,44,44,0.75)]"
+			class="absolute right-0 bottom-4 left-0 text-center text-sm leading-[21px] font-normal tracking-[-0.005em] text-[rgba(42,44,44,0.75)] lg:bottom-6"
 		>
 			Copyright@2025. All rights Reserved
 		</div>

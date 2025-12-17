@@ -39,66 +39,6 @@
 <section class="relative overflow-hidden bg-primary py-40">
 	<!-- Decorative Background Circles -->
 	<!-- Decorative Header -->
-	<div class="pointer-events-none absolute top-0 left-0 h-[130px] w-full overflow-hidden">
-		<div
-			class="absolute top-[43px] left-[70px] flex flex-row items-center justify-start gap-[79px] opacity-20 md:opacity-100"
-		>
-			<div class="relative h-8 w-[106px] shrink-0 overflow-hidden">
-				<img
-					class="absolute top-[0.39px] left-[0.41px] h-auto"
-					src="{base}/icons/employers/clip-path-group0.svg"
-					alt=""
-				/>
-			</div>
-			<div class="relative h-8 w-[100px] shrink-0 overflow-hidden">
-				<img
-					class="absolute inset-0 h-full w-full"
-					src="{base}/icons/employers/group6.svg"
-					alt=""
-				/>
-			</div>
-			<div class="relative h-8 w-[100px] shrink-0 overflow-hidden">
-				<img
-					class="absolute inset-0 h-full w-full"
-					src="{base}/icons/employers/group7.svg"
-					alt=""
-				/>
-			</div>
-			<div class="relative h-[15px] w-[98px] shrink-0 overflow-hidden">
-				<img
-					class="absolute top-[0.01px] left-[0.01px] h-auto"
-					src="{base}/icons/employers/page-10.svg"
-					alt=""
-				/>
-			</div>
-			<div class="relative h-[15px] w-[98px] shrink-0 overflow-hidden">
-				<img
-					class="absolute top-[0.01px] left-[0.01px] h-auto"
-					src="{base}/icons/employers/page-11.svg"
-					alt=""
-				/>
-			</div>
-			<div class="relative h-[15px] w-[98px] shrink-0 overflow-hidden">
-				<img
-					class="absolute top-[0.01px] left-[0.01px] h-auto"
-					src="{base}/icons/employers/page-12.svg"
-					alt=""
-				/>
-			</div>
-			<div class="relative h-[29px] w-[94px] shrink-0 overflow-hidden">
-				<img
-					class="absolute top-[0.36px] left-[0.36px] h-auto"
-					src="{base}/icons/employers/clip-path-group1.svg"
-					alt=""
-				/>
-			</div>
-			<img
-				class="relative h-[44.44px] w-[53.4px] shrink-0"
-				src="{base}/icons/employers/page-13.svg"
-				alt=""
-			/>
-		</div>
-	</div>
 
 	<div class="relative z-10 container mx-auto px-4">
 		<!-- Header -->

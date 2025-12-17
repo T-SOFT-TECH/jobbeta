@@ -27,11 +27,11 @@
 			title="Hire the Best Talent with JobBeta"
 			subtitle="Connect with top-tier candidates and streamline your recruitment process."
 		/>
-		<EmployersHowItWorksHero />
 		<EmployersBrands />
+		<EmployersHowItWorksHero />
 		<RecruitmentSolutions />
 		<FindTopTalent />
-		<EmployersHowItWorks />
+
 		<EmployersPricing />
 		<EmployersTestimonials />
 		<EmployersFAQ />
