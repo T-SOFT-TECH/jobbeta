@@ -319,7 +319,7 @@
 
 		<!-- Footer -->
 		<div
-			class="absolute right-0 bottom-4 left-0 text-center text-sm leading-[21px] font-normal tracking-[-0.005em] text-[rgba(42,44,44,0.75)] lg:bottom-6"
+			class="absolute bottom-4 left-0 w-full py-3 text-center text-sm leading-[21px] font-normal tracking-[-0.005em] text-[rgba(42,44,44,0.75)] lg:bottom-6 lg:w-1/2"
 		>
 			Copyright@2025. All rights Reserved
 		</div>

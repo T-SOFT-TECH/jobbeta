@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./vars.css">
+  <link rel="stylesheet" href="./style.css">
+  <script src='https://cdn.tailwindcss.com/3.2.0' ></script>
+  <script src="./tailwind.config.js"></script>
+  <style>
+   a,
+   button,
+   input,
+   select,
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   * {
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+       border: none;
+       text-decoration: none;
+       background: none;
+   
+       -webkit-font-smoothing: antialiased;
+   }
+   
+   menu, ol, ul {
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+   }
+   </style>
+  <title>Document</title>
+</head>
+<body>
+  <div class="bg-neutral h-[1413px] relative overflow-hidden">
+    <div
+      class="rounded-[50%] border-solid border-[#ffffff] border w-[148px] h-[148px] absolute left-[-216.69px] top-[1279px]"
+      style="transform-origin: 0 0; transform: rotate(11.423deg) scale(1, 1)"
+    ></div>
+    <div
+      class="rounded-[50%] border-solid border-[#ffffff] border w-[148px] h-[148px] absolute left-[-48.1px] top-[1313.07px]"
+      style="transform-origin: 0 0; transform: rotate(11.423deg) scale(1, 1)"
+    ></div>
+    <div
+      class="rounded-[50%] border-solid border-[#ffffff] border w-[148px] h-[148px] absolute left-[-130.43px] top-[1296.43px]"
+      style="transform-origin: 0 0; transform: rotate(11.423deg) scale(1, 1)"
+    ></div>
+    <div
+      class="rounded-[50%] border-solid border-[#ffffff] border w-[148px] h-[148px] absolute left-[47.96px] top-[1332.48px]"
+      style="transform-origin: 0 0; transform: rotate(11.423deg) scale(1, 1)"
+    ></div>
+    <div
+      class="rounded-[50%] border-solid border-[#ffffff] border w-[148px] h-[148px] absolute left-[216.56px] top-[1366.54px]"
+      style="transform-origin: 0 0; transform: rotate(11.423deg) scale(1, 1)"
+    ></div>
+    <div
+      class="rounded-[50%] border-solid border-[#ffffff] border w-[148px] h-[148px] absolute left-[378.29px] top-[1399.22px]"
+      style="transform-origin: 0 0; transform: rotate(11.423deg) scale(1, 1)"
+    ></div>
+    <div
+      class="rounded-[50%] border-solid border-[#ffffff] border w-[148px] h-[148px] absolute left-[556.68px] top-[1435.27px]"
+      style="transform-origin: 0 0; transform: rotate(11.423deg) scale(1, 1)"
+    ></div>
+    <div
+      class="rounded-[50%] border-solid border-[#ffffff] border w-[148px] h-[148px] absolute left-[120.5px] top-[1347.13px]"
+      style="transform-origin: 0 0; transform: rotate(11.423deg) scale(1, 1)"
+    ></div>
+    <div
+      class="rounded-[50%] border-solid border-[#ffffff] border w-[148px] h-[148px] absolute left-[277.33px] top-[1378.82px]"
+      style="transform-origin: 0 0; transform: rotate(11.423deg) scale(1, 1)"
+    ></div>
+    <div
+      class="rounded-[50%] border-solid border-[#ffffff] border w-[148px] h-[148px] absolute left-[445.92px] top-[1412.89px]"
+      style="transform-origin: 0 0; transform: rotate(11.423deg) scale(1, 1)"
+    ></div>
+    <div
+      class="rounded-[50%] border-solid border-[#ffffff] border w-[148px] h-[148px] absolute left-[636.08px] top-[1451.31px]"
+      style="transform-origin: 0 0; transform: rotate(11.423deg) scale(1, 1)"
+    ></div>
+    <div
+      class="rounded-[50%] border-solid border-[#ffffff] border w-[148px] h-[148px] absolute left-[719.69px] top-[-67px]"
+      style="transform-origin: 0 0; transform: rotate(2.979deg) scale(1, 1)"
+    ></div>
+    <div
+      class="rounded-[50%] border-solid border-[#ffffff] border w-[148px] h-[148px] absolute left-[891.46px] top-[-58.05px]"
+      style="transform-origin: 0 0; transform: rotate(2.979deg) scale(1, 1)"
+    ></div>
+    <div
+      class="rounded-[50%] border-solid border-[#ffffff] border w-[148px] h-[148px] absolute left-[807.57px] top-[-62.42px]"
+      style="transform-origin: 0 0; transform: rotate(2.979deg) scale(1, 1)"
+    ></div>
+    <div
+      class="rounded-[50%] border-solid border-[#ffffff] border w-[148px] h-[148px] absolute left-[989.33px] top-[-52.96px]"
+      style="transform-origin: 0 0; transform: rotate(2.979deg) scale(1, 1)"
+    ></div>
+    <div
+      class="rounded-[50%] border-solid border-[#ffffff] border w-[148px] h-[148px] absolute left-[1161.09px] top-[-44.02px]"
+      style="transform-origin: 0 0; transform: rotate(2.979deg) scale(1, 1)"
+    ></div>
+    <div
+      class="rounded-[50%] border-solid border-[#ffffff] border w-[148px] h-[148px] absolute left-[1325.87px] top-[-35.45px]"
+      style="transform-origin: 0 0; transform: rotate(2.979deg) scale(1, 1)"
+    ></div>
+    <div
+      class="rounded-[50%] border-solid border-[#ffffff] border w-[148px] h-[148px] absolute left-[1507.62px] top-[-25.99px]"
+      style="transform-origin: 0 0; transform: rotate(2.979deg) scale(1, 1)"
+    ></div>
+    <div
+      class="rounded-[50%] border-solid border-[#ffffff] border w-[148px] h-[148px] absolute left-[1063.23px] top-[-49.12px]"
+      style="transform-origin: 0 0; transform: rotate(2.979deg) scale(1, 1)"
+    ></div>
+    <div
+      class="rounded-[50%] border-solid border-[#ffffff] border w-[148px] h-[148px] absolute left-[1223.01px] top-[-40.8px]"
+      style="transform-origin: 0 0; transform: rotate(2.979deg) scale(1, 1)"
+    ></div>
+    <div
+      class="rounded-[50%] border-solid border-[#ffffff] border w-[148px] h-[148px] absolute left-[1394.78px] top-[-31.86px]"
+      style="transform-origin: 0 0; transform: rotate(2.979deg) scale(1, 1)"
+    ></div>
+    <div
+      class="rounded-[50%] border-solid border-[#ffffff] border w-[148px] h-[148px] absolute left-[1588.51px] top-[-21.79px]"
+      style="transform-origin: 0 0; transform: rotate(2.979deg) scale(1, 1)"
+    ></div>
+    <div
+      class="flex flex-col gap-[90px] items-center justify-start w-[1272px] absolute left-[50%] top-32"
+      style="translate: -50%"
+    >
+      <div
+        class="flex flex-col gap-6 items-center justify-center shrink-0 relative"
+      >
+        <div
+          class="flex flex-col gap-5 items-center justify-center self-stretch shrink-0 relative"
+        >
+          <div
+            class="text-secondary-color text-left font-['Geist-Bold',_sans-serif] text-[40px] leading-[51px] font-bold relative"
+            style="letter-spacing: -0.005em"
+          >
+            Popular Job Categories
+          </div>
+          <div
+            class="text-secondary-color text-center font-['Geist-Medium',_sans-serif] text-xl leading-[30px] font-medium relative self-stretch"
+            style="letter-spacing: -0.005em; opacity: 0.85"
+          >
+            1000 jobs live – 120 added today.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex flex-col items-center justify-between w-[1106px] h-[890px] absolute left-[50%] top-[344px]"
+      style="translate: -50%"
+    >
+      <div
+        class="flex flex-row gap-[46px] items-center justify-center self-stretch shrink-0 relative"
+      >
+        <div
+          class="bg-primar-color rounded-[20px] shrink-0 w-[338px] h-[430px] relative overflow-hidden"
+        >
+          <div
+            class="flex flex-row gap-[74px] items-start justify-start absolute left-[50%] top-[51px]"
+            style="translate: -50%"
+          >
+            <div
+              class="flex flex-col items-start justify-between shrink-0 w-[164px] h-[60px] relative"
+            >
+              <div
+                class="text-white text-left font-['Geist-Bold',_sans-serif] text-lg leading-[27px] font-bold relative w-[199px]"
+                style="letter-spacing: -0.005em; opacity: 0.85"
+              >
+                Banking
+              </div>
+              <div
+                class="text-white text-left font-['Geist-Bold',_sans-serif] text-sm leading-[21px] font-bold relative self-stretch"
+                style="letter-spacing: -0.005em; opacity: 0.85"
+              >
+                ( 3 Positions Opened )
+              </div>
+            </div>
+            <img
+              class="shrink-0 w-6 h-6 relative overflow-visible"
+              src="line-end-arrow-notch0.svg"
+            />
+          </div>
+          <div
+            class="bg-[#eeecfc] rounded-2xl w-[234px] h-[164px] absolute left-[52px] top-[194px] overflow-hidden"
+          ></div>
+          <div
+            class="bg-brand-colours-dark-purple rounded-2xl w-72 h-[194px] absolute left-[50%] top-[205px] overflow-hidden"
+            style="translate: -50%"
+          >
+            <div
+              class="w-[242px] h-[147px] absolute left-[50%] top-[23px] overflow-hidden"
+              style="translate: -50%"
+            >
+              <img
+                class="w-[100%] h-[124.2%] absolute right-[0%] left-[0%] bottom-[-24.2%] top-[0%] overflow-visible"
+                src="group-1030.svg"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-primar-color rounded-[20px] shrink-0 w-[338px] h-[430px] relative overflow-hidden"
+        >
+          <div
+            class="flex flex-row gap-0 items-start justify-start absolute left-[50%] top-[51px]"
+            style="translate: -50%"
+          >
+            <div
+              class="flex flex-col items-start justify-between shrink-0 w-[252px] h-[60px] relative"
+            >
+              <div
+                class="text-white text-left font-['Geist-Bold',_sans-serif] text-lg leading-[27px] font-bold relative self-stretch"
+                style="letter-spacing: -0.005em; opacity: 0.85"
+              >
+                Technology
+              </div>
+              <div
+                class="text-white text-left font-['Geist-Bold',_sans-serif] text-sm leading-[21px] font-bold relative self-stretch"
+                style="letter-spacing: -0.005em; opacity: 0.85"
+              >
+                ( 3 Positions Opened )
+              </div>
+            </div>
+            <img
+              class="shrink-0 w-6 h-6 relative overflow-visible"
+              src="line-end-arrow-notch1.svg"
+            />
+          </div>
+          <div
+            class="bg-[rgba(234,255,209,0.91)] rounded-2xl w-[234px] h-[164px] absolute left-[52px] top-[194px] overflow-hidden"
+          ></div>
+          <div
+            class="bg-[#7add03] rounded-2xl w-72 h-[194px] absolute left-[50%] top-[205px] overflow-hidden"
+            style="translate: -50%"
+          >
+            <div
+              class="w-[150px] h-[149px] absolute left-[69px] top-[22px] overflow-hidden"
+            >
+              <img
+                class="w-[31.11%] h-[40.16%] absolute right-[63.36%] left-[5.54%] bottom-[59.84%] top-[0%] overflow-visible"
+                src="group0.svg"
+              />
+              <img
+                class="w-[37.15%] h-[0.36%] absolute right-[20.2%] left-[42.66%] bottom-[0.67%] top-[98.97%] overflow-visible"
+                src="vector0.svg"
+              />
+              <img
+                class="h-[auto] absolute left-[27.67px] top-[100.63px] overflow-visible"
+                src="group1.svg"
+              />
+              <img
+                class="h-[auto] absolute left-0 top-[45.86px] overflow-visible"
+                src="group2.svg"
+              />
+              <img
+                class="w-[5.46%] h-[3.44%] absolute right-[36.26%] left-[58.28%] bottom-[58.08%] top-[38.48%] overflow-visible"
+                src="vector1.svg"
+              />
+              <img
+                class="w-[7.61%] h-[7.64%] absolute right-[36.46%] left-[55.93%] bottom-[60.08%] top-[32.28%] overflow-visible"
+                src="vector2.svg"
+              />
+              <img
+                class="w-[14.06%] h-[30.64%] absolute right-[31.72%] left-[54.22%] bottom-[6.9%] top-[62.47%] overflow-visible"
+                src="vector3.svg"
+              />
+              <img
+                class="w-[8.31%] h-[8.16%] absolute right-[36.21%] left-[55.48%] bottom-[60.74%] top-[31.09%] overflow-visible"
+                src="vector4.svg"
+              />
+              <img
+                class="w-[4.57%] h-[7.35%] absolute right-[34.84%] left-[60.59%] bottom-[0%] top-[92.65%] overflow-visible"
+                src="vector5.svg"
+              />
+              <img
+                class="w-[6.23%] h-[10.97%] absolute right-[29.85%] left-[63.91%] bottom-[0.25%] top-[88.78%] overflow-visible"
+                src="vector6.svg"
+              />
+              <img
+                class="w-[7.64%] h-[14.57%] absolute right-[51.92%] left-[40.44%] bottom-[30.31%] top-[55.11%] overflow-visible"
+                src="vector7.svg"
+              />
+              <img
+                class="w-[13.99%] h-[22.63%] absolute right-[31.94%] left-[54.07%] bottom-[36.34%] top-[41.02%] overflow-visible"
+                src="vector8.svg"
+              />
+              <img
+                class="w-[11.98%] h-[18.28%] absolute right-[45.11%] left-[42.91%] bottom-[38.96%] top-[42.77%] overflow-visible"
+                src="vector9.svg"
+              />
+              <img
+                class="h-[auto] absolute left-[99.98px] top-[104.42px] overflow-visible"
+                src="group3.svg"
+              />
+              <img
+                class="w-[7.48%] h-[29.84%] absolute right-[27.1%] left-[65.42%] bottom-[27%] top-[43.16%] overflow-visible"
+                src="group4.svg"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-primar-color rounded-[20px] shrink-0 w-[338px] h-[430px] relative overflow-hidden"
+        >
+          <div
+            class="flex flex-row gap-[18px] items-start justify-start absolute left-[50%] top-[51px]"
+            style="translate: -50%"
+          >
+            <div
+              class="flex flex-col items-start justify-between shrink-0 w-[217px] h-[60px] relative"
+            >
+              <div
+                class="text-white text-left font-['Geist-Bold',_sans-serif] text-lg leading-[27px] font-bold relative self-stretch"
+                style="letter-spacing: -0.005em; opacity: 0.85"
+              >
+                Finance/Accounting
+              </div>
+              <div
+                class="text-white text-left font-['Geist-Bold',_sans-serif] text-sm leading-[21px] font-bold relative self-stretch"
+                style="letter-spacing: -0.005em; opacity: 0.85"
+              >
+                ( 3 Positions Opened )
+              </div>
+            </div>
+            <img
+              class="shrink-0 w-6 h-6 relative overflow-visible"
+              src="line-end-arrow-notch2.svg"
+            />
+          </div>
+          <div
+            class="bg-[rgba(255,221,181,0.91)] rounded-2xl w-[234px] h-[164px] absolute left-[52px] top-[194px] overflow-hidden"
+          ></div>
+          <div
+            class="bg-[#ffa500] rounded-2xl w-72 h-[194px] absolute left-[50%] top-[205px] overflow-hidden"
+            style="translate: -50%"
+          >
+            <div
+              class="w-[155px] h-[148px] absolute left-[67px] top-[23px] overflow-hidden"
+            >
+              <img
+                class="h-[auto] absolute left-0 top-0 overflow-visible"
+                src="group5.svg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-row items-center justify-between self-stretch shrink-0 relative"
+      >
+        <div
+          class="bg-primar-color rounded-[20px] shrink-0 w-[338px] h-[430px] relative overflow-hidden"
+        >
+          <div
+            class="bg-[#c4bbff] rounded-2xl w-[234px] h-[164px] absolute left-[50%] top-[193px] overflow-hidden"
+            style="translate: -50%"
+          ></div>
+          <div
+            class="flex flex-row gap-9 items-start justify-start absolute left-[50%] top-[51px]"
+            style="translate: -50%"
+          >
+            <div
+              class="flex flex-col items-start justify-between shrink-0 w-[207px] h-[60px] relative"
+            >
+              <div
+                class="text-white text-left font-['Geist-Bold',_sans-serif] text-lg leading-[27px] font-bold relative self-stretch"
+                style="letter-spacing: -0.005em; opacity: 0.85"
+              >
+                Customer Service
+              </div>
+              <div
+                class="text-white text-left font-['Geist-Bold',_sans-serif] text-sm leading-[21px] font-bold relative self-stretch"
+                style="letter-spacing: -0.005em; opacity: 0.85"
+              >
+                ( 3 Positions Opened )
+              </div>
+            </div>
+            <img
+              class="shrink-0 w-6 h-6 relative overflow-visible"
+              src="line-end-arrow-notch3.svg"
+            />
+          </div>
+          <div
+            class="bg-[#020eff] rounded-2xl w-72 h-[194px] absolute left-[50%] top-[205px] overflow-hidden"
+            style="translate: -50%"
+          >
+            <div
+              class="w-[220px] h-[155px] absolute left-[34px] top-[19px] overflow-hidden"
+            >
+              <img
+                class="w-[100%] h-[100%] absolute right-[0%] left-[0%] bottom-[0%] top-[0%] overflow-visible"
+                src="group6.svg"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-primar-color rounded-[20px] shrink-0 w-[338px] h-[430px] relative overflow-hidden"
+        >
+          <div
+            class="bg-[#a3c0f9] rounded-2xl w-[234px] h-[164px] absolute left-[50%] top-48 overflow-hidden"
+            style="translate: -50%"
+          ></div>
+          <div
+            class="flex flex-row gap-[26px] items-center justify-start absolute left-[50%] top-[51px]"
+            style="translate: -50%"
+          >
+            <div
+              class="flex flex-col items-start justify-between shrink-0 w-[212px] h-[60px] relative"
+            >
+              <div
+                class="text-white text-left font-['Geist-Bold',_sans-serif] text-lg leading-[27px] font-bold relative self-stretch"
+                style="letter-spacing: -0.005em; opacity: 0.85"
+              >
+                Health Care
+              </div>
+              <div
+                class="text-white text-left font-['Geist-Bold',_sans-serif] text-sm leading-[21px] font-bold relative self-stretch"
+                style="letter-spacing: -0.005em; opacity: 0.85"
+              >
+                ( 3 Positions Opened )
+              </div>
+            </div>
+            <img
+              class="shrink-0 w-6 h-6 relative overflow-visible"
+              src="line-end-arrow-notch4.svg"
+            />
+          </div>
+          <div
+            class="bg-neutral rounded-2xl w-72 h-[194px] absolute left-[50%] top-[205px] overflow-hidden"
+            style="translate: -50%"
+          >
+            <img
+              class="w-[231px] h-[161px] absolute left-[50%] top-4 overflow-visible"
+              style="translate: -50%"
+              src="undraw-medical-care-7-m-9-g-10.svg"
+            />
+          </div>
+        </div>
+        <div
+          class="bg-primar-color rounded-[20px] shrink-0 w-[338px] h-[430px] relative overflow-hidden"
+        >
+          <div
+            class="flex flex-row gap-6 items-start justify-start absolute left-[50%] top-[51px]"
+            style="translate: -50%"
+          >
+            <div
+              class="flex flex-col items-start justify-between shrink-0 w-[213px] h-[60px] relative"
+            >
+              <div
+                class="text-white text-left font-['Geist-Bold',_sans-serif] text-lg leading-[27px] font-bold relative self-stretch"
+                style="letter-spacing: -0.005em; opacity: 0.85"
+              >
+                Education
+              </div>
+              <div
+                class="text-white text-left font-['Geist-Bold',_sans-serif] text-sm leading-[21px] font-bold relative self-stretch"
+                style="letter-spacing: -0.005em; opacity: 0.85"
+              >
+                ( 3 Positions Opened )
+              </div>
+            </div>
+            <img
+              class="shrink-0 w-6 h-6 relative overflow-visible"
+              src="line-end-arrow-notch5.svg"
+            />
+          </div>
+          <div
+            class="bg-[#fdd7ff] rounded-2xl w-[234px] h-[164px] absolute left-[50%] top-[194px] overflow-hidden"
+            style="translate: -50%"
+          ></div>
+          <div
+            class="bg-[#f402ff] rounded-2xl w-72 h-[194px] absolute left-[50%] top-[205px] overflow-hidden"
+            style="translate: -50%"
+          >
+            <div
+              class="w-[241px] h-[158px] absolute left-6 top-[18px] overflow-hidden"
+            >
+              <img
+                class="w-[85.03%] h-[48.29%] absolute right-[5.76%] left-[9.2%] bottom-[51.71%] top-[0%] overflow-visible"
+                src="vector10.svg"
+              />
+              <img
+                class="w-[100%] h-[0.3%] absolute right-[0%] left-[0%] bottom-[0.92%] top-[98.78%] overflow-visible"
+                src="uuid-dac-6-dc-9-f-03-bc-4283-a-90-c-97-bcdcbf-45-dc0.svg"
+              />
+              <img
+                class="w-[100%] h-[0.3%] absolute right-[0%] left-[0%] bottom-[16.35%] top-[83.35%] overflow-visible"
+                src="uuid-2-f-9646-f-7-bb-94-4523-8-d-2-e-fd-8-f-0877664-c0.svg"
+              />
+              <img
+                class="w-[17.93%] h-[72.21%] absolute right-[47.47%] left-[34.6%] bottom-[16.54%] top-[11.25%] overflow-visible"
+                src="group7.svg"
+              />
+              <img
+                class="w-[35.52%] h-[54.58%] absolute right-[4.2%] left-[60.28%] bottom-[1.28%] top-[44.14%] overflow-visible"
+                src="group8.svg"
+              />
+              <img
+                class="h-[auto] absolute left-[10.29px] top-[72.33px] overflow-visible"
+                src="group9.svg"
+              />
+              <img
+                class="w-[5.41%] h-[4.49%] absolute right-[37.8%] left-[56.79%] bottom-[51.92%] top-[43.6%] overflow-visible"
+                src="vector11.svg"
+              />
+              <img
+                class="w-[5.41%] h-[1.84%] absolute right-[28.99%] left-[65.61%] bottom-[51.92%] top-[46.24%] overflow-visible"
+                src="vector12.svg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>

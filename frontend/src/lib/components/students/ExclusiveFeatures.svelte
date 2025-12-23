@@ -48,7 +48,7 @@
 		<div class="flex flex-col items-start justify-start gap-10 md:w-1/2">
 			<div class="flex flex-col gap-5">
 				<div
-					class="font-['Geist-Bold',_sans-serif] text-[28px] leading-tight font-bold text-[#7502ff] sm:text-[32px] md:text-[40px] md:leading-[60px]"
+					class="font-['Geist-Bold',_sans-serif] text-[28px] leading-tight font-bold text-black sm:text-[32px] md:text-[40px] md:leading-[60px]"
 				>
 					Exclusive Features for Students & Graduates
 				</div>
@@ -87,7 +87,7 @@
 			<!-- The HTML had a very large image absolute positioned. I'll make it responsive. -->
 			<img
 				class="h-auto w-full object-cover"
-				src="/images/students/Frame 2085663876.png"
+				src="/images/students/student.png"
 				alt="Exclusive Features"
 			/>
 		</div>

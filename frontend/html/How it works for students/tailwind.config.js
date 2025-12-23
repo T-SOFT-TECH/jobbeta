@@ -1,0 +1,59 @@
+
+// remember to use module.exports instead of tailwind.config in production
+tailwind.config = 
+   {
+      // Note: config only includes the used styles & variables of your selection
+      content: ["./src/**/*.{html,vue,svelte,js,ts,jsx,tsx}"],
+      theme: {
+        extend: {
+          fontFamily: {
+            
+          },
+          fontSize: {
+            
+          },
+          fontWeight: {
+            
+          },
+          lineHeight: {
+             
+          },
+          letterSpacing: {
+             
+          },
+          borderRadius: {
+              
+          },
+          colors: {
+            'neutral-white': '#ffffff',
+'brand-colours-dark-purple': '#110d21',
+'primar-color': '#7502ff',
+'white': '#ffffff',
+            
+          },
+          spacing: {
+              
+          },
+          width: {
+             
+          },
+          minWidth: {
+             
+          },
+          maxWidth: {
+             
+          },
+          height: {
+             
+          },
+          minHeight: {
+             
+          },
+          maxHeight: {
+             
+          }
+        }
+      }
+    }
+
+          
