@@ -419,7 +419,7 @@
 <!-- Hero Section -->
 
 <section
-	class="relative w-full overflow-hidden py-4 md:py-8 lg:h-[1024px]"
+	class="relative w-full overflow-hidden py-4 md:py-8 lg:h-[760px]"
 	style="background: linear-gradient(237.007deg, rgba(238, 236, 252, 0.04) 15.896%, rgba(117, 2, 255, 0.04) 29.374%), linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%)"
 >
 	<!-- Background Grid Pattern - Hidden on mobile -->
