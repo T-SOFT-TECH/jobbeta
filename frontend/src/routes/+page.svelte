@@ -419,7 +419,7 @@
 <!-- Hero Section -->
 
 <section
-	class="relative w-full overflow-hidden py-12 md:py-20 lg:h-[1024px]"
+	class="relative w-full overflow-hidden py-4 md:py-8 lg:h-[1024px]"
 	style="background: linear-gradient(237.007deg, rgba(238, 236, 252, 0.04) 15.896%, rgba(117, 2, 255, 0.04) 29.374%), linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%)"
 >
 	<!-- Background Grid Pattern - Hidden on mobile -->
@@ -445,7 +445,7 @@
 	</div>
 
 	<div class="page-container relative">
-		<div class="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between lg:pt-24">
+		<div class="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between lg:pt-16">
 			<!-- Hero Content -->
 			<Animate variant="left" duration={0.8}>
 				<div class="flex flex-col gap-6 lg:max-w-[640px]">
