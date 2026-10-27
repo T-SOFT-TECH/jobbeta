@@ -5,9 +5,9 @@
 
 	// Sample notifications (fictional people and companies)
 	const notifications = [
-		{ name: 'Jane Osteen', detail: 'Fresh graduate', match: 'Internship at Northfield Labs', avatar: '/images/Ellipse177.png' },
-		{ name: 'Abraham Jude', detail: 'Year 3 student', match: 'Graduate role at Bluepine Finance', avatar: '/images/Ellipse178.png' },
-		{ name: 'Rachel Obaloluwa', detail: 'Year 1 student', match: 'Internship at Arcline Studio', avatar: '/images/Ellipse179.png' }
+		{ name: 'Jane Osteen', detail: 'Fresh graduate', match: 'Internship at Northfield Labs', avatar: '/images/Ellipse177.webp' },
+		{ name: 'Abraham Jude', detail: 'Year 3 student', match: 'Graduate role at Bluepine Finance', avatar: '/images/Ellipse178.webp' },
+		{ name: 'Rachel Obaloluwa', detail: 'Year 1 student', match: 'Internship at Arcline Studio', avatar: '/images/Ellipse179.webp' }
 	];
 </script>
 
@@ -26,7 +26,7 @@
 			<!-- How the network fits together -->
 			<article class="lift flex flex-col gap-6 rounded-3xl bg-white p-6 md:p-7">
 				<div class="flex items-center justify-between px-2 py-4" aria-hidden="true">
-					<img src="/images/Ellipse175.png" alt="" class="h-12 w-12 rounded-full" />
+					<img loading="lazy" decoding="async" src="/images/Ellipse175.webp" alt="" class="h-12 w-12 rounded-full" />
 					<span class="h-px flex-1 border-t-2 border-dashed border-primary/30"></span>
 					<span class="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary text-white">
 						<Icon name="users" size={26} />
@@ -54,7 +54,7 @@
 				<ul class="flex flex-col gap-3">
 					{#each notifications as n (n.name)}
 						<li class="flex gap-3 rounded-2xl bg-neutral-light/70 p-3">
-							<img src={n.avatar} alt="" class="h-10 w-10 shrink-0 rounded-full" />
+							<img loading="lazy" decoding="async" src={n.avatar} alt="" class="h-10 w-10 shrink-0 rounded-full" />
 							<div class="min-w-0 font-geist">
 								<p class="text-sm font-semibold text-secondary">
 									{n.name} <span class="font-normal text-text-secondary">· {n.detail}</span>
@@ -72,7 +72,7 @@
 			<!-- Fit over volume -->
 			<article class="lift flex flex-col overflow-hidden rounded-3xl bg-white md:col-span-2 lg:col-span-1">
 				<img
-					src="/images/Frame 2085663329.png"
+					src="/images/Frame 2085663329.webp"
 					alt="A smiling graduate in a job interview"
 					loading="lazy"
 					class="h-48 w-full object-cover lg:h-52"

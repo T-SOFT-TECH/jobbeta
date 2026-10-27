@@ -102,7 +102,7 @@
 			<div class="relative">
 				<img
 					class="border-accent-color h-[500px] w-full rounded-2xl border-8 border-solid object-cover lg:w-[544px]"
-					src="/icons/blog/frame-20856642380.png"
+					src="/icons/blog/frame-20856642380.webp"
 					alt=""
 				/>
 
@@ -123,7 +123,7 @@
 							</div>
 							<div class="flex flex-row gap-2">
 								{#each Array(5) as _, i}
-									<img class="h-6 w-6" src="/icons/blog/kid-star{i + 5}.svg" alt="" />
+									<img loading="lazy" decoding="async" class="h-6 w-6" src="/icons/blog/kid-star{i + 5}.svg" alt="" />
 								{/each}
 							</div>
 						</div>
@@ -131,7 +131,7 @@
 				</div>
 				<div class="absolute right-[50px] bottom-[-40px] hidden rounded-2xl bg-white p-3 lg:block">
 					<div class="flex flex-row gap-3">
-						<img
+						<img loading="lazy" decoding="async"
 							class="border-neutral-primary-grey h-[50px] w-[50px] rounded-[50px] border-[3px] border-solid object-cover"
 							src="/icons/blog/frame-20856641870.png"
 							alt=""
@@ -145,7 +145,7 @@
 							</div>
 							<div class="flex flex-row gap-2">
 								{#each Array(5) as _, i}
-									<img class="h-6 w-6" src="/icons/blog/kid-star{i}.svg" alt="" />
+									<img loading="lazy" decoding="async" class="h-6 w-6" src="/icons/blog/kid-star{i}.svg" alt="" />
 								{/each}
 							</div>
 						</div>
@@ -309,10 +309,10 @@
 									>
 										Learn MorE
 									</div>
-									<img class="h-6 w-6" src="/icons/blog/arrow-right-alt{i}.svg" alt="" />
+									<img loading="lazy" decoding="async" class="h-6 w-6" src="/icons/blog/arrow-right-alt{i}.svg" alt="" />
 								</div>
 								<div class="flex flex-row gap-3">
-									<img
+									<img loading="lazy" decoding="async"
 										class="border-neutral-primary-grey h-[50px] w-[50px] rounded-[50px] border-[3px] border-solid object-cover"
 										src="/icons/blog/frame-2085664187{i + 2}.png"
 										alt=""
@@ -335,9 +335,9 @@
 							</div>
 
 							<!-- Image -->
-							<img
+							<img loading="lazy" decoding="async"
 								class="h-72 w-full shrink-0 rounded-[20px] object-cover sm:h-96 lg:h-[476px] lg:w-[438px]"
-								src="/icons/blog/frame-2085664184{i}.png"
+								src="/icons/blog/frame-2085664184{i}.webp"
 								alt=""
 							/>
 						</div>
@@ -425,10 +425,10 @@
 							>
 								Learn MorE
 							</div>
-							<img class="h-6 w-6" src="/icons/blog/arrow-right-alt3.svg" alt="" />
+							<img loading="lazy" decoding="async" class="h-6 w-6" src="/icons/blog/arrow-right-alt3.svg" alt="" />
 						</div>
 						<div class="flex flex-row gap-3">
-							<img
+							<img loading="lazy" decoding="async"
 								class="border-neutral-primary-grey h-[50px] w-[50px] rounded-[50px] border-[3px] border-solid object-cover"
 								src="/icons/blog/frame-20856641875.png"
 								alt=""
@@ -452,9 +452,9 @@
 
 					<!-- Image -->
 					<div class="lg:w-1/2">
-						<img
+						<img loading="lazy" decoding="async"
 							class="h-[476px] w-full rounded-[20px] object-cover"
-							src="/icons/blog/frame-20856641843.png"
+							src="/icons/blog/frame-20856641843.webp"
 							alt=""
 						/>
 					</div>

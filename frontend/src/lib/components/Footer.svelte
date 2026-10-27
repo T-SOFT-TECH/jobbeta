@@ -89,12 +89,12 @@
 
 	<!-- Illustration (desktop only) -->
 	<div class="pointer-events-none absolute right-0 bottom-[7rem] hidden h-[340px] w-[340px] xl:block">
-		<img src="/icons/Graphic_elements-footer.svg" alt="" class="h-full w-full object-contain" />
+		<img loading="lazy" decoding="async" src="/icons/Graphic_elements-footer.svg" alt="" class="h-full w-full object-contain" />
 	</div>
 
 	<!-- Bottom bar -->
 	<div class="relative">
-		<img src="/icons/Footer-Vector.svg" alt="" class="w-full" />
+		<img loading="lazy" decoding="async" src="/icons/Footer-Vector.svg" alt="" class="w-full" />
 		<div class="bg-primary py-5">
 			<div
 				class="page-container flex flex-col items-center justify-between gap-3 font-geist text-sm text-white md:flex-row"

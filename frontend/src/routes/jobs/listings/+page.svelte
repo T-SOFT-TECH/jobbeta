@@ -85,24 +85,24 @@
 							<div class="flex w-full flex-col gap-6">
 								<div class="font-geist text-base font-semibold leading-6 text-[#2a2c2c]" style="letter-spacing: -0.005em">Date Posted</div>
 								<div class="flex flex-row items-center gap-4">
-									<img class="h-5 w-5" src="/icons/job-listings/fiber-manual-record0.svg" alt="" />
+									<img loading="lazy" decoding="async" class="h-5 w-5" src="/icons/job-listings/fiber-manual-record0.svg" alt="" />
 									<div class="font-lato text-base leading-6 text-[rgba(42,44,44,0.90)]" style="letter-spacing: -0.005em">Last 24 hours</div>
 								</div>
 								<div class="flex flex-row items-center gap-4">
-									<img class="h-5 w-5" src="/icons/job-listings/fiber-manual-record1.svg" alt="" />
+									<img loading="lazy" decoding="async" class="h-5 w-5" src="/icons/job-listings/fiber-manual-record1.svg" alt="" />
 									<div class="font-lato text-base leading-6 text-[rgba(42,44,44,0.90)]" style="letter-spacing: -0.005em">Last 7 Days</div>
 								</div>
 								<div class="flex flex-row items-center gap-4">
-									<img class="h-5 w-5" src="/icons/job-listings/fiber-manual-record2.svg" alt="" />
+									<img loading="lazy" decoding="async" class="h-5 w-5" src="/icons/job-listings/fiber-manual-record2.svg" alt="" />
 									<div class="font-lato text-base leading-6 text-[rgba(42,44,44,0.90)]" style="letter-spacing: -0.005em">Last 14 days</div>
 								</div>
 								<div class="flex flex-row items-center gap-4">
-									<img class="h-5 w-5" src="/icons/job-listings/fiber-manual-record3.svg" alt="" />
+									<img loading="lazy" decoding="async" class="h-5 w-5" src="/icons/job-listings/fiber-manual-record3.svg" alt="" />
 									<div class="font-lato text-base leading-6 text-[rgba(42,44,44,0.90)]" style="letter-spacing: -0.005em">Last 30 days</div>
 								</div>
 								<div class="flex flex-row items-center gap-3">
 									<div class="flex h-10 w-10 items-center justify-center overflow-hidden rounded-[50px] bg-[#3f018a]">
-										<img class="h-5 w-5" src="/icons/job-listings/add0.svg" alt="" />
+										<img loading="lazy" decoding="async" class="h-5 w-5" src="/icons/job-listings/add0.svg" alt="" />
 									</div>
 									<div class="font-lato text-base font-extrabold leading-6 text-[rgba(42,44,44,0.90)]" style="letter-spacing: -0.005em">See More</div>
 								</div>
@@ -112,24 +112,24 @@
 							<div class="flex flex-col gap-3.5">
 								<div class="font-geist text-base font-semibold leading-6 text-[#2a2c2c]" style="letter-spacing: -0.005em">Experience Level</div>
 								<div class="flex flex-row items-center gap-4">
-									<img class="h-5 w-5" src="/icons/job-listings/fiber-manual-record4.svg" alt="" />
+									<img loading="lazy" decoding="async" class="h-5 w-5" src="/icons/job-listings/fiber-manual-record4.svg" alt="" />
 									<div class="font-lato text-base leading-6 text-[rgba(42,44,44,0.90)]" style="letter-spacing: -0.005em">Entry-level</div>
 								</div>
 								<div class="flex flex-row items-center gap-4">
-									<img class="h-5 w-5" src="/icons/job-listings/fiber-manual-record5.svg" alt="" />
+									<img loading="lazy" decoding="async" class="h-5 w-5" src="/icons/job-listings/fiber-manual-record5.svg" alt="" />
 									<div class="font-lato text-base leading-6 text-[rgba(42,44,44,0.90)]" style="letter-spacing: -0.005em">Mid-level</div>
 								</div>
 								<div class="flex flex-row items-center gap-4">
-									<img class="h-5 w-5" src="/icons/job-listings/fiber-manual-record6.svg" alt="" />
+									<img loading="lazy" decoding="async" class="h-5 w-5" src="/icons/job-listings/fiber-manual-record6.svg" alt="" />
 									<div class="font-lato text-base leading-6 text-[rgba(42,44,44,0.90)]" style="letter-spacing: -0.005em">Intermediate level</div>
 								</div>
 								<div class="flex flex-row items-center gap-4">
-									<img class="h-5 w-5" src="/icons/job-listings/fiber-manual-record7.svg" alt="" />
+									<img loading="lazy" decoding="async" class="h-5 w-5" src="/icons/job-listings/fiber-manual-record7.svg" alt="" />
 									<div class="font-lato text-base leading-6 text-[rgba(42,44,44,0.90)]" style="letter-spacing: -0.005em">Senior Level</div>
 								</div>
 								<div class="flex flex-row items-center gap-3">
 									<div class="flex h-10 w-10 items-center justify-center overflow-hidden rounded-[50px] bg-[#3f018a]">
-										<img class="h-5 w-5" src="/icons/job-listings/add1.svg" alt="" />
+										<img loading="lazy" decoding="async" class="h-5 w-5" src="/icons/job-listings/add1.svg" alt="" />
 									</div>
 									<div class="font-lato text-base font-extrabold leading-6 text-[rgba(42,44,44,0.90)]" style="letter-spacing: -0.005em">See More</div>
 								</div>
@@ -167,7 +167,7 @@
 								<div class="font-geist text-base font-bold leading-6 text-[#2a2c2c]" style="letter-spacing: -0.005em">Job Title</div>
 								<div class="flex flex-row items-center gap-2.5 rounded-2xl border border-solid border-neutral-primary-grey bg-white px-6 py-4">
 									<div class="font-lato flex-1 text-left text-base leading-6 text-[rgba(42,44,44,0.49)]" style="letter-spacing: -0.005em">Enter Job title</div>
-									<img class="h-6 w-6" src="/icons/job-listings/arrow-drop-down0.svg" alt="" />
+									<img loading="lazy" decoding="async" class="h-6 w-6" src="/icons/job-listings/arrow-drop-down0.svg" alt="" />
 								</div>
 							</div>
 
@@ -176,7 +176,7 @@
 								<div class="font-geist text-base font-bold leading-6 text-[#2a2c2c]" style="letter-spacing: -0.005em">Notification Frequency</div>
 								<div class="flex flex-row items-center gap-2.5 rounded-2xl border border-solid border-neutral-primary-grey bg-white px-6 py-4">
 									<div class="font-lato flex-1 text-left text-base leading-6 text-[rgba(42,44,44,0.49)]" style="letter-spacing: -0.005em">Daily</div>
-									<img class="h-6 w-6" src="/icons/job-listings/arrow-drop-down1.svg" alt="" />
+									<img loading="lazy" decoding="async" class="h-6 w-6" src="/icons/job-listings/arrow-drop-down1.svg" alt="" />
 								</div>
 							</div>
 						</div>
@@ -201,11 +201,11 @@
 							<div class="flex flex-row items-center gap-[23px]">
 								<div class="flex flex-row items-center justify-center gap-2.5 rounded-[20px] bg-[rgba(42,44,44,0.06)] p-2.5">
 									<div class="font-lato text-base font-medium leading-6 text-[rgba(42,44,44,0.60)]" style="letter-spacing: -0.005em">Sort By</div>
-									<img class="h-6 w-6" src="/icons/job-listings/arrow-drop-down2.svg" alt="" />
+									<img loading="lazy" decoding="async" class="h-6 w-6" src="/icons/job-listings/arrow-drop-down2.svg" alt="" />
 								</div>
 								<div class="flex flex-row items-center justify-center gap-2.5 rounded-[20px] bg-[rgba(42,44,44,0.05)] p-2.5">
 									<div class="font-lato text-base font-medium leading-6 text-[rgba(42,44,44,0.60)]" style="letter-spacing: -0.005em">10 Per-page</div>
-									<img class="h-6 w-6" src="/icons/job-listings/arrow-drop-down3.svg" alt="" />
+									<img loading="lazy" decoding="async" class="h-6 w-6" src="/icons/job-listings/arrow-drop-down3.svg" alt="" />
 								</div>
 							</div>
 						</div>
@@ -231,15 +231,15 @@
 												</div>
 												<div class="flex flex-row flex-wrap gap-5">
 													<div class="flex flex-row items-center gap-2">
-														<img class="h-5 w-5" src="/icons/job-listings/work-outline0.svg" alt="" />
+														<img loading="lazy" decoding="async" class="h-5 w-5" src="/icons/job-listings/work-outline0.svg" alt="" />
 														<div class="font-raleway text-xs leading-[18px]" style="letter-spacing: -0.005em">Accounting</div>
 													</div>
 													<div class="flex flex-row items-center gap-2">
-														<img class="h-5 w-5" src="/icons/job-listings/location-on1.svg" alt="" />
+														<img loading="lazy" decoding="async" class="h-5 w-5" src="/icons/job-listings/location-on1.svg" alt="" />
 														<div class="font-raleway text-xs leading-[18px]" style="letter-spacing: -0.005em">Lagos, Nigeria</div>
 													</div>
 													<div class="flex flex-row items-center gap-2">
-														<img class="h-5 w-5" src="/icons/job-listings/home-work0.svg" alt="" />
+														<img loading="lazy" decoding="async" class="h-5 w-5" src="/icons/job-listings/home-work0.svg" alt="" />
 														<div class="font-raleway text-xs leading-[18px]" style="letter-spacing: -0.005em">N250,000 - N400,000</div>
 													</div>
 												</div>
@@ -262,7 +262,7 @@
 										</div>
 									</div>
 									<button class="shrink-0">
-										<img class="h-6 w-6" src="/icons/job-listings/bookmark-border0.svg" alt="Bookmark" />
+										<img loading="lazy" decoding="async" class="h-6 w-6" src="/icons/job-listings/bookmark-border0.svg" alt="Bookmark" />
 									</button>
 								</div>
 							{/each}
@@ -272,13 +272,13 @@
 					<!-- Pagination -->
 					<div class="flex flex-row items-center justify-center gap-3">
 						<button class="flex h-[60px] w-[60px] items-center justify-center overflow-hidden rounded-[50px] border border-solid border-[#eeecfc]">
-							<img class="h-6 w-6" src="/icons/job-listings/arrow-right-alt0.svg" alt="Previous" />
+							<img loading="lazy" decoding="async" class="h-6 w-6" src="/icons/job-listings/arrow-right-alt0.svg" alt="Previous" />
 						</button>
 						<button class="font-geist flex h-[60px] w-[60px] items-center justify-center overflow-hidden rounded-[50px] bg-[#3f018a] text-base font-bold leading-6 text-white" style="letter-spacing: -0.005em">1</button>
 						<button class="font-geist flex h-[60px] w-[60px] items-center justify-center overflow-hidden rounded-[50px] border border-solid border-[#eeecfc] text-base font-bold leading-6 text-[#62717a]" style="letter-spacing: -0.005em">2</button>
 						<button class="font-geist flex h-[60px] w-[60px] items-center justify-center overflow-hidden rounded-[50px] border border-solid border-[#eeecfc] text-base font-bold leading-6 text-[#62717a]" style="letter-spacing: -0.005em">3</button>
 						<button class="flex h-[60px] w-[60px] items-center justify-center overflow-hidden rounded-[50px] border border-solid border-[#eeecfc]">
-							<img class="h-6 w-6" src="/icons/job-listings/arrow-right-alt1.svg" alt="Next" />
+							<img loading="lazy" decoding="async" class="h-6 w-6" src="/icons/job-listings/arrow-right-alt1.svg" alt="Next" />
 						</button>
 					</div>
 				</div>

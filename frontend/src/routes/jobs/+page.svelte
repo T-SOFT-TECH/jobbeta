@@ -30,9 +30,9 @@
 
 	const resources = [
 		{ title: 'Tech CV guide', body: 'Write a CV that gets noticed.', img: '/images/jobs/frame-20856640660.png' },
-		{ title: 'Salary negotiation', body: 'Master the art of negotiating your worth.', img: '/images/jobs/frame-20856640720.png' },
-		{ title: 'Career development', body: 'Tips for growing in your first role.', img: '/images/jobs/frame-20856640721.png' },
-		{ title: 'Technical interviews', body: 'Prepare for your next interview.', img: '/images/jobs/frame-20856640722.png' }
+		{ title: 'Salary negotiation', body: 'Master the art of negotiating your worth.', img: '/images/jobs/frame-20856640720.webp' },
+		{ title: 'Career development', body: 'Tips for growing in your first role.', img: '/images/jobs/frame-20856640721.webp' },
+		{ title: 'Technical interviews', body: 'Prepare for your next interview.', img: '/images/jobs/frame-20856640722.webp' }
 	];
 </script>
 

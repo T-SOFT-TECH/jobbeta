@@ -300,7 +300,7 @@
 
 				<!-- Main Image -->
 				<img
-					src="/images/login/frame-20856643060.png"
+					src="/images/login/frame-20856643060.webp"
 					alt="JobBeta Dashboard Preview"
 					class="w-full max-w-[500px] rounded-[20px] border-[10px] border-white object-cover shadow-2xl"
 				/>

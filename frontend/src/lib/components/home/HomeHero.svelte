@@ -24,7 +24,7 @@
 
 		<div class="relative">
 			<img
-				src="/images/2148190729 1.png"
+				src="/images/2148190729 1.webp"
 				alt="Two young professionals celebrating with a thumbs up"
 				fetchpriority="high"
 				class="aspect-[4/3] w-full rounded-3xl object-cover lg:aspect-[4/5] lg:max-h-[520px]"

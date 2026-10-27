@@ -1,7 +1,7 @@
 <script>
 	import Animate from '$lib/components/Animate.svelte';
 
-	let { heroBg = '/images/career-tips/frame-20856641690.png' } = $props();
+	let { heroBg = '/images/career-tips/frame-20856641690.webp' } = $props();
 </script>
 
 <section class="relative w-full overflow-hidden px-4 py-20 md:h-[712px] md:py-0">

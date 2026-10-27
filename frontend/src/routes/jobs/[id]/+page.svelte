@@ -114,17 +114,17 @@
 						<!-- Collapsible Sections -->
 						<div class="flex flex-row items-start justify-between gap-5">
 							<div class="font-geist flex-1 text-2xl font-semibold leading-9 text-black" style="letter-spacing: -0.005em">Key Responsibilities</div>
-							<img class="h-8 w-8" src="/icons/job-details/keyboard-arrow-down1.svg" alt="" />
+							<img loading="lazy" decoding="async" class="h-8 w-8" src="/icons/job-details/keyboard-arrow-down1.svg" alt="" />
 						</div>
 
 						<div class="flex flex-row items-start justify-between gap-5">
 							<div class="font-geist flex-1 text-2xl font-semibold leading-9 text-black" style="letter-spacing: -0.005em">Requirements</div>
-							<img class="h-8 w-8" src="/icons/job-details/keyboard-arrow-down2.svg" alt="" />
+							<img loading="lazy" decoding="async" class="h-8 w-8" src="/icons/job-details/keyboard-arrow-down2.svg" alt="" />
 						</div>
 
 						<div class="flex flex-row items-start justify-between gap-5">
 							<div class="font-geist flex-1 text-2xl font-semibold leading-9 text-black" style="letter-spacing: -0.005em">What We Offer</div>
-							<img class="h-8 w-8" src="/icons/job-details/keyboard-arrow-down3.svg" alt="" />
+							<img loading="lazy" decoding="async" class="h-8 w-8" src="/icons/job-details/keyboard-arrow-down3.svg" alt="" />
 						</div>
 
 						<!-- Share on Socials -->
@@ -134,11 +134,11 @@
 							</div>
 							<div class="flex flex-row flex-wrap gap-5">
 								<div class="flex flex-row items-center gap-2">
-									<img class="h-6 w-6" src="/icons/job-details/facebook1.svg" alt="Facebook" />
+									<img loading="lazy" decoding="async" class="h-6 w-6" src="/icons/job-details/facebook1.svg" alt="Facebook" />
 									<div class="font-raleway text-sm leading-[21px]" style="letter-spacing: -0.005em">Facebook</div>
 								</div>
 								<div class="flex flex-row items-center gap-2">
-									<img class="h-6 w-6" src="/icons/job-details/gmail0.svg" alt="Gmail" />
+									<img loading="lazy" decoding="async" class="h-6 w-6" src="/icons/job-details/gmail0.svg" alt="Gmail" />
 									<div class="font-raleway text-sm leading-[21px]" style="letter-spacing: -0.005em">Gmail</div>
 								</div>
 							</div>
@@ -165,7 +165,7 @@
 									<div class="flex flex-col gap-4">
 										<div class="flex flex-row items-center justify-between gap-1.5">
 											<div class="font-geist flex-1 text-sm leading-[21px] text-[rgba(0,0,0,0.66)]" style="letter-spacing: -0.005em">Ridgeway Power</div>
-											<img class="h-6 w-6" src="/icons/job-details/bookmark-border1.svg" alt="Bookmark" />
+											<img loading="lazy" decoding="async" class="h-6 w-6" src="/icons/job-details/bookmark-border1.svg" alt="Bookmark" />
 										</div>
 										<div class="flex flex-row flex-wrap items-center justify-between gap-x-4 gap-y-1">
 											<div class="font-geist text-base font-bold leading-6 text-black" style="letter-spacing: -0.005em">Project Security Manager</div>
@@ -173,15 +173,15 @@
 										</div>
 										<div class="flex flex-row flex-wrap gap-5">
 											<div class="flex flex-row items-center gap-2">
-												<img class="h-5 w-5" src="/icons/job-details/work-outline{i}.svg" alt="" />
+												<img loading="lazy" decoding="async" class="h-5 w-5" src="/icons/job-details/work-outline{i}.svg" alt="" />
 												<div class="font-raleway text-xs leading-[18px]" style="letter-spacing: -0.005em">Accounting</div>
 											</div>
 											<div class="flex flex-row items-center gap-2">
-												<img class="h-5 w-5" src="/icons/job-details/location-on{i}.svg" alt="" />
+												<img loading="lazy" decoding="async" class="h-5 w-5" src="/icons/job-details/location-on{i}.svg" alt="" />
 												<div class="font-raleway text-xs leading-[18px]" style="letter-spacing: -0.005em">Lagos, Nigeria</div>
 											</div>
 											<div class="flex flex-row items-center gap-2">
-												<img class="h-5 w-5" src="/icons/job-details/home-work{i}.svg" alt="" />
+												<img loading="lazy" decoding="async" class="h-5 w-5" src="/icons/job-details/home-work{i}.svg" alt="" />
 												<div class="font-raleway text-xs leading-[18px]" style="letter-spacing: -0.005em">N250,000 - N400,000</div>
 											</div>
 										</div>
@@ -213,7 +213,7 @@
 							<div class="font-geist text-base font-bold leading-6 text-[#2a2c2c]" style="letter-spacing: -0.005em">Job Title</div>
 							<div class="flex flex-row items-center gap-2.5 rounded-2xl border border-solid border-neutral-primary-grey bg-white px-6 py-4">
 								<div class="font-lato flex-1 text-left text-base leading-6 text-[rgba(42,44,44,0.49)]" style="letter-spacing: -0.005em">Enter Job title</div>
-								<img class="h-6 w-6" src="/icons/job-details/arrow-drop-down0.svg" alt="" />
+								<img loading="lazy" decoding="async" class="h-6 w-6" src="/icons/job-details/arrow-drop-down0.svg" alt="" />
 							</div>
 						</div>
 
@@ -222,7 +222,7 @@
 							<div class="font-geist text-base font-bold leading-6 text-[#2a2c2c]" style="letter-spacing: -0.005em">Notification Frequency</div>
 							<div class="flex flex-row items-center gap-2.5 rounded-2xl border border-solid border-neutral-primary-grey bg-white px-6 py-4">
 								<div class="font-lato flex-1 text-left text-base leading-6 text-[rgba(42,44,44,0.49)]" style="letter-spacing: -0.005em">Daily</div>
-								<img class="h-6 w-6" src="/icons/job-details/arrow-drop-down1.svg" alt="" />
+								<img loading="lazy" decoding="async" class="h-6 w-6" src="/icons/job-details/arrow-drop-down1.svg" alt="" />
 							</div>
 						</div>
 					</div>
@@ -243,9 +243,9 @@
 			<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
 				{#each [
 					{ image: 'frame-20856640660.png', title: "Stay relevant with student trends" },
-					{ image: 'frame-20856640720.png', title: "Grow your employer network" },
-					{ image: 'frame-20856640721.png', title: 'Create meaningful career experience' },
-					{ image: 'frame-20856640722.png', title: 'Tell your story to others' }
+					{ image: 'frame-20856640720.webp', title: "Grow your employer network" },
+					{ image: 'frame-20856640721.webp', title: 'Create meaningful career experience' },
+					{ image: 'frame-20856640722.webp', title: 'Tell your story to others' }
 				] as card (card.image)}
 					<a href="/career-tips" class="group lift flex flex-col gap-5 rounded-2xl bg-white p-4 pb-6">
 						<img class="aspect-[268/226] w-full rounded-2xl object-cover" src="/icons/job-details/{card.image}" alt="" loading="lazy" />

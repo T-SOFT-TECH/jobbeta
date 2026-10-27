@@ -35,7 +35,7 @@
 
 		<div class="overflow-hidden rounded-3xl bg-white p-3 shadow-xl ring-1 ring-black/5 md:p-4">
 			<img
-				src="/images/employers/candidate-match-panel.png"
+				src="/images/employers/candidate-match-panel.webp"
 				alt="Candidate list beside a match view explaining a 90% AI match"
 				loading="lazy"
 				class="aspect-[4/3] w-full rounded-2xl object-cover object-top"

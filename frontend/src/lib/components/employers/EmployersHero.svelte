@@ -24,7 +24,7 @@
 		<div class="relative w-full max-w-5xl">
 			<div class="pointer-events-none absolute inset-x-10 -top-6 bottom-0 rounded-[2rem] bg-primary/15 blur-3xl"></div>
 			<img
-				src="/images/employers/dashboard-overview.png"
+				src="/images/employers/dashboard-overview.webp"
 				alt="JobBeta employer dashboard showing active roles, talent pool, interviews and shortlists"
 				fetchpriority="high"
 				class="relative aspect-[16/7] w-full rounded-t-2xl object-cover object-top shadow-2xl ring-1 ring-black/5 md:rounded-t-3xl"

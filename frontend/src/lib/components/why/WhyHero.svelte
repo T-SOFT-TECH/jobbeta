@@ -32,7 +32,7 @@
 			<div class="absolute -top-6 -right-6 hidden h-24 w-24 rounded-full border border-primary/20 sm:block"></div>
 			<div class="absolute -bottom-8 -left-8 hidden h-32 w-32 rounded-full border border-[#3296f8]/20 sm:block"></div>
 			<img
-				src="/images/hero-2.jpg"
+				src="/images/hero-2.webp"
 				alt="Early-career professionals walking and talking together"
 				fetchpriority="high"
 				class="aspect-[4/5] max-h-[460px] w-full rounded-3xl object-cover shadow-2xl"

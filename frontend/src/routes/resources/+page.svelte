@@ -14,20 +14,20 @@
 			description:
 				'Practical advice for building connections, finding mentors and creating momentum in your early career.',
 			href: '/career-tips',
-			image: '/images/career-centers/frame-20856640720.png'
+			image: '/images/career-centers/frame-20856640720.webp'
 		},
 		{
 			title: 'Create Meaningful Career Experience',
 			description:
 				"What's happening across industries, and what it means for students and new graduates.",
 			href: '/blog',
-			image: '/images/career-centers/frame-20856640721.png'
+			image: '/images/career-centers/frame-20856640721.webp'
 		},
 		{
 			title: 'Tell Your Story to Others',
 			description: 'How to present your projects, skills and journey so employers take notice.',
 			href: '/blog',
-			image: '/images/career-centers/frame-20856640722.png'
+			image: '/images/career-centers/frame-20856640722.webp'
 		}
 	];
 </script>

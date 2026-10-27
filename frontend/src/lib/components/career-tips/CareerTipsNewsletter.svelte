@@ -26,7 +26,7 @@
 
 <section
 	class="relative w-full overflow-hidden bg-secondary px-4 py-16 md:px-20 md:py-24"
-	style="background-image: url('/images/career-tips/frame-20856642780.png'); background-size: cover; background-position: center;"
+	style="background-image: url('/images/career-tips/frame-20856642780.webp'); background-size: cover; background-position: center;"
 >
 	<div
 		class="relative z-10 mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 lg:flex-row lg:gap-12"

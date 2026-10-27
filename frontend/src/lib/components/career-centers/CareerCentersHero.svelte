@@ -27,7 +27,7 @@
 
 		<div class="relative mx-auto w-full max-w-md">
 			<img
-				src="/images/students/Frame 2085663912.png"
+				src="/images/students/Frame 2085663912.webp"
 				alt="A group of cheerful university students"
 				fetchpriority="high"
 				class="aspect-[4/3] w-full rounded-3xl object-cover shadow-2xl ring-4 ring-white/15"

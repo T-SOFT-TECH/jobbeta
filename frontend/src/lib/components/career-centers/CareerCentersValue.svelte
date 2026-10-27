@@ -39,7 +39,7 @@
 		<div class="relative mx-auto w-full max-w-md">
 			<div class="absolute -inset-3 rotate-3 rounded-[2rem] bg-gradient-to-br from-primary via-[#3296f8] to-[#0e9f6e] opacity-90"></div>
 			<img
-				src="/images/career-centers/value-proposition.png"
+				src="/images/career-centers/value-proposition.webp"
 				alt="A career adviser holding a tablet"
 				loading="lazy"
 				class="relative aspect-[4/5] max-h-[480px] w-full rounded-3xl object-cover"

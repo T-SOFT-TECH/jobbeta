@@ -24,7 +24,7 @@
 			<div class="w-full  mx-auto">
 				<div class="w-full aspect-[16/9] sm:aspect-[3/2] md:aspect-[16/7] lg:aspect-[1238/536] rounded-2xl sm:rounded-3xl lg:rounded-[32px] overflow-hidden shadow-md md:shadow-lg">
 					<img
-						src="/images/Frame%202085663570.jpg"
+						src="/images/Frame%202085663570.webp"
 						alt="Business professionals collaborating"
 						class="w-full h-full object-cover"
 					/>
@@ -70,7 +70,7 @@
 				<div class="bg-[#7502FF] rounded-2xl lg:rounded-[16px] min-h-[280px] sm:min-h-[300px] md:min-h-[320px] lg:h-[338px] relative overflow-hidden p-6 sm:p-8 md:p-10 lg:p-0">
 					<!-- Icon -->
 					<div class="absolute top-6 sm:top-7 md:top-8 lg:top-[28px] right-6 sm:right-8 md:right-10 lg:right-[45px] w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-[60px] lg:h-[60px]">
-						<img src="/icons/workspace-premium-light.svg" alt="" class="w-full h-full" />
+						<img loading="lazy" decoding="async" src="/icons/workspace-premium-light.svg" alt="" class="w-full h-full" />
 					</div>
 
 					<!-- Content -->
@@ -88,7 +88,7 @@
 				<div class="bg-[#7502FF] rounded-2xl lg:rounded-[16px] min-h-[280px] sm:min-h-[300px] md:min-h-[320px] lg:h-[338px] relative overflow-hidden p-6 sm:p-8 md:p-10 lg:p-0">
 					<!-- Icon -->
 					<div class="absolute top-6 sm:top-7 md:top-8 lg:top-[32px] right-6 sm:right-8 md:right-10 lg:right-[45px] w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-[60px] lg:h-[60px]">
-						<img src="/icons/workspace-premium-light.svg" alt="" class="w-full h-full" />
+						<img loading="lazy" decoding="async" src="/icons/workspace-premium-light.svg" alt="" class="w-full h-full" />
 					</div>
 
 					<!-- Content -->
@@ -106,7 +106,7 @@
 				<div class="bg-white rounded-2xl lg:rounded-[16px] min-h-[280px] sm:min-h-[300px] md:min-h-[320px] lg:h-[338px] relative overflow-hidden p-6 sm:p-8 md:p-10 lg:p-0">
 					<!-- Icon -->
 					<div class="absolute top-6 sm:top-7 md:top-8 lg:top-[28px] right-6 sm:right-8 md:right-10 lg:right-[35px] w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-[60px] lg:h-[60px]">
-						<img src="/icons/workspace-premium-dark.svg" alt="" class="w-full h-full" />
+						<img loading="lazy" decoding="async" src="/icons/workspace-premium-dark.svg" alt="" class="w-full h-full" />
 					</div>
 
 					<!-- Content -->
@@ -178,19 +178,19 @@
 						<!-- Main dashed circle -->
 						<div class="w-[260px] h-[260px] sm:w-[300px] sm:h-[300px] md:w-[360px] md:h-[360px] lg:w-[420px] lg:h-[420px] rounded-full border-2 border-dashed border-white/30 relative">
 							<!-- Connection lines -->
-							<img src="/images/Line 33.svg" alt="" class="absolute" style="top: 50%; left: 50%; transform: translate(-50%, -50%); width: 110%; height: 110%; opacity: 0.4;" />
-							<img src="/images/Line 37.svg" alt="" class="absolute" style="top: 50%; left: 50%; transform: translate(-50%, -50%); width: 110%; height: 110%; opacity: 0.4;" />
+							<img loading="lazy" decoding="async" src="/images/Line 33.svg" alt="" class="absolute" style="top: 50%; left: 50%; transform: translate(-50%, -50%); width: 110%; height: 110%; opacity: 0.4;" />
+							<img loading="lazy" decoding="async" src="/images/Line 37.svg" alt="" class="absolute" style="top: 50%; left: 50%; transform: translate(-50%, -50%); width: 110%; height: 110%; opacity: 0.4;" />
 						</div>
 					</div>
 
 					<!-- World Map SVG - Dotted Style -->
 					<div class="absolute inset-0 flex items-center justify-center">
-						<img src="/images/mapbase.svg" alt="World Map" class="w-full h-auto max-w-[400px] sm:max-w-[450px] md:max-w-[520px] lg:max-w-[600px] opacity-90" />
+						<img loading="lazy" decoding="async" src="/images/mapbase.webp" alt="World Map" class="w-full h-auto max-w-[400px] sm:max-w-[450px] md:max-w-[520px] lg:max-w-[600px] opacity-90" />
 					</div>
 
 					<!-- Profile Images Group SVG -->
 					<div class="absolute inset-0 flex items-center justify-center">
-						<img src="/images/Group 1321314384.svg" alt="Global Team" class="w-full h-auto max-w-[280px] sm:max-w-[340px] md:max-w-[420px] lg:max-w-[500px] object-contain" />
+						<img loading="lazy" decoding="async" src="/images/Group 1321314384.svg" alt="Global Team" class="w-full h-auto max-w-[280px] sm:max-w-[340px] md:max-w-[420px] lg:max-w-[500px] object-contain" />
 					</div>
 				</div>
 			</div>
@@ -216,7 +216,7 @@
 				<!-- Team Member 1 -->
 				<div class="flex flex-col items-center text-center gap-4 sm:gap-5">
 					<div class="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border-4 border-gray-200 shadow-lg">
-						<img src="/images/Anthony-Akinniyi.png" alt="Anthony Akinniyi" class="w-full h-full object-cover" />
+						<img loading="lazy" decoding="async" src="/images/Anthony-Akinniyi.webp" alt="Anthony Akinniyi" class="w-full h-full object-cover" />
 					</div>
 					<div class="flex flex-col gap-1 sm:gap-2">
 						<h3 class="font-geist text-xl sm:text-2xl md:text-[28px] font-bold text-[#110D21]">
@@ -231,7 +231,7 @@
 				<!-- Team Member 2 -->
 				<div class="flex flex-col items-center text-center gap-4 sm:gap-5">
 					<div class="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border-4 border-gray-200 shadow-lg">
-						<img src="/images/Olajire-Aiyedun.png" alt="Olajire Aiyedun" class="w-full h-full object-cover" />
+						<img loading="lazy" decoding="async" src="/images/Olajire-Aiyedun.webp" alt="Olajire Aiyedun" class="w-full h-full object-cover" />
 					</div>
 					<div class="flex flex-col gap-1 sm:gap-2">
 						<h3 class="font-geist text-xl sm:text-2xl md:text-[28px] font-bold text-[#110D21]">
@@ -246,7 +246,7 @@
 				<!-- Team Member 3 -->
 				<div class="flex flex-col items-center text-center gap-4 sm:gap-5">
 					<div class="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border-4 border-gray-200 shadow-lg">
-						<img src="/images/Ebunoluwa-Shadeko.png" alt="Ebunoluwa Shadeko" class="w-full h-full object-cover" />
+						<img loading="lazy" decoding="async" src="/images/Ebunoluwa-Shadeko.webp" alt="Ebunoluwa Shadeko" class="w-full h-full object-cover" />
 					</div>
 					<div class="flex flex-col gap-1 sm:gap-2">
 						<h3 class="font-geist text-xl sm:text-2xl md:text-[28px] font-bold text-[#110D21]">
@@ -269,7 +269,7 @@
 			<div class="relative bg-[#7502FF] overflow-hidden rounded-[60px] sm:rounded-[100px] md:rounded-[150px] lg:rounded-[200px] h-[400px] sm:h-[450px] md:h-[520px] lg:h-[598px]">
 				<!-- Background Pattern (5% opacity) -->
 				<div class="absolute inset-0 opacity-5 pointer-events-none rounded-[60px] sm:rounded-[100px] md:rounded-[150px] lg:rounded-[200px]">
-					<img src="/images/Frame 2085663608.png" alt="" class="w-full h-full object-cover rounded-[60px] sm:rounded-[100px] md:rounded-[150px] lg:rounded-[200px]" />
+					<img loading="lazy" decoding="async" src="/images/Frame 2085663608.webp" alt="" class="w-full h-full object-cover rounded-[60px] sm:rounded-[100px] md:rounded-[150px] lg:rounded-[200px]" />
 				</div>
 
 				<!-- Large White Circle Border -->
@@ -289,17 +289,17 @@
 
 				<!-- Wired Cube - Rotated 299.146deg -->
 				<div class="absolute top-[16px] right-[36px] sm:right-[50px] md:right-[60px] lg:left-[963px] lg:top-[16px] w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-[217.959px] lg:h-[217.959px]" style="transform: rotate(299.146deg);">
-					<img src="/images/wired cube 2.svg" alt="" class="w-full h-full object-contain" />
+					<img loading="lazy" decoding="async" src="/images/wired cube 2.svg" alt="" class="w-full h-full object-contain" />
 				</div>
 
 				<!-- Cone - Rotated 48.805deg -->
 				<div class="absolute top-[180px] right-[150px] sm:right-[180px] md:right-[200px] lg:left-[876.73px] lg:top-[222.73px] w-36 h-36 sm:w-44 sm:h-44 md:w-52 md:h-52 lg:w-[239px] lg:h-[239px]" style="transform: rotate(48.805deg);">
-					<img src="/images/cone3.svg" alt="" class="w-full h-full object-contain" />
+					<img loading="lazy" decoding="async" src="/images/cone3.svg" alt="" class="w-full h-full object-contain" />
 				</div>
 
 				<!-- Ellipse/Sphere -->
 				<div class="absolute top-[140px] right-[120px] sm:right-[140px] md:right-[160px] lg:left-[783px] lg:top-[161px] w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-[221px] lg:h-[221px]">
-					<img src="/images/ellipse4.svg" alt="" class="w-full h-full object-contain" />
+					<img loading="lazy" decoding="async" src="/images/ellipse4.svg" alt="" class="w-full h-full object-contain" />
 				</div>
 
 				<!-- Content Container -->
@@ -342,17 +342,17 @@
 	<section class="relative w-full bg-[#110D21] overflow-hidden min-h-[600px] sm:min-h-[700px] md:min-h-[800px] lg:min-h-[937px]">
 		<!-- Background Pattern (4% opacity) - Full viewport width -->
 		<div class="absolute inset-0 opacity-[0.04] overflow-hidden pointer-events-none">
-			<img src="/images/Frame 2085663656.png" alt="" class="absolute top-0 left-1/2 -translate-x-1/2 w-screen min-w-[1440px] h-[220.08%] object-cover" />
+			<img loading="lazy" decoding="async" src="/images/Frame 2085663656.webp" alt="" class="absolute top-0 left-1/2 -translate-x-1/2 w-screen min-w-[1440px] h-[220.08%] object-cover" />
 		</div>
 
 		<!-- Decorative Lines - Top Right -->
 		<div class="absolute hidden lg:block w-[321px] h-[316px] -top-[133px] right-0 lg:right-[calc((100vw-1440px)/2+48px)]">
-			<img src="/images/decorative-lines-2.svg" alt="" class="w-full h-full" />
+			<img loading="lazy" decoding="async" src="/images/decorative-lines-2.svg" alt="" class="w-full h-full" />
 		</div>
 
 		<!-- Decorative Lines - Bottom Left -->
 		<div class="absolute hidden lg:block w-[239px] h-[257px] bottom-[129px] left-0 lg:left-[calc((100vw-1440px)/2-149px)]">
-			<img src="/images/decorative-lines-3.svg" alt="" class="w-full h-full" />
+			<img loading="lazy" decoding="async" src="/images/decorative-lines-3.svg" alt="" class="w-full h-full" />
 		</div>
 
 		<!-- Mobile/Tablet Responsive Layout -->
@@ -372,17 +372,17 @@
 				<div class="relative h-[280px] sm:h-[320px] md:h-[360px] mt-8">
 					<div class="absolute left-0 bottom-[4px] sm:bottom-[6px] md:bottom-[8px] w-[140px] sm:w-[160px] md:w-[180px]" style="transform: rotate(-2.406deg);">
 						<div class="border-[6px] sm:border-[8px] border-white rounded-[16px] overflow-hidden h-[240px] sm:h-[270px] md:h-[300px]">
-							<img src="/images/photo-card-1.png" alt="Professional woman" class="w-full h-full object-cover" />
+							<img loading="lazy" decoding="async" src="/images/photo-card-1.webp" alt="Professional woman" class="w-full h-full object-cover" />
 						</div>
 					</div>
 					<div class="absolute left-[120px] sm:left-[140px] md:left-[160px] bottom-[8px] sm:bottom-[10px] md:bottom-[12px] w-[145px] sm:w-[165px] md:w-[185px]">
 						<div class="border-[6px] sm:border-[8px] border-white rounded-[16px] overflow-hidden h-[240px] sm:h-[270px] md:h-[300px]">
-							<img src="/images/photo-card-3.png" alt="Professional man" class="w-full h-full object-cover" />
+							<img loading="lazy" decoding="async" src="/images/photo-card-3.webp" alt="Professional man" class="w-full h-full object-cover" />
 						</div>
 					</div>
 					<div class="absolute left-[240px] sm:left-[280px] md:left-[320px] bottom-[4px] sm:bottom-[6px] md:bottom-[8px] w-[145px] sm:w-[165px] md:w-[185px]" style="transform: rotate(6.025deg);">
 						<div class="border-[6px] sm:border-[8px] border-white rounded-[16px] overflow-hidden h-[240px] sm:h-[270px] md:h-[300px]">
-							<img src="/images/photo-card-2.png" alt="Professional man smiling" class="w-full h-full object-cover" />
+							<img loading="lazy" decoding="async" src="/images/photo-card-2.webp" alt="Professional man smiling" class="w-full h-full object-cover" />
 						</div>
 					</div>
 				</div>
@@ -391,19 +391,19 @@
 				<div class="flex flex-col gap-4 sm:gap-5 items-center mt-8">
 					<div class="bg-white rounded-[50px] px-5 sm:px-6 py-2 sm:py-2.5 flex items-center gap-2 sm:gap-2.5">
 						<div class="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0">
-							<img src="/icons/ads-click-orange.svg" alt="" class="w-full h-full" />
+							<img loading="lazy" decoding="async" src="/icons/ads-click-orange.svg" alt="" class="w-full h-full" />
 						</div>
 						<p class="font-geist text-xl sm:text-[22px] font-bold tracking-[-0.12px] text-[#F7931E]">Access</p>
 					</div>
 					<div class="bg-white rounded-[50px] px-5 sm:px-6 py-2 sm:py-2.5 flex items-center gap-2 sm:gap-2.5">
 						<div class="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0">
-							<img src="/icons/ads-click-blue.svg" alt="" class="w-full h-full" />
+							<img loading="lazy" decoding="async" src="/icons/ads-click-blue.svg" alt="" class="w-full h-full" />
 						</div>
 						<p class="font-geist text-xl sm:text-[22px] font-bold tracking-[-0.12px] text-[#3296F8]">Equity</p>
 					</div>
 					<div class="bg-white rounded-[50px] px-5 sm:px-6 py-2 sm:py-2.5 flex items-center gap-2 sm:gap-2.5">
 						<div class="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0">
-							<img src="/icons/ads-click-dark.svg" alt="" class="w-full h-full" />
+							<img loading="lazy" decoding="async" src="/icons/ads-click-dark.svg" alt="" class="w-full h-full" />
 						</div>
 						<p class="font-geist text-xl sm:text-[22px] font-bold tracking-[-0.12px] text-[#110D21]">Opportunity</p>
 					</div>
@@ -431,21 +431,21 @@
 				<!-- Photo Card 1 - Rotated left (-2.406deg = 357.594deg) -->
 				<div class="absolute left-0 top-0" style="transform: rotate(357.594deg);">
 					<div class="border-[10px] border-solid border-white h-[318px] w-[199px] rounded-[20px] overflow-hidden">
-						<img src="/images/photo-card-1.png" alt="Professional woman" class="w-full h-full object-cover" />
+						<img loading="lazy" decoding="async" src="/images/photo-card-1.webp" alt="Professional woman" class="w-full h-full object-cover" />
 					</div>
 				</div>
 
 				<!-- Photo Card 2 - Center -->
 				<div class="absolute left-[191.59px] top-[4.03px]">
 					<div class="border-[10px] border-solid border-white h-[318px] w-[207px] rounded-[20px] overflow-hidden">
-						<img src="/images/photo-card-3.png" alt="Professional man" class="w-full h-full object-cover" />
+						<img loading="lazy" decoding="async" src="/images/photo-card-3.webp" alt="Professional man" class="w-full h-full object-cover" />
 					</div>
 				</div>
 
 				<!-- Photo Card 3 - Rotated right -->
 				<div class="absolute left-[372.59px] top-[3.03px]" style="transform: rotate(6.025deg);">
 					<div class="border-[10px] border-solid border-white h-[318px] w-[207px] rounded-[20px] overflow-hidden">
-						<img src="/images/photo-card-2.png" alt="Professional man smiling" class="w-full h-full object-cover" />
+						<img loading="lazy" decoding="async" src="/images/photo-card-2.webp" alt="Professional man smiling" class="w-full h-full object-cover" />
 					</div>
 				</div>
 			</div>
@@ -454,13 +454,13 @@
 			<div class="absolute left-[896px] top-[548px]">
 				<!-- Decorative connecting lines -->
 				<div class="absolute left-[23px] top-[11px] w-[283px] h-[195px]">
-					<img src="/images/decorative-lines-1.svg" alt="" class="w-full h-full" />
+					<img loading="lazy" decoding="async" src="/images/decorative-lines-1.svg" alt="" class="w-full h-full" />
 				</div>
 
 				<!-- Access Badge (top) -->
 				<div class="absolute left-0 top-0 bg-white rounded-[50px] px-[24px] py-[10px] flex items-center gap-[10px] w-[328px]">
 					<div class="w-[24px] h-[24px] flex-shrink-0">
-						<img src="/icons/ads-click-orange.svg" alt="" class="w-full h-full" />
+						<img loading="lazy" decoding="async" src="/icons/ads-click-orange.svg" alt="" class="w-full h-full" />
 					</div>
 					<p class="font-geist text-[24px] font-bold leading-[36px] tracking-[-0.12px] text-[#F7931E]">Access</p>
 				</div>
@@ -468,7 +468,7 @@
 				<!-- Equity Badge (middle) -->
 				<div class="absolute left-[24px] top-[86px] bg-white rounded-[50px] px-[24px] py-[10px] flex items-center gap-[10px] w-[328px]">
 					<div class="w-[24px] h-[24px] flex-shrink-0">
-						<img src="/icons/ads-click-blue.svg" alt="" class="w-full h-full" />
+						<img loading="lazy" decoding="async" src="/icons/ads-click-blue.svg" alt="" class="w-full h-full" />
 					</div>
 					<p class="font-geist text-[24px] font-bold leading-[36px] tracking-[-0.12px] text-[#3296F8]">Equity</p>
 				</div>
@@ -476,7 +476,7 @@
 				<!-- Opportunity Badge (bottom) -->
 				<div class="absolute left-[24px] top-[178px] bg-white rounded-[50px] px-[24px] py-[10px] flex items-center gap-[10px] w-[328px]">
 					<div class="w-[24px] h-[24px] flex-shrink-0">
-						<img src="/icons/ads-click-dark.svg" alt="" class="w-full h-full" />
+						<img loading="lazy" decoding="async" src="/icons/ads-click-dark.svg" alt="" class="w-full h-full" />
 					</div>
 					<p class="font-geist text-[24px] font-bold leading-[36px] tracking-[-0.12px] text-[#110D21]">Opportunity</p>
 				</div>

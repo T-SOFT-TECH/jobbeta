@@ -19,7 +19,7 @@ export const audiencePanels: AudiencePanel[] = [
 		label: 'Students & Graduates',
 		title: 'Your first role, without the guesswork',
 		body: 'Build a profile that shows what you can do, and let the right opportunities come to you.',
-		image: { src: '/images/hero-4.jpg', alt: 'A smiling student holding notebooks on campus' },
+		image: { src: '/images/hero-4.webp', alt: 'A smiling student holding notebooks on campus' },
 		points: [
 			{ title: 'Portfolio-style profiles', body: 'Show projects, coursework and skills, not just a CV.' },
 			{ title: 'Internships & first roles', body: 'Opportunities picked for students and recent graduates.' },
@@ -33,7 +33,7 @@ export const audiencePanels: AudiencePanel[] = [
 		label: 'Employers',
 		title: 'Hire early-career talent with confidence',
 		body: 'Reach motivated students and graduates, and spend your time on the candidates who fit.',
-		image: { src: '/images/hero-3.jpg', alt: 'A professional reviewing candidates on a laptop' },
+		image: { src: '/images/hero-3.webp', alt: 'A professional reviewing candidates on a laptop' },
 		points: [
 			{ title: 'Verified, high-potential candidates', body: 'Profiles with real skills and projects behind them.' },
 			{ title: 'Less time to hire', body: 'AI-ranked shortlists and built-in interview scheduling.' },
@@ -47,7 +47,7 @@ export const audiencePanels: AudiencePanel[] = [
 		label: 'Career Centres',
 		title: 'Extend career support beyond the classroom',
 		body: 'Give your students verified opportunities and see how they progress, with no extra admin.',
-		image: { src: '/images/students/Frame 2085663912.png', alt: 'A group of cheerful university students' },
+		image: { src: '/images/students/Frame 2085663912.webp', alt: 'A group of cheerful university students' },
 		points: [
 			{ title: 'Verified jobs for your students', body: 'Share roles from employers we have reviewed.' },
 			{ title: 'Insight without extra admin', body: 'See engagement and readiness on a partner dashboard.' },

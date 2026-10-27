@@ -71,7 +71,7 @@
 			<!-- Featured Image -->
 			<img
 				class="h-[606px] w-full rounded-[20px] object-cover"
-				src="/icons/blog-details/frame-20856641980.png"
+				src="/icons/blog-details/frame-20856641980.webp"
 				alt=""
 			/>
 
@@ -208,10 +208,10 @@
 							>
 								Learn MorE
 							</div>
-							<img class="h-6 w-6" src="/icons/blog-details/arrow-right-alt0.svg" alt="" />
+							<img loading="lazy" decoding="async" class="h-6 w-6" src="/icons/blog-details/arrow-right-alt0.svg" alt="" />
 						</div>
 						<div class="flex flex-row gap-3">
-							<img
+							<img loading="lazy" decoding="async"
 								class="border-neutral-primary-grey h-[50px] w-[50px] rounded-[50px] border-[3px] border-solid object-cover"
 								src="/icons/blog-details/frame-20856641870.png"
 								alt=""
@@ -235,9 +235,9 @@
 
 					<!-- Image -->
 					<div class="lg:w-1/2">
-						<img
+						<img loading="lazy" decoding="async"
 							class="h-[476px] w-full rounded-[20px] object-cover"
-							src="/icons/blog-details/frame-20856641840.png"
+							src="/icons/blog-details/frame-20856641840.webp"
 							alt=""
 						/>
 					</div>
@@ -249,7 +249,7 @@
 	<!-- Newsletter Footer -->
 	<div
 		class="w-full overflow-hidden bg-cover bg-center"
-		style="background-image: url('/icons/blog-details/frame-20856642780.png')"
+		style="background-image: url('/icons/blog-details/frame-20856642780.webp')"
 	>
 		<div class="bg-[rgba(17,13,33,0.9)] px-6 py-[117px]">
 			<div
@@ -258,7 +258,7 @@
 				<!-- Left Content -->
 				<div class="flex flex-1 flex-col gap-6">
 					<div class="h-[30px] w-[143px] overflow-hidden">
-						<img class="h-auto" src="/icons/blog-details/layer-21.svg" alt="JobBeta" />
+						<img loading="lazy" decoding="async" class="h-auto" src="/icons/blog-details/layer-21.svg" alt="JobBeta" />
 					</div>
 					<div class="flex flex-col gap-4">
 						<h2
@@ -293,7 +293,7 @@
 							disabled={subscribing}
 							class="bg-accent-color flex items-center justify-center rounded-tr-lg rounded-br-lg px-4 py-4 disabled:opacity-60"
 						>
-							<img class="h-6 w-6" src="/icons/blog-details/send0.svg" alt="Send" />
+							<img loading="lazy" decoding="async" class="h-6 w-6" src="/icons/blog-details/send0.svg" alt="Send" />
 						</button>
 					</div>
 					{#if status === 'success'}

@@ -36,7 +36,7 @@
 					</a>
 				</div>
 				<img
-					src="/images/employers/candidate-match-panel.png"
+					src="/images/employers/candidate-match-panel.webp"
 					alt="JobBeta candidate match view showing a 90% AI match with the reasons explained"
 					loading="lazy"
 					class="mx-6 mt-auto h-56 w-[calc(100%-3rem)] rounded-t-2xl object-cover object-top shadow-lg md:mx-8 md:h-64 md:w-[calc(100%-4rem)]"
@@ -113,7 +113,7 @@
 					</p>
 				</div>
 				<img
-					src="/images/employers/dashboard-overview.png"
+					src="/images/employers/dashboard-overview.webp"
 					alt="JobBeta employer dashboard with active roles, talent pool and interview counts"
 					loading="lazy"
 					class="mx-6 mt-auto h-56 w-[calc(100%-3rem)] rounded-t-2xl object-cover object-left-top shadow-2xl md:mx-8 md:h-64 md:w-[calc(100%-4rem)]"
