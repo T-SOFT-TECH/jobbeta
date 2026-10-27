@@ -1,206 +1,38 @@
 <script lang="ts">
-	// Career Centers Features Section - Redesigned with card grid layout
+	import Icon from '$lib/components/ui/Icon.svelte';
+	import { links } from '$lib/config/site';
+	import { tools } from '$lib/content/careerCenters';
+
+	const accents = ['#7502ff', '#3296f8', '#0e9f6e', '#f59e0b', '#e11d48', '#9333ea'];
 </script>
 
-<section class="relative w-full overflow-hidden bg-[#eeecfc] py-20 lg:py-32">
+<section class="section bg-white">
 	<div class="page-container">
-		<!-- Section Header - Centered -->
-		<div class="mx-auto mb-12 flex max-w-[959px] flex-col items-center gap-6 text-center lg:mb-16">
-			<div class="flex flex-col items-center gap-5">
-				<div class="flex items-center justify-center rounded-[20px] bg-primary px-3 py-1.5">
+		<div class="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
+			<div class="flex max-w-2xl flex-col gap-3">
+				<span class="eyebrow">Features</span>
+				<h2 class="title-section text-secondary">Tools that help every student get career-ready</h2>
+			</div>
+			<a href={links.resources} class="inline-flex shrink-0 items-center gap-2 font-geist font-semibold text-primary">
+				Browse free resources <Icon name="arrow-right" size={18} />
+			</a>
+		</div>
+
+		<ul class="snap-row mt-10 md:grid-cols-2 lg:grid-cols-3">
+			{#each tools as tool, i (tool.title)}
+				<li class="lift flex gap-4 rounded-2xl border border-neutral-grey p-5">
 					<span
-						class="font-geist text-base leading-6 font-medium text-white"
-						style="letter-spacing: -0.005em"
+						class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl text-white"
+						style="background-color: {accents[i % accents.length]}"
 					>
-						Features
+						<Icon name={tool.icon} size={20} />
 					</span>
-				</div>
-				<h2
-					class="max-w-[642px] font-geist text-3xl leading-tight font-bold text-[#2a2c2c] sm:text-4xl lg:text-[40px] lg:leading-[60px]"
-					style="letter-spacing: -0.005em"
-				>
-					Join Career Events that connect you to opportunities.
-				</h2>
-			</div>
-			<p
-				class="font-geist text-lg leading-relaxed font-normal text-[rgba(42,44,44,0.70)] lg:text-xl lg:leading-[30px]"
-				style="letter-spacing: -0.005em"
-			>
-				Discover meaningful opportunities tailored to your goals, build valuable professional
-				connections with industry leaders and peers, and gain the tools and insights you need to
-				accelerate your career journey with confidence and purpose.
-			</p>
-		</div>
-
-		<!-- Features Grid - 3 columns on desktop, 2 on tablet, 1 on mobile -->
-		<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12">
-			<!-- Feature Card 1: Verified Job Board -->
-			<div
-				class="flex h-auto min-h-[300px] flex-col gap-9 rounded-[20px] bg-white px-[30px] py-10 lg:h-[357px]"
-			>
-				<div class="flex h-[74px] w-[86px] items-center justify-center rounded-[14px] bg-primary">
-					<img
-						class="h-10 w-10"
-						src="/icons/career-centers/features/group1.svg"
-						alt="Verified Job Board"
-					/>
-				</div>
-				<div class="flex max-w-[325px] flex-col items-start gap-3">
-					<h3
-						class="font-geist text-xl leading-[30px] font-bold text-[#2a2c2c]"
-						style="letter-spacing: -0.005em"
-					>
-						Verified Job Board
-					</h3>
-					<p
-						class="max-w-[300px] font-geist text-base leading-6 font-normal text-[#2a2c2c]"
-						style="letter-spacing: -0.005em"
-					>
-						Curated opportunities tailored to student profiles and program backgrounds.
-					</p>
-				</div>
-			</div>
-
-			<!-- Feature Card 2: Career Insights Dashboard -->
-			<div
-				class="flex h-auto min-h-[300px] flex-col gap-9 rounded-[20px] bg-white px-[30px] py-10 lg:h-[357px]"
-			>
-				<div class="flex h-[74px] w-[86px] items-center justify-center rounded-[14px] bg-primary">
-					<img
-						class="h-10 w-10"
-						src="/icons/career-centers/features/group3.svg"
-						alt="Career Insights Dashboard"
-					/>
-				</div>
-				<div class="flex flex-col items-start gap-3">
-					<h3
-						class="font-geist text-xl leading-[30px] font-bold text-[#2a2c2c]"
-						style="letter-spacing: -0.005em"
-					>
-						Career Insights Dashboard
-					</h3>
-					<p
-						class="max-w-[282px] font-geist text-base leading-6 font-normal text-[#2a2c2c]"
-						style="letter-spacing: -0.005em"
-					>
-						Track engagement, top employers, and skill gaps across your student base.
-					</p>
-				</div>
-			</div>
-
-			<!-- Feature Card 3: Employer Engagement Tools -->
-			<div
-				class="flex h-auto min-h-[300px] flex-col gap-9 rounded-[20px] bg-white px-[30px] py-10 lg:h-[357px]"
-			>
-				<div class="flex h-[74px] w-[86px] items-center justify-center rounded-[14px] bg-primary">
-					<img
-						class="h-10 w-10"
-						src="/icons/career-centers/features/group5.svg"
-						alt="Employer Engagement Tools"
-					/>
-				</div>
-				<div class="flex flex-col items-start gap-3">
-					<h3
-						class="font-geist text-xl leading-[30px] font-bold text-[#2a2c2c]"
-						style="letter-spacing: -0.005em"
-					>
-						Employer Engagement Tools
-					</h3>
-					<p
-						class="max-w-[282px] font-geist text-base leading-6 font-normal text-[#2a2c2c]"
-						style="letter-spacing: -0.005em"
-					>
-						Promote your career fairs, networking events, and workshops directly through the
-						platform.
-					</p>
-				</div>
-			</div>
-
-			<!-- Feature Card 4: Student Portfolios -->
-			<div
-				class="flex h-auto min-h-[300px] flex-col gap-9 rounded-[20px] bg-white px-[30px] py-10 lg:h-[357px]"
-			>
-				<div class="flex h-[74px] w-[86px] items-center justify-center rounded-[14px] bg-primary">
-					<img
-						class="h-10 w-10"
-						src="/icons/career-centers/features/group7.svg"
-						alt="Student Portfolios"
-					/>
-				</div>
-				<div class="flex flex-col items-start gap-3">
-					<h3
-						class="font-geist text-xl leading-[30px] font-bold text-[#2a2c2c]"
-						style="letter-spacing: -0.005em"
-					>
-						Student Portfolios
-					</h3>
-					<p
-						class="max-w-[282px] font-geist text-base leading-6 font-normal text-[#2a2c2c]"
-						style="letter-spacing: -0.005em"
-					>
-						Help students present a holistic view of their achievements beyond the resume.
-					</p>
-				</div>
-			</div>
-
-			<!-- Feature Card 5: Skill & Career Programs -->
-			<div
-				class="flex h-auto min-h-[300px] flex-col gap-9 rounded-[20px] bg-white px-[30px] py-10 lg:h-[357px]"
-			>
-				<div class="flex h-[74px] w-[86px] items-center justify-center rounded-[14px] bg-primary">
-					<img
-						class="h-10 w-10"
-						src="/icons/career-centers/features/group9.svg"
-						alt="Skill & Career Programs"
-					/>
-				</div>
-				<div class="flex flex-col items-start gap-3">
-					<h3
-						class="font-geist text-xl leading-[30px] font-bold text-[#2a2c2c]"
-						style="letter-spacing: -0.005em"
-					>
-						Skill & Career Programs
-					</h3>
-					<p
-						class="max-w-[282px] font-geist text-base leading-6 font-normal text-[#2a2c2c]"
-						style="letter-spacing: -0.005em"
-					>
-						On-demand modules that prepare students for interviews, networking, and the job hunt.
-					</p>
-				</div>
-			</div>
-
-			<!-- Feature Card 6: CV Optimization -->
-			<div
-				class="flex h-auto min-h-[300px] flex-col gap-9 rounded-[20px] bg-white px-[30px] py-10 lg:h-[357px]"
-			>
-				<div class="flex h-[74px] w-[86px] items-center justify-center rounded-[14px] bg-primary">
-					<img
-						class="h-10 w-10"
-						src="/icons/career-centers/features/group11.svg"
-						alt="CV Optimization"
-					/>
-				</div>
-				<div class="flex flex-col items-start gap-3">
-					<h3
-						class="font-geist text-xl leading-[30px] font-bold text-[#2a2c2c]"
-						style="letter-spacing: -0.005em"
-					>
-						CV Optimization
-					</h3>
-					<p
-						class="max-w-[282px] font-geist text-base leading-6 font-normal text-[#2a2c2c]"
-						style="letter-spacing: -0.005em"
-					>
-						Prepare students for interviews, networking, and the job hunt.
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Background Decorative Element - positioned to show only ~20% -->
-	<div class="pointer-events-none absolute -bottom-[600px] -left-[600px] hidden lg:block">
-		<img src="/icons/career-centers/group-13213144610.svg" alt="" class="h-auto w-auto" />
+					<div class="font-geist">
+						<p class="font-semibold text-secondary">{tool.title}</p>
+						<p class="mt-1 text-sm leading-relaxed text-text-secondary">{tool.body}</p>
+					</div>
+				</li>
+			{/each}
+		</ul>
 	</div>
 </section>

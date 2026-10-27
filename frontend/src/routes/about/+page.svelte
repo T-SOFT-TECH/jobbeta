@@ -134,7 +134,7 @@
 					</h2>
 
 					<p class="font-geist text-base sm:text-lg md:text-xl lg:text-[20px] font-normal leading-relaxed sm:leading-[28px] md:leading-[30px] lg:leading-[32px] max-w-[90%] sm:max-w-full">
-						We have successfully partnered with over 120 global companies and these companies have been proved to be reliable since then.
+						A future where every student and graduate, whatever their background, can find a fair first step into a career they want.
 					</p>
 
 					<!-- Values List -->
@@ -197,81 +197,6 @@
 		</div>
 	</section>
 
-	<!-- Our Partners Section -->
-	<section class="relative w-full bg-[#EAECF0] py-12 sm:py-16 md:py-20 lg:py-24">
-		<div class="page-container">
-			<!-- Section Header -->
-			<div class="flex flex-col gap-4 sm:gap-5 md:gap-6 mb-10 sm:mb-12 md:mb-14 lg:mb-16">
-				<h2 class="font-geist text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-bold leading-tight sm:leading-[1.15] md:leading-[1.1] lg:leading-[1.1] text-[#110D21]">
-					Our Partners
-				</h2>
-				<p class="font-geist text-base sm:text-lg md:text-xl lg:text-[20px] font-normal leading-relaxed sm:leading-[28px] md:leading-[30px] lg:leading-[32px] text-[#596770] max-w-full lg:max-w-[900px]">
-					These are institutions we have partnered with to advance education systems and empower students with the tools, guidance, and opportunities needed for successful career development and long-term growth across Africa.
-				</p>
-			</div>
-
-			<!-- Infinite Scrolling Partner Logos -->
-			<div class="relative overflow-hidden">
-				<div class="flex animate-scroll">
-					<!-- First set of logos -->
-					<div class="flex items-center gap-12 sm:gap-16 md:gap-20 lg:gap-24 shrink-0">
-						<!-- MosaiT -->
-						<div class="flex items-center justify-center h-16 sm:h-20 md:h-24 lg:h-28 w-32 sm:w-40 md:w-48 lg:w-56">
-							<img src="/icons/MosafT.svg" alt="MosaiT" class="max-h-full max-w-full object-contain" />
-						</div>
-
-						<!-- jetBlue -->
-						<div class="flex items-center justify-center h-16 sm:h-20 md:h-24 lg:h-28 w-32 sm:w-40 md:w-48 lg:w-56">
-							<img src="/icons/jetblue.svg" alt="jetBlue" class="max-h-full max-w-full object-contain" />
-						</div>
-
-						<!-- Prodigy -->
-						<div class="flex items-center justify-center h-16 sm:h-20 md:h-24 lg:h-28 w-32 sm:w-40 md:w-48 lg:w-56">
-							<img src="/icons/prodigy_education_logo.svg.svg" alt="Prodigy" class="max-h-full max-w-full object-contain" />
-						</div>
-
-						<!-- Educa Studio -->
-						<div class="flex items-center justify-center h-16 sm:h-20 md:h-24 lg:h-28 w-32 sm:w-40 md:w-48 lg:w-56">
-							<img src="/icons/educa.svg" alt="Educa Studio" class="max-h-full max-w-full object-contain" />
-						</div>
-
-						<!-- Educación 3.0 -->
-						<div class="flex items-center justify-center h-16 sm:h-20 md:h-24 lg:h-28 w-32 sm:w-40 md:w-48 lg:w-56">
-							<img src="/icons/educacion.svg" alt="Educación 3.0" class="max-h-full max-w-full object-contain" />
-						</div>
-					</div>
-
-					<!-- Duplicate set for seamless loop -->
-					<div class="flex items-center gap-12 sm:gap-16 md:gap-20 lg:gap-24 shrink-0">
-						<!-- MosaiT -->
-						<div class="flex items-center justify-center h-16 sm:h-20 md:h-24 lg:h-28 w-32 sm:w-40 md:w-48 lg:w-56">
-							<img src="/icons/MosafT.svg" alt="MosaiT" class="max-h-full max-w-full object-contain" />
-						</div>
-
-						<!-- jetBlue -->
-						<div class="flex items-center justify-center h-16 sm:h-20 md:h-24 lg:h-28 w-32 sm:w-40 md:w-48 lg:w-56">
-							<img src="/icons/jetblue.svg" alt="jetBlue" class="max-h-full max-w-full object-contain" />
-						</div>
-
-						<!-- Prodigy -->
-						<div class="flex items-center justify-center h-16 sm:h-20 md:h-24 lg:h-28 w-32 sm:w-40 md:w-48 lg:w-56">
-							<img src="/icons/prodigy_education_logo.svg.svg" alt="Prodigy" class="max-h-full max-w-full object-contain" />
-						</div>
-
-						<!-- Educa Studio -->
-						<div class="flex items-center justify-center h-16 sm:h-20 md:h-24 lg:h-28 w-32 sm:w-40 md:w-48 lg:w-56">
-							<img src="/icons/educa.svg" alt="Educa Studio" class="max-h-full max-w-full object-contain" />
-						</div>
-
-						<!-- Educación 3.0 -->
-						<div class="flex items-center justify-center h-16 sm:h-20 md:h-24 lg:h-28 w-32 sm:w-40 md:w-48 lg:w-56">
-							<img src="/icons/educacion.svg" alt="Educación 3.0" class="max-h-full max-w-full object-contain" />
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
 
 	<!-- The Team Section -->
 	<section class="relative w-full bg-white py-12 sm:py-16 md:py-20 lg:py-24">
@@ -333,50 +258,7 @@
 					</div>
 				</div>
 
-				<!-- Team Member 4 -->
-				<div class="flex flex-col items-center text-center gap-4 sm:gap-5">
-					<div class="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border-4 border-gray-200 shadow-lg">
-						<img src="/images/Janet-Anthony.png" alt="Janet Anthony" class="w-full h-full object-cover" />
-					</div>
-					<div class="flex flex-col gap-1 sm:gap-2">
-						<h3 class="font-geist text-xl sm:text-2xl md:text-[28px] font-bold text-[#110D21]">
-							Janet Anthony
-						</h3>
-						<p class="font-geist text-sm sm:text-base md:text-lg text-[#596770]">
-							CTOII
-						</p>
-					</div>
-				</div>
-
-				<!-- Team Member 5 -->
-				<div class="flex flex-col items-center text-center gap-4 sm:gap-5">
-					<div class="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border-4 border-gray-200 shadow-lg">
-						<img src="/images/Janet-Anthony.png" alt="Janet Anthony" class="w-full h-full object-cover" />
-					</div>
-					<div class="flex flex-col gap-1 sm:gap-2">
-						<h3 class="font-geist text-xl sm:text-2xl md:text-[28px] font-bold text-[#110D21]">
-							Janet Anthony
-						</h3>
-						<p class="font-geist text-sm sm:text-base md:text-lg text-[#596770]">
-							CTOII
-						</p>
-					</div>
-				</div>
-
-				<!-- Team Member 6 -->
-				<div class="flex flex-col items-center text-center gap-4 sm:gap-5">
-					<div class="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border-4 border-gray-200 shadow-lg">
-						<img src="/images/Janet-Anthony.png" alt="Janet Anthony" class="w-full h-full object-cover" />
-					</div>
-					<div class="flex flex-col gap-1 sm:gap-2">
-						<h3 class="font-geist text-xl sm:text-2xl md:text-[28px] font-bold text-[#110D21]">
-							Janet Anthony
-						</h3>
-						<p class="font-geist text-sm sm:text-base md:text-lg text-[#596770]">
-							CTOII
-						</p>
-					</div>
-				</div>
+				<!-- Members 4-6 were a repeated "Janet Anthony / CTOII" placeholder (also in the Figma); add real people here -->
 			</div>
 		</div>
 	</section>
@@ -433,10 +315,11 @@
 					</div>
 
 					<!-- Timeline -->
-					<div class="flex gap-4 sm:gap-6 md:gap-7 lg:gap-[28px] items-center">
-						<!-- Timeline Line/Icon -->
-						<div class="flex-shrink-0 w-4 sm:w-5 lg:w-[20px] h-auto lg:h-[152px]">
-							<img src="/images/Group 1321314407.svg" alt="" class="w-full h-full block" />
+					<div class="flex gap-4 sm:gap-6 md:gap-7 lg:gap-[28px] items-stretch">
+						<!-- Timeline dot + line, drawn in CSS (the exported SVG was never added to static/) -->
+						<div class="relative flex-shrink-0 w-4 sm:w-5 lg:w-[20px]" aria-hidden="true">
+							<span class="absolute top-2 left-1/2 h-3 w-3 -translate-x-1/2 rounded-full bg-white"></span>
+							<span class="absolute top-2 bottom-0 left-1/2 w-0.5 -translate-x-1/2 bg-white/80"></span>
 						</div>
 
 						<!-- Timeline Content -->

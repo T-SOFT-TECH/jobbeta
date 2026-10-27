@@ -18,6 +18,16 @@
 	--color-text-secondary: #62717a;
 	--color-text-muted: #2a2c2c;
 
+	/* Figma variable names used by the exported Blog and Job pages. They were never defined,
+	   so Tailwind silently dropped every class using them (invisible pills, buttons, CTAs). */
+	--color-accent-color: #3296f8;
+	--color-brand-colours-dark-purple: var(--color-secondary);
+	--color-neutral-primary-grey: var(--color-neutral-grey);
+
+	/* Motion easings (also usable as ease-out-expo / ease-in-quick utilities) */
+	--ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+	--ease-in-quick: cubic-bezier(0.4, 0, 1, 1);
+
 	/* Font Families */
 	--font-geist: Geist, system-ui, sans-serif;
 	--font-lato: Lato, system-ui, sans-serif;
@@ -27,6 +37,71 @@
 @layer components {
 	.page-container {
 		@apply mx-auto px-6 sm:px-10 md:px-16 max-w-7xl;
+	}
+
+	/* Section rhythm — compact so each block reads as roughly one screen */
+	.section {
+		@apply py-14 md:py-20;
+	}
+
+	.eyebrow {
+		@apply inline-flex w-fit items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 font-geist text-xs font-semibold tracking-wider text-primary uppercase;
+	}
+
+	.eyebrow-light {
+		@apply inline-flex w-fit items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1 font-geist text-xs font-semibold tracking-wider text-white uppercase;
+	}
+
+	.title-display {
+		@apply font-geist text-[2rem] leading-[1.1] font-semibold tracking-[-0.03em] text-balance sm:text-[2.5rem] lg:text-[3.25rem];
+	}
+
+	.title-section {
+		@apply font-geist text-[1.75rem] leading-[1.15] font-semibold tracking-[-0.02em] text-balance sm:text-[2rem] lg:text-[2.5rem];
+	}
+
+	.lead {
+		@apply font-geist text-base leading-relaxed text-pretty md:text-lg;
+	}
+
+	/* Buttons — combine `btn` with one variant */
+	.btn {
+		@apply inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3.5 font-lato text-base leading-6 font-bold whitespace-nowrap transition-[color,background-color,border-color,box-shadow,scale] duration-200 ease-out active:scale-[0.97] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary disabled:cursor-not-allowed disabled:opacity-60;
+	}
+
+	.btn-primary {
+		@apply bg-primary text-white hover:bg-[#6002d1];
+	}
+
+	.btn-dark {
+		@apply bg-secondary text-white hover:bg-black;
+	}
+
+	.btn-light {
+		@apply bg-white text-secondary hover:bg-neutral-light;
+	}
+
+	.btn-outline {
+		@apply border border-secondary/20 bg-white text-secondary hover:border-secondary/60;
+	}
+
+	.btn-outline-light {
+		@apply border border-white/40 text-white hover:bg-white/10;
+	}
+
+	/* Card rows: swipeable on phones (keeps pages short), grid from md up */
+	.snap-row {
+		@apply -mx-6 flex snap-x snap-mandatory scroll-px-6 gap-4 overflow-x-auto px-6 pb-2 sm:-mx-10 sm:scroll-px-10 sm:px-10 md:mx-0 md:grid md:scroll-px-0 md:overflow-visible md:px-0 md:pb-0;
+		scrollbar-width: none;
+	}
+
+	.snap-row > * {
+		@apply w-[82%] shrink-0 snap-start md:w-auto;
+	}
+
+	/* Cards that respond to the pointer: a small rise and a soft shadow */
+	.lift {
+		@apply transition-[translate,box-shadow,border-color] duration-500 ease-out-expo hover:shadow-[0_22px_44px_-22px_rgb(17_13_33/0.35)] motion-safe:hover:-translate-y-1;
 	}
 }
 
@@ -207,43 +282,376 @@
 }
 
 /* ========================================
-   View Transition: Header Navigation
+   Motion
+   Everything here is off under prefers-reduced-motion.
+   JS side: $lib/motion/reveal.ts (scroll reveal) and $lib/motion/transitions.ts (View Transitions).
    ======================================== */
 
-/* Smooth fade and slide animation for header nav items during page transitions */
-::view-transition-old(header-nav) {
-	animation: nav-fade-out 0.25s ease-out forwards;
+:root {
+	/* Lets <details> and other boxes animate to/from `auto` heights where supported */
+	interpolate-size: allow-keywords;
 }
 
-::view-transition-new(header-nav) {
-	animation: nav-fade-in 0.25s ease-out forwards;
-}
-
-@keyframes nav-fade-out {
-	from {
-		opacity: 1;
-		transform: translateY(0);
+@media (prefers-reduced-motion: no-preference) {
+	/* ---- Scroll reveal -------------------------------------------------
+	 * Hidden only while `html.reveal` is set (app.html) and the element hasn't been revealed.
+	 * The animation uses `backwards` fill, so once it ends the element's own transforms and
+	 * hover transitions apply untouched. */
+	html.reveal [data-reveal]:not(.is-revealed),
+	html.reveal [data-reveal-stagger]:not(.is-revealed) > * {
+		opacity: 0;
 	}
 
+	[data-reveal].is-revealed:not(.reveal-done) {
+		animation: reveal-in var(--reveal-duration, 0.9s) var(--ease-out-expo) var(--reveal-delay, 0s)
+			backwards;
+	}
+
+	[data-reveal-stagger].is-revealed:not(.reveal-done) > * {
+		animation: reveal-in var(--reveal-duration, 0.8s) var(--ease-out-expo)
+			calc(var(--reveal-delay, 0s) + var(--i, 0) * 75ms) backwards;
+	}
+
+	/* Variants: where the element comes from. Default (`up` or empty) rises from below.
+	 * Each applies to a single element or to every child of a stagger group. */
+	:is([data-reveal='down'], [data-reveal-stagger='down'] > *) {
+		--reveal-y: -32px;
+	}
+	:is([data-reveal='left'], [data-reveal-stagger='left'] > *) {
+		--reveal-x: -56px;
+		--reveal-y: 0px;
+	}
+	:is([data-reveal='right'], [data-reveal-stagger='right'] > *) {
+		--reveal-x: 56px;
+		--reveal-y: 0px;
+	}
+	:is([data-reveal='fade'], [data-reveal-stagger='fade'] > *) {
+		--reveal-y: 0px;
+		--reveal-duration: 1.1s;
+	}
+	:is([data-reveal='scale'], [data-reveal-stagger='scale'] > *) {
+		--reveal-scale: 0.92;
+		--reveal-y: 16px;
+	}
+	:is([data-reveal='zoom'], [data-reveal-stagger='zoom'] > *) {
+		--reveal-scale: 1.06;
+		--reveal-y: 0px;
+		--reveal-duration: 1.2s;
+	}
+	:is([data-reveal='blur'], [data-reveal-stagger='blur'] > *) {
+		--reveal-blur: 12px;
+		--reveal-y: 12px;
+		--reveal-duration: 1s;
+	}
+
+	/* Progress bars fill from the left instead of fading */
+	html.reveal [data-reveal='bar']:not(.is-revealed) {
+		opacity: 1;
+		scale: 0 1;
+	}
+	[data-reveal='bar'] {
+		transform-origin: left center;
+	}
+	[data-reveal='bar'].is-revealed:not(.reveal-done) {
+		animation-name: reveal-bar;
+		animation-duration: 1.4s;
+		animation-delay: 0.25s;
+	}
+
+	/* ---- Hero entrance (first load only) -------------------------------
+	 * Pure CSS so it plays on first paint, before hydration. On client navigations the view
+	 * transition is the entrance instead (`.vt-nav`, set by the layout). */
+	html:not(.vt-nav) main > :first-child :has(> h1) > * {
+		animation: hero-rise 0.9s var(--ease-out-expo) backwards;
+		animation-delay: calc(80ms + var(--hero-i, 0) * 90ms);
+	}
+	html:not(.vt-nav) main > :first-child :has(> h1) > h1 {
+		animation-name: hero-rise-blur;
+	}
+	main > :first-child :has(> h1) > :nth-child(2) {
+		--hero-i: 1;
+	}
+	main > :first-child :has(> h1) > :nth-child(3) {
+		--hero-i: 2;
+	}
+	main > :first-child :has(> h1) > :nth-child(4) {
+		--hero-i: 3;
+	}
+	main > :first-child :has(> h1) > :nth-child(5) {
+		--hero-i: 4;
+	}
+	main > :first-child :has(> h1) > :nth-child(n + 6) {
+		--hero-i: 5;
+	}
+	/* A mix of directions: the eyebrow drops in, the lead paragraph fades */
+	html:not(.vt-nav) main > :first-child :has(> h1) > :first-child:not(h1) {
+		animation-name: hero-drop;
+	}
+	html:not(.vt-nav) main > :first-child :has(> h1) > p {
+		animation-name: hero-fade;
+		animation-duration: 1.2s;
+	}
+
+	/* The hero's visual (the column after the text) slides in from the right after the copy.
+	   (:has() can't nest inside :has(), so this targets the text column's later siblings.) */
+	html:not(.vt-nav) main > section:first-child :has(> h1) ~ * {
+		animation: hero-slide-in 1.2s var(--ease-out-expo) 0.3s backwards;
+	}
+}
+
+@keyframes reveal-in {
+	from {
+		opacity: 0;
+		translate: var(--reveal-x, 0px) var(--reveal-y, 32px);
+		scale: var(--reveal-scale, 1);
+		filter: blur(var(--reveal-blur, 0px));
+	}
+}
+@keyframes reveal-bar {
+	from {
+		scale: 0 1;
+	}
+}
+@keyframes hero-rise {
+	from {
+		opacity: 0;
+		translate: 0 24px;
+	}
+}
+@keyframes hero-rise-blur {
+	from {
+		opacity: 0;
+		translate: 0 24px;
+		filter: blur(10px);
+	}
+}
+@keyframes hero-drop {
+	from {
+		opacity: 0;
+		translate: 0 -20px;
+	}
+}
+@keyframes hero-fade {
+	from {
+		opacity: 0;
+	}
+}
+@keyframes hero-slide-in {
+	from {
+		opacity: 0;
+		translate: 64px 0;
+		scale: 0.97;
+	}
+}
+
+/* ---- Scroll-driven extras (no JS; skipped where unsupported) ---------- */
+@supports (animation-timeline: scroll()) {
+	@media (prefers-reduced-motion: no-preference) {
+		/* Hero glow blobs drift and fade as the hero scrolls away: a cheap sense of depth */
+		main > section:first-child > .pointer-events-none {
+			animation: drift linear both;
+			animation-timeline: scroll(root block);
+			animation-range: 0 700px;
+		}
+	}
+}
+@keyframes drift {
+	to {
+		translate: 0 140px;
+		opacity: 0.35;
+	}
+}
+
+/* ---- Accordion: <details class="accordion"> opens and closes smoothly ----
+ * ::details-content animates the native element, so keyboard support, find-in-page and the
+ * shared `name` (one open at a time) keep working. Unsupported browsers simply snap. */
+@media (prefers-reduced-motion: no-preference) {
+	details.accordion::details-content {
+		block-size: 0;
+		opacity: 0;
+		overflow: clip;
+		transition:
+			block-size 0.45s var(--ease-out-expo),
+			opacity 0.3s ease,
+			content-visibility 0.45s allow-discrete;
+	}
+	details.accordion[open]::details-content {
+		block-size: auto;
+		opacity: 1;
+	}
+	details.accordion {
+		transition:
+			background-color 0.3s ease,
+			border-color 0.3s ease,
+			box-shadow 0.3s ease;
+	}
+}
+
+/* ---- Micro-interactions ------------------------------------------------ */
+@media (prefers-reduced-motion: no-preference) {
+	/* Arrow icons nudge toward where the link goes */
+	:is(.btn, .link-arrow) [data-icon^='arrow'] {
+		transition: translate 0.3s var(--ease-out-expo);
+	}
+	:is(.btn, .link-arrow):hover [data-icon='arrow-right'] {
+		translate: 4px 0;
+	}
+	:is(.btn, .link-arrow):hover [data-icon='arrow-up-right'] {
+		translate: 2px -2px;
+	}
+}
+
+/* ========================================
+   View Transitions
+   Elements are named by ROLE (view-transition-class); each role has one treatment and one
+   layer. Layers keep the OLD page's paint order, so z-index is explicit:
+     1 vt-panel / tab-panel   boxes that reshape (hero band, tab panels)
+     3 vt-text                text that morphs in place (page title)
+     4 vt-card                cards moving to a new slot (filtered job list)
+    10 site-header            holds still
+    11 nav-pill / tab-pill    sliding highlights
+    12 nav-label / tab-label  labels, always above the highlight
+   ======================================== */
+@media (prefers-reduced-motion: no-preference) {
+	::view-transition-group(*) {
+		animation-duration: 520ms;
+		animation-timing-function: var(--ease-out-expo);
+	}
+
+	/* Page navigation: the old page leaves fast, the new one rises in */
+	html[data-vt='page']::view-transition-old(root) {
+		animation: 200ms var(--ease-in-quick) both vt-leave;
+	}
+	html[data-vt='page']::view-transition-new(root) {
+		animation: 480ms var(--ease-out-expo) 40ms both vt-arrive;
+	}
+	/* Browser Back: arrive from above instead */
+	html[data-vt-back]::view-transition-new(root) {
+		animation-name: vt-arrive-back;
+	}
+
+	/* In-page swaps (tabs, filters): the rest of the page just cross-fades quickly */
+	html[data-vt='swap']::view-transition-old(root),
+	html[data-vt='swap']::view-transition-new(root) {
+		animation-duration: 220ms;
+	}
+
+	/* Panel: the box resizes; its content cross-fades at natural size from the top-left */
+	::view-transition-group(*.vt-panel) {
+		overflow: clip;
+		z-index: 1;
+	}
+	::view-transition-old(*.vt-panel),
+	::view-transition-new(*.vt-panel) {
+		height: auto;
+		object-fit: none;
+		object-position: left top;
+	}
+
+	/* Text: the block resizes to the new text; old and new cross-fade unstretched */
+	::view-transition-group(*.vt-text) {
+		overflow: clip;
+		z-index: 3;
+	}
+	::view-transition-old(*.vt-text),
+	::view-transition-new(*.vt-text) {
+		width: auto;
+		height: 100%;
+		object-fit: none;
+		object-position: left top;
+	}
+
+	/* Chrome holds still */
+	::view-transition-group(site-header) {
+		z-index: 10;
+	}
+
+	/* Sliding highlights, and the labels that must stay above them */
+	::view-transition-group(*.nav-pill),
+	::view-transition-group(*.tab-pill) {
+		animation-duration: 440ms;
+		animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+		z-index: 11;
+	}
+	::view-transition-group(*.nav-label),
+	::view-transition-group(*.tab-label) {
+		z-index: 12;
+	}
+
+	/* Tab panel: resizes like a panel; content slides in from the side of the chosen tab */
+	::view-transition-group(*.tab-panel) {
+		overflow: clip;
+		z-index: 1;
+		animation-duration: 460ms;
+	}
+	::view-transition-old(*.tab-panel),
+	::view-transition-new(*.tab-panel) {
+		height: auto;
+		object-fit: none;
+		object-position: left top;
+	}
+	::view-transition-old(*.tab-panel) {
+		animation: 180ms var(--ease-in-quick) both vt-panel-out;
+	}
+	::view-transition-new(*.tab-panel) {
+		animation: 460ms var(--ease-out-expo) 60ms both vt-panel-in;
+	}
+	html[data-vt-dir='prev']::view-transition-old(*.tab-panel),
+	html[data-vt-dir='prev']::view-transition-new(*.tab-panel) {
+		--vt-dx: -28px;
+	}
+
+	/* Cards moving to new slots; ones that exist on one side only pop in or out */
+	::view-transition-group(*.vt-card) {
+		z-index: 4;
+		animation-duration: 500ms;
+	}
+	::view-transition-new(*.vt-card):only-child {
+		animation: 380ms var(--ease-out-expo) 120ms both vt-pop-in;
+	}
+	::view-transition-old(*.vt-card):only-child {
+		animation: 200ms var(--ease-in-quick) both vt-pop-out;
+	}
+}
+
+@keyframes vt-leave {
 	to {
 		opacity: 0;
-		transform: translateY(-8px);
 	}
 }
-
-@keyframes nav-fade-in {
+@keyframes vt-arrive {
 	from {
 		opacity: 0;
-		transform: translateY(8px);
-	}
-
-	to {
-		opacity: 1;
-		transform: translateY(0);
+		translate: 0 18px;
 	}
 }
-
-/* Ensure smooth transition for header background on scroll */
-header {
-	will-change: background-color, backdrop-filter, box-shadow;
+@keyframes vt-arrive-back {
+	from {
+		opacity: 0;
+		translate: 0 -18px;
+	}
+}
+@keyframes vt-panel-in {
+	from {
+		opacity: 0;
+		translate: var(--vt-dx, 28px) 0;
+	}
+}
+@keyframes vt-panel-out {
+	to {
+		opacity: 0;
+		translate: calc(var(--vt-dx, 28px) * -0.5) 0;
+	}
+}
+@keyframes vt-pop-in {
+	from {
+		opacity: 0;
+		scale: 0.9;
+	}
+}
+@keyframes vt-pop-out {
+	to {
+		opacity: 0;
+		scale: 0.9;
+	}
 }

@@ -6,7 +6,7 @@
 <div class="w-full bg-white">
 	<!-- Main Content Container -->
 	<div class="w-full bg-[rgba(248,243,255,0.35)] py-12">
-		<div class="mx-auto w-full max-w-[1344px] rounded-[20px] bg-[rgba(248,243,255,0.26)] px-6 py-16">
+		<div class="page-container w-full rounded-[20px] bg-[rgba(248,243,255,0.26)] py-16">
 			<!-- Section Header -->
 			<div class="mb-12 flex flex-col items-center justify-center gap-5">
 				<h1 class="font-geist text-center text-[40px] font-bold leading-[60px] text-black" style="letter-spacing: -0.005em">
@@ -43,7 +43,7 @@
 									<input
 										type="text"
 										placeholder="Search with job title, keywords"
-										class="font-lato w-full text-base leading-6 text-[rgba(42,44,44,0.49)] outline-none"
+										class="font-lato w-full min-w-0 border-0 bg-transparent p-0 text-base leading-6 text-text-muted placeholder:text-[rgba(42,44,44,0.49)] focus:ring-0 focus:outline-none"
 										style="letter-spacing: -0.005em"
 									/>
 								</div>
@@ -57,7 +57,7 @@
 									<input
 										type="text"
 										placeholder="City or zipcode"
-										class="font-lato w-full text-base leading-6 text-[rgba(42,44,44,0.49)] outline-none"
+										class="font-lato w-full min-w-0 border-0 bg-transparent p-0 text-base leading-6 text-text-muted placeholder:text-[rgba(42,44,44,0.49)] focus:ring-0 focus:outline-none"
 										style="letter-spacing: -0.005em"
 									/>
 								</div>
@@ -213,16 +213,16 @@
 						<!-- Job Cards -->
 						<div class="flex flex-col gap-6">
 							{#each Array(5) as _, i}
-								<div class="flex flex-row items-start justify-between gap-8 rounded-lg border border-solid border-neutral-primary-grey bg-white p-6 lg:gap-20 lg:p-[38px]">
-									<div class="flex flex-row gap-5">
-										<img class="h-9 w-9 shrink-0 rounded-2xl object-cover" src="/icons/job-listings/image{i}.png" alt="" />
-										<div class="flex flex-col gap-8">
+								<div class="flex flex-row items-start justify-between gap-4 rounded-lg border border-solid border-neutral-primary-grey bg-white p-4 sm:p-6 lg:gap-20 lg:p-[38px]">
+									<div class="flex min-w-0 flex-1 flex-row gap-3 sm:gap-5">
+										<span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#0f766e] font-geist text-xs font-bold text-white" aria-hidden="true">RP</span>
+										<div class="flex min-w-0 flex-1 flex-col gap-8">
 											<div class="flex flex-col gap-4">
 												<div class="flex flex-row items-center justify-between gap-1.5">
-													<div class="font-geist flex-1 text-sm leading-[21px] text-[rgba(0,0,0,0.66)]" style="letter-spacing: -0.005em">Shell</div>
+													<div class="font-geist flex-1 text-sm leading-[21px] text-[rgba(0,0,0,0.66)]" style="letter-spacing: -0.005em">Ridgeway Power</div>
 												</div>
-												<div class="flex flex-row items-center gap-4">
-													<div class="font-geist text-base font-bold leading-6 text-black" style="letter-spacing: -0.005em">Project Security Manger</div>
+												<div class="flex flex-row flex-wrap items-center gap-x-4 gap-y-1">
+													<div class="font-geist text-base font-bold leading-6 text-black" style="letter-spacing: -0.005em">Project Security Manager</div>
 													{#if i === 0}
 														<div class="flex w-[68px] flex-row items-center justify-center gap-2.5 rounded-lg bg-[rgba(255,0,0,0.08)] px-2.5 py-1">
 															<div class="font-geist text-xs font-bold leading-[18px] text-[#ff0000]" style="letter-spacing: -0.005em">New</div>
@@ -231,15 +231,15 @@
 												</div>
 												<div class="flex flex-row flex-wrap gap-5">
 													<div class="flex flex-row items-center gap-2">
-														<img class="h-5 w-5" src="/icons/job-listings/work-outline{i + 3}.svg" alt="" />
+														<img class="h-5 w-5" src="/icons/job-listings/work-outline0.svg" alt="" />
 														<div class="font-raleway text-xs leading-[18px]" style="letter-spacing: -0.005em">Accounting</div>
 													</div>
 													<div class="flex flex-row items-center gap-2">
-														<img class="h-5 w-5" src="/icons/job-listings/location-on{i + 1}.svg" alt="" />
+														<img class="h-5 w-5" src="/icons/job-listings/location-on1.svg" alt="" />
 														<div class="font-raleway text-xs leading-[18px]" style="letter-spacing: -0.005em">Lagos, Nigeria</div>
 													</div>
 													<div class="flex flex-row items-center gap-2">
-														<img class="h-5 w-5" src="/icons/job-listings/home-work{i}.svg" alt="" />
+														<img class="h-5 w-5" src="/icons/job-listings/home-work0.svg" alt="" />
 														<div class="font-raleway text-xs leading-[18px]" style="letter-spacing: -0.005em">N250,000 - N400,000</div>
 													</div>
 												</div>
@@ -262,7 +262,7 @@
 										</div>
 									</div>
 									<button class="shrink-0">
-										<img class="h-6 w-6" src="/icons/job-listings/bookmark-border{i}.svg" alt="Bookmark" />
+										<img class="h-6 w-6" src="/icons/job-listings/bookmark-border0.svg" alt="Bookmark" />
 									</button>
 								</div>
 							{/each}
@@ -272,7 +272,7 @@
 					<!-- Pagination -->
 					<div class="flex flex-row items-center justify-center gap-3">
 						<button class="flex h-[60px] w-[60px] items-center justify-center overflow-hidden rounded-[50px] border border-solid border-[#eeecfc]">
-							<img class="h-6 w-6 rotate-180" src="/icons/job-listings/arrow-right-alt0.svg" alt="Previous" />
+							<img class="h-6 w-6" src="/icons/job-listings/arrow-right-alt0.svg" alt="Previous" />
 						</button>
 						<button class="font-geist flex h-[60px] w-[60px] items-center justify-center overflow-hidden rounded-[50px] bg-[#3f018a] text-base font-bold leading-6 text-white" style="letter-spacing: -0.005em">1</button>
 						<button class="font-geist flex h-[60px] w-[60px] items-center justify-center overflow-hidden rounded-[50px] border border-solid border-[#eeecfc] text-base font-bold leading-6 text-[#62717a]" style="letter-spacing: -0.005em">2</button>

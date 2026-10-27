@@ -1,47 +1,39 @@
-<script>
+<script lang="ts">
 	import EmployersHero from '$lib/components/employers/EmployersHero.svelte';
-	import EmployersHowItWorksHero from '$lib/components/employers/EmployersHowItWorksHero.svelte';
-	import EmployersBrands from '$lib/components/employers/EmployersBrands.svelte';
+	import EmployerSteps from '$lib/components/employers/EmployerSteps.svelte';
 	import RecruitmentSolutions from '$lib/components/employers/RecruitmentSolutions.svelte';
 	import FindTopTalent from '$lib/components/employers/FindTopTalent.svelte';
-	import EmployersHowItWorks from '$lib/components/employers/EmployersHowItWorks.svelte';
 	import EmployersPricing from '$lib/components/employers/EmployersPricing.svelte';
-	import EmployersTestimonials from '$lib/components/employers/EmployersTestimonials.svelte';
-	import EmployersFAQ from '$lib/components/employers/EmployersFAQ.svelte';
-	import SolutionsCTA from '$lib/components/solutions/SolutionsCTA.svelte';
+	import BrandMarquee from '$lib/components/ui/BrandMarquee.svelte';
+	import CtaBanner from '$lib/components/ui/CtaBanner.svelte';
+	import FaqSection from '$lib/components/home/FaqSection.svelte';
+	import { partnerBrands } from '$lib/content/home';
+	import { links } from '$lib/config/site';
 </script>
 
 <svelte:head>
 	<title>Employers | JobBeta</title>
 	<meta
 		name="description"
-		content="Hire top talent with JobBeta. Post jobs, manage candidates, and grow your team."
+		content="Hire students and graduates with JobBeta: AI-matched shortlists, interview scheduling and one hiring pipeline."
 	/>
 </svelte:head>
 
-<EmployersHero
-	title="Hire the Best Talent with JobBeta"
-	subtitle="Connect with top-tier candidates and streamline your recruitment process."
-/>
-<EmployersBrands />
-<EmployersHowItWorksHero />
-<RecruitmentSolutions />
+<EmployersHero />
+<BrandMarquee brands={partnerBrands} heading="Built for teams hiring early-career talent" />
+<EmployerSteps />
 <FindTopTalent />
-
+<RecruitmentSolutions />
 <EmployersPricing />
-<EmployersTestimonials />
-<EmployersFAQ />
-<SolutionsCTA
-	leftBgColor="bg-primary"
-	rightBgColor="bg-secondary"
-	leftLabel=""
-	leftTitle="Create an Employer Account"
-	leftDescription="Start hiring today! Sign up as an employer and gain access to top students and graduate talent."
-	leftButton1Text="Join As an Employer"
-	leftButton2Text="Partner with us "
-	rightLabel="We love to hear from you"
-	rightTitle="Do you need more Details<br />or support?"
-	rightButton1Text="Hire With JobBeta"
-	rightButton2Text="Partner with JobBeta"
-	showDecorators={true}
+<FaqSection
+	audiences={['employer']}
+	title="Employer FAQs"
+	subtitle="What hiring teams usually ask before getting started."
+/>
+<CtaBanner
+	title="Create an employer account."
+	body="Join the waitlist to start hiring top students and graduates as soon as we launch."
+	primary={{ label: 'Join as an Employer', href: links.waitlistEmployer }}
+	secondary={{ label: 'Request a demo', href: links.demo }}
+	tertiary={{ label: 'Partner with JobBeta', href: links.partner }}
 />

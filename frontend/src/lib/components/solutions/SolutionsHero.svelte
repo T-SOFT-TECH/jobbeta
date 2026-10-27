@@ -1,30 +1,34 @@
-<script>
-	let {
-		title = 'Your Next Hire <br/> Starts Here...',
-		subtitle = 'We match skilled professionals with the right roles, helping businesses grow and individuals thrive at JobBeta'
-	} = $props();
+<script lang="ts">
+	import Icon from '$lib/components/ui/Icon.svelte';
+	import { links } from '$lib/config/site';
 </script>
 
-<section class="relative w-full bg-white px-4 pb-20 pt-32 text-center">
-	<div class="mx-auto flex max-w-4xl flex-col items-center gap-6">
-		<h1 class="text-text-muted text-[40px] font-bold leading-tight md:text-[64px]">
-			{@html title}
-		</h1>
-		<p class="text-text-muted/70 max-w-2xl text-xl">
-			{subtitle}
-		</p>
+<section class="relative overflow-hidden bg-gradient-to-b from-neutral-light via-white to-white">
+	<div class="page-container flex flex-col items-center gap-10 pt-12 text-center md:pt-16">
+		<div class="flex max-w-3xl flex-col items-center gap-5">
+			<span class="eyebrow"><Icon name="dashboard" size={14} /> Solutions</span>
+			<h1 class="title-display text-secondary">Your next hire starts here.</h1>
+			<p class="lead max-w-2xl text-text-secondary">
+				We match skilled students and graduates with the right roles, helping businesses grow and
+				people thrive.
+			</p>
+			<div class="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
+				<a href={links.waitlistEmployer} class="btn btn-primary">
+					Get Started for Free <Icon name="arrow-right" size={18} />
+				</a>
+				<a href={links.demo} class="btn btn-outline">Request a Demo</a>
+			</div>
+		</div>
 
-		<div class="mt-8 flex flex-col gap-4 sm:flex-row">
-			<button
-				class="bg-primary rounded-[20px] px-8 py-4 text-base font-bold text-white transition-colors hover:bg-[#6002d1]"
-			>
-				Get Started For Free
-			</button>
-			<button
-				class="border-secondary text-secondary rounded-[20px] border px-8 py-4 text-base font-bold transition-colors hover:bg-gray-50"
-			>
-				Request For a Demo
-			</button>
+		<!-- Candidate-review dashboard from the client's Figma (review image 39) -->
+		<div class="relative w-full max-w-5xl">
+			<div class="pointer-events-none absolute inset-x-10 -top-6 bottom-0 rounded-[2rem] bg-primary/15 blur-3xl"></div>
+			<img
+				src="/images/solutions/employer-dashboard.png"
+				alt="JobBeta candidate review screen with AI match scores for a Marketing Manager role"
+				fetchpriority="high"
+				class="relative aspect-[16/7] w-full rounded-t-2xl object-cover object-top shadow-2xl ring-1 ring-black/5 md:rounded-t-3xl"
+			/>
 		</div>
 	</div>
 </section>

@@ -37,14 +37,14 @@
 
 				<div class="flex flex-col gap-3 sm:flex-row">
 					<a
-						href="/partner"
+						href="/contact"
 						class="flex w-full items-center justify-center rounded-[20px] bg-black px-[10px] py-4 text-base leading-6 font-bold text-white transition-colors hover:bg-gray-800 sm:w-60"
 						style="font-family: 'Lato', sans-serif; letter-spacing: -0.005em;"
 					>
 						Become a Partner
 					</a>
 					<a
-						href="/demo"
+						href="/contact"
 						class="flex w-full items-center justify-center rounded-[20px] border border-white px-[10px] py-4 text-base leading-6 font-bold text-white transition-colors hover:bg-white/10 sm:w-60"
 						style="font-family: 'Lato', sans-serif; letter-spacing: -0.005em;"
 					>
@@ -95,7 +95,7 @@
 						Hire With JobBeta
 					</a>
 					<a
-						href="/partner"
+						href="/contact"
 						class="flex w-full items-center justify-center rounded-[20px] px-[10px] py-4 text-base leading-6 font-bold text-white transition-colors hover:bg-white/10 sm:w-60"
 						style="font-family: 'Lato', sans-serif; letter-spacing: -0.005em;"
 					>

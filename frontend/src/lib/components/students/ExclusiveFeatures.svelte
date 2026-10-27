@@ -1,95 +1,46 @@
-<script>
-	import { run } from 'svelte/legacy';
-
-	/** @type {{}} */
-	let { ...props } = $props();
-
-	const features = [
-		{
-			title: 'Smart Job Matching',
-			description: 'Find roles tailored to your skills & goals.'
-		},
-		{
-			title: 'Create an Impressive Profile',
-			description: 'Showcase your experience, skills & projects.'
-		},
-		{
-			title: 'Career Tips & Hacks',
-			description: 'Get expert advice on resumes, interviews, and networking.'
-		},
-		{
-			title: 'Virtual Career Fairs & Webinars',
-			description: 'Meet recruiters from top companies.'
-		},
-		{
-			title: 'Skill Development Programs',
-			description: 'Learn new skills and earn certifications.'
-		}
-	];
+<script lang="ts">
+	import Icon from '$lib/components/ui/Icon.svelte';
+	import MatchCard from '$lib/components/ui/MatchCard.svelte';
+	import { exclusiveFeatures } from '$lib/content/students';
 </script>
 
-<section class="relative w-full overflow-hidden bg-[#FAFAFA] py-20">
-	<!-- Background Decorative Circles (Purple) -->
-	<!-- Simplified representation of the many circles in HTML -->
-	<div
-		class="absolute top-[10%] right-[10%] h-[85px] w-[85px] rounded-full border border-[#7502ff] opacity-20"
-	></div>
-	<div
-		class="absolute top-[5%] right-[15%] h-[85px] w-[85px] rounded-full border border-[#7502ff] opacity-20"
-	></div>
-	<div
-		class="absolute top-[15%] right-[20%] h-[85px] w-[85px] rounded-full border border-[#7502ff] opacity-20"
-	></div>
-
-	<div
-		class="mx-auto flex w-full max-w-[1369px] flex-col items-center justify-between gap-10 px-4 md:flex-row md:px-[58px]"
-	>
-		<!-- Text Content -->
-		<div class="flex flex-col items-start justify-start gap-10 md:w-1/2">
-			<div class="flex flex-col gap-5">
-				<div
-					class="font-['Geist-Bold',_sans-serif] text-[28px] leading-tight font-bold text-black sm:text-[32px] md:text-[40px] md:leading-[60px]"
-				>
-					Exclusive Features for Students & Graduates
-				</div>
-				<div
-					class="font-['Geist-Medium',_sans-serif] text-xl leading-[30px] font-medium text-[rgba(42,44,44,0.60)]"
-				>
-					We don’t just help you find jobs—we help you build your career!. The best part? It’s all
-					free. Start now!
-				</div>
+<!-- Client review: "two cards on the right instead of the long image" -->
+<section class="section bg-neutral-light">
+	<div class="page-container grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
+		<div class="flex flex-col gap-6">
+			<div class="flex flex-col gap-3">
+				<h2 class="title-section text-secondary">Exclusive features for students & graduates</h2>
+				<p class="lead text-text-secondary">
+					We don't just help you find jobs. We help you build a career, and it's free.
+				</p>
 			</div>
-
-			<!-- Features List -->
-			<div class="flex flex-col gap-[30px]">
-				{#each features as feature}
-					<div class="flex flex-row items-start gap-[30px]">
-						<div class="h-[60px] w-[3px] shrink-0 rounded-lg bg-[#7502ff] md:h-[84px]"></div>
-						<div class="flex flex-col justify-center gap-3 py-2">
-							<div
-								class="font-['Geist-Bold',_sans-serif] text-xl leading-[30px] font-bold text-[#2a2c2c]"
-							>
-								{feature.title}
-							</div>
-							<div
-								class="font-['Geist-Regular',_sans-serif] text-base leading-6 font-normal text-[rgba(48,48,48,0.64)]"
-							>
-								{feature.description}
-							</div>
+			<ul class="grid gap-4 sm:grid-cols-2">
+				{#each exclusiveFeatures as feature (feature.title)}
+					<li class="flex gap-3">
+						<span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white text-primary shadow-sm">
+							<Icon name={feature.icon} size={20} />
+						</span>
+						<div class="font-geist">
+							<p class="font-semibold text-secondary">{feature.title}</p>
+							<p class="mt-1 text-sm leading-relaxed text-text-secondary">{feature.body}</p>
 						</div>
-					</div>
+					</li>
 				{/each}
-			</div>
+			</ul>
 		</div>
 
-		<!-- Image -->
-		<div class="relative md:w-1/2">
-			<!-- The HTML had a very large image absolute positioned. I'll make it responsive. -->
-			<img
-				class="h-auto w-full object-cover"
-				src="/images/students/student.png"
-				alt="Exclusive Features"
-			/>
+		<div class="flex flex-col gap-5">
+			<div class="flex flex-col gap-3 rounded-3xl bg-primary p-6 text-white md:p-7">
+				<span class="flex h-10 w-10 items-center justify-center rounded-xl bg-white/15">
+					<Icon name="shield-check" size={20} />
+				</span>
+				<p class="font-geist text-xl font-semibold">Verified opportunities only</p>
+				<p class="font-geist text-sm leading-relaxed text-white/80">
+					Every listing comes from a reviewed employer, so you never waste time on dead or fake job
+					posts.
+				</p>
+			</div>
+			<MatchCard />
 		</div>
 	</div>
 </section>

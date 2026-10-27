@@ -1,5 +1,27 @@
-<script>
-	// Newsletter Section for Career Tips
+<script lang="ts">
+	import { pb } from '$lib/pocketbase';
+	import Logo from '$lib/components/ui/Logo.svelte';
+
+	let email = $state('');
+	let subscribing = $state(false);
+	let status = $state<'idle' | 'success' | 'error'>('idle');
+
+	async function subscribe(e: SubmitEvent) {
+		e.preventDefault();
+		if (!email.trim()) return;
+		subscribing = true;
+		status = 'idle';
+		try {
+			await pb.collection('waitlist').create({ email: email.trim(), role: 'newsletter' });
+			status = 'success';
+			email = '';
+		} catch (err) {
+			console.error(err);
+			status = 'error';
+		} finally {
+			subscribing = false;
+		}
+	}
 </script>
 
 <section
@@ -11,7 +33,7 @@
 	>
 		<!-- Left Content -->
 		<div class="flex max-w-xl flex-col gap-4 text-center lg:gap-6 lg:text-left">
-			<img src="/images/logo-white.svg" alt="JobBeta" class="mx-auto h-8 lg:mx-0" />
+			<Logo tone="light" class="mx-auto h-8 w-auto lg:mx-0" />
 			<h2
 				class="text-2xl leading-tight font-bold text-white sm:text-3xl md:text-[32px] md:leading-[48px]"
 				style="font-family: var(--font-geist); letter-spacing: -0.005em;"
@@ -27,32 +49,47 @@
 		</div>
 
 		<!-- Email Input -->
-		<div class="flex w-full max-w-md">
-			<input
-				type="email"
-				placeholder="Enter your Email Address"
-				class="w-full rounded-l-lg bg-white/15 px-6 py-4 text-base text-white placeholder-white transition-colors outline-none focus:bg-white/20"
-				style="font-family: var(--font-geist); letter-spacing: -0.005em;"
-			/>
-			<button
-				class="flex items-center justify-center rounded-r-lg bg-primary px-6 py-4 transition-colors hover:bg-[#6002d1]"
-				aria-label="Subscribe"
-			>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke-width="2"
-					stroke="currentColor"
-					class="h-6 w-6 text-white"
+		<form class="flex w-full max-w-md flex-col gap-2" onsubmit={subscribe}>
+			<div class="flex w-full">
+				<input
+					type="email"
+					required
+					bind:value={email}
+					placeholder="Enter your Email Address"
+					class="w-full rounded-l-lg bg-white/15 px-6 py-4 text-base text-white placeholder-white transition-colors outline-none focus:bg-white/20"
+					style="font-family: var(--font-geist); letter-spacing: -0.005em;"
+				/>
+				<button
+					type="submit"
+					disabled={subscribing}
+					class="flex items-center justify-center rounded-r-lg bg-primary px-6 py-4 transition-colors hover:bg-[#6002d1] disabled:opacity-60"
+					aria-label="Subscribe"
 				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"
-					/>
-				</svg>
-			</button>
-		</div>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="2"
+						stroke="currentColor"
+						class="h-6 w-6 text-white"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"
+						/>
+					</svg>
+				</button>
+			</div>
+			{#if status === 'success'}
+				<p class="text-sm text-green-400" style="font-family: var(--font-geist);">
+					You're subscribed! Watch your inbox for updates.
+				</p>
+			{:else if status === 'error'}
+				<p class="text-sm text-red-400" style="font-family: var(--font-geist);">
+					Something went wrong. Please try again later.
+				</p>
+			{/if}
+		</form>
 	</div>
 </section>

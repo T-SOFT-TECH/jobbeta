@@ -1,75 +1,58 @@
-<script>
-	const features = [
+<script lang="ts">
+	import Icon, { type IconName } from '$lib/components/ui/Icon.svelte';
+
+	const pillars: { icon: IconName; title: string; tagline: string; body: string }[] = [
 		{
+			icon: 'megaphone',
 			title: 'Attract',
-			description: 'Stand out to early talent before they even apply',
-			details:
-				'Be where Gen Z is looking. From personalized employer profiles to targeted job promotion, JobBeta helps your brand show up (and stand out) on the platforms and places students trust most.',
-			icon: '/images/solutions/work-outline4.svg'
+			tagline: 'Stand out to early talent before they apply',
+			body: 'Personalised employer profiles and targeted job promotion put your brand where students already look.'
 		},
 		{
+			icon: 'users',
 			title: 'Connect',
-			description:
-				'Connecting the right talent to the right opportunities with precision, efficiency, and fairness.',
-			details:
-				'Search and match with top student talent using filters that actually make sense: skills, portfolios, course projects, and availability. Proactive sourcing meets curated connections.',
-			icon: '/images/solutions/connect.svg'
+			tagline: 'The right talent for the right role',
+			body: 'Match on skills, portfolios, course projects and availability, with filters that actually make sense.'
 		},
 		{
+			icon: 'message',
 			title: 'Engage',
-			description: 'Make meaningful impressions that convert',
-			details:
-				'Reach out with messages that resonate. Host branded events, run micro-campaigns, and get more from every touchpoint — without sounding like every other company.',
-			icon: '/images/solutions/work-outline5.svg'
+			tagline: 'Make impressions that convert',
+			body: 'Messages that resonate, branded events and micro-campaigns, without sounding like every other company.'
 		},
 		{
-			title: 'Hire Smarter',
-			description: 'Track, assess, and hire with purpose',
-			details:
-				'From real-time performance data to match scoring and feedback loops, JobBeta empowers your team to make confident hiring decisions — and prove what’s working.',
-			icon: '/images/solutions/connect.svg'
+			icon: 'chart',
+			title: 'Hire smarter',
+			tagline: 'Track, assess and hire with purpose',
+			body: 'Match scores, feedback loops and pipeline data help your team decide with confidence.'
 		}
 	];
 </script>
 
-<section class="bg-neutral-light/20 w-full px-4 py-20">
-	<div class="mx-auto flex max-w-6xl flex-col gap-20">
-		<!-- Header -->
-		<div class="mx-auto flex max-w-4xl flex-col items-center gap-5 text-center">
-			<h2 class="text-text-muted text-4xl font-bold">JobBeta Employer Solutions – 4 Pillars</h2>
-			<p class="text-text-muted/65 text-xl">
-				Our collection of solutions empowers educators, engages students, and builds stronger
-				connections between institutions and their communities.
+<section class="section bg-neutral-light">
+	<div class="page-container">
+		<div class="mx-auto flex max-w-2xl flex-col items-center gap-3 text-center">
+			<span class="eyebrow">Employer solutions</span>
+			<h2 class="title-section text-secondary">Four pillars of early-career hiring</h2>
+			<p class="lead text-text-secondary">
+				Everything you need to attract, connect with and hire students and graduates.
 			</p>
 		</div>
 
-		<!-- Features Grid -->
-		<div class="grid grid-cols-1 gap-12 md:grid-cols-2">
-			{#each features as feature}
-				<div
-					class="flex flex-col gap-8 rounded-2xl bg-white p-8 shadow-sm transition-shadow hover:shadow-md md:flex-row"
-				>
-					<div class="bg-primary flex h-16 w-16 shrink-0 items-center justify-center rounded-lg">
-						<img src={feature.icon} alt={feature.title} class="h-8 w-8" />
+		<ol class="snap-row mt-10 md:grid-cols-2 lg:grid-cols-4">
+			{#each pillars as pillar, i (pillar.title)}
+				<li class="lift flex flex-col gap-3 rounded-3xl bg-white p-6">
+					<div class="flex items-center justify-between">
+						<span class="flex h-11 w-11 items-center justify-center rounded-xl bg-primary text-white">
+							<Icon name={pillar.icon} size={22} />
+						</span>
+						<span class="font-geist text-sm font-semibold text-text-secondary/60">0{i + 1}</span>
 					</div>
-					<div class="flex flex-col gap-4">
-						<h3 class="text-secondary text-[32px] font-semibold">{feature.title}</h3>
-						<p class="text-secondary/80 text-xl font-medium">{feature.description}</p>
-						<p class="text-text-muted/70 text-base leading-relaxed">
-							{feature.details}
-						</p>
-					</div>
-				</div>
+					<h3 class="mt-2 font-geist text-xl font-semibold text-secondary">{pillar.title}</h3>
+					<p class="font-geist text-sm font-semibold text-primary">{pillar.tagline}</p>
+					<p class="font-geist text-sm leading-relaxed text-text-secondary">{pillar.body}</p>
+				</li>
 			{/each}
-		</div>
-
-		<!-- Show More Button -->
-		<div class="flex justify-center">
-			<button
-				class="text-secondary rounded-[20px] border border-[#62717a] px-16 py-4 text-base font-bold transition-colors hover:bg-gray-50"
-			>
-				Show More
-			</button>
-		</div>
+		</ol>
 	</div>
 </section>

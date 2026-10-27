@@ -234,7 +234,7 @@
 								</div>
 								{#if !isSignUp}
 									<a
-										href="/forgot-password"
+										href="/contact"
 										class="text-right text-base leading-6 font-bold tracking-[-0.005em] text-[#3f018a] hover:underline"
 										>Forgot password?</a
 									>
@@ -256,13 +256,18 @@
 							<span class="text-[rgba(42,44,44,0.65)]">
 								{isSignUp ? 'Already have an account?' : 'Dont have an Account?'}
 							</span>
-							<button
-								type="button"
-								onclick={() => (isSignUp = !isSignUp)}
-								class="ml-1 font-bold text-[#7502ff] hover:underline"
-							>
-								{isSignUp ? 'Sign In' : 'SignUp'}
-							</button>
+							{#if isSignUp}
+								<button
+									type="button"
+									onclick={() => (isSignUp = !isSignUp)}
+									class="ml-1 font-bold text-[#7502ff] hover:underline"
+								>
+									Sign In
+								</button>
+							{:else}
+								<a href="/waitlist" class="ml-1 font-bold text-[#7502ff] hover:underline">Sign Up</a
+								>
+							{/if}
 						</div>
 					</div>
 				</form>

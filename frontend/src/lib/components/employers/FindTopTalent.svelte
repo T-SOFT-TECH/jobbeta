@@ -1,72 +1,45 @@
-<script>
-	import { base } from '$app/paths';
-	import EmployerDashboardMockup from './EmployerDashboardMockup.svelte';
-
-	const features = [
-		{
-			title: 'AI Powered Matching',
-			description:
-				'Find candidates that align with your job requirements effortlessly. Advanced algorithms ensure optimal candidate-employer fit.'
-		},
-		{
-			title: 'Fast & Efficient Hiring',
-			description: 'Post jobs and connect with talent in minutes.'
-		},
-		{
-			title: 'Qualified Candidates',
-			description: 'Access a pool of verified students and graduates ready to work.'
-		},
-		{
-			title: 'Affordable & Flexible Plans',
-			description: 'Choose a plan that fits your budget and hiring needs.'
-		}
-	];
+<script lang="ts">
+	import Icon from '$lib/components/ui/Icon.svelte';
+	import { links } from '$lib/config/site';
+	import { talentPoints } from '$lib/content/employers';
 </script>
 
-<section class="relative overflow-hidden bg-[#eeecfc] py-12 md:py-20 lg:py-45">
-	<div class="container mx-auto px-4">
-		<!-- Main Content (Text + Image) -->
-		<div class="mb-20 flex flex-col items-center gap-12 lg:flex-row lg:gap-24">
-			<!-- Text Content -->
-			<div class="w-full lg:w-1/2">
-				<h2 class="mb-6 font-geist text-4xl leading-tight font-bold text-neutral-800 md:text-5xl">
-					Find Top Talent Faster & <br />Smarter
-				</h2>
-				<p class="mb-8 font-geist text-xl leading-relaxed text-neutral-800/80">
-					At JobBeta, we connect employers with skilled students and graduates who are ready to
-					contribute and grow within your organization. Our platform streamlines the hiring process,
-					giving you direct access to a pool of highly motivated candidates actively seeking job
-					opportunities.
+<!-- Client review (image 33): the candidate list + match panel replaces the old card -->
+<section class="section bg-neutral-light">
+	<div class="page-container grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+		<div class="flex flex-col items-start gap-6">
+			<div class="flex flex-col gap-3">
+				<h2 class="title-section text-secondary">Find top talent faster and smarter</h2>
+				<p class="lead text-text-secondary">
+					We connect employers with skilled students and graduates who are ready to grow with
+					your organisation, and our matching shows you who fits and why.
 				</p>
-				<button
-					class="rounded-[20px] bg-primary px-8 py-4 font-lato text-base font-bold text-white shadow-lg transition-colors hover:bg-primary/90"
-				>
-					Learn More
-				</button>
 			</div>
-
-			<!-- Dashboard Preview Component -->
-			<div class="flex w-full justify-center lg:w-1/2 lg:justify-end">
-				<EmployerDashboardMockup />
-			</div>
+			<ul class="grid gap-5 sm:grid-cols-2">
+				{#each talentPoints as point (point.title)}
+					<li class="flex gap-3">
+						<span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+							<Icon name="check" size={15} strokeWidth={3} />
+						</span>
+						<div class="font-geist">
+							<p class="font-semibold text-secondary">{point.title}</p>
+							<p class="mt-1 text-sm leading-relaxed text-text-secondary">{point.body}</p>
+						</div>
+					</li>
+				{/each}
+			</ul>
+			<a href={links.waitlistEmployer} class="btn btn-primary w-full sm:w-auto">
+				Start hiring <Icon name="arrow-right" size={18} />
+			</a>
 		</div>
 
-		<!-- Features Grid (4 Columns) -->
-		<div class="mx-auto grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-			{#each features as feature}
-				<div class="flex items-start gap-4">
-					<!-- Purple Vertical Bar -->
-					<div class="h-[100px] w-[3px] shrink-0 rounded-lg bg-[#7502ff]"></div>
-					<div class="flex flex-col gap-2">
-						<h3 class="font-geist text-xl font-bold text-neutral-800/80">
-							{feature.title}
-						</h3>
-						<p class="font-geist text-base leading-relaxed text-neutral-800/80">
-							{feature.description}
-						</p>
-					</div>
-				</div>
-			{/each}
+		<div class="overflow-hidden rounded-3xl bg-white p-3 shadow-xl ring-1 ring-black/5 md:p-4">
+			<img
+				src="/images/employers/candidate-match-panel.png"
+				alt="Candidate list beside a match view explaining a 90% AI match"
+				loading="lazy"
+				class="aspect-[4/3] w-full rounded-2xl object-cover object-top"
+			/>
 		</div>
 	</div>
 </section>

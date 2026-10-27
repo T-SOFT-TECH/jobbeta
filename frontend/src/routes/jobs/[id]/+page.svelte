@@ -1,3 +1,7 @@
+<script lang="ts">
+	import { links } from '$lib/config/site';
+</script>
+
 <svelte:head>
 	<title>Project Security Manager - JobBeta</title>
 	<meta name="description" content="View job details and apply - JobBeta" />
@@ -5,7 +9,7 @@
 
 <div class="w-full bg-white">
 	<!-- Breadcrumb -->
-	<div class="mx-auto w-full max-w-[1344px] px-6 py-8">
+	<div class="page-container w-full py-8">
 		<button class="font-geist flex items-center gap-2 text-base leading-6 text-[#2a2c2c]" style="letter-spacing: -0.005em">
 			<span>←</span>
 			<span>Go back</span>
@@ -13,18 +17,18 @@
 	</div>
 
 	<!-- Job Header -->
-	<div class="mx-auto w-full max-w-[1344px] px-6 pb-12">
+	<div class="page-container w-full pb-12">
 		<div class="flex flex-col gap-12 lg:flex-row lg:gap-[78px]">
 			<!-- Main Content -->
 			<div class="flex w-full flex-col gap-12 lg:w-[644px]">
 				<!-- Job Title Section -->
 				<div class="flex flex-row gap-[51px]">
-					<img class="h-[100px] w-[100px] shrink-0 rounded-2xl object-cover" src="/icons/job-details/image3.png" alt="Shell" />
+					<span class="flex h-[100px] w-[100px] shrink-0 items-center justify-center rounded-2xl bg-[#0f766e] font-geist text-3xl font-bold text-white" aria-hidden="true">RP</span>
 					<div class="flex flex-col gap-4">
 						<div class="flex flex-col gap-3">
 							<div class="flex flex-row items-center gap-3">
 								<h1 class="font-geist text-[32px] font-bold leading-[48px] text-[#3f018a]" style="letter-spacing: -0.005em">
-									Project Security Manger
+									Project Security Manager
 								</h1>
 								<img class="h-6 w-6" src="/icons/job-details/check-circle0.svg" alt="Verified" />
 							</div>
@@ -145,22 +149,27 @@
 
 			<!-- Right Sidebar -->
 			<div class="flex w-full flex-col gap-10 lg:w-auto lg:flex-1">
+				<!-- Apply (pre-launch: routes to the student waitlist, like the other job CTAs) -->
+				<a href={links.waitlistStudent} class="btn btn-primary w-full">
+					Apply at launch <span class="sr-only">for Project Security Manager</span>
+				</a>
+
 				<!-- Related Jobs -->
 				<div class="flex flex-col gap-4">
 					<h2 class="font-geist text-xl font-bold leading-[30px] text-black" style="letter-spacing: -0.005em">Related Jobs</h2>
 					<div class="flex flex-col gap-4">
 						{#each Array(3) as _, i}
-							<div class="flex flex-row gap-5 rounded-lg border border-solid border-neutral-primary-grey bg-white p-6">
-								<img class="h-9 w-9 shrink-0 rounded-2xl object-cover" src="/icons/job-details/image{i}.png" alt="" />
-								<div class="flex flex-col gap-8">
+							<div class="flex flex-row gap-3 rounded-lg border border-solid border-neutral-primary-grey bg-white p-4 sm:gap-5 sm:p-6">
+								<span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#0f766e] font-geist text-xs font-bold text-white" aria-hidden="true">RP</span>
+								<div class="flex min-w-0 flex-1 flex-col gap-8">
 									<div class="flex flex-col gap-4">
 										<div class="flex flex-row items-center justify-between gap-1.5">
-											<div class="font-geist flex-1 text-sm leading-[21px] text-[rgba(0,0,0,0.66)]" style="letter-spacing: -0.005em">Shell</div>
-											<img class="h-6 w-6" src="/icons/job-details/bookmark-border{i + 1}.svg" alt="Bookmark" />
+											<div class="font-geist flex-1 text-sm leading-[21px] text-[rgba(0,0,0,0.66)]" style="letter-spacing: -0.005em">Ridgeway Power</div>
+											<img class="h-6 w-6" src="/icons/job-details/bookmark-border1.svg" alt="Bookmark" />
 										</div>
-										<div class="flex flex-row items-center justify-between gap-1.5">
-											<div class="font-geist text-base font-bold leading-6 text-black" style="letter-spacing: -0.005em">Project Security Manger</div>
-											<div class="font-geist w-[222px] text-right text-sm leading-[21px] text-black" style="letter-spacing: -0.005em">Posted about an hour ago</div>
+										<div class="flex flex-row flex-wrap items-center justify-between gap-x-4 gap-y-1">
+											<div class="font-geist text-base font-bold leading-6 text-black" style="letter-spacing: -0.005em">Project Security Manager</div>
+											<div class="font-geist text-sm leading-[21px] text-black" style="letter-spacing: -0.005em">Posted about an hour ago</div>
 										</div>
 										<div class="flex flex-row flex-wrap gap-5">
 											<div class="flex flex-row items-center gap-2">
@@ -229,25 +238,24 @@
 
 	<!-- Feature Cards Section -->
 	<div class="w-full bg-[rgba(234,236,240,0.43)] py-16">
-		<div class="mx-auto w-full max-w-[1344px] px-6">
-			<div class="flex flex-row flex-wrap justify-center gap-[39px]">
+		<div class="page-container w-full">
+			<!-- Was absolutely positioned 300px cards that wrapped 3+1; a grid keeps them in one row -->
+			<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
 				{#each [
-					{ image: 'frame-20856640660.png', title: "Stay Relevant with student's trend" },
-					{ image: 'frame-20856640720.png', title: "Grow Your Employer's Network" },
-					{ image: 'frame-20856640721.png', title: 'Create Meaningful<br />Career Experience' },
-					{ image: 'frame-20856640722.png', title: 'Tell Your Story to Other' }
-				] as card}
-					<div class="relative h-[552px] w-[300px] overflow-hidden rounded-tl-2xl rounded-tr-2xl bg-white">
-						<img class="absolute left-4 top-5 h-[226px] w-[268px] overflow-hidden rounded-2xl object-cover" src="/icons/job-details/{card.image}" alt="" />
-						<div class="absolute left-[21px] top-[304px] flex flex-col gap-7">
-							<div class="font-raleway w-[190px] text-xl font-bold leading-[21px] text-black" style="letter-spacing: -0.005em">
-								{@html card.title}
-							</div>
-							<div class="font-geist w-[258px] text-sm font-medium leading-[21px] text-[rgba(42,44,44,0.75)]" style="letter-spacing: -0.005em">
-								Hear from companies that have found exceptional talent through JobBeta. Join these successful employers – Post your job today!
-							</div>
+					{ image: 'frame-20856640660.png', title: "Stay relevant with student trends" },
+					{ image: 'frame-20856640720.png', title: "Grow your employer network" },
+					{ image: 'frame-20856640721.png', title: 'Create meaningful career experience' },
+					{ image: 'frame-20856640722.png', title: 'Tell your story to others' }
+				] as card (card.image)}
+					<a href="/career-tips" class="group lift flex flex-col gap-5 rounded-2xl bg-white p-4 pb-6">
+						<img class="aspect-[268/226] w-full rounded-2xl object-cover" src="/icons/job-details/{card.image}" alt="" loading="lazy" />
+						<div class="flex flex-col gap-3 px-1">
+							<p class="font-geist text-lg font-bold leading-snug text-black group-hover:text-primary">{card.title}</p>
+							<p class="font-geist text-sm font-medium leading-[21px] text-[rgba(42,44,44,0.75)]">
+								Practical guides from the JobBeta team to help you land and grow in your first role.
+							</p>
 						</div>
-					</div>
+					</a>
 				{/each}
 			</div>
 		</div>

@@ -1,131 +1,49 @@
 <script lang="ts">
-	// Career Centers Value Proposition Section
+	import Icon from '$lib/components/ui/Icon.svelte';
+	import { benefits } from '$lib/content/careerCenters';
 </script>
 
-<section class="w-full bg-[rgba(42,44,44,0.02)] py-16 lg:pt-48">
-	<div class="page-container flex gap-8">
-		<!-- Section Header with Image -->
-		<div class="mb-16 flex flex-col items-center gap-12 lg:flex-row lg:gap-16">
-			<div class="flex-1">
-				<div class="flex flex-col items-start justify-start gap-6">
-					<div
-						class="rounded-[50px] border border-solid border-[rgba(42,44,44,0.20)] bg-neutral-light px-4 py-2"
+<!-- Client review: "more colour" (image 40) and the four benefits as small cards (image 41) -->
+<section class="section bg-gradient-to-br from-neutral-light via-white to-[#e8f3ff]">
+	<div class="page-container grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
+		<div class="flex flex-col gap-8">
+			<div class="flex flex-col gap-3">
+				<span class="eyebrow">Value proposition</span>
+				<h2 class="title-section text-secondary">Why career centres choose JobBeta</h2>
+				<p class="lead text-text-secondary">
+					Verified opportunities, career-building tools and employers who want to hire your
+					students, on one dynamic platform.
+				</p>
+			</div>
+			<ul class="grid gap-3 sm:grid-cols-2">
+				{#each benefits as benefit (benefit.title)}
+					<li
+						class="flex gap-3 rounded-2xl border-l-4 bg-white p-4 shadow-sm"
+						style="border-left-color: {benefit.accent}"
 					>
-						<div
-							class="font-geist text-xl leading-[21px] font-medium text-[rgba(42,44,44,0.75)]"
-							style="letter-spacing: -0.005em"
+						<span
+							class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl"
+							style="background-color: {benefit.accent}1a; color: {benefit.accent}"
 						>
-							Value Proposition
+							<Icon name={benefit.icon} size={18} />
+						</span>
+						<div class="font-geist">
+							<p class="font-semibold text-secondary">{benefit.title}</p>
+							<p class="mt-1 text-sm leading-relaxed text-text-secondary">{benefit.body}</p>
 						</div>
-					</div>
-					<h2
-						class="font-geist text-3xl leading-tight font-bold text-[#2a2c2c] lg:text-5xl lg:leading-[60px]"
-						style="letter-spacing: -0.005em"
-					>
-						Why Career Centres Choose JobBeta
-					</h2>
-					<p
-						class="font-geist text-xl leading-relaxed font-normal text-[#62717a] lg:text-3xl lg:leading-[45px]"
-						style="letter-spacing: -0.005em"
-					>
-						Partner with JobBeta to connect your students with verified job opportunities,
-						career-building tools, and top employers — all on one dynamic platform.
-					</p>
-				</div>
-			</div>
-
-			<!-- Feature Image -->
-			<div class="flex-1">
-				<img
-					class="w-3xl rounded-[20px] border-[10px] border-solid border-neutral-grey object-cover"
-					src="/images/career-centers/value-proposition.png"
-					alt="Career Center Platform"
-				/>
-			</div>
+					</li>
+				{/each}
+			</ul>
 		</div>
-	</div>
-</section>
 
-<section class="w-full bg-[rgba(42,44,44,0.02)] py-16 lg:py-20">
-	<div class="page-container">
-		<!-- Bottom Features Grid with Dividers -->
-		<div class="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
-			<!-- Feature 1 -->
-			<div class="flex flex-1 flex-col items-start justify-start gap-3">
-				<h3
-					class="font-geist text-xl leading-[30px] font-bold text-[#2a2c2c]"
-					style="letter-spacing: -0.005em"
-				>
-					Seamless Employer Access
-				</h3>
-				<p
-					class="font-geist text-base leading-6 font-normal text-[#2a2c2c]"
-					style="letter-spacing: -0.005em"
-				>
-					Give your students direct access to nearly 1 million employers actively hiring
-					early-career talent.
-				</p>
-			</div>
-
-			<!-- Divider - Hidden on mobile -->
-			<div class="hidden h-[200px] w-[3px] rounded-lg bg-primary lg:block"></div>
-
-			<!-- Feature 2 -->
-			<div class="flex flex-1 flex-col items-start justify-start gap-3">
-				<h3
-					class="font-geist text-xl leading-[30px] font-bold text-[#2a2c2c]"
-					style="letter-spacing: -0.005em"
-				>
-					Community
-				</h3>
-				<p
-					class="font-geist text-base leading-6 font-normal text-[#2a2c2c]"
-					style="letter-spacing: -0.005em"
-				>
-					Introduce students to a vibrant career community through virtual and in-person events and
-					engagements.
-				</p>
-			</div>
-
-			<!-- Divider - Hidden on mobile -->
-			<div class="hidden h-[200px] w-[3px] rounded-lg bg-primary lg:block"></div>
-
-			<!-- Feature 3 -->
-			<div class="flex flex-1 flex-col items-start justify-start gap-3">
-				<h3
-					class="font-geist text-xl leading-[30px] font-bold text-[#2a2c2c]"
-					style="letter-spacing: -0.005em"
-				>
-					Data-Driven Student Support
-				</h3>
-				<p
-					class="font-geist text-base leading-6 font-normal text-[#2a2c2c]"
-					style="letter-spacing: -0.005em"
-				>
-					Gain insights into student job search activity, application trends, and career readiness
-					through our partner dashboard.
-				</p>
-			</div>
-
-			<!-- Divider - Hidden on mobile -->
-			<div class="hidden h-[200px] w-[3px] rounded-lg bg-primary lg:block"></div>
-
-			<!-- Feature 4 -->
-			<div class="flex flex-1 flex-col items-start justify-start gap-3">
-				<h3
-					class="font-geist text-xl leading-[30px] font-bold text-[#2a2c2c]"
-					style="letter-spacing: -0.005em"
-				>
-					Career Development & Streamlined Student Experience
-				</h3>
-				<p
-					class="font-geist text-base leading-6 font-normal text-[#2a2c2c]"
-					style="letter-spacing: -0.005em"
-				>
-					Give your students direct access to nearly 1 million employers actively hiring
-					early-career talent.
-				</p>
-			</div>
+		<div class="relative mx-auto w-full max-w-md">
+			<div class="absolute -inset-3 rotate-3 rounded-[2rem] bg-gradient-to-br from-primary via-[#3296f8] to-[#0e9f6e] opacity-90"></div>
+			<img
+				src="/images/career-centers/value-proposition.png"
+				alt="A career adviser holding a tablet"
+				loading="lazy"
+				class="relative aspect-[4/5] max-h-[480px] w-full rounded-3xl object-cover"
+			/>
 		</div>
 	</div>
 </section>

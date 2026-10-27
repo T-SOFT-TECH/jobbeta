@@ -1,99 +1,31 @@
-<script>
-	import { base } from '$app/paths';
-	import Animate from '$lib/components/Animate.svelte';
-
-	const solutions = [
-		{
-			title: 'Featured Job Listings',
-			description: 'Get 5X more visibility for your job postings.',
-			iconBg: 'group8.svg',
-			iconFg: 'group9.svg'
-		},
-		{
-			title: 'Talent Analytics',
-			description: 'Gain insights on applicant trends and industry hiring data.',
-			iconBg: 'group10.svg',
-			iconFg: 'group11.svg'
-		},
-		{
-			title: 'Employer Branding',
-			description: 'Attract top candidates by showcasing your company culture & values.',
-			iconBg: 'group12.svg',
-			iconFg: 'group13.svg'
-		},
-		{
-			title: 'Skill Assessments',
-			description: 'Evaluate candidates with custom skill tests & assessments.',
-			iconBg: 'group14.svg',
-			iconFg: 'group15.svg'
-		},
-		{
-			title: 'Talent Pool Access',
-			description: 'Browse through a curated list of pre-screened candidates.',
-			iconBg: 'group16.svg',
-			iconFg: 'group17.svg'
-		}
-	];
+<script lang="ts">
+	import Icon from '$lib/components/ui/Icon.svelte';
+	import { links } from '$lib/config/site';
+	import { services } from '$lib/content/employers';
 </script>
 
-<section class="relative overflow-hidden bg-primary py-40">
-	<!-- Decorative Background Circles -->
-	<!-- Decorative Header -->
-
-	<div class="relative z-10 container mx-auto px-4">
-		<!-- Header -->
-		<Animate variant="bottom" duration={0.8}>
-			<div class="mx-auto mb-16 max-w-3xl text-center">
-				<h2 class="mb-6 font-geist text-3xl font-bold text-white md:text-5xl">
-					Recruitment Solutions & Services
-				</h2>
-				<p class="mb-8 font-geist text-lg text-white/85 md:text-xl">
-					At JobBeta, we go beyond job postings. We provide end-to-end recruitment solutions to help
-					you find the right talent faster. Need tailored hiring solutions? Contact us today!
-				</p>
-				<button
-					class="rounded-[20px] bg-white px-8 py-4 font-lato font-bold text-neutral-800 shadow-lg transition-colors hover:bg-neutral-100"
-				>
-					Contact us today
-				</button>
-			</div>
-		</Animate>
-
-		<!-- Solutions Grid -->
-		<div class="flex flex-col items-center gap-6">
-			<!-- Top Row (3 items) -->
-			<div class="grid w-full max-w-6xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-				{#each solutions.slice(0, 3) as solution}
-					<div
-						class="flex h-full min-h-[300px] flex-col items-center justify-center gap-4 rounded-2xl bg-white p-6 text-center shadow-lg transition-shadow hover:shadow-xl"
-					>
-						<div
-							class="relative flex h-14 w-14 items-center justify-center rounded-full border-2 border-primary"
-						>
-							<img src="{base}/icons/employers/{solution.iconFg}" alt="" class="h-6 w-6" />
-						</div>
-						<h3 class="font-geist text-xl font-bold text-neutral-800">{solution.title}</h3>
-						<p class="font-geist text-base text-neutral-600">{solution.description}</p>
-					</div>
-				{/each}
-			</div>
-
-			<!-- Bottom Row (2 items) -->
-			<div class="grid w-full max-w-4xl grid-cols-1 gap-6 md:grid-cols-2">
-				{#each solutions.slice(3, 5) as solution}
-					<div
-						class="flex h-full min-h-[300px] flex-col items-center justify-center gap-4 rounded-2xl bg-white p-6 text-center shadow-lg transition-shadow hover:shadow-xl"
-					>
-						<div
-							class="relative flex h-14 w-14 items-center justify-center rounded-full border-2 border-primary"
-						>
-							<img src="{base}/icons/employers/{solution.iconFg}" alt="" class="h-6 w-6" />
-						</div>
-						<h3 class="font-geist text-xl font-bold text-neutral-800">{solution.title}</h3>
-						<p class="font-geist text-base text-neutral-600">{solution.description}</p>
-					</div>
-				{/each}
-			</div>
+<section class="section bg-primary text-white">
+	<div class="page-container grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:gap-16">
+		<div class="flex flex-col items-start gap-5">
+			<span class="eyebrow-light">Recruitment solutions</span>
+			<h2 class="title-section">Everything you need to hire early-career talent</h2>
+			<p class="lead text-white/80">
+				End-to-end recruitment services built around students and graduates. Need a tailored
+				hiring package? Talk to us.
+			</p>
+			<a href={links.contact} class="btn btn-light text-primary">Contact us</a>
 		</div>
+
+		<ul class="snap-row md:grid-cols-2">
+			{#each services as service, i (service.title)}
+				<li class="lift flex flex-col gap-3 rounded-2xl bg-white/10 p-5 ring-1 ring-white/15 {i === 0 ? 'md:col-span-2' : ''}">
+					<span class="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-primary">
+						<Icon name={service.icon} size={20} />
+					</span>
+					<p class="font-geist font-semibold">{service.title}</p>
+					<p class="font-geist text-sm leading-relaxed text-white/75">{service.body}</p>
+				</li>
+			{/each}
+		</ul>
 	</div>
 </section>
