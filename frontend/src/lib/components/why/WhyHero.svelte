@@ -19,12 +19,12 @@
 			<span class="eyebrow"><Icon name="sparkles" size={14} /> Why JobBeta?</span>
 			<h1 class="title-display text-secondary">Because early careers deserve a better start.</h1>
 			<p class="lead max-w-xl text-text-secondary">
-				We're building more than a job board. JobBeta is a place where students, graduates and
-				employers connect meaningfully, grow together and succeed.
+				We're building more than a job board. JobBeta connects students, graduates, and employers
+				through meaningful opportunities, skills, and potential.
 			</p>
 			<div class="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
 				<a href={links.howItWorks} class="btn btn-primary">See How It Works</a>
-				<a href={links.waitlist} class="btn btn-outline">Join Now – It's Free</a>
+				<a href={links.waitlist} class="btn btn-outline">Join the Waitlist</a>
 			</div>
 		</div>
 

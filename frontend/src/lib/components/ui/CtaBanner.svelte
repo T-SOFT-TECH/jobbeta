@@ -5,11 +5,12 @@
 	type Action = { label: string; href: string };
 
 	let {
-		title = "Your career journey begins here. Let's create magic together.",
-		body = 'Be first to access features, stay ahead with early updates and unlock opportunities designed for you.',
-		primary = { label: 'Join Waitlist as Student', href: links.waitlistStudent },
-		secondary = { label: 'Join as Employer', href: links.waitlistEmployer },
-		tertiary = { label: 'Career centre? Talk to us', href: links.partner }
+		// Defaults = the home page banner (client copy, review v2)
+		title = 'Your next opportunity starts here.',
+		body = 'Join the waitlist for early access to JobBeta and be among the first to experience a better way to connect.',
+		primary = { label: 'Join Student Waitlist', href: links.waitlistStudent },
+		secondary = { label: 'Join Employer Waitlist', href: links.waitlistEmployer },
+		tertiary = { label: 'Career Centres: Partner With Us', href: links.registerInterest }
 	}: {
 		title?: string;
 		body?: string;

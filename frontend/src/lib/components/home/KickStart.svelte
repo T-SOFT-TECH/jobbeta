@@ -3,12 +3,20 @@
 	import EmailCapture from '$lib/components/ui/EmailCapture.svelte';
 	import { links } from '$lib/config/site';
 
-	// Sample notifications (fictional people and companies)
+	// Sample match notifications: job titles and employers, as a student would
+	// see them (client review v2). Fictional companies.
 	const notifications = [
-		{ name: 'Jane Osteen', detail: 'Fresh graduate', match: 'Internship at Northfield Labs', avatar: '/images/Ellipse177.webp' },
-		{ name: 'Abraham Jude', detail: 'Year 3 student', match: 'Graduate role at Bluepine Finance', avatar: '/images/Ellipse178.webp' },
-		{ name: 'Rachel Obaloluwa', detail: 'Year 1 student', match: 'Internship at Arcline Studio', avatar: '/images/Ellipse179.webp' }
+		{ role: 'Software Engineering Intern', company: 'Northfield Labs', detail: 'Lagos', color: '#7502ff' },
+		{ role: 'Graduate Analyst', company: 'Bluepine Finance', detail: 'Abuja', color: '#3296f8' },
+		{ role: 'Junior Product Designer', company: 'Arcline Studio', detail: 'Remote', color: '#e11d48' }
 	];
+
+	const initials = (company: string) =>
+		company
+			.split(' ')
+			.slice(0, 2)
+			.map((w) => w[0])
+			.join('');
 </script>
 
 <section class="section bg-neutral-light">
@@ -16,10 +24,17 @@
 		<div class="mx-auto flex max-w-2xl flex-col items-center gap-5 text-center">
 			<h2 class="title-section text-secondary">Kick-start your career!</h2>
 			<p class="lead text-text-secondary">
-				Stand out to employers, get curated opportunities and showcase your skills on a platform
-				built to help you get noticed and hired.
+				Showcase your skills, discover relevant opportunities, stand out and connect with employers
+				who see your potential.
 			</p>
-			<EmailCapture role="student" tone="light" buttonLabel="Sign Up" class="mt-2 max-w-lg" />
+			<EmailCapture
+				role="talent"
+				source="home-kickstart"
+				tone="light"
+				buttonLabel="Join Waitlist"
+				placeholder="Enter your email to join the waitlist"
+				class="mt-2 max-w-lg"
+			/>
 		</div>
 
 		<div class="snap-row mt-8 md:mt-10 md:grid-cols-2 lg:grid-cols-3">
@@ -39,8 +54,7 @@
 				<div class="flex flex-col gap-2">
 					<h3 class="font-geist text-lg font-semibold text-secondary">One place for your career</h3>
 					<p class="font-geist text-base leading-relaxed text-text-secondary">
-						JobBeta brings students, employers and career centres together, with jobs, internships
-						and industry insight in one platform.
+						Discover opportunities, connect with employers, and access career resources in one place.
 					</p>
 				</div>
 				<a href={links.learnMore} class="mt-auto inline-flex items-center gap-2 font-geist font-semibold text-primary">
@@ -50,20 +64,23 @@
 
 			<!-- Recommendations -->
 			<article class="lift flex flex-col gap-3 rounded-3xl bg-white p-6 md:p-7">
-				<h3 class="font-geist text-lg font-semibold text-secondary">Recommendations, as they land</h3>
-				<ul class="flex flex-col gap-3">
-					{#each notifications as n (n.name)}
+				<h3 class="font-geist text-lg font-semibold text-secondary">Matches as they happen</h3>
+				<p class="font-geist text-base leading-relaxed text-text-secondary">
+					Get notified when new opportunities match your skills and interests.
+				</p>
+				<ul class="flex flex-col gap-3" aria-label="Example match notifications">
+					{#each notifications as n (n.role)}
 						<li class="flex gap-3 rounded-2xl bg-neutral-light/70 p-3">
-							<img loading="lazy" decoding="async" src={n.avatar} alt="" class="h-10 w-10 shrink-0 rounded-full" />
+							<span
+								class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl font-geist text-sm font-bold text-white"
+								style="background-color: {n.color}"
+								aria-hidden="true">{initials(n.company)}</span
+							>
 							<div class="min-w-0 font-geist">
-								<p class="text-sm font-semibold text-secondary">
-									{n.name} <span class="font-normal text-text-secondary">· {n.detail}</span>
-								</p>
-								<p class="text-sm text-text-secondary">
-									New match: <span class="font-medium text-secondary">{n.match}</span>
-								</p>
+								<p class="text-sm font-semibold text-secondary">{n.role}</p>
+								<p class="text-sm text-text-secondary">{n.company} · {n.detail}</p>
 							</div>
-							<Icon name="bell" size={18} class="ml-auto text-primary" />
+							<Icon name="bell" size={18} class="ml-auto shrink-0 text-primary" />
 						</li>
 					{/each}
 				</ul>
@@ -80,8 +97,7 @@
 				<div class="flex flex-col gap-2 p-6 md:p-7">
 					<h3 class="font-geist text-lg font-semibold text-secondary">Matches built around you</h3>
 					<p class="font-geist text-base leading-relaxed text-text-secondary">
-						We connect you with the right employers by understanding your strengths, aspirations and
-						career goals, so it's a fit that lasts.
+						Find employers who value your skills, interests, and potential.
 					</p>
 				</div>
 			</article>

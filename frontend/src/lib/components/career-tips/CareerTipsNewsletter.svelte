@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { pb } from '$lib/pocketbase';
+	import { joinWaitlist } from '$lib/waitlist';
 	import Logo from '$lib/components/ui/Logo.svelte';
 
 	let email = $state('');
@@ -12,7 +12,7 @@
 		subscribing = true;
 		status = 'idle';
 		try {
-			await pb.collection('waitlist').create({ email: email.trim(), role: 'newsletter' });
+			await joinWaitlist({ email, role: 'talent', source: 'career-tips' });
 			status = 'success';
 			email = '';
 		} catch (err) {

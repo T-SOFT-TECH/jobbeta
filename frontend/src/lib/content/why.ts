@@ -15,18 +15,19 @@ export interface AudiencePanel {
 
 export const audiencePanels: AudiencePanel[] = [
 	{
+		// Client copy (review v2)
 		key: 'students',
 		label: 'Students & Graduates',
-		title: 'Your first role, without the guesswork',
-		body: 'Build a profile that shows what you can do, and let the right opportunities come to you.',
+		title: 'Your career starts with the right match.',
+		body: 'Showcase your potential, discover relevant opportunities, and connect with employers who value what you bring.',
 		image: { src: '/images/hero-4.webp', alt: 'A smiling student holding notebooks on campus' },
 		points: [
-			{ title: 'Portfolio-style profiles', body: 'Show projects, coursework and skills, not just a CV.' },
-			{ title: 'Internships & first roles', body: 'Opportunities picked for students and recent graduates.' },
-			{ title: 'Smart matching', body: 'Get notified when a role that fits you goes live.' },
-			{ title: 'Modern career tools', body: 'CV tips, interview prep and industry insights in one place.' }
+			{ title: 'Beyond the resume', body: 'Highlight your skills, projects, and experiences.' },
+			{ title: 'Relevant opportunities', body: 'Explore internships and entry-level roles tailored to you.' },
+			{ title: 'Smarter matching', body: 'Discover roles aligned with your skills and goals.' },
+			{ title: 'Career resources', body: 'Access practical tips and insights to get career-ready.' }
 		],
-		cta: { label: 'Join as a student / graduate', href: links.waitlistStudent }
+		cta: { label: 'Join the Student Waitlist', href: links.waitlistStudent }
 	},
 	{
 		key: 'employers',
@@ -35,26 +36,26 @@ export const audiencePanels: AudiencePanel[] = [
 		body: 'Reach motivated students and graduates, and spend your time on the candidates who fit.',
 		image: { src: '/images/hero-3.webp', alt: 'A professional reviewing candidates on a laptop' },
 		points: [
-			{ title: 'Verified, high-potential candidates', body: 'Profiles with real skills and projects behind them.' },
-			{ title: 'Less time to hire', body: 'AI-ranked shortlists and built-in interview scheduling.' },
-			{ title: 'Promote your brand', body: 'Show student talent why your team is worth joining.' },
-			{ title: 'Smart filters & insights', body: 'Track applicants, shortlists and interviews per role.' }
+			{ title: 'High-potential candidates', body: 'Profiles with real skills and projects behind them.' },
+			{ title: 'BetaMatch shortlists', body: 'Candidates ranked by fit, with clear reasons behind each match.' },
+			{ title: 'Mutual interest', body: 'Express interest in candidates. When it is mutual, start a conversation.' },
+			{ title: 'Promote your brand', body: 'Show emerging talent why your team is worth joining.' }
 		],
-		cta: { label: 'Hire with JobBeta', href: links.waitlistEmployer }
+		cta: { label: 'Join the Employer Waitlist', href: links.waitlistEmployer }
 	},
 	{
+		// Post-MVP: describe what's being built, collect interest
 		key: 'career-centers',
 		label: 'Career Centres',
-		title: 'Extend career support beyond the classroom',
-		body: 'Give your students verified opportunities and see how they progress, with no extra admin.',
+		title: 'Coming soon: JobBeta for Career Centres',
+		body: "We're building tools to help universities and career centres connect students with career opportunities and employers.",
 		image: { src: '/images/students/Frame 2085663912.webp', alt: 'A group of cheerful university students' },
 		points: [
-			{ title: 'Verified jobs for your students', body: 'Share roles from employers we have reviewed.' },
-			{ title: 'Insight without extra admin', body: 'See engagement and readiness on a partner dashboard.' },
-			{ title: 'Reach students quickly', body: 'Send relevant opportunities to the right students as soon as they are posted.' },
-			{ title: 'Always-on career resources', body: 'CV, interview and career guidance students can use any time.' }
+			{ title: 'Career Opportunities', body: 'Connect students with relevant internships and graduate opportunities.' },
+			{ title: 'Employer Connections', body: 'Help institutions build stronger relationships with employers.' },
+			{ title: 'Career Insights', body: 'Understand student engagement and career outcomes.' }
 		],
-		cta: { label: 'Partner with JobBeta', href: links.partner }
+		cta: { label: 'Register Your Interest', href: links.registerInterest }
 	}
 ];
 
@@ -67,11 +68,11 @@ export const promises: { icon: IconName; title: string; body: string }[] = [
 	{
 		icon: 'graduation',
 		title: 'Free for students',
-		body: 'Profiles, matching and applications cost students nothing.'
+		body: 'Profiles, matching and connecting with employers cost students nothing.'
 	},
 	{
 		icon: 'users',
-		title: 'People first, AI-assisted',
-		body: 'Smart matching does the sorting, and people make the decisions.'
+		title: 'Human-centred, technology-powered',
+		body: 'BetaMatch does the sorting, and people make the decisions.'
 	}
 ];

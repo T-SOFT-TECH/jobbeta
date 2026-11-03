@@ -72,7 +72,7 @@
 		{
 			title: '11. Contact Us',
 			body: [
-				'If you have any questions about this Privacy Policy or how we handle your personal information, please reach out through our contact page or email us at hello@jobbeta.com.'
+				'If you have any questions about this Privacy Policy or how we handle your personal information, please reach out through our contact page or email us at hello@jobbeta.ng.'
 			]
 		}
 	];

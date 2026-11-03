@@ -20,24 +20,24 @@
 		</h2>
 
 		<div class="mt-10 grid gap-5 md:mt-12 lg:grid-cols-3">
-			<!-- Human-centred + AI smart -->
+			<!-- Human-centred, technology-powered -->
 			<article class="lift flex flex-col overflow-hidden rounded-3xl bg-neutral-light lg:col-span-2">
 				<div class="flex flex-col gap-3 p-6 md:p-8">
-					<span class="eyebrow">Human-centred + AI smart</span>
+					<span class="eyebrow">Human-centred, technology-powered</span>
 					<h3 class="font-geist text-xl font-semibold text-secondary md:text-2xl">
-						Matches you can understand
+						Matches that make sense
 					</h3>
 					<p class="max-w-xl font-geist text-base leading-relaxed text-text-secondary">
-						Our matching ranks opportunities on fit, not keywords, and explains why someone is a top
-						pick. People always make the final call.
+						BetaMatch connects talent and employers based on skills, experience, and potential — not
+						just keywords.
 					</p>
-					<a href={links.waitlist} class="inline-flex w-fit items-center gap-2 font-geist font-semibold text-primary">
-						Get matched today <Icon name="arrow-right" size={18} />
+					<a href={links.productsSolutions} class="inline-flex w-fit items-center gap-2 font-geist font-semibold text-primary">
+						Discover BetaMatch <Icon name="arrow-right" size={18} />
 					</a>
 				</div>
 				<img
 					src="/images/employers/candidate-match-panel.webp"
-					alt="JobBeta candidate match view showing a 90% AI match with the reasons explained"
+					alt="JobBeta candidate view showing a 90% BetaMatch score, the reasons behind it and an Express Interest button"
 					loading="lazy"
 					class="mx-6 mt-auto h-56 w-[calc(100%-3rem)] rounded-t-2xl object-cover object-top shadow-lg md:mx-8 md:h-64 md:w-[calc(100%-4rem)]"
 				/>
@@ -47,10 +47,10 @@
 			<article class="lift flex flex-col gap-5 rounded-3xl bg-secondary p-6 text-white md:p-8">
 				<div class="flex flex-col gap-3">
 					<span class="eyebrow-light">Made for early-career talent</span>
-					<h3 class="font-geist text-xl font-semibold md:text-2xl">Roles for people starting out</h3>
+					<h3 class="font-geist text-xl font-semibold md:text-2xl">Built for your first big step.</h3>
 					<p class="font-geist text-base leading-relaxed text-white/75">
-						Internships, graduate programmes and first jobs, without being buried under senior
-						roles.
+						Explore internships, graduate programmes, and entry-level roles designed for emerging
+						talent.
 					</p>
 				</div>
 				<ul class="flex flex-col gap-2">
@@ -69,8 +69,8 @@
 						</li>
 					{/each}
 				</ul>
-				<a href={links.jobs} class="mt-auto inline-flex items-center gap-2 font-geist font-semibold">
-					Explore our job openings <Icon name="arrow-right" size={18} />
+				<a href="/students" class="mt-auto inline-flex items-center gap-2 font-geist font-semibold">
+					Explore Opportunities <Icon name="arrow-right" size={18} />
 				</a>
 			</article>
 
@@ -80,8 +80,8 @@
 					<span class="eyebrow">Profiles that tell your story</span>
 					<h3 class="font-geist text-xl font-semibold text-secondary md:text-2xl">Beyond the CV</h3>
 					<p class="font-geist text-base leading-relaxed text-text-secondary">
-						Show your projects, passions and portfolio, and let employers see what you can actually
-						do.
+						Showcase your skills, projects, and experiences. Let employers see what makes you stand
+						out.
 					</p>
 				</div>
 				<div class="mt-auto rounded-2xl bg-neutral-light p-4" aria-hidden="true">
@@ -106,15 +106,15 @@
 			<article class="lift flex flex-col overflow-hidden rounded-3xl bg-primary text-white lg:col-span-2">
 				<div class="flex flex-col gap-3 p-6 md:p-8">
 					<span class="eyebrow-light">For employers</span>
-					<h3 class="font-geist text-xl font-semibold md:text-2xl">Your whole hiring pipeline, at a glance</h3>
+					<h3 class="font-geist text-xl font-semibold md:text-2xl">Your hiring pipeline, simplified.</h3>
 					<p class="max-w-xl font-geist text-base leading-relaxed text-white/80">
-						Active roles, talent pool, interviews and shortlists, all on one dashboard built for
-						early-career hiring.
+						Manage job postings, discover talent, track matches, and schedule interviews — all in one
+						place.
 					</p>
 				</div>
 				<img
 					src="/images/employers/dashboard-overview.webp"
-					alt="JobBeta employer dashboard with active roles, talent pool and interview counts"
+					alt="JobBeta employer dashboard showing active roles, new student matches, shortlists and interviews"
 					loading="lazy"
 					class="mx-6 mt-auto h-56 w-[calc(100%-3rem)] rounded-t-2xl object-cover object-left-top shadow-2xl md:mx-8 md:h-64 md:w-[calc(100%-4rem)]"
 				/>

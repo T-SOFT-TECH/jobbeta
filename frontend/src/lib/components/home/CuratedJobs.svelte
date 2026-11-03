@@ -2,7 +2,6 @@
 	import Icon from '$lib/components/ui/Icon.svelte';
 	import Marquee from '$lib/components/ui/Marquee.svelte';
 	import { sampleJobs } from '$lib/content/home';
-	import { links } from '$lib/config/site';
 
 	const half = Math.ceil(sampleJobs.length / 2);
 	const rows = [sampleJobs.slice(0, half), sampleJobs.slice(half)];
@@ -18,10 +17,10 @@
 <section class="section overflow-hidden bg-secondary">
 	<div class="page-container mb-10 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
 		<h2 class="title-section max-w-2xl text-white">
-			Curated job and internship opportunities tailored to your goals.
+			Curated job opportunities tailored to your goals
 		</h2>
-		<a href={links.jobs} class="btn btn-outline-light w-full md:w-auto">
-			Explore jobs <Icon name="arrow-right" size={18} />
+		<a href="/students" class="btn btn-outline-light w-full md:w-auto">
+			Explore Opportunities <Icon name="arrow-right" size={18} />
 		</a>
 	</div>
 

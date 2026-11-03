@@ -12,10 +12,10 @@
 </script>
 
 <svelte:head>
-	<title>JobBeta — Early-career jobs, internships and hiring</title>
+	<title>JobBeta — The right opportunity. The right talent. A better match.</title>
 	<meta
 		name="description"
-		content="JobBeta connects students and graduates with verified internships and entry-level roles, and helps employers hire early-career talent."
+		content="JobBeta connects students and recent graduates with employers looking for emerging talent. Built around skills, interests, and potential, not just resumes."
 	/>
 </svelte:head>
 
@@ -27,4 +27,4 @@
 <KickStart />
 <CuratedJobs />
 <CtaBanner />
-<FaqSection />
+<FaqSection tone="blue" />

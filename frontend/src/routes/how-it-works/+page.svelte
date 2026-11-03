@@ -21,8 +21,8 @@
 		<span class="eyebrow-light"><Icon name="sparkles" size={14} /> How it works</span>
 		<h1 class="title-display max-w-3xl">Simple from start to finish, whichever side you're on.</h1>
 		<p class="lead max-w-2xl text-white/85">
-			Students build a profile and get matched to roles that fit. Employers post a role and get a
-			ranked shortlist. Here's each journey, step by step.
+			Students discover opportunities that fit. Employers find talent that matches their needs.
+			Here's how JobBeta makes it happen.
 		</p>
 		<nav aria-label="Jump to a guide" class="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
 			<a href="#student-steps" class="btn btn-light text-primary">
@@ -38,5 +38,5 @@
 <StudentSteps />
 <div class="page-container"><hr class="border-neutral-grey" /></div>
 <EmployerSteps />
-<FaqSection />
+<FaqSection tone="mint" />
 <CtaBanner />

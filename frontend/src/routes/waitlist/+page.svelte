@@ -1,42 +1,113 @@
 <script lang="ts">
-	import { pb } from '$lib/pocketbase';
 	import Animate from '$lib/components/Animate.svelte';
 	import Icon from '$lib/components/ui/Icon.svelte';
 	import { page } from '$app/state';
+	import { afterNavigate } from '$app/navigation';
+	import { links } from '$lib/config/site';
+	import { joinWaitlist, roleFromParam, type WaitlistRole } from '$lib/waitlist';
 
-	// CTAs like "Join as Employer" link here with ?role= to preselect the audience
-	const requestedRole = page.url.searchParams.get('role');
+	type IconName = 'target' | 'sparkles' | 'bell' | 'users' | 'chart' | 'building' | 'mail';
+
+	// CTAs link here with ?role= to preselect the audience; the footer's email
+	// field forwards ?email= (and ?source=) so the visitor doesn't type it twice.
+	const params = page.url.searchParams;
 
 	let name = $state('');
-	let email = $state('');
-	let role = $state(
-		requestedRole === 'employer' || requestedRole === 'career-center' ? requestedRole : 'student'
-	);
+	let email = $state(params.get('email') ?? '');
+	let role = $state<WaitlistRole>(roleFromParam(params.get('role')) ?? 'talent');
+	let source = $state(params.get('source') || 'waitlist-page');
 	let loading = $state(false);
-	let submitted = $state(false);
+	let result = $state<'joined' | 'already' | null>(null);
 	let error = $state('');
 
-	const roles = [
-		{ value: 'student', label: 'Student / New Graduate' },
+	// SvelteKit reuses this component when navigating /waitlist → /waitlist
+	// (e.g. the footer form on this page), so re-read the query each time.
+	afterNavigate(({ from }) => {
+		if (!from) return; // first load: already initialised above
+		const next = page.url.searchParams;
+		email = next.get('email') ?? email;
+		role = roleFromParam(next.get('role')) ?? role;
+		source = next.get('source') || 'waitlist-page';
+		result = null;
+		error = '';
+	});
+
+	const roles: { value: WaitlistRole; label: string }[] = [
+		{ value: 'talent', label: 'Student / New Graduate' },
 		{ value: 'employer', label: 'Employer' },
-		{ value: 'career-center', label: 'Career Centre' }
+		{ value: 'career_centre', label: 'Career Centre (Coming Later)' }
 	];
+
+	// Client copy (review v2, Login / Join Waitlist): benefits follow the audience.
+	const benefits: Record<WaitlistRole, { icon: IconName; title: string; text: string }[]> = {
+		talent: [
+			{
+				icon: 'target',
+				title: 'Discover opportunities',
+				text: 'Explore internships and entry-level roles that match your skills and interests.'
+			},
+			{
+				icon: 'sparkles',
+				title: 'Smarter matching',
+				text: 'Connect with employers based on more than just your CV.'
+			},
+			{
+				icon: 'bell',
+				title: 'Early access',
+				text: 'Be among the first to experience JobBeta when we launch.'
+			}
+		],
+		employer: [
+			{
+				icon: 'users',
+				title: 'Discover emerging talent',
+				text: 'Connect with students and graduates suited to your hiring needs.'
+			},
+			{
+				icon: 'sparkles',
+				title: 'Better candidate matching',
+				text: 'Identify promising candidates based on skills and potential.'
+			},
+			{
+				icon: 'bell',
+				title: 'Early access',
+				text: 'Get notified when employer onboarding opens.'
+			}
+		],
+		career_centre: [
+			{
+				icon: 'building',
+				title: 'Future partnerships',
+				text: "Explore how JobBeta could support your institution's career services."
+			},
+			{
+				icon: 'users',
+				title: 'Employer connections',
+				text: 'Help students discover relevant career opportunities.'
+			},
+			{
+				icon: 'mail',
+				title: 'Stay informed',
+				text: 'Receive updates as we develop our institutional offering.'
+			}
+		]
+	};
 
 	async function handleSubmit(e: SubmitEvent) {
 		e.preventDefault();
-		if (!email.trim()) {
-			error = 'Please enter your email address.';
+		if (!name.trim() || !email.trim()) {
+			error = 'Please enter your full name and email address.';
 			return;
 		}
 		loading = true;
 		error = '';
 		try {
-			await pb.collection('waitlist').create({
-				name: name.trim(),
-				email: email.trim(),
-				role
+			result = await joinWaitlist({
+				full_name: name,
+				email,
+				role,
+				source
 			});
-			submitted = true;
 		} catch (err) {
 			console.error(err);
 			error =
@@ -51,7 +122,7 @@
 	<title>Join the Waitlist - JobBeta</title>
 	<meta
 		name="description"
-		content="Join the JobBeta waitlist to be the first to access verified internships, entry-level jobs and career tools."
+		content="Be among the first to discover a smarter way to connect students and graduates with employers across Nigeria."
 	/>
 </svelte:head>
 
@@ -77,8 +148,8 @@
 			<p
 				class="mx-auto mt-4 max-w-2xl font-geist text-base leading-relaxed text-white/85 sm:text-lg"
 			>
-				Be the first to access verified internships, entry-level jobs and career tools built for
-				students, new graduates, employers and career centres.
+				Be among the first to discover a smarter way to connect students and graduates with
+				employers across Nigeria.
 			</p>
 		</Animate>
 	</div>
@@ -90,37 +161,22 @@
 		<div class="grid gap-10 lg:grid-cols-2 lg:items-start lg:gap-16">
 			<!-- Form Card -->
 			<div class="rounded-[24px] border border-[#eaecf0] bg-white p-6 shadow-lg md:p-10">
-				{#if submitted}
+				{#if result}
 					<div class="flex flex-col items-center py-8 text-center">
 						<div class="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-green-100">
-							<svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-								<path
-									d="M20 6L9 17L4 12"
-									stroke="#16a34a"
-									stroke-width="2.5"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								/>
-							</svg>
+							<Icon name="check" size={32} class="text-green-600" />
 						</div>
-						<h2 class="font-geist text-2xl font-bold text-[#110d21]">You're on the list!</h2>
+						<h2 class="font-geist text-2xl font-bold text-[#110d21]">
+							{result === 'already' ? "You're already on the list!" : "You're on the list!"}
+						</h2>
 						<p class="mt-3 max-w-sm font-geist text-base text-[#62717a]">
-							Thanks for joining. We'll email you as soon as JobBeta goes live with early access
-							details.
+							{result === 'already'
+								? "This email is already on the JobBeta waitlist. We'll email you as soon as early access opens."
+								: "Thanks for joining. We'll email you as soon as JobBeta goes live with early access details."}
 						</p>
 						<div class="mt-8 flex flex-col gap-3 sm:flex-row">
-							<a
-								href="/jobs"
-								class="flex items-center justify-center rounded-[20px] bg-[#7502ff] px-6 py-3.5 font-geist text-base font-bold text-white transition-colors hover:bg-[#6502dd]"
-							>
-								Explore Jobs
-							</a>
-							<a
-								href="/career-tips"
-								class="flex items-center justify-center rounded-[20px] border border-[#110d21] px-6 py-3.5 font-geist text-base font-bold text-[#110d21] transition-colors hover:bg-gray-50"
-							>
-								Read Career Tips
-							</a>
+							<a href={links.learnMore} class="btn btn-primary">Learn More About JobBeta</a>
+							<a href="/career-tips" class="btn btn-outline">Read Career Tips</a>
 						</div>
 					</div>
 				{:else}
@@ -128,12 +184,13 @@
 						Reserve your spot
 					</h2>
 					<p class="mt-2 font-geist text-base text-[#62717a]">
-						It takes less than a minute — no spam, just launch updates.
+						It takes less than a minute. No spam, just launch updates.
 					</p>
 
 					{#if error}
 						<div
 							class="mt-6 rounded-xl border border-red-200 bg-red-50 p-4 font-geist text-sm text-red-700"
+							role="alert"
 						>
 							{error}
 						</div>
@@ -142,11 +199,15 @@
 					<form class="mt-8 flex flex-col gap-6" onsubmit={handleSubmit}>
 						<div class="flex flex-col gap-2">
 							<label for="waitlist-name" class="font-geist text-sm font-semibold text-[#2a2c2c]">
-								Full Name
+								Full Name <span class="text-red-500">*</span>
 							</label>
 							<input
 								id="waitlist-name"
 								type="text"
+								required
+								minlength="2"
+								maxlength="120"
+								autocomplete="name"
 								bind:value={name}
 								placeholder="Enter your full name"
 								class="h-14 rounded-2xl border border-[#d0d5dd] px-4 font-geist text-base text-[#110d21] placeholder:text-[#98a2b3] focus:border-[#7502ff] focus:ring-2 focus:ring-[#7502ff]/20 focus:outline-none"
@@ -161,18 +222,22 @@
 								id="waitlist-email"
 								type="email"
 								required
+								autocomplete="email"
 								bind:value={email}
 								placeholder="Enter your email address"
 								class="h-14 rounded-2xl border border-[#d0d5dd] px-4 font-geist text-base text-[#110d21] placeholder:text-[#98a2b3] focus:border-[#7502ff] focus:ring-2 focus:ring-[#7502ff]/20 focus:outline-none"
 							/>
 						</div>
 
-						<div class="flex flex-col gap-2">
-							<span class="font-geist text-sm font-semibold text-[#2a2c2c]"> I'm joining as </span>
-							<div class="grid gap-2 sm:grid-cols-3">
+						<fieldset class="flex flex-col gap-2">
+							<legend class="mb-2 font-geist text-sm font-semibold text-[#2a2c2c]">
+								I'm joining as
+							</legend>
+							<div class="grid grid-cols-1 gap-2 sm:grid-cols-3">
 								{#each roles as item (item.value)}
 									<button
 										type="button"
+										aria-pressed={role === item.value}
 										onclick={() => (role = item.value)}
 										class="rounded-2xl border px-3 py-3 font-geist text-sm font-medium transition-colors {role ===
 										item.value
@@ -183,82 +248,39 @@
 									</button>
 								{/each}
 							</div>
-						</div>
+						</fieldset>
 
-						<button
-							type="submit"
-							disabled={loading}
-							class="mt-2 flex h-14 items-center justify-center rounded-[20px] bg-[#7502ff] font-geist text-base font-bold text-white transition-colors hover:bg-[#6502dd] disabled:cursor-not-allowed disabled:opacity-60"
-						>
-							{loading ? 'Joining...' : 'Join the Waitlist'}
+						<button type="submit" disabled={loading} class="btn btn-primary mt-2 h-14">
+							{loading ? 'Joining…' : 'Join the Waitlist'}
 						</button>
 					</form>
 				{/if}
 			</div>
 
-			<!-- Benefits -->
+			<!-- Benefits: follow the selected audience -->
 			<div class="flex flex-col gap-6 lg:pt-6">
 				<h2 class="font-geist text-2xl font-bold text-[#110d21] md:text-[28px]">
 					Why join the waitlist?
 				</h2>
-				<ul class="flex flex-col gap-5">
-					<li class="flex items-start gap-4">
-						<span
-							class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#7502ff]/10"
-						>
-							<Icon name="shield-check" size={20} class="text-primary" />
-						</span>
-						<div>
-							<h3 class="font-geist text-base font-bold text-[#110d21]">
-								Verified opportunities only
-							</h3>
-							<p class="mt-1 font-geist text-sm leading-relaxed text-[#62717a]">
-								Every listing comes from a verified employer — no scams, no ghost jobs.
-							</p>
-						</div>
-					</li>
-					<li class="flex items-start gap-4">
-						<span
-							class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#7502ff]/10"
-						>
-							<Icon name="sparkles" size={20} class="text-primary" />
-						</span>
-						<div>
-							<h3 class="font-geist text-base font-bold text-[#110d21]">Smart job matching</h3>
-							<p class="mt-1 font-geist text-sm leading-relaxed text-[#62717a]">
-								Get matched to internships and entry-level roles that fit your skills and goals.
-							</p>
-						</div>
-					</li>
-					<li class="flex items-start gap-4">
-						<span
-							class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#7502ff]/10"
-						>
-							<img src="/icons/Business center.svg" alt="" class="h-5 w-5" />
-						</span>
-						<div>
-							<h3 class="font-geist text-base font-bold text-[#110d21]">
-								Career tools &amp; insights
-							</h3>
-							<p class="mt-1 font-geist text-sm leading-relaxed text-[#62717a]">
-								Resume builders, interview prep and industry insights to make you Day-1 ready.
-							</p>
-						</div>
-					</li>
-					<li class="flex items-start gap-4">
-						<span
-							class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#7502ff]/10"
-						>
-							<img src="/icons/star-4.svg" alt="" class="h-5 w-5" />
-						</span>
-						<div>
-							<h3 class="font-geist text-base font-bold text-[#110d21]">Early access</h3>
-							<p class="mt-1 font-geist text-sm leading-relaxed text-[#62717a]">
-								Be first in line when we launch — and help shape what we build next.
-							</p>
-						</div>
-					</li>
-				</ul>
+				{#key role}
+					<ul class="flex flex-col gap-5" aria-live="polite">
+						{#each benefits[role] as benefit (benefit.title)}
+							<li class="flex items-start gap-4">
+								<span
+									class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#7502ff]/10"
+								>
+									<Icon name={benefit.icon} size={20} class="text-primary" />
+								</span>
+								<div>
+									<h3 class="font-geist text-base font-bold text-[#110d21]">{benefit.title}</h3>
+									<p class="mt-1 font-geist text-sm leading-relaxed text-[#62717a]">
+										{benefit.text}
+									</p>
+								</div>
+							</li>
+						{/each}
+					</ul>
+				{/key}
 			</div>
 		</div>
 	</div>

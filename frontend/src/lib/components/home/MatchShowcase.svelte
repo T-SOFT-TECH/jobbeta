@@ -3,11 +3,24 @@
 	import MatchCard from '$lib/components/ui/MatchCard.svelte';
 	import { links } from '$lib/config/site';
 
-	const points = [
-		'Ranked matches, with the reasons behind every score',
-		'Skills, projects and portfolios side by side',
-		'Interview scheduling and messaging built in'
-	];
+	// Home uses the defaults; Products & Solutions passes the Feature Spotlight copy
+	let {
+		eyebrow = 'Smarter talent matching',
+		title = 'The right talent. The right opportunity. A better match.',
+		body = 'JobBeta matches emerging talent with employers based on skills, experience, and potential, making every connection more meaningful.',
+		points = [
+			'Relevant matches, backed by match scores',
+			'Skills, projects, and experience beyond CVs',
+			'Direct messaging and interview scheduling'
+		],
+		cta = { label: 'Join Waitlist', href: links.waitlist }
+	}: {
+		eyebrow?: string;
+		title?: string;
+		body?: string;
+		points?: string[];
+		cta?: { label: string; href: string };
+	} = $props();
 </script>
 
 <section class="section relative overflow-hidden bg-primary text-white">
@@ -18,12 +31,9 @@
 
 	<div class="page-container relative grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
 		<div class="flex flex-col items-start gap-6">
-			<span class="eyebrow-light">Customised job matching</span>
-			<h2 class="title-section">Connect with top talent and opportunities, all in one place.</h2>
-			<p class="lead text-white/85">
-				We match talent with employers who fit their skills, passions and potential, so both people
-				and companies grow together.
-			</p>
+			<span class="eyebrow-light">{eyebrow}</span>
+			<h2 class="title-section">{title}</h2>
+			<p class="lead text-white/85">{body}</p>
 			<ul class="flex flex-col gap-3">
 				{#each points as point (point)}
 					<li class="flex items-start gap-3 font-geist text-base">
@@ -34,8 +44,8 @@
 					</li>
 				{/each}
 			</ul>
-			<a href={links.waitlist} class="btn btn-light">
-				Join Waitlist <Icon name="arrow-right" size={18} />
+			<a href={cta.href} class="btn btn-light">
+				{cta.label} <Icon name="arrow-right" size={18} />
 			</a>
 		</div>
 

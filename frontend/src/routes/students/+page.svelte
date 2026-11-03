@@ -11,7 +11,7 @@
 	<title>Students & Graduates | JobBeta</title>
 	<meta
 		name="description"
-		content="Find internships and first jobs with JobBeta. Free for students and graduates."
+		content="Discover internships and entry-level roles matched to your skills, interests, and potential. Free for students and graduates."
 	/>
 </svelte:head>
 
@@ -19,14 +19,16 @@
 <StudentSteps />
 <ExclusiveFeatures />
 <CtaBanner
-	title="Join JobBeta today. It's free."
-	body="Get your profile ready before launch and be first in line for opportunities tailored to you."
-	primary={{ label: 'Sign up – it’s free', href: links.waitlistStudent }}
-	secondary={{ label: 'Learn more about JobBeta', href: links.learnMore }}
+	title="Your next opportunity starts here."
+	body="Join the waitlist for early access to JobBeta. It's free for students and graduates."
+	primary={{ label: 'Join Student Waitlist', href: links.waitlistStudent }}
+	secondary={{ label: 'Learn More About JobBeta', href: links.learnMore }}
 	tertiary={null}
 />
 <FaqSection
 	audiences={['student']}
 	title="Student FAQs"
 	subtitle="Everything you need to know before you join."
+	helpText="Have a question about JobBeta? We're here to help."
+	tone="lavender"
 />

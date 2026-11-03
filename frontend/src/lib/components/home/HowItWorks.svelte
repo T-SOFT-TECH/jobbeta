@@ -20,8 +20,8 @@
 			<span class="eyebrow">How it works</span>
 			<h2 class="title-section text-secondary">Simple from start to finish.</h2>
 			<p class="lead max-w-lg text-text-secondary">
-				Whether you're starting your career or hiring fresh talent, JobBeta takes you from
-				"I'm looking" to "I'm hired" without the stress.
+				From creating your profile to connecting with employers, JobBeta makes finding opportunities
+				easier.
 			</p>
 			<SegmentedTabs {options} bind:value={audience} idPrefix="how" label="Choose your path" />
 			<div class="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
@@ -29,7 +29,7 @@
 					href={audience === 'employers' ? links.waitlistEmployer : links.waitlistStudent}
 					class="btn btn-primary"
 				>
-					Join Our Waitlist
+					{audience === 'employers' ? 'Join Employer Waitlist' : 'Join Student Waitlist'}
 				</a>
 				<a href={links.howItWorks} class="btn btn-outline">
 					See the full guide <Icon name="arrow-up-right" size={18} />

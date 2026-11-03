@@ -10,15 +10,15 @@
 		class="page-container relative grid items-center gap-10 py-12 md:py-16 lg:grid-cols-[1fr_1.05fr] lg:gap-16 lg:py-20"
 	>
 		<div class="flex flex-col items-start gap-6">
-			<span class="eyebrow-light"><Icon name="sparkles" size={14} /> Our products</span>
+			<span class="eyebrow-light"><Icon name="sparkles" size={14} /> Products & Solutions</span>
 			<h1 class="title-display">One platform for early-career hiring.</h1>
 			<p class="lead max-w-xl text-white/80">
-				Matching, job posting, interview scheduling and analytics, built for employers, schools and
-				the students they serve.
+				Discover, match and connect with early-career talent. Everything employers need to find the
+				right candidates, in one place.
 			</p>
 			<div class="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
-				<a href={links.demo} class="btn btn-primary">Book a Demo</a>
-				<a href="#product-suite" class="btn btn-outline-light">See plans</a>
+				<a href={links.demo} class="btn btn-primary">Request a Demo</a>
+				<a href={links.waitlistEmployer} class="btn btn-outline-light">Join the Waitlist</a>
 			</div>
 		</div>
 

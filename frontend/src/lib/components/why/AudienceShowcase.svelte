@@ -11,7 +11,7 @@
 	<div class="page-container">
 		<div class="flex flex-col items-center gap-6 text-center">
 			<h2 class="title-section max-w-3xl text-secondary">
-				Real connections. Real momentum. For everyone starting out.
+				Real connections. Better opportunities.
 			</h2>
 			<SegmentedTabs
 				options={audiencePanels.map(({ key, label }) => ({ key, label }))}

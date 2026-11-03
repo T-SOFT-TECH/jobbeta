@@ -8,13 +8,13 @@
 		class="page-container grid items-center gap-10 py-10 md:py-14 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16 lg:py-16"
 	>
 		<div class="flex flex-col items-start gap-6">
-			<span class="eyebrow"><Icon name="graduation" size={14} /> Level up your career</span>
+			<span class="eyebrow"><Icon name="sparkles" size={14} /> A better way to connect talent &amp; opportunity</span>
 			<h1 class="title-display text-secondary">
-				Discover your next career opportunity and find the perfect candidate today.
+				The right opportunity. The right talent. A better match.
 			</h1>
 			<p class="lead max-w-xl text-text-secondary">
-				We're changing how companies hire and how early-career talent finds meaningful
-				opportunities — from first internships to full-time roles.
+				JobBeta connects students and recent graduates with employers looking for emerging talent.
+				Built around skills, interests, and potential, not just resumes.
 			</p>
 			<a href={links.waitlist} class="btn btn-primary w-full sm:w-auto">
 				Join Our Waitlist <Icon name="arrow-right" size={18} />

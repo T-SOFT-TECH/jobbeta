@@ -4,15 +4,15 @@
 	import { talentPoints } from '$lib/content/employers';
 </script>
 
-<!-- Client review (image 33): the candidate list + match panel replaces the old card -->
+<!-- Copy per client review v2; the mockup shows early-career candidates and Express Interest -->
 <section class="section bg-neutral-light">
 	<div class="page-container grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
 		<div class="flex flex-col items-start gap-6">
 			<div class="flex flex-col gap-3">
-				<h2 class="title-section text-secondary">Find top talent faster and smarter</h2>
+				<h2 class="title-section text-secondary">Find the right talent, faster.</h2>
 				<p class="lead text-text-secondary">
-					We connect employers with skilled students and graduates who are ready to grow with
-					your organisation, and our matching shows you who fits and why.
+					Discover students and graduates whose skills and potential match your needs, with clear
+					insights into why they're a good fit.
 				</p>
 			</div>
 			<ul class="grid gap-5 sm:grid-cols-2">
@@ -29,14 +29,14 @@
 				{/each}
 			</ul>
 			<a href={links.waitlistEmployer} class="btn btn-primary w-full sm:w-auto">
-				Start hiring <Icon name="arrow-right" size={18} />
+				Join the Waitlist <Icon name="arrow-right" size={18} />
 			</a>
 		</div>
 
 		<div class="overflow-hidden rounded-3xl bg-white p-3 shadow-xl ring-1 ring-black/5 md:p-4">
 			<img
 				src="/images/employers/candidate-match-panel.webp"
-				alt="Candidate list beside a match view explaining a 90% AI match"
+				alt="Matched marketing graduates beside a candidate view explaining a 90% BetaMatch score"
 				loading="lazy"
 				class="aspect-[4/3] w-full rounded-2xl object-cover object-top"
 			/>

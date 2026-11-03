@@ -5,10 +5,11 @@ import type { IconName } from '$lib/components/ui/Icon.svelte';
  * "100% Free", "Build your personal brand") for rewording; these are launch-safe placeholders.
  */
 
+// Client copy (review v2, Students)
 export const heroPoints = [
-	'Verified employers only',
+	'Verified employers, real opportunities',
 	'Free for students & graduates',
-	'Matched on skills, not just your CV'
+	'Matched on skills, not just resumes'
 ];
 
 export type StepPreview = 'profile' | 'matches' | 'connect' | 'offer';
@@ -20,37 +21,39 @@ export interface StudentStep {
 	preview: StepPreview;
 }
 
+// Client copy (review v2, How It Works). Pre-launch: every step links to the waitlist.
 export const studentSteps: StudentStep[] = [
 	{
-		title: 'Create your free account',
-		body: 'Sign up in minutes and build a profile that shows your skills, projects and career interests.',
-		link: 'Build your profile',
+		title: 'Create your free profile',
+		body: 'Showcase your skills, projects, and career interests.',
+		link: 'Join the Waitlist',
 		preview: 'profile'
 	},
 	{
-		title: 'Get matched to roles that fit',
-		body: 'Our AI matches you with internships, part-time and graduate roles that suit your goals.',
-		link: 'See your matches',
+		title: 'Discover your matches',
+		body: 'Explore opportunities matched to your skills and goals.',
+		link: 'Join the Waitlist',
 		preview: 'matches'
 	},
 	{
-		title: 'Apply & connect with employers',
-		body: 'Send applications and chat directly with recruiters, all in one place.',
-		link: 'Get started for free',
+		title: 'Connect with employers',
+		body: "Express interest. When it's mutual, start a conversation.",
+		link: 'Join the Waitlist',
 		preview: 'connect'
 	},
 	{
-		title: 'Land your first role',
-		body: 'Track every application, prepare for interviews and get notified the moment things move.',
-		link: 'Join the waitlist',
+		title: 'Take the next step',
+		body: 'Chat, interview, and move closer to your first role.',
+		link: 'Join the Waitlist',
 		preview: 'offer'
 	}
 ];
 
+// Client copy (review v2). Virtual career events and skill development were
+// removed for a future release.
 export const exclusiveFeatures: { icon: IconName; title: string; body: string }[] = [
-	{ icon: 'target', title: 'Smart job matching', body: 'Roles ranked by how well they fit your skills and goals.' },
-	{ icon: 'profile', title: 'A profile that stands out', body: 'Show your experience, skills and projects.' },
-	{ icon: 'book', title: 'Career tips & guides', body: 'Practical advice on CVs, interviews and networking.' },
-	{ icon: 'calendar', title: 'Virtual career events', body: 'Meet employers and learn from people already in the job.' },
-	{ icon: 'sparkles', title: 'Skill development', body: 'Learn new skills and grow your portfolio as you go.' }
+	{ icon: 'target', title: 'Smart job matching', body: 'Discover roles matched to your skills and goals.' },
+	{ icon: 'profile', title: 'A profile that stands out', body: 'Showcase your skills, projects, and experience.' },
+	{ icon: 'book', title: 'Career tips & guides', body: 'Practical advice on CVs, interviews, and networking.' },
+	{ icon: 'shield-check', title: 'Verified opportunities', body: 'Explore opportunities from reviewed employers.' }
 ];

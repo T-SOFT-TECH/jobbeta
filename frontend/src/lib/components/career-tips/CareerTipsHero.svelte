@@ -1,63 +1,38 @@
-<script>
-	import Animate from '$lib/components/Animate.svelte';
-
-	let { heroBg = '/images/career-tips/frame-20856641690.webp' } = $props();
+<script lang="ts">
+	import Icon from '$lib/components/ui/Icon.svelte';
 </script>
 
-<section class="relative w-full overflow-hidden px-4 py-20 md:h-[712px] md:py-0">
-	<!-- Background image -->
-	<div
-		class="absolute inset-0 bg-cover bg-center bg-no-repeat"
-		style="background-image: url('{heroBg}'); opacity: 0.5;"
-	></div>
-
-	<!-- Purple overlay on top of image -->
-	<div class="absolute inset-0 bg-[#7502ff]/98"></div>
-
-	<!-- Decorative circles - hidden on mobile -->
-	<div class="pointer-events-none hidden lg:block">
-		<img
-			src="/images/career-tips/group-13213144580.svg"
-			alt=""
-			class="absolute top-[550px] left-0"
-		/>
-		<img
-			src="/images/career-tips/group-13213144580.svg"
-			alt=""
-			class="absolute bottom-[550px] left-0"
-		/>
-		<img
-			src="/images/career-tips/group-13213144580.svg"
-			alt=""
-			class="absolute right-0 bottom-[550px]"
-		/>
-		<img
-			src="/images/career-tips/group-13213144580.svg"
-			alt=""
-			class="absolute top-[550px] right-0"
-		/>
+<!--
+	Client review v2: hero ~35-40% shorter so the tips show sooner, and the
+	circle pattern kept but quieter. Layout follows the client's sample.
+-->
+<section class="relative overflow-hidden rounded-b-[2rem] bg-gradient-to-br from-primary to-[#5b2bff] text-white">
+	<!-- Quiet pattern: the original circle motif at low opacity, desktop only -->
+	<div class="pointer-events-none absolute inset-0 hidden opacity-25 lg:block" aria-hidden="true">
+		<img src="/images/career-tips/group-13213144580.svg" alt="" class="absolute -bottom-40 -left-16 w-[420px]" />
+		<img src="/images/career-tips/group-13213144580.svg" alt="" class="absolute -top-44 right-1/4 w-[420px]" />
 	</div>
 
-	<!-- Content - centered -->
-	<Animate variant="bottom" duration={0.8}>
-		<div
-			class="relative z-10 flex h-full min-h-[400px] w-full flex-col items-center justify-center text-center md:min-h-[712px]"
-		>
-			<div class="mx-auto flex max-w-[640px] flex-col items-center gap-4">
-				<h1
-					class="text-3xl leading-tight font-bold text-white sm:text-4xl md:text-[40px] md:leading-[60px]"
-					style="font-family: var(--font-geist); letter-spacing: -0.005em;"
-				>
-					Career Tips
-				</h1>
-				<p
-					class="text-base leading-relaxed font-medium text-white/85 sm:text-lg md:text-xl md:leading-[30px]"
-					style="font-family: var(--font-geist); letter-spacing: -0.005em;"
-				>
-					Get expert-backed insights, practical tips, and guidance to help you make informed career
-					decisions, grow your skills, and reach your professional goals.
-				</p>
+	<div class="page-container relative grid items-center gap-8 py-12 md:py-16 lg:grid-cols-[1fr_auto]">
+		<div class="flex max-w-2xl flex-col items-start gap-4">
+			<h1 class="title-display">Career Tips</h1>
+			<p class="lead text-white/90">
+				Practical advice on CVs, interviews, networking, and everything you need to navigate your
+				early career.
+			</p>
+		</div>
+
+		<!-- Decorative stack of tip cards -->
+		<div class="relative hidden h-44 w-64 lg:block" aria-hidden="true">
+			<div class="absolute top-8 left-0 h-36 w-44 -rotate-6 rounded-3xl bg-white/15"></div>
+			<div class="absolute top-0 right-0 flex h-40 w-48 rotate-6 flex-col gap-3 rounded-3xl bg-white/25 p-5 backdrop-blur-sm">
+				<span class="flex h-9 w-9 items-center justify-center rounded-xl bg-white/30">
+					<Icon name="book" size={18} />
+				</span>
+				<span class="h-2.5 w-28 rounded-full bg-white/60"></span>
+				<span class="h-2.5 w-20 rounded-full bg-white/40"></span>
+				<span class="h-2.5 w-24 rounded-full bg-white/40"></span>
 			</div>
 		</div>
-	</Animate>
+	</div>
 </section>

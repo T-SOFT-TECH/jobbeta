@@ -11,7 +11,7 @@
 	<title>Why JobBeta — Early careers deserve a better start</title>
 	<meta
 		name="description"
-		content="JobBeta is a smarter career hub connecting students, graduates, employers and career centres."
+		content="We're building more than a job board. JobBeta connects students, graduates, and employers through meaningful opportunities, skills, and potential."
 	/>
 </svelte:head>
 
@@ -22,7 +22,7 @@
 <CtaBanner
 	title="Whether you're searching or hiring, start here."
 	body="Join the waitlist and be first in line when JobBeta launches."
-	primary={{ label: 'Join as a Student / Graduate', href: links.waitlistStudent }}
-	secondary={{ label: 'Hire with JobBeta', href: links.waitlistEmployer }}
-	tertiary={{ label: 'Partner with JobBeta', href: links.partner }}
+	primary={{ label: 'Join Student Waitlist', href: links.waitlistStudent }}
+	secondary={{ label: 'Join Employer Waitlist', href: links.waitlistEmployer }}
+	tertiary={{ label: 'Career Centres: Partner With Us', href: links.registerInterest }}
 />

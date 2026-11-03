@@ -4,14 +4,14 @@
 	import { exclusiveFeatures } from '$lib/content/students';
 </script>
 
-<!-- Client review: "two cards on the right instead of the long image" -->
+<!-- Copy and mockup per client review v2: student-focused, four features -->
 <section class="section bg-neutral-light">
 	<div class="page-container grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
 		<div class="flex flex-col gap-6">
 			<div class="flex flex-col gap-3">
-				<h2 class="title-section text-secondary">Exclusive features for students & graduates</h2>
+				<h2 class="title-section text-secondary">Everything you need to get ahead.</h2>
 				<p class="lead text-text-secondary">
-					We don't just help you find jobs. We help you build a career, and it's free.
+					More than job opportunities. Discover tools to help you grow your career, all for free.
 				</p>
 			</div>
 			<ul class="grid gap-4 sm:grid-cols-2">
@@ -29,18 +29,7 @@
 			</ul>
 		</div>
 
-		<div class="flex flex-col gap-5">
-			<div class="flex flex-col gap-3 rounded-3xl bg-primary p-6 text-white md:p-7">
-				<span class="flex h-10 w-10 items-center justify-center rounded-xl bg-white/15">
-					<Icon name="shield-check" size={20} />
-				</span>
-				<p class="font-geist text-xl font-semibold">Verified opportunities only</p>
-				<p class="font-geist text-sm leading-relaxed text-white/80">
-					Every listing comes from a reviewed employer, so you never waste time on dead or fake job
-					posts.
-				</p>
-			</div>
-			<MatchCard />
-		</div>
+		<!-- Student-facing: an opportunity with the student's BetaMatch score (client review v2) -->
+		<MatchCard variant="job" class="text-text-secondary" />
 	</div>
 </section>

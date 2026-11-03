@@ -23,8 +23,8 @@
 		{
 			icon: 'chart',
 			title: 'Hire smarter',
-			tagline: 'Track, assess and hire with purpose',
-			body: 'Match scores, feedback loops and pipeline data help your team decide with confidence.'
+			tagline: 'Track, compare and hire with purpose',
+			body: 'BetaMatch scores, feedback loops and pipeline data help your team decide with confidence.'
 		}
 	];
 </script>

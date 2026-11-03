@@ -1,36 +1,22 @@
 <script lang="ts">
 	import CareerCentersHero from '$lib/components/career-centers/CareerCentersHero.svelte';
-	import CareerCentersValue from '$lib/components/career-centers/CareerCentersValue.svelte';
-	import CareerCentersFeatures from '$lib/components/career-centers/CareerCentersFeatures.svelte';
-	import CareerCentersTestimonials from '$lib/components/career-centers/CareerCentersTestimonials.svelte';
-	import CtaBanner from '$lib/components/ui/CtaBanner.svelte';
-	import FaqSection from '$lib/components/home/FaqSection.svelte';
-	import { links } from '$lib/config/site';
-
-	let { data } = $props();
+	import CareerCentersBuilding from '$lib/components/career-centers/CareerCentersBuilding.svelte';
+	import RegisterInterest from '$lib/components/career-centers/RegisterInterest.svelte';
 </script>
 
+<!--
+	Client review v2: Career Centres are post-MVP, so the page is three sections
+	focused on expressions of interest. Reached from the footer and Products &
+	Solutions, not the main nav.
+-->
 <svelte:head>
-	<title>Career Centres | JobBeta</title>
+	<title>JobBeta for Career Centres (Coming Soon) | JobBeta</title>
 	<meta
 		name="description"
-		content="Partner with JobBeta to connect your students with verified job opportunities and employers."
+		content="We're building tools to help universities and career centres connect students with career opportunities and employers. Register your interest."
 	/>
 </svelte:head>
 
 <CareerCentersHero />
-<CareerCentersValue />
-<CareerCentersFeatures />
-<CareerCentersTestimonials testimonials={data.testimonials} />
-<FaqSection
-	audiences={['career-center']}
-	title="Questions from career centres"
-	subtitle="How partnering with JobBeta works."
-/>
-<CtaBanner
-	title="Ready to bring JobBeta to your students?"
-	body="Let's work together to shape the future of early-career hiring."
-	primary={{ label: 'Become a Partner', href: links.partner }}
-	secondary={{ label: 'Book a Demo', href: links.demo }}
-	tertiary={{ label: 'Browse career resources', href: links.resources }}
-/>
+<CareerCentersBuilding />
+<RegisterInterest />

@@ -1,16 +1,26 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
+	import { links } from '$lib/config/site';
 	import { joinWaitlist, type WaitlistRole } from '$lib/waitlist';
 	import Icon from './Icon.svelte';
 
 	let {
-		role = 'newsletter',
+		role,
+		source,
 		buttonLabel = 'Join Waitlist',
 		placeholder = 'Enter your email address',
-		successMessage = "You're on the list — we'll be in touch soon.",
+		successMessage = "You're on the list. We'll be in touch soon.",
 		tone = 'dark',
 		class: className = ''
 	}: {
+		/**
+		 * Audience to save under. Leave unset where the audience is unknown (the
+		 * footer): the email is then carried to the full waitlist form, which asks
+		 * for name and audience, instead of being saved under a guessed role.
+		 */
 		role?: WaitlistRole;
+		/** Recorded with the sign-up to show which form it came from */
+		source: string;
 		buttonLabel?: string;
 		placeholder?: string;
 		successMessage?: string;
@@ -21,14 +31,17 @@
 
 	const inputId = $props.id();
 	let email = $state('');
-	let status = $state<'idle' | 'sending' | 'done' | 'error'>('idle');
+	let status = $state<'idle' | 'sending' | 'done' | 'already' | 'error'>('idle');
 
 	async function submit(e: SubmitEvent) {
 		e.preventDefault();
+		if (!role) {
+			await goto(`${links.waitlist}?email=${encodeURIComponent(email.trim())}&source=${source}`);
+			return;
+		}
 		status = 'sending';
 		try {
-			await joinWaitlist({ email, role });
-			status = 'done';
+			status = (await joinWaitlist({ email, role, source })) === 'already' ? 'already' : 'done';
 			email = '';
 		} catch (err) {
 			console.error(err);
@@ -57,6 +70,10 @@
 	<p class="mt-2 min-h-5 font-geist text-sm" aria-live="polite">
 		{#if status === 'done'}
 			<span class={tone === 'dark' ? 'text-emerald-300' : 'text-emerald-700'}>{successMessage}</span>
+		{:else if status === 'already'}
+			<span class={tone === 'dark' ? 'text-emerald-300' : 'text-emerald-700'}>
+				You're already on the waitlist. We'll be in touch soon.
+			</span>
 		{:else if status === 'error'}
 			<span class={tone === 'dark' ? 'text-red-300' : 'text-red-600'}>
 				We couldn't save that just now. Please try again in a moment.

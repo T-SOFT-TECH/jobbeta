@@ -1,6 +1,10 @@
 /**
  * Header Navigation Configuration
  * Each site section shows its own sub-navigation; everything else gets the main nav.
+ *
+ * Career Centres are deliberately absent from the main nav: they are a
+ * post-MVP product (client review v2) reached via the footer and Products &
+ * Solutions. Jobs and Blog were removed for now.
  */
 
 export interface NavItem {
@@ -12,9 +16,7 @@ const mainNav: NavItem[] = [
 	{ href: '/why-jobbeta', label: 'Why JobBeta?' },
 	{ href: '/how-it-works', label: 'How it works' },
 	{ href: '/students', label: 'Students' },
-	{ href: '/employers', label: 'Employers' },
-	{ href: '/career-centers', label: 'Career Centers' },
-	{ href: '/jobs', label: 'Jobs' }
+	{ href: '/employers', label: 'Employers' }
 ];
 
 const sectionNavs: NavItem[][] = [
@@ -24,15 +26,8 @@ const sectionNavs: NavItem[][] = [
 	],
 	[
 		{ href: '/employers', label: 'Employers' },
-		{ href: '/products', label: 'Products' },
-		{ href: '/solutions', label: 'Solutions' }
-	],
-	[
-		{ href: '/career-centers', label: 'Career Centers' },
-		{ href: '/blog', label: 'Blog' },
-		{ href: '/resources', label: 'Resources' }
-	],
-	[{ href: '/jobs', label: 'Jobs' }]
+		{ href: '/products', label: 'Products & Solutions' }
+	]
 ];
 
 function matches(pathname: string, href: string) {
@@ -41,7 +36,7 @@ function matches(pathname: string, href: string) {
 
 /**
  * Get navigation items for a specific pathname.
- * Nested routes (e.g. /jobs/[id], /blog/[slug]) inherit their section's nav.
+ * Nested routes inherit their section's nav.
  */
 export function getNavItems(pathname: string): NavItem[] {
 	return sectionNavs.find((nav) => nav.some((item) => matches(pathname, item.href))) ?? mainNav;

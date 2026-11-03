@@ -16,30 +16,40 @@ export interface Feature {
 	body: string;
 }
 
-export const audiences: { key: AudienceKey; label: string; features: Feature[] }[] = [
+/**
+ * "Connecting talent with real-world opportunities" tabs.
+ * Students copy is the client's (review v2). Career Centres are post-MVP, so
+ * that tab is marked coming soon and only describes what's being built.
+ */
+export const audiences: {
+	key: AudienceKey;
+	label: string;
+	comingSoon?: boolean;
+	features: Feature[];
+}[] = [
 	{
 		key: 'students',
 		label: 'For Students',
 		features: [
 			{
 				icon: 'target',
-				title: 'Smart job matching',
+				title: 'Smarter job matching',
 				body: 'We map your skills and goals to the right roles, and let you know as soon as a relevant job goes live.'
 			},
 			{
 				icon: 'profile',
-				title: 'Profiles that show your work',
-				body: 'Showcase coursework, projects and extracurriculars. Go beyond a one-page CV.'
+				title: 'More than a CV',
+				body: 'Showcase your skills, projects, and experiences beyond your CV.'
 			},
 			{
 				icon: 'shield-check',
-				title: 'Verified opportunities only',
-				body: 'Every listing comes from a verified employer. No scams, no ghost jobs.'
+				title: 'Verified opportunities',
+				body: 'Explore opportunities from verified employers you can trust.'
 			},
 			{
 				icon: 'book',
 				title: 'Career readiness resources',
-				body: 'CV tips, interview preparation and industry insights to help you become Day-1 ready.'
+				body: 'Access CV tips, interview guidance, and career insights to get ahead.'
 			}
 		]
 	},
@@ -49,49 +59,45 @@ export const audiences: { key: AudienceKey; label: string; features: Feature[] }
 		features: [
 			{
 				icon: 'sparkles',
-				title: 'AI-matched shortlists',
-				body: 'Post a role and get a ranked shortlist of students and graduates who fit it, with the reasons why.'
+				title: 'BetaMatch shortlists',
+				body: 'Post a role and see students and graduates ranked by fit, with clear reasons behind each match.'
 			},
 			{
-				icon: 'calendar',
-				title: 'Built-in interview scheduling',
-				body: 'Invite candidates, book interviews and track responses without leaving your dashboard.'
+				icon: 'users',
+				title: 'Mutual interest, then conversation',
+				body: 'Express interest in candidates. When it is mutual, message them and schedule interviews.'
 			},
 			{
 				icon: 'megaphone',
 				title: 'Promote your employer brand',
-				body: 'Tell your story to early-career talent through your company profile and featured roles.'
+				body: 'Showcase your company to emerging talent through your employer profile and job postings.'
 			},
 			{
 				icon: 'chart',
 				title: 'Hiring analytics',
-				body: 'See applicants, shortlists and interviews per role at a glance, and spot where candidates drop off.'
+				body: 'Track matches, shortlists and interviews for every role in one place.'
 			}
 		]
 	},
 	{
 		key: 'career-centers',
 		label: 'Career Centres',
+		comingSoon: true,
 		features: [
 			{
+				icon: 'briefcase',
+				title: 'Career Opportunities',
+				body: 'Connect students with relevant internships and graduate opportunities.'
+			},
+			{
 				icon: 'building',
-				title: 'Direct employer access',
-				body: 'Connect your students with verified employers looking for early-career talent.'
+				title: 'Employer Connections',
+				body: 'Help institutions build stronger relationships with employers.'
 			},
 			{
-				icon: 'dashboard',
-				title: 'Partner dashboard',
-				body: "Follow your students' applications and placements, with no extra admin."
-			},
-			{
-				icon: 'bell',
-				title: 'Share opportunities fast',
-				body: 'Send relevant jobs and internships to the right students as soon as they are posted.'
-			},
-			{
-				icon: 'graduation',
-				title: 'Career support beyond class',
-				body: 'Give students CV, interview and career resources they can use any time.'
+				icon: 'chart',
+				title: 'Career Insights',
+				body: 'Understand student engagement and career outcomes.'
 			}
 		]
 	}
@@ -102,27 +108,43 @@ export interface Step {
 	body: string;
 }
 
+/** Home "Simple from start to finish." steps (client copy, review v2). */
 export const howItWorks: Record<'students' | 'employers', Step[]> = {
 	students: [
 		{
 			title: 'Create your free profile',
-			body: 'Tell us about your studies, skills and the kind of role you want.'
+			body: 'Tell us about your skills, experience, interests, and career goals.'
 		},
-		{ title: 'Get matched', body: 'Smart matching surfaces internships and entry-level roles that fit you.' },
-		{ title: 'Apply & connect', body: 'Apply in a few clicks and chat directly with hiring teams.' },
-		{ title: 'Land the role', body: 'Track interviews and offers in one place, then start your career.' }
+		{
+			title: 'Discover your matches',
+			body: 'Explore opportunities matched to your profile and preferences.'
+		},
+		{
+			title: 'Connect with employers',
+			body: "Express interest. When it's mutual, start a conversation."
+		},
+		{
+			title: 'Take the next step',
+			body: 'Connect, interview, and move closer to your next opportunity.'
+		}
 	],
 	employers: [
 		{
-			title: 'Set up your employer profile',
-			body: 'Add your company details and show early-career talent what you stand for.'
+			title: 'Create your employer profile',
+			body: 'Set up your company profile and showcase what makes your team unique.'
 		},
-		{ title: 'Post your openings', body: 'Publish jobs and internships with the skills you need.' },
 		{
-			title: 'Review your matched shortlist',
-			body: 'See candidates ranked by fit, with skills and portfolios side by side.'
+			title: 'Post roles & discover talent',
+			body: 'Share opportunities and discover candidates matched to your needs.'
 		},
-		{ title: 'Interview & hire', body: 'Invite, schedule and hire the right person from one dashboard.' }
+		{
+			title: 'Review & express interest',
+			body: 'Explore matched profiles, compare skills, and express interest in candidates.'
+		},
+		{
+			title: 'Connect & hire',
+			body: 'Unlock conversations through mutual interest, schedule interviews, and hire confidently.'
+		}
 	]
 };
 
@@ -161,80 +183,79 @@ export const sampleJobs: SampleJob[] = [
 	{ role: 'Customer Success Associate', company: 'Bluepine Finance', category: 'Customer Service', type: 'Full-time', location: 'Abuja', color: '#3296f8' }
 ];
 
-export type FaqAudience = 'employer' | 'student' | 'career-center';
+export type FaqAudience = 'student' | 'employer' | 'career-center';
 
+// Order = tab order: Student | Employer | Career Centre (client review v2).
+// Student and Employer copy is the client's wording verbatim.
 export const faqs: { key: FaqAudience; label: string; items: { q: string; a: string }[] }[] = [
-	{
-		key: 'employer',
-		label: 'Employer',
-		items: [
-			{
-				q: 'How do I post a job on JobBeta?',
-				a: "Once your employer account is set up, choose 'Post a job' on your dashboard and add the title, description, skills and pay range. While we're pre-launch, join the waitlist and we'll set you up as soon as employer accounts open."
-			},
-			{
-				q: 'What does hiring through JobBeta cost?',
-				a: "We're finalising launch pricing. Join the waitlist or contact our team and we'll share plans that fit your hiring needs, including options for bulk hiring."
-			},
-			{
-				q: 'How do I find the right candidates?',
-				a: 'Our matching ranks candidates against each role using their skills, studies and portfolio. You can also filter by experience level, location and availability.'
-			},
-			{
-				q: 'Can I hire interns and entry-level talent?',
-				a: 'Yes. JobBeta focuses on students and recent graduates, so internships, graduate trainee programmes and entry-level roles are exactly what the platform is built for.'
-			},
-			{
-				q: 'Do you support bulk or campus hiring?',
-				a: "Yes. Tell us about your hiring plans through the contact page and we'll work with you on a campus or bulk-hiring setup."
-			}
-		]
-	},
 	{
 		key: 'student',
 		label: 'Student',
 		items: [
 			{
 				q: 'Is JobBeta free for students?',
-				a: 'Yes. Creating a profile, getting matched and applying for roles is free for students and graduates.'
+				a: 'Yes! JobBeta is free for students and graduates, from creating your profile to connecting with employers.'
 			},
 			{
 				q: 'How do I get started?',
-				a: "Join the waitlist with your email. We'll invite you to create your profile as soon as we launch."
+				a: "Join our waitlist. We'll invite you to create your profile when we launch."
 			},
 			{
-				q: 'Can I find internships as well as full-time roles?',
-				a: 'Yes. You can look for internships, graduate trainee programmes, part-time and full-time roles, and filter by the type you want.'
+				q: 'Can I find internships and full-time roles?',
+				a: 'Yes! Explore internships, graduate programmes, part-time, and full-time opportunities.'
 			},
 			{
 				q: 'How are jobs verified?',
-				a: 'Every employer is reviewed before they can post, so the listings you see come from real companies that are actively hiring.'
+				a: 'Employers are reviewed before posting opportunities to help ensure a safer, more trusted experience.'
 			},
 			{
-				q: 'What happens after I apply?',
-				a: "You can follow each application's status on your dashboard, and employers can message you or invite you to interview there too."
+				q: 'What happens after I express interest in a role?',
+				a: "If an employer is also interested, you'll match and can start a conversation directly on JobBeta."
+			}
+		]
+	},
+	{
+		key: 'employer',
+		label: 'Employer',
+		items: [
+			{
+				q: 'How do I post a job on JobBeta?',
+				a: 'Once JobBeta launches, you can create an employer account, post your openings and start connecting with matched candidates. Join our waitlist for early access.'
+			},
+			{
+				q: 'What does hiring through JobBeta cost?',
+				a: "We're developing flexible plans to suit different hiring needs. Pricing will be announced closer to launch. Join our waitlist to stay updated."
+			},
+			{
+				q: 'How do I find the right candidates?',
+				a: "BetaMatch helps you discover candidates based on their skills, experience and fit for your roles. You'll see ranked matches and insights explaining why each candidate could be a good fit."
+			},
+			{
+				q: 'Can I hire interns and entry-level talent?',
+				a: 'Absolutely! JobBeta is built for early-career hiring, helping you connect with students and recent graduates seeking internships, graduate programmes and entry-level opportunities.'
+			},
+			{
+				q: 'Do you support bulk or campus hiring?',
+				a: "We're building solutions for employers with larger recruitment needs, including graduate programmes and campus hiring. Contact our team to discuss your requirements and explore how we can support you."
 			}
 		]
 	},
 	{
 		key: 'career-center',
 		label: 'Career Centre',
+		// Institutional product comes after the MVP: answers describe intent only.
 		items: [
 			{
-				q: 'How can our career centre partner with JobBeta?',
-				a: "Reach out through the contact page. We'll set up a partner account so you can share opportunities with your students and follow their progress."
+				q: 'Is JobBeta available for career centres yet?',
+				a: "Not yet. We're building tools to help universities and career centres connect students with career opportunities and employers. Register your interest and we'll let you know when JobBeta for Career Centres launches."
 			},
 			{
-				q: 'What does the partner dashboard show?',
-				a: 'How engaged your students are, where they apply, and how ready they are for work, all summarised so there is no extra admin for your team.'
-			},
-			{
-				q: 'Can we share our own events or job fairs?',
-				a: "Event tools are on our roadmap after launch. For now, tell us what you'd like to promote and we'll help you reach your students."
+				q: 'How can our institution get involved?',
+				a: "Register your interest with your institution's details. We'll keep you updated as we develop our institutional offering."
 			},
 			{
 				q: 'Is there a cost for career centres?',
-				a: "We're finalising partner plans. Contact us to discuss what fits your institution."
+				a: "We haven't set institutional pricing yet. We'll share details closer to launch."
 			}
 		]
 	}

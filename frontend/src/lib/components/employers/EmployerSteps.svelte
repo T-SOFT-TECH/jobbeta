@@ -25,7 +25,7 @@
 	<div class="page-container">
 		<div class="mx-auto flex max-w-2xl flex-col items-center gap-3 text-center">
 			<span class="eyebrow">How it works</span>
-			<h2 class="title-section text-secondary">Hiring on JobBeta is simple and effective</h2>
+			<h2 class="title-section text-secondary">Find the right talent. Hire with confidence.</h2>
 		</div>
 
 		<ol class="snap-row mt-10 md:grid-cols-2 lg:grid-cols-4">
@@ -53,7 +53,7 @@
 								<p class="flex items-center gap-2"><Icon name="check" size={13} class="text-emerald-600" /> Culture & benefits added</p>
 							</div>
 						{:else if step.preview === 'candidates'}
-							<p class="text-xs font-semibold text-secondary">Candidates available for hire</p>
+							<p class="text-xs font-semibold text-secondary">Matched to your role</p>
 							<ul class="mt-3 flex flex-col gap-2.5">
 								{#each candidates as c (c.name)}
 									<li class="flex items-center gap-2.5">
@@ -79,7 +79,7 @@
 								{/each}
 							</ul>
 						{:else}
-							<p class="text-xs font-semibold text-secondary">Graduate Analyst · Applied</p>
+							<p class="text-xs font-semibold text-secondary">Graduate Analyst · Matched</p>
 							<ul class="mt-3 flex flex-col gap-2.5">
 								{#each pipeline as p (p.name)}
 									<li class="flex items-center justify-between gap-2">
@@ -93,8 +93,8 @@
 						{/if}
 					</div>
 
-					<a href={links.waitlistEmployer} class="inline-flex items-center gap-2 font-geist text-sm font-semibold text-primary">
-						Get started <Icon name="arrow-right" size={16} />
+					<a href={links.waitlistEmployer} class="mt-1 inline-flex items-center gap-2 font-geist text-sm font-semibold text-primary">
+						Join Employer Waitlist <Icon name="arrow-right" size={16} />
 					</a>
 				</li>
 			{/each}

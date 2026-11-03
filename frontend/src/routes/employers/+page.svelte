@@ -15,7 +15,7 @@
 	<title>Employers | JobBeta</title>
 	<meta
 		name="description"
-		content="Hire students and graduates with JobBeta: AI-matched shortlists, interview scheduling and one hiring pipeline."
+		content="Find the right early-career talent with JobBeta. Discover promising students and graduates, find candidates who fit your needs, and manage hiring in one place."
 	/>
 </svelte:head>
 
@@ -29,11 +29,12 @@
 	audiences={['employer']}
 	title="Employer FAQs"
 	subtitle="What hiring teams usually ask before getting started."
+	tone="sky"
 />
 <CtaBanner
-	title="Create an employer account."
-	body="Join the waitlist to start hiring top students and graduates as soon as we launch."
-	primary={{ label: 'Join as an Employer', href: links.waitlistEmployer }}
-	secondary={{ label: 'Request a demo', href: links.demo }}
+	title="Be among the first to hire with JobBeta."
+	body="Join our waitlist for early access to smarter hiring and a growing pool of students and graduates."
+	primary={{ label: 'Join the Employer Waitlist', href: links.waitlistEmployer }}
+	secondary={{ label: 'Request a Demo', href: links.demo }}
 	tertiary={{ label: 'Partner with JobBeta', href: links.partner }}
 />

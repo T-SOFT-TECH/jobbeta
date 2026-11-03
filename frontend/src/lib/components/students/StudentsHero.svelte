@@ -19,10 +19,10 @@
 	>
 		<div class="flex flex-col items-start gap-6">
 			<span class="eyebrow-light"><Icon name="graduation" size={14} /> For students & graduates</span>
-			<h1 class="title-display">Your career starts here with JobBeta.</h1>
+			<h1 class="title-display">Your career starts with the right opportunity.</h1>
 			<p class="lead max-w-xl text-white/85">
-				Your gateway to internships, entry-level jobs and career opportunities. We connect students
-				and graduates with employers looking for fresh talent.
+				Discover internships and entry-level roles matched to your skills, interests, and potential.
+				Connect with employers who see what you bring.
 			</p>
 			<ul class="flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:gap-x-6">
 				{#each heroPoints as point (point)}
@@ -44,7 +44,7 @@
 
 		<div class="rounded-3xl bg-white p-5 text-secondary shadow-2xl md:p-6" aria-hidden="true">
 			<div class="flex items-center justify-between">
-				<p class="font-geist font-semibold">Jobs matched for you</p>
+				<p class="font-geist font-semibold">Opportunities matched to you.</p>
 				<span class="rounded-full bg-primary/10 px-3 py-1 font-geist text-xs font-semibold text-primary">
 					This week
 				</span>

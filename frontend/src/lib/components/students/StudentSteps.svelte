@@ -10,7 +10,7 @@
 	const nodes = partnerBrands.slice(0, 4);
 	const initials = (name: string) => name.split(' ').map((w) => w[0]).join('').slice(0, 2);
 	const updates = [
-		{ text: 'New role matches your profile', time: 'Mon · 09:12' },
+		{ text: "It's a mutual match with Northfield Labs", time: 'Mon · 09:12' },
 		{ text: "You've been invited to interview", time: 'Wed · 14:30' },
 		{ text: 'Offer received. Congratulations!', time: 'Fri · 11:05' }
 	];
@@ -20,7 +20,7 @@
 	<div class="page-container">
 		<div class="mx-auto flex max-w-2xl flex-col items-center gap-3 text-center">
 			<span class="eyebrow">How it works</span>
-			<h2 class="title-section text-secondary">Finding a job has never been easier</h2>
+			<h2 class="title-section text-secondary">Your next opportunity, step by step.</h2>
 		</div>
 
 		<ol class="snap-row mt-10 md:grid-cols-2 lg:grid-cols-4">
@@ -97,7 +97,7 @@
 						{/if}
 					</div>
 
-					<a href={links.waitlistStudent} class="inline-flex items-center gap-2 font-geist text-sm font-semibold text-primary">
+					<a href={links.waitlistStudent} class="mt-1 inline-flex items-center gap-2 font-geist text-sm font-semibold text-primary">
 						{step.link} <Icon name="arrow-right" size={16} />
 					</a>
 				</li>

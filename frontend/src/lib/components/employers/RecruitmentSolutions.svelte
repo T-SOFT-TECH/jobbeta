@@ -10,8 +10,8 @@
 			<span class="eyebrow-light">Recruitment solutions</span>
 			<h2 class="title-section">Everything you need to hire early-career talent</h2>
 			<p class="lead text-white/80">
-				End-to-end recruitment services built around students and graduates. Need a tailored
-				hiring package? Talk to us.
+				From finding the right candidates to managing your hiring pipeline, JobBeta makes
+				early-career recruitment simpler.
 			</p>
 			<a href={links.contact} class="btn btn-light text-primary">Contact us</a>
 		</div>
