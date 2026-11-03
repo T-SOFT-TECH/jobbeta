@@ -2502,3 +2502,12 @@
 /frontend/html/Student.zip
 /frontend/html/Why jobbeta.png
 /frontend/html/Why-JobBeta.zip
+
+# IDE
+/.idea/
+
+# Client review material and design exports (private, kept local only)
+/JobBeta Website Review.zip
+/JobBeta Website Review/
+/New JobBeta Website Review/
+/figma-exports/
